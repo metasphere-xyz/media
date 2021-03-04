@@ -1,4 +1,5 @@
 # metasphere media helpers
+This repository is a collection of helper scripts to deal with media file conversion, cleanup and storage. They are intended to be run as shell scripts.
 
 ## downloader
 #### downloadFromSonix.py
