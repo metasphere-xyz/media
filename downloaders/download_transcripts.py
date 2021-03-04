@@ -1,12 +1,24 @@
 # %% Import and Authentication
 import json
 import requests
+import os
 
+#%% Create Directory for Transcripts
+path = os.getcwd()
+path = path + '/transcript_storage'
+
+try:
+    os.mkdir(path)
+except OSError:
+    print ("Creation of the directory %s failed" % path)
+else:
+    print ("Successfully created the directory %s " % path)
+
+# %% GET Media IDs from SONIX AI
 headers = {
     'Authorization': 'Bearer HDx7ZSQ9CIzbwJZ90OurHAtt',
 }
 
-# %% GET Media IDs from SONIX AI
 response_full = requests.get(
     'https://api.sonix.ai/v1/media/', headers=headers)
 r_media = response_full.json()
