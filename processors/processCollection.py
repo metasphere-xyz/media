@@ -9,7 +9,7 @@ help_message = """
 processCollection.py:
 Processes a metasphere collection.json and pass it into the graph database
 usage: processCollection.py [-i] <collection.json>
--i --input-file <transcript.json>: location of the sonix transcript
+-i --input-file <collection.json>: location of metasphere collection.json
 """
 
 def raise_error(error):

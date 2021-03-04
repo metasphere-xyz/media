@@ -11,10 +11,7 @@ Downloaders download content from a specific site or service.
 #### downloadFromSonix.py
 Downloads a JSON file of a transcript from sonix.ai
 
-Usage:
-```bash
-downloadFromSonix.py [-i] <sonix media id>
-```
+Usage: ```downloadFromSonix.py [-i] <sonix media id>```
 
 
 ## converters
@@ -26,6 +23,9 @@ Converts a sonix.ai JSON transcript into a metasphere collection.json
 usage:
 ```bash
 sonix2metasphere.py [-i] <transcript.json> [-o output.json]
+
+-i --input-file <transcript.json>: location of the sonix transcript
+-o --output-file <output.json>: output file (default: collection-<md5>.json)
 ```
 
 
@@ -38,7 +38,7 @@ Processes a metasphere collection.json and passes it into the graph database.
 Usage:
 ```bash
 processCollection.py [-i] <collection.json>
--i --input-file <transcript.json>: location of the sonix transcript
+-i --input-file <filename>: location of metasphere collection.json
 ```
 
 #### dumpCollection.py
@@ -48,6 +48,6 @@ Usage:
 ```bash
 dumpCollection.py [-i] <collection id> [-o <collection.json>]
 -i --id <collection id>: id of the collection to be compiled
--o --output-file <collection.json>: location of output file (uses md5 id of collection as default)
+-o --output-file <filename>: location of output file (default: collection-< md5>.json)
 ```
 
