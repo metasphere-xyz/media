@@ -1,6 +1,9 @@
 # metasphere media helpers
 This repository is a collection of helper scripts to deal with media file conversion, cleanup and storage. They are intended to be run as shell scripts.
 
+
+
+
 ## downloader
 #### downloadFromSonix.py
 Downloads a JSON file of a transcript from sonix.ai
@@ -21,4 +24,3 @@ Processes a metasphere collection.json and passes it into the graph database
 
 Usage: ```processCollection.py [-i] <collection.json>```
 
-##
