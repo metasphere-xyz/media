@@ -4,14 +4,19 @@ This repository is a collection of helper scripts to deal with media file conver
 
 
 
-## downloader
+## downloaders
+Downloaders download content from a specific site or service.
+
+
 #### downloadFromSonix.py
 Downloads a JSON file of a transcript from sonix.ai
 
 Usage: ```downloadFromSonix.py [-i] <sonix media id>```
 
 
-## converter
+## converters
+Converters convert different data formats into metasphere compatible JSON structures.
+
 #### sonix2metasphere.py
 Converts a sonix.ai JSON transcript into a metasphere collection.json
 
@@ -19,6 +24,8 @@ usage: ```sonix2metasphere.py [-i] <transcript.json> [-o output.json]```
 
 
 ## processors
+Processors process metasphere compatible JSON structures and load them into the graph database.
+
 #### processCollection.py
 Processes a metasphere collection.json and passes it into the graph database
 
