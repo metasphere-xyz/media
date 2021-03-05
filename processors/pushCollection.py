@@ -7,6 +7,7 @@ import hashlib
 import time
 import requests
 from rich.progress import Progress, track
+from rich import print
 
 api_base_url = 'http://ecchr.metasphere.xyz:2342'
 media_directory = 'files'
@@ -16,6 +17,9 @@ Processes a metasphere collection.json and pushes it into the graph database
 usage: pushCollection.py [-i] <collection.json>
 -i --input-file <collection.json>: location of metasphere collection.json
 """
+
+checkmark = f"[green]"u'\u2713'
+cross = f"[red]"u'\u00D7'
 
 def request(endpoint, query):
     url = api_base_url + endpoint
@@ -40,14 +44,14 @@ def raise_error(error):
         print("Error: " + str(error))
     sys.exit(2)
 
-
 def main():
     input_file = ""
+    verbose = False
 
     try:
         opts, args = getopt.getopt(
             sys.argv[1:],
-            "hi:", ["input-file="]
+            "vhi:", ["input-file="]
         )
     except getopt.GetoptError as error:
         raise_error(error)
@@ -57,6 +61,8 @@ def main():
             sys.exit()
         elif opt in ("-i", "--input-file"):
             input_file = arg
+        elif opt == '-v':
+            verbose = True
 
     if not input_file:
         raise_error("Please specify the location of collection.json")
@@ -79,24 +85,24 @@ def main():
     num_chunks = len(collection["chunk_sequence"])
 
     with Progress() as progress:
-        progress.console.print(f"Collection name:\t: {collection['name']}.")
-        progress.console.print(f"Collection id:\t\t: {collection['collection_id']}.")
-        progress.console.print(f"Collection source type: {collection['source_type']}.")
-
+        progress.console.print(f"\nCollection name:\t {collection['name']}")
+        progress.console.print(f"Collection id:\t\t {collection['collection_id']}")
+        progress.console.print(f"Collection type:\t {collection['source_type']}")
 
         chunk_progress = progress.add_task("Progress \t", total=num_chunks)
         request_progress = progress.add_task("API request \t", total=2)
 
         for chunk in range(num_chunks):
             data = collection["chunk_sequence"][chunk]
-            progress.console.print(f"[bold]Processing chunk #{chunk}")
-            progress.console.print(f"Checking if chunk exists")
             chunk_id = data["chunk_id"]
-            progress.console.print(f"Processing chunk_id:  {chunk_id}")
+            progress.console.print(f"\n[bold]Processing chunk [regular]#{chunk}")
+            progress.console.print(f"Chunk id: {chunk_id}")
 
             endpoint = '/graph/find'
             query = {"name": chunk_id}
             response = request(endpoint, query)
+            # response = {'status':'success'}
+
             progress.advance(request_progress)
             if response["status"] == "failed":
                 if collection["source_type"] == "audio":
@@ -107,18 +113,17 @@ def main():
                         'mp3/Chunks',
                         data["source_file"]
                     ])
-                    progress.console.print(f"Checking if audio file exists: {source_file}.")
                     try:
                         f = open(source_file_path)
-                        progress.console.print(f"[green]Source file found.")
+                        progress.console.print(checkmark, f"Associated audio file exists: {source_file} ")
                     except IOError:
-                        progress.console.print(f"[red]Source file not accessible: {source_file_path}. Aborting.")
+                        progress.console.print(cross, f"Associated audio file not found: {source_file} ")
+                        progress.console.print(f"\n[red bold]Aborting.")
                         sys.exit(2)
                     finally:
                         f.close()
 
-
-                progress.console.print(f"Inserting chunk into database.")
+                if verbose: progress.console.print(f"Inserting chunk into database.")
                 endpoint = '/graph/add/chunk'
                 query = {
                     'chunk_id': data["chunk_id"],
@@ -131,14 +136,22 @@ def main():
                     'similarity': []
                 }
 
-                # response = request(endpoint, query)
-                progress.advance(request_progress)
+                # UNCOMMENT response = request(endpoint, query)
                 response["status"] = query
+                progress.advance(request_progress)
 
                 if response["status"] != "failed":
-                    progress.console.print(f"[green]Successfully inserted chunk:")
+                    progress.console.print(checkmark, f"Successfully inserted chunk.")
                 else:
-                    progress.console.print(f"[red]Error inserting chunk.")
+                    progress.console.print(cross, f"[red]Error inserting chunk.")
+            else:
+                progress.console.print(cross, f"[white]Chunk already exists. Skipping.")
+
+            if verbose: progress.console.print(f"Extracting entities.")
+            time.sleep(.3)
+            if verbose: progress.console.print(f"Extracting summaries.")
+            time.sleep(.3)
+
             progress.advance(chunk_progress)
 
         while not progress.finished:
