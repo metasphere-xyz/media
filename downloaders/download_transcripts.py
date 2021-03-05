@@ -42,7 +42,9 @@ for i in range(media_amount):
 for i in lst:
     response = requests.get(
         'https://api.sonix.ai/v1/media/{id}/transcript.json'.format(id=i), headers=headers)
-    filename = response.json()
+    content = response.json()
+    output_file = str(content['name']) + '.json'
+    print("Downloading into " + output_file)
 
-    with open('./transcript_storage/{id}.json'.format(id=i), 'w') as outfile:
-        json.dump(filename, outfile, indent=4, sort_keys=True)
+    with open('./transcript_storage/{output_file}'.format(output_file=output_file), 'w') as out:
+        json.dump(content, out, indent=4, sort_keys=True)
