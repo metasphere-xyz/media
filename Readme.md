@@ -37,22 +37,22 @@ sonix2metasphere.py [-i] <transcript.json> [-o output.json]
 ## processors
 Processors process metasphere compatible JSON structures and load them into the graph database.
 
-#### processCollection.py
+#### pushCollection.py
 Processes a metasphere collection.json and passes it into the graph database.
 
 Usage:
 ```bash
-processCollection.py [-i] <collection.json>
+pushCollection.py [-i] <collection.json>
 
 -i --input-file <filename>: location of metasphere collection.json
 ```
 
-#### dumpCollection.py
+#### pullCollection.py
 Queries the graph database and compiles a JSON object of the collection.
 
 Usage:
 ```bash
-dumpCollection.py [-i] <collection id> [-o <collection.json>]
+pullCollection.py [-i] <collection id> [-o <collection.json>]
 
 -i --id <collection id>: id of the collection to be compiled
 -o --output-file <filename>: location of output file (default: collection-<md5>.json)

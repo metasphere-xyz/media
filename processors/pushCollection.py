@@ -6,9 +6,9 @@ import json
 import hashlib
 
 help_message = """
-processCollection.py:
-Processes a metasphere collection.json and pass it into the graph database
-usage: processCollection.py [-i] <collection.json>
+pushCollection.py:
+Processes a metasphere collection.json and pushes it into the graph database
+usage: pushCollection.py [-i] <collection.json>
 -i --input-file <collection.json>: location of metasphere collection.json
 """
 

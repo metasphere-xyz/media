@@ -6,9 +6,9 @@ import json
 import hashlib
 
 help_message = """
-dumpCollection.py:
-Queries the graph database and compiles a JSON object of the collection.
-usage: dumpCollection.py [-i] <collection id> [-o <collection.json>]
+pullCollection.py:
+Pulls a metasphere colletion.json object from the graph database.
+usage: pullCollection.py [-i] <collection id> [-o <collection.json>]
 -i --id <collection id>: id of the collection to be compiled
 -o --output-file <collection.json>: location of output file (uses md5 id of collection as default)
 """
@@ -41,7 +41,7 @@ def main():
             output_file = arg
 
     if not collection_id:
-        raise_error("No collection id specified. Please specify which collection should be dumped.")
+        raise_error("No collection id specified. Please specify which collection should be pulled from the database.")
     if not output_file:
         output_file = 'collection-' + collection_id + '.json'
         print("No output file specified. Using " + output_file)
