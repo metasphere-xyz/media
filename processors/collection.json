@@ -1,0 +1,1303 @@
+{
+    "collection_id": "4ece0d064575609367f665d617d95d30",
+    "name": "2020-12-16_wolfgang-mark_final",
+    "source_type": "audio",
+    "source_path": "/podcasts/episodes/4ece0d064575609367f665d617d95d30",
+    "chunk_sequence": [
+        {
+            "chunk_id": "f0a58d81ae6102b1b8d3b8704b32aba5",
+            "text": "So, hello everybody, to the latest edition of our podcast by ECCHR, European Center for Constitutional and Human Rights in Berlin.",
+            "source_file": "1-Wolfgang.mp3",
+            "start_time": 0.26,
+            "end_time": 12.28
+        },
+        {
+            "chunk_id": "c2bf5974b1574a0b885c438a6082f99e",
+            "text": "We're having a series of talks on Arts and Human Rights with some of the most well-known curators, artists, people from the arts world. And today my guest is Mark Sealy, curator, writer and director of The Association of Black Photographers in London, Photography expert and scholar.",
+            "source_file": "2-Wolfgang.mp3",
+            "start_time": 13.4,
+            "end_time": 36.27
+        },
+        {
+            "chunk_id": "88dd8d45501cd66aeb2a1a5cbc0eae52",
+            "text": "So hello, Mark. Yeah, it's a pleasure to have you here. Unfortunately, we cannot record this podcast at your gallery, at Autograph Gallery Rivington Place in Shoreditch, East London. I love the space very much. Mark, would you like to tell us a little bit about the history of the place and and also about the intentions to set up a place , like a physical space like Autograph in East London?",
+            "source_file": "3-Wolfgang.mp3",
+            "start_time": 36.55,
+            "end_time": 71.35
+        },
+        {
+            "chunk_id": "499a86162bf9831a3f09a5793b48f87d",
+            "text": "That's a very, interesting question, because it's kind of like all, all histories, it's multilayered.",
+            "source_file": "4-Mark.mp3",
+            "start_time": 72.4,
+            "end_time": 78.64
+        },
+        {
+            "chunk_id": "abdece72b785b3929520199ccdd55e99",
+            "text": "I guess one of the first things that we were very concerned with as kind of activists, really , was the idea of a sense of place. Where does one belong? How do we fit in within the kind of cultural offer within the state?",
+            "source_file": "5-Mark.mp3",
+            "start_time": 79.28,
+            "end_time": 94.38
+        },
+        {
+            "chunk_id": "1dde36febbacecad644262cfdd2d4f45",
+            "text": "And, you know, the idea of having a kind of a place to be really a place to kind of have your own program, have your own work shown without having to negotiate other spaces to do things.",
+            "source_file": "6-Mark.mp3",
+            "start_time": 94.91,
+            "end_time": 108.95
+        },
+        {
+            "chunk_id": "8f0b242fd982b0b8e189065a2471396f",
+            "text": "Because prior to 2007, when the building opened, we were very much agency . By being an agency it meant that we were always being active for sure, but it meant that we were always going to other places to negotiate, for example, exhibitions or talks, having to kind of sell the ideas to some of these spaces, which might not be committed to or receptive to the things that you wanted to do .",
+            "source_file": "7-Mark.mp3",
+            "start_time": 108.98,
+            "end_time": 136.08
+        },
+        {
+            "chunk_id": "04c750f09b0fa2a2b2dd2d7082c22010",
+            "text": "From the very outset I guess one of the key things about Autograph,and it built this building in partnership with the Institute of International Visual Arts at the time, was to try and get what I would call a kind of cultural stake in the heart of the city .",
+            "source_file": "8-Mark.mp3",
+            "start_time": 136.54,
+            "end_time": 152.89
+        },
+        {
+            "chunk_id": "5e622b1d88b7932b5512096b24e21fcd",
+            "text": "To have a bit like a property, like if you're an individual rather than renting places, it's important to kind of own something. And we know that in modernist societies and it's all about what you've got you're building your museum, your assets.",
+            "source_file": "9-Mark.mp3",
+            "start_time": 153.61,
+            "end_time": 172.25
+        },
+        {
+            "chunk_id": "31dba627d26ba3f17e9f391344a38762",
+            "text": "And I was always very worried as far as the funding was concerned, that we were very volatil e if we weren't going to move towards being a building-based organization . That meant that we could be somewhere where people could come to , rather than us having to go to places.",
+            "source_file": "10-Mark.mp3",
+            "start_time": 172.77,
+            "end_time": 189.9
+        },
+        {
+            "chunk_id": "0ab421e085f4e80e14ac93e23981d624",
+            "text": "So we realized that there was a various funding streams available and we applied and thought very hard about the burden of a building as well",
+            "source_file": "11-Mark.mp3",
+            "start_time": 190.57,
+            "end_time": 207.8
+        },
+        {
+            "chunk_id": "0c7f61a3d186ed580630c66ba12d7b1f",
+            "text": "But overall, you know, with our board people like \"Stuart Hall\" and colleagues like \"Gilane Tawadros \" and other really important people around the project at the time, we thought that it was probably the best move to make.",
+            "source_file": "12-Mark.mp3",
+            "start_time": 208.31,
+            "end_time": 219.93
+        },
+        {
+            "chunk_id": "1164e31af4a77f7cb7ce35117205607b",
+            "text": "And at the time, a young, fantastic architect was on the start. He's now \"Sir David Adjaye,\" who built the fantastic Museum of African American History and Culture in Washington, D.C. on the Mall now , is a very famous architect, but at the time we gave him an opportunity to build one of his first public spaces, and he managed to pull off quite a small, intimate landmark building two galleries.",
+            "source_file": "13-Mark.mp3",
+            "start_time": 222.52,
+            "end_time": 247.23
+        },
+        {
+            "chunk_id": "ce6e537d2cb5881716b276e17b7cff40",
+            "text": "At the time, there was a library space and there's education spaces and studios and office space and a business model that we put together, which meant that we could rent some space to creative agencies to keep our own business afloat.",
+            "source_file": "14-Mark.mp3",
+            "start_time": 247.78,
+            "end_time": 259.21
+        },
+        {
+            "chunk_id": "ccbf0abca165c42920563f0bacceb81b",
+            "text": "So it was also a cultural and also a kind of financial plan going forward, which meant that the building became quite crucial to us through our survival.",
+            "source_file": "15-Mark.mp3",
+            "start_time": 259.21,
+            "end_time": 269.14
+        },
+        {
+            "chunk_id": "0377807c9a92ffdd3b135fb3c4d9a21b",
+            "text": " I understand this kind of building up of counter-infrastructure and to have ownership about a space and then being independent .",
+            "source_file": "16-Wolfgang.mp3",
+            "start_time": 270.69,
+            "end_time": 280.83
+        },
+        {
+            "chunk_id": "66cba25b216ce0dfb3b761069638a695",
+            "text": "You also say in one of your statements that Autograph intends to articulate a politics in which unspoken and invisible subjects have challenged spaces of representation but then establish another kind of representation. Is that the right thing or do we have to question the whole concept of representation?",
+            "source_file": "17-Wolfgang.mp3",
+            "start_time": 281.89,
+            "end_time": 307.08
+        },
+        {
+            "chunk_id": "bb0413fafe3784b07db631bfc3fefa8b",
+            "text": "I think we have to question the whole concept of representation. I think there's a massive amount of what I would say un-learning to do in the field of representation.",
+            "source_file": "18-Mark.mp3",
+            "start_time": 307.67,
+            "end_time": 317.76
+        },
+        {
+            "chunk_id": "11ae1c88721e98c6f0b127df2b8fe3ce",
+            "text": "I think one of the things that I'm very fascinated by in terms of photography is how the world has been rendered.",
+            "source_file": "19-Mark.mp3",
+            "start_time": 317.84,
+            "end_time": 323.1
+        },
+        {
+            "chunk_id": "579a6e102fc0d7ad4278323d0ff339a6",
+            "text": "If we think about the invention of photography around 1839, let's say, and the kind of politics that was at play in terms of, well, we can talk about racial politics, imperial politics, colonial politics . I think it's probably fair to say that the camera was very much a kind of colonial tool.",
+            "source_file": "20-Mark.mp3",
+            "start_time": 323.45,
+            "end_time": 341.44
+        },
+        {
+            "chunk_id": "1146dea5651089ed89cf38530e664ba9",
+            "text": "So my big question really, in terms of thinking about . Is like how and why was the world seen and rendered through what kind of political lens? And I think one of the key things that we try and do at Autograph is to problematize questions like that . It's like, let's unpick who we think we are.",
+            "source_file": "21-Mark.mp3",
+            "start_time": 341.92,
+            "end_time": 360.0
+        },
+        {
+            "chunk_id": "4e582bf699d5ecced830b2c80d487b4f",
+            "text": "Let's unpick the kind of politics of race . Let's unpick the politics of representation, open the field and enter into new epistemes, new knowledge systems, that in theory will help us bring the kind of cultural differences or racial differences or political differences that people have and bring us closer together in terms of understanding who and how difference works across the planet.",
+            "source_file": "22-Mark.mp3",
+            "start_time": 360.48,
+            "end_time": 381.16
+        },
+        {
+            "chunk_id": "aa47aedcb4ebb6648f4187d5f408b9a4",
+            "text": "You already mentioned one of the key persons in the process of establishing Autograph, \"Stuart Hall,\" whose library is part of the the building at Rivington place. What does he mean as a person for you? And what does his oeuvre mean for your work?",
+            "source_file": "23-Wolfgang.mp3",
+            "start_time": 382.85,
+            "end_time": 402.0
+        },
+        {
+            "chunk_id": "66d493954051b217d2360269495e25ca",
+            "text": "Well, the library is now moved down to the University of Chelsea School of Arts into a new, bigger and dynamic space. So it's still very much the Stuart Hall Library as an entity.",
+            "source_file": "24-Mark.mp3",
+            "start_time": 402.55,
+            "end_time": 413.38
+        },
+        {
+            "chunk_id": "4f451bdf2888e4094d665b81ce414b6d",
+            "text": "It was housed in the building for maybe up until approximately 10 years ... That library is owned by another arts organization called the Institute of International Visual Arts. It's a fantastic resource.",
+            "source_file": "25-Mark.mp3",
+            "start_time": 413.78,
+            "end_time": 426.14
+        },
+        {
+            "chunk_id": "fca3e480b8598219bcca568d59c80b59",
+            "text": "But Stuart Hall himself as an individual was very key really to the cultural thinking, cultural studies, understanding race, understanding media studies, understanding the . You know, it's like the godfather of cultural studies .",
+            "source_file": "26-Mark.mp3",
+            "start_time": 426.22,
+            "end_time": 441.75
+        },
+        {
+            "chunk_id": "9c3f6e39e1b29b238165178103137f9a",
+            "text": "I mean, I think it's really important and I think you might appreciate this as well, Wolfgang, but sometimes we meet people who we just kind of connect with.",
+            "source_file": "27-Mark.mp3",
+            "start_time": 449.99,
+            "end_time": 459.12
+        },
+        {
+            "chunk_id": "a660afdc9875d9e68b76f20dd33e0cf2",
+            "text": "And often as a younger man, it's someone who's more senior than you who can help and guide you through some of the thoughts that you might not have shaped or they're still shaping as well.",
+            "source_file": "28-Mark.mp3",
+            "start_time": 459.12,
+            "end_time": 469.6
+        },
+        {
+            "chunk_id": "6b9522b7593a50623148e5b21e96117e",
+            "text": "And I took great privilege and have incredible fond memories of those conversations that we would just be having over a cup of tea or traveling somewhere together, shaping ideas, thinking about, you know, how races may ... Thinking about the work images do in culture, thinking about television, thinking about media, thinking about trying to bring people with us as we go on this journey and his incredible accessible writing.",
+            "source_file": "29-Mark.mp3",
+            "start_time": 470.12,
+            "end_time": 498.07
+        },
+        {
+            "chunk_id": "aab8d28a1392b9e75c7f7909c7b706de",
+            "text": "Well, I mean, you know, the privilege of that, as you can probably tell by my enthusiasm for his ideas, was just was a real delight. It was like a learning curve and something that I'm very mindful of in terms of the burden of responsibility that I have when working at Autograph.",
+            "source_file": "30-Mark.mp3",
+            "start_time": 498.51,
+            "end_time": 517.55
+        },
+        {
+            "chunk_id": "d00890ab49b9aedad10b054a85229af3",
+            "text": "I don't think there's a day that goes by that I don't think about some of the things that we would talk [about] together. It's hard to encapsulate. It's hard to imagine.",
+            "source_file": "31-Mark.mp3",
+            "start_time": 517.88,
+            "end_time": 526.96
+        },
+        {
+            "chunk_id": "9afffb64b23ed1aaeb1ab5c825fe5e1e",
+            "text": "I mean, it would be from the ridiculous to the sublime. And of course, we differed . Occasionally we differed. And one of the key things that I want to share with you today is that, you know, as Stuart got older, he did ask the question, should I have done more in the field of human rights? And my response to that was, I think we should have.",
+            "source_file": "32-Mark.mp3",
+            "start_time": 527.31,
+            "end_time": 550.57
+        },
+        {
+            "chunk_id": "81f9a47c94d54c72e4a2d304cd84c3ff",
+            "text": "That's a very interesting take and I come back to that . I just want to ask a last question around Autograph the gallery, the physical space, and I'm happy that you pointed out the importance of physical encounters, of personal encounters.",
+            "source_file": "33-Wolfgang.mp3",
+            "start_time": 550.92,
+            "end_time": 566.18
+        },
+        {
+            "chunk_id": "9d9a55a0c7174252b78e4e29d3f05a6a",
+            "text": "So what are we doing today? I mean, with this pandemic plus then the Brexit in the UK and probably a financial crisis resulting of both reasons.",
+            "source_file": "34-Wolfgang.mp3",
+            "start_time": 567.22,
+            "end_time": 578.72
+        },
+        {
+            "chunk_id": "2999b27ea696793eb1cbc93237820d20",
+            "text": "What does it mean for first cultural politics in the UK and elsewhere? But what does it also mean for our lives that we are restricted to meet like we are meeting now , via Zoom and not not so much in personal encounters?",
+            "source_file": "35-Wolfgang.mp3",
+            "start_time": 579.58,
+            "end_time": 596.27
+        },
+        {
+            "chunk_id": "b9fed0c45a6c185a6d2f81a47ab4b73f",
+            "text": "You know, it's a really interesting situation because, you know, the pandemic is caused, of course, people to be apart, physically apart .",
+            "source_file": "36-Mark.mp3",
+            "start_time": 597.36,
+            "end_time": 606.74
+        },
+        {
+            "chunk_id": "5f79f84477e598a9a74459807f1b93ea",
+            "text": "And Brexit politically kind of disengaging with the community of Europe, let's say. But I think I kind of look at this in a way that sometimes, especially around the pandemic, it's been important maybe to step back, maybe to stop, maybe to pause, maybe to reflect on a little bit of time and to reflect on how we are.",
+            "source_file": "37-Mark.mp3",
+            "start_time": 607.06,
+            "end_time": 627.11
+        },
+        {
+            "chunk_id": "491678b728a7fb83d149a976bcdf94a0",
+            "text": "I mean, of course, it's been a disaster, but I've been thinking about things like, for example, how do people with disability function in our normal way of being, as a question, the kind of ... All these normal aspects of encounter.",
+            "source_file": "38-Mark.mp3",
+            "start_time": 627.54,
+            "end_time": 643.19
+        },
+        {
+            "chunk_id": "7e9ec1b7e3bb3b2ad895e1d2acb0bacc",
+            "text": "It helps us think about the difficult challenges that those that are on the edge of society have, the way that, you know, not being able to do all of those assumed things that we've taken for granted for so long.",
+            "source_file": "39-Mark.mp3",
+            "start_time": 643.78,
+            "end_time": 656.01
+        },
+        {
+            "chunk_id": "b96095bea4a2b71056c95fc630f61c3e",
+            "text": "There are many people who don't have access to the things that you and I have been taking for granted. So that's one kind of thing. I'd like to think that there is no more ... There is no more going back. There is a future that we can be much more tender with each other, with much more caring with each other, with much more kind of let's say, you know, considerate in terms of equality.",
+            "source_file": "40-Mark.mp3",
+            "start_time": 656.82,
+            "end_time": 678.48
+        },
+        {
+            "chunk_id": "9643ef7c71364266933a361bd277f95b",
+            "text": "And I think our cultural institutions now may be the good ones can really take that on board rather than carrying on with this idea that we go to this holy grail of great art. But thinking about the cultural relevance that a cultural institution, say like Tate Modern , could have . Who goes in there, why they go in there and historically, who's been locked out?",
+            "source_file": "41-Mark.mp3",
+            "start_time": 678.91,
+            "end_time": 704.78
+        },
+        {
+            "chunk_id": "64ced51cfef91c233e8211dd04143a53",
+            "text": "I understand your remarks, but these are the wise words of someone who had already experienced a lot of what you what we're talking about, but I guess young people might answer the question a little bit different. But come let's come to the core of our talk.",
+            "source_file": "42-Wolfgang.mp3",
+            "start_time": 707.61,
+            "end_time": 728.72
+        },
+        {
+            "chunk_id": "b183bb5b7537ecd3dd0618c80f2887b9",
+            "text": "And I mean, it's incredible that both of us wrote about the same topics at the same time.",
+            "source_file": "43-Wolfgang.mp3",
+            "start_time": 728.78,
+            "end_time": 735.94
+        },
+        {
+            "chunk_id": "c1347f2b32a21c789ee6d9b9f19df884",
+            "text": "Back in 2010, you had the chance to work with the Ryerson Image Center in Toronto to carry out a research into the archives of the Black Star collection of more or less 209.000 photojournalistic prints. And so these black and white photographs represent the social, political and cultural memory of the 20th century from a Western perspective.",
+            "source_file": "44-Wolfgang.mp3",
+            "start_time": 736.68,
+            "end_time": 763.46
+        },
+        {
+            "chunk_id": "1105cf9206e77dff33790b769c48de6e",
+            "text": "And you try to counter-read and to select pictures of this huge stock of pictures and curated this wonderful show which was exhibited in Toronto in 2013 and in London two years later in 2015. So what was your take on this issue \"Human Rights, Human Wrongs\"?",
+            "source_file": "45-Wolfgang.mp3",
+            "start_time": 763.8,
+            "end_time": 793.13
+        },
+        {
+            "chunk_id": "e0a9f71532815798ffb1d1cfbed94550",
+            "text": "Well, I guess looking in the archive, I thought that there was a kind of sense that history was just showing the black body completely broken . That it seemed to me one of the key points that I wanted to draw out was that, you know, the politics of representation in journalism, especially in the continent of Africa, independence struggles, the Cold War, that somehow, you know, the African soldier was still being rendered as a kind of savage.",
+            "source_file": "46-Mark.mp3",
+            "start_time": 794.5,
+            "end_time": 823.97
+        },
+        {
+            "chunk_id": "67f8b503567805999dee6e51b357f349",
+            "text": "The empathy in terms of this lens, this European lens was, you know, was not really present, that there was a clear divide it seems , attitudinally, towards how the camera was turned on those that were not European.",
+            "source_file": "47-Mark.mp3",
+            "start_time": 824.48,
+            "end_time": 840.63
+        },
+        {
+            "chunk_id": "022c5f82e032b0e529195c18922ac32c",
+            "text": "And looking through the archive, the language that was used to discuss the subjects framed, there was a certain, what I would say, kind of cultural distancing across how it is that the certain bodies were being felt .",
+            "source_file": "48-Mark.mp3",
+            "start_time": 841.13,
+            "end_time": 855.7
+        },
+        {
+            "chunk_id": "dcab2c2bfcf1c3ee1ec144aaf71aa21d",
+            "text": "And looking at it through the lens of, say, people like Agamben's work or Judith Butler's work about which lives matter. It seemed to me, and I think the research kind of highlighted that lives were worth more than others. And it meant that the value of some bodies could be just photographed in ways that were incredibly debasing.",
+            "source_file": "49-Mark.mp3",
+            "start_time": 855.7,
+            "end_time": 880.92
+        },
+        {
+            "chunk_id": "47a74ffde86e9542e710374360200795",
+            "text": "And the underlying current of that meant that there that I think that I would argue that many of these archives kind of play with or reinforce a kind of racial hierarchy that is quite disturbing, quite imperial and colonial.",
+            "source_file": "50-Mark.mp3",
+            "start_time": 881.46,
+            "end_time": 898.9
+        },
+        {
+            "chunk_id": "25fc72fb665dc56e66835e6dce7ca5eb",
+            "text": "You also wrote this, or you were responsible for this wonderful, catalogue of the exhibition, \"Human Rights and Human Wrongs\". And in the very first pages you with a purple background, you have the Universal Declaration of Human Rights with all the nice programatic utopian sentences.",
+            "source_file": "51-Wolfgang.mp3",
+            "start_time": 901.37,
+            "end_time": 929.83
+        },
+        {
+            "chunk_id": "022b3e5efa6172aaf8f6b4eaf44c2548",
+            "text": "And you contrast this, text with pictures of brutal violence and riots in the U.S. So a whole series of pictures in the catalogue of the exhibition, \"Human Rights and Human Wrongs\", you contrasted the very programatic and utopian sentences of the Universal Declaration of Human Rights with the reality of that time . Which was brutal violence, racist violence, police violence in the U.S., but also in other parts of the world.",
+            "source_file": "52-Wolfgang.mp3",
+            "start_time": 930.71,
+            "end_time": 969.63
+        },
+        {
+            "chunk_id": "1a8f2ced8ab412feb792176bc8839a02",
+            "text": "So you show pictures of the civil rights movement in the United States, but also a much broader political context of decolonization. So would you like to tell us a little bit about what was your criteria? What pictures did you select? And what were the most striking pictures in that regard for you?",
+            "source_file": "53-Wolfgang.mp3",
+            "start_time": 969.63,
+            "end_time": 993.17
+        },
+        {
+            "chunk_id": "d5fdd98d6e661cdf28136597dd3f32f9",
+            "text": "You know what I was interested in ... The Universal Declaration ... So we have World War Two and it's a world war, right. We know that African soldiers fought, Indian soldiers fought. We know that soldiers from all over Europe fought and, you know, it was a massive, massive moment.",
+            "source_file": "54-Mark.mp3",
+            "start_time": 993.4,
+            "end_time": 1008.82
+        },
+        {
+            "chunk_id": "4bf87ab5935df16f8ad40f70ae289340",
+            "text": "And in theory, all the promises that Churchill and Eisenhower, the Atlantic Treaty, all these kind of these wonderful moments of turning back kind of fascism, we're going to deliver, right. It was going to be a new world.",
+            "source_file": "55-Mark.mp3",
+            "start_time": 1009.45,
+            "end_time": 1021.51
+        },
+        {
+            "chunk_id": "d838aa7c5e132f1fddd621909a7f97a1",
+            "text": "And it was clearly stated that if you fight and help, liberation will be yours, that the world will be shared . And the economic pact between particularly Britain and America, the money flowed.",
+            "source_file": "56-Mark.mp3",
+            "start_time": 1021.78,
+            "end_time": 1034.36
+        },
+        {
+            "chunk_id": "1f8d4e159a7ade925a20c7c103c858c1",
+            "text": "The end of I think the underlying deal was that, you know, your colonies will be ... You're gonna have to dismantle the financing of the world the way that you're going to have to let America into the market. Kind of still interesting echoes of that today. So there was going to be a new world.",
+            "source_file": "57-Mark.mp3",
+            "start_time": 1034.76,
+            "end_time": 1050.19
+        },
+        {
+            "chunk_id": "b8404c30c373f5170ed4b0667240d35e",
+            "text": "But when the Universal Declaration of Human Rights comes through, it's clearly aimed at, you know, or excluding a large majority of the world . Because a little bit like after this pandemic, there's a desire to reset and go back to where you were. Well, unfortunately, the West got that completely wrong.",
+            "source_file": "58-Mark.mp3",
+            "start_time": 1050.19,
+            "end_time": 1068.5
+        },
+        {
+            "chunk_id": "23c542cc47684ab1873884dffe7ef860",
+            "text": "And the liberation movement because of World War Two was fully on the march and people were not going to go back to where they were. The Caribbean was not going to be the same. Africa was not going to be the same. India was not going to be the same.",
+            "source_file": "59-Mark.mp3",
+            "start_time": 1069.22,
+            "end_time": 1083.38
+        },
+        {
+            "chunk_id": "47c50afc1d3458e9b7ab89d73e2450e9",
+            "text": "And also, they had this Universal Declaration of Universal Rights, which people like \" Du Bois \" were in the room. People were wanting their rights, they were wanting their freedoms, and they deserved them. They fought for them . They were part of the pact that they were that they were engaging with.",
+            "source_file": "60-Mark.mp3",
+            "start_time": 1083.8,
+            "end_time": 1100.13
+        },
+        {
+            "chunk_id": "e0aade2f0a9d2b2dcd91664b08918e23",
+            "text": "Now they're wonderful, these declarations, especially ... And I wanted to look at the exhibition through the lens of Article Six. It's like everybody has the right to representation. And I wanted to think about that in terms of legal rights, the right to representation, but also the right to representation in a visual context.",
+            "source_file": "61-Mark.mp3",
+            "start_time": 1100.51,
+            "end_time": 1118.93
+        },
+        {
+            "chunk_id": "9cbff321d5dbf7ccb628bef0b8b31ee8",
+            "text": "And I'm arguing through that show that everyone has the right really to be seen as a human subject . Not continuously be rendered as kind of war fodder or body fodder or kind of violent, you know, pornography, if you like, through journalistic representations of their work.",
+            "source_file": "62-Mark.mp3",
+            "start_time": 1119.29,
+            "end_time": 1136.98
+        },
+        {
+            "chunk_id": "95a80e3aeaa6c3bf0c5f26b75621a1a2",
+            "text": "And that exhibition was about calling that kind of space, if you like, that way of seeing the world to account. It also was produced as a timeline. Very importantly, you went through the show and you could see all of the conflicts and who was involved in them.",
+            "source_file": "63-Mark.mp3",
+            "start_time": 1136.98,
+            "end_time": 1155.51
+        },
+        {
+            "chunk_id": "3c9bbf2ff624605f8dda4b9e0507d28a",
+            "text": "Yeah, let's start with some of the incidents you are describing, because, as you pointed out, the African soldiers fought for the liberation from the fascism and believed that this idea of freedom and for all men are equal become true. And they demanded to be treated fairly and as equals as their European counterparts in the war.",
+            "source_file": "64-Wolfgang.mp3",
+            "start_time": 1155.51,
+            "end_time": 1186.64
+        },
+        {
+            "chunk_id": "f6a2ffc04d47dbc95bfe20f3bca6d1a3",
+            "text": "And the minimum claim that they put on the table or they shouted on the streets were, we want pensions, we want a proper renumeration. And instead of being honored, there were several massacres, not really famous but we refer to them a lot.",
+            "source_file": "65-Wolfgang.mp3",
+            "start_time": 1187.32,
+            "end_time": 1208.72
+        },
+        {
+            "chunk_id": "21dd6abf8bbeadfee2b231fd78e80d0c",
+            "text": "The Thiaroye Massacre near Dakar with with 35 people killed in a in a demonstration, in a peaceful demonstration, but also in Algeria and other places. So this was about the more even more fundamental right.",
+            "source_file": "66-Wolfgang.mp3",
+            "start_time": 1208.95,
+            "end_time": 1240.59
+        },
+        {
+            "chunk_id": "ce5ac0bb1c761eeaf6e713ef17d51f70",
+            "text": "It's good that you point out the right to recognition. But here we talk about the right to life, the right be treated as equally as their white counterparts. And that was even denied in the wake of the allied forces.",
+            "source_file": "67-Wolfgang.mp3",
+            "start_time": 1240.82,
+            "end_time": 1257.75
+        },
+        {
+            "chunk_id": "43954e232d5a202dd3abfce0916e7467",
+            "text": "Absolutely, and we know that, you know, the hierarchy in the North American, the United States didn't want any black soldiers marching down the Champs \u00c9lys\u00e9es, example.",
+            "source_file": "68-Mark.mp3",
+            "start_time": 1257.75,
+            "end_time": 1268.39
+        },
+        {
+            "chunk_id": "8234e5c31d546a41a5b53b9ec4f21cc6",
+            "text": "If the race came, was still you know, they didn't want African-American soldiers to fight. They wanted them to peel potatoes, right.",
+            "source_file": "69-Mark.mp3",
+            "start_time": 1268.84,
+            "end_time": 1276.04
+        },
+        {
+            "chunk_id": "f45cdfaab58a4dff1e0cdd86535e34b7",
+            "text": "So in terms of like the civil rights movement, you've got black soldiers fighting fascism, going back to North America and been treated in the most ridiculously, you know, culturally Apartheid ways. You know, again, wanting things to be back the way they were.",
+            "source_file": "70-Mark.mp3",
+            "start_time": 1276.39,
+            "end_time": 1291.24
+        },
+        {
+            "chunk_id": "91f42a70e11cd8b0e027945323b1d9bc",
+            "text": "I mean, I think there was also it's not just about the the Senegalese soldiers being killed, soldiers in Ghana being killed, soldiers in Algeria being killed .Basically arguing to be paid for the work that had been done as well. You also had high incidence of lynching in North America of returning soldiers.",
+            "source_file": "71-Mark.mp3",
+            "start_time": 1291.76,
+            "end_time": 1309.2
+        },
+        {
+            "chunk_id": "f1fd7714eeaaaf88b01e8ed712a92a27",
+            "text": "So the idea that you could go abroad and fight and come back and then be lynched for looking at somebody the wrong way was the most bizarre and most ridiculous form of racism that could still be alive. And it just goes to show just how little progress was made at that time.",
+            "source_file": "72-Mark.mp3",
+            "start_time": 1309.45,
+            "end_time": 1329.54
+        },
+        {
+            "chunk_id": "496387b6467bd56b91b6e100d1ce219a",
+            "text": " Yeah, that was in the 1940s and I mean, but it continued throughout the 1950s and the beginning of the 1960s, not only in the U.S. but in many parts of the world . Where we had, you know, armed struggles around the what is called contested decolonization.",
+            "source_file": "73-Wolfgang.mp3",
+            "start_time": 1329.54,
+            "end_time": 1350.61
+        },
+        {
+            "chunk_id": "2dee8a7885872ac5eb16718b50a03b66",
+            "text": "And you also show some pictures of the struggles in the show.",
+            "source_file": "74-Wolfgang.mp3",
+            "start_time": 1351.0,
+            "end_time": 1356.19
+        },
+        {
+            "chunk_id": "8953fcd12a92a6e7526da09b54e9d834",
+            "text": "We know Kenya, the Mau Mau movement, the return to the concentration camp . I think is very important that we showed those images of black people, many of whom were not even involved in the Mau Mau .",
+            "source_file": "75-Mark.mp3",
+            "start_time": 1356.61,
+            "end_time": 1365.62
+        },
+        {
+            "chunk_id": "6f60d4bba2e741b9d11249ab672a8997",
+            "text": "The rounding up, the herding, the replication, if you like, of things which had happened during both World Wars is such that the covert operations, the, as you say, the massacres, the killings, the threat, the segregation policies that were in place. All this was being implemented throughout the kind of what I would say the decolonizing wars, the, you know, the anticolonial kind of efforts that were out there.",
+            "source_file": "76-Mark.mp3",
+            "start_time": 1365.62,
+            "end_time": 1398.72
+        },
+        {
+            "chunk_id": "40f3e2786a1beaf1bb7e5dbc6331e11d",
+            "text": "I think, you know, people in those spaces paid high prices. You know, their liberties with their lives, as you rightly say, were taken, their liberty was taken. And what's interesting, you know, really, when we think about this, what I wanted to bring into the lens here is that this is still living memory. Right?",
+            "source_file": "77-Mark.mp3",
+            "start_time": 1398.98,
+            "end_time": 1418.93
+        },
+        {
+            "chunk_id": "f12a2d13245a6407a68329a77c3a4ac7",
+            "text": " It's very interesting what you're saying, because, I mean, I live in a country, Germany, where the colonial massacres, the colonial genocide from South West Africa was between 1904 to 1908. So that was an even longer way. But still, you know, people second, third, fourth generation remember it and suffer the consequences.",
+            "source_file": "78-Wolfgang.mp3",
+            "start_time": 1422.4,
+            "end_time": 1451.53
+        },
+        {
+            "chunk_id": "4af91de915fa51b435da9f03ac43ae8b",
+            "text": "But moreover, mentioned the Mau Mau and we could also add some other examples . The people here, and that brings me back to your Stuart Hall question. Could we have done more for human rights?",
+            "source_file": "79-Wolfgang.mp3",
+            "start_time": 1451.53,
+            "end_time": 1465.33
+        },
+        {
+            "chunk_id": "06e681aae856dc1bcfe4938799626c0a",
+            "text": "The people--the Mau Mau--went to British courts and based on human rights they demanded reparation for torture, for rape as well in the Netherlands as in Belgium.",
+            "source_file": "80-Wolfgang.mp3",
+            "start_time": 1465.73,
+            "end_time": 1482.78
+        },
+        {
+            "chunk_id": "1c93a0048c4659a0f57f4e04bda93474",
+            "text": "And so should we have started or should they have started to claim human rights, the category of human rights earlier? Should people like Stuart Hall refer to human rights earlier?",
+            "source_file": "81-Wolfgang.mp3",
+            "start_time": 1483.25,
+            "end_time": 1501.01
+        },
+        {
+            "chunk_id": "c70bd82bf10e9bd7478a1930c3d04db7",
+            "text": "That would be a question, because on the other hand, you have this contrast of this, let's say, well-celebrated text of the Universal Declaration of Human Rights. And on the other hand, several of these rights were never really put into force.",
+            "source_file": "82-Wolfgang.mp3",
+            "start_time": 1502.03,
+            "end_time": 1521.73
+        },
+        {
+            "chunk_id": "bd71c82e3b83c70ed51c0105f6eb90db",
+            "text": "So people used other categories : Liberation, independence, and others. Should we have considered human rights earlier?",
+            "source_file": "83-Wolfgang.mp3",
+            "start_time": 1522.44,
+            "end_time": 1533.15
+        },
+        {
+            "chunk_id": "06b46b0595468a02aa78dc17e842892b",
+            "text": "I'd like to say yes, but I'm not sure how . For example, 1948, Universal Declaration of Human Rights . And at the same time you have the beginning of the Apartheid regime. It seems to me there's just so many contradictions at play.",
+            "source_file": "84-Mark.mp3",
+            "start_time": 1537.16,
+            "end_time": 1556.0
+        },
+        {
+            "chunk_id": "9be16760edafcf275212e83e4b3fb396",
+            "text": "You have the partition of India, you know, based on racial lines, Muslim and Hindu. And, you know, there is so many fault lines.",
+            "source_file": "85-Mark.mp3",
+            "start_time": 1556.68,
+            "end_time": 1572.44
+        },
+        {
+            "chunk_id": "31cc064cf96a21d00f4204549c58d19b",
+            "text": "I'm not sure whether the world was ready to hear and champion, particularly black human rights, if that makes sense. And we know that now because we're still having to talk about Black Lives Matter.",
+            "source_file": "86-Mark.mp3",
+            "start_time": 1572.68,
+            "end_time": 1586.05
+        },
+        {
+            "chunk_id": "d0e665beab66db31729a96dd2f332380",
+            "text": "So the arc of kind of political will, juridical\u00a0will, sovereign states been able to embrace this rights question . And we know that one of the key concerns around the Universal Declarations is how they impact on sovereign nations.",
+            "source_file": "87-Mark.mp3",
+            "start_time": 1587.26,
+            "end_time": 1604.5
+        },
+        {
+            "chunk_id": "a67de8f77a5a9cb63cf5792d11f8af63",
+            "text": "I'm not sure how well, how receptive those states are to those lines of inquiry around human rights from the colonial period. I think this is one of the profound big questions that we're facing right now : Can we, can those rights, can those injustices be fixed somehow? Is there justice for that space?",
+            "source_file": "88-Mark.mp3",
+            "start_time": 1605.03,
+            "end_time": 1632.78
+        },
+        {
+            "chunk_id": "174811ae86d89bfb4365a57e2e994e7a",
+            "text": "You and I know very well, you know , Marcelo Brodsky, the artist in Argentina . And I remember talking to Marcelo about what was happening around the junta and his family and his brother and he basically said to me, Mark, all we read--and it stays with me a lot--he said, you know, I'm not interested in truth and reconciliation. I'm interested in justice.",
+            "source_file": "89-Mark.mp3",
+            "start_time": 1633.16,
+            "end_time": 1655.87
+        },
+        {
+            "chunk_id": "7e91076cfaae6849528db0d3ced1a9dc",
+            "text": "So the question there for me is, where does justice live and how do we find it? How do we get it out and how do we use it?",
+            "source_file": "90-Mark.mp3",
+            "start_time": 1657.04,
+            "end_time": 1664.72
+        },
+        {
+            "chunk_id": "eef7cb4d7046193c5c81dce23ff1cbef",
+            "text": "I would contradict my friend Marcelo Brodsky in this regard, because truth is part of making justice or fighting for justice . You cannot fight for justice without establishing some kind of truth. And in this regard, the pictures play quite a big role. And as you describe in several of your publications, also a very ambivalent role.",
+            "source_file": "91-Wolfgang.mp3",
+            "start_time": 1666.49,
+            "end_time": 1690.25
+        },
+        {
+            "chunk_id": "4f015460d103327027558f24bd04a79e",
+            "text": "On one hand, you mentioned the pictures, the Congo .The famous Congo pictures by the missionaries. And you point out that these pictures, the \"Alice Seeley Harris pictures\" and the work of the Congo Reform Association, highlighted the outrageous regime of Leopold II from Belgium.",
+            "source_file": "92-Wolfgang.mp3",
+            "start_time": 1690.25,
+            "end_time": 1722.42
+        },
+        {
+            "chunk_id": "e4540b963c36a14729af16f32ff7c4be",
+            "text": "And in a way, until today, are these pictures to show the pictures is somehow necessary to establish some kind of truth and also communicate what happened in colonial times. On the other hand, you point out to the downside of showing these pictures today.",
+            "source_file": "93-Wolfgang.mp3",
+            "start_time": 1722.88,
+            "end_time": 1742.85
+        },
+        {
+            "chunk_id": "bd269449acf4852fdad7334aa5dfbf8a",
+            "text": "Yeah, it's one of those ... It's, OK, so one of the key mantras that I have in my work is we have to ask ourselves, what's the work, the work is doing? It's when do you deploy the images and for what purpose? I think that's a really important question for us to continuously ask ourselves, what's the work the work's doing?",
+            "source_file": "94-Mark.mp3",
+            "start_time": 1744.03,
+            "end_time": 1766.0
+        },
+        {
+            "chunk_id": "f5113b5731546e30e81399dd9919789d",
+            "text": "So when I think about some of the cultural work, the images of lynching from the United States have done, they helped African-Americans kind of see the level of pleasure that the white people who were attending those lynching moments took. That's very important.",
+            "source_file": "95-Mark.mp3",
+            "start_time": 1766.63,
+            "end_time": 1785.31
+        },
+        {
+            "chunk_id": "0acdbcb71febd63c22b3a898c9575fbb",
+            "text": "So we can then begin to read the violence of the images, not necessarily in the hanging, the lynched, broken body . The violence of the images. Just what kind of place were these people in when they're having a party while someone is being killed in that way? So it affords us to ask some really important questions.",
+            "source_file": "96-Mark.mp3",
+            "start_time": 1785.97,
+            "end_time": 1807.6
+        },
+        {
+            "chunk_id": "f7f85251174d45da76115ff266e09b29",
+            "text": "The other work those images might have done is that they forced, you know, an official apology from the Senate about the lack of care that the American government took across its citizens at that time. That's a very important apology that people forget.",
+            "source_file": "97-Mark.mp3",
+            "start_time": 1807.6,
+            "end_time": 1827.69
+        },
+        {
+            "chunk_id": "d6fa9c4b1b52cccae755f7590b1201c3",
+            "text": "And I think, you know, we have to recognize that what Alice Seeley Harris and those missionary photographs were doing is they're trying to bring the brutality to the fore, especially in Britain and again, North America. But at the same time, that work that they're doing means that there's a tide of ...",
+            "source_file": "98-Mark.mp3",
+            "start_time": 1828.17,
+            "end_time": 1846.97
+        },
+        {
+            "chunk_id": "9f0fa769e8bafffc496b0dd2da219e99",
+            "text": "You know, he feared these photographs, Leopold . He called it, the Kodak camera, the kind of the dreaded kind of camera. You know, the camera was ... He tried to enter into a visual propaganda back . But it's primarily the work that those images did that brought to light what Leopold was up to. Very, very important.",
+            "source_file": "99-Mark.mp3",
+            "start_time": 1847.54,
+            "end_time": 1867.79
+        },
+        {
+            "chunk_id": "ec98a6ba9053aaf2b4122c0d1a26ca58",
+            "text": "And at the same time, we have to ask ourselves, well, what's actually going on in the missionary context anyway? You know, Catholic missionaries, Protestant missionaries. So there's all kinds of layers of colonialities that work within that work.",
+            "source_file": "100-Mark.mp3",
+            "start_time": 1868.28,
+            "end_time": 1886.22
+        },
+        {
+            "chunk_id": "32a8442bd41de67c75dbbd6d6c93281f",
+            "text": "This is what I mean by ... We were just talking about truth. Truth is like a working process, isn't it? We keep on peeling it back. It's a conversation. It's a layer. Just when you think you've got one place, there's another layer of truth that we can peel back. And I think that peeling process works across time, works across experience and works through different levels of inquiry. So it's about truths, really, isn't it?",
+            "source_file": "101-",
+            "start_time": 1886.34,
+            "end_time": 1915.15
+        },
+        {
+            "chunk_id": "830dc7ee27910cdeaf023e3e827cbc8c",
+            "text": "Yeah, it's interesting also because we have a different moment in this history, different layers of history where, you know, the impact of the pictures differ s completely.",
+            "source_file": "102-Wolfgang.mp3",
+            "start_time": 1915.15,
+            "end_time": 1926.1
+        },
+        {
+            "chunk_id": "769ac15f79150c6c6c10b34185529aa9",
+            "text": "I mean, it was an act of resistance to exhibit the picture at the time of this colonial violence. But now, you know, you have to ask yourself if you can demonstrate the same pictures now.",
+            "source_file": "103-Wolfgang.mp3",
+            "start_time": 1926.16,
+            "end_time": 1940.9
+        },
+        {
+            "chunk_id": "d5dffedc624a9c4666bd6c927e2204b9",
+            "text": "And I would like to come back to the first part of your answer. And that was the question of what impact the pictures actually have",
+            "source_file": "104-Wolfgang.mp3",
+            "start_time": 1941.3,
+            "end_time": 1952.78
+        },
+        {
+            "chunk_id": "672e773a2ecd65b877753d1e7aa58041",
+            "text": " some of the pictures exposed in \"Human Rights and Human Wrongs\" are extremely cruel, extremely brutal. We see dead and mutilated corpses, some of them very emblematic. We could add other very famous pictures of the Vietnam War, which played a huge role.",
+            "source_file": "105-Wolfgang.mp3",
+            "start_time": 1954.48,
+            "end_time": 1977.71
+        },
+        {
+            "chunk_id": "9858b0a93275622d1ac6844284de10e7",
+            "text": "And that, you know, brings me to Susan Sontag's essay, \"The Suffering of Others,\" where she writes about the \"Abu Ghraib pictures\" and puts a very famous question: what do we do with the feelings that have been aroused through the pictures? And what do we do with the knowledge or what kind of knowledge has been communicated by the pictures?",
+            "source_file": "106-Wolfgang.mp3",
+            "start_time": 1978.03,
+            "end_time": 2029.97
+        },
+        {
+            "chunk_id": "53df3ca8dd0530a3f5238fb21d668334",
+            "text": "Well, I think we need to look harder into images. I think we have to take responsibility when we do that looking. I don't think people are anesthetized through looking at those images. I think they become bored sometimes because of the context in which those images are presented to us in.",
+            "source_file": "107-Mark.mp3",
+            "start_time": 2030.56,
+            "end_time": 2055.53
+        },
+        {
+            "chunk_id": "8758c78bfc4cea1df47fb5b84d202b1d",
+            "text": "I think we have to give the back story to where these images come from so that people fully understand what's going on.",
+            "source_file": "108-Mark.mp3",
+            "start_time": 2056.1,
+            "end_time": 2065.55
+        },
+        {
+            "chunk_id": "88851610564f66a90eedf71ffa4726f9",
+            "text": "I think the spectacle of those Abu Ghraib pictures are, you know, they say an awful lot about how we are in the West, really. And I think that's the painful work, that we have to recognize. And I see them as an arc back.",
+            "source_file": "109-Mark.mp3",
+            "start_time": 2065.72,
+            "end_time": 2087.48
+        },
+        {
+            "chunk_id": "9caf742945b620d77646a7770688ac68",
+            "text": "There are photographs, for example in Algeria like that. We know that in conflict and in war, when we go into the photographic archives .",
+            "source_file": "110-Mark.mp3",
+            "start_time": 2088.14,
+            "end_time": 2098.5
+        },
+        {
+            "chunk_id": "65cd54eb2ea3e6d9aa61933293c93939",
+            "text": "Those Abu Ghraib photographs are not some bizarre out of context moment . Trophy , the trophyism and the work of, you know, holding your victim up and pointing the camera at them and enjoying that hunting kind of game is part of what's gone on for a very, very long time.",
+            "source_file": "111-Mark.mp3",
+            "start_time": 2098.85,
+            "end_time": 2119.12
+        },
+        {
+            "chunk_id": "ea4ac2195428600e0761b3bad303d4af",
+            "text": " What's interesting about the Abu Ghraib scenario is that it reminds us of that and it's incredibly uncomfortable . And it has to be prosecuted. And it's a kind of shame that, you know, it's a shame on that. But it's a shame that's in many archives , that way of being",
+            "source_file": "112-Mark.mp3",
+            "start_time": 2119.84,
+            "end_time": 2138.02
+        },
+        {
+            "chunk_id": "069735b0cd7376db54cd718746fbaee9",
+            "text": "There would be a fantastic piece of research to be done to pull similar images out of the archives and personal soldiers, trophy hunting scenarios.",
+            "source_file": "113-Mark.mp3",
+            "start_time": 2138.76,
+            "end_time": 2147.95
+        },
+        {
+            "chunk_id": "894d0e3ab48c29bb4443989b27de9361",
+            "text": "So for me, what do we do with it, is that we have to unpack and prosecute and realize that that's part of what we've done. That's who we are, right. This is not a blip.",
+            "source_file": "114-Mark.mp3",
+            "start_time": 2147.95,
+            "end_time": 2161.52
+        },
+        {
+            "chunk_id": "69e374d655bb9df46901dad27794a36c",
+            "text": "And it's interesting that there's always some poor example. Someone has to be made an example of, someone has to be prosecuted for it. But culturally, I think we have to ask ourselves what kind of spaces, what kind of culture are we, which enables this thing to surface. What is it about war that we love so much?",
+            "source_file": "115-Mark.mp3",
+            "start_time": 2162.03,
+            "end_time": 2178.96
+        },
+        {
+            "chunk_id": "d55164b0bae92408ab0d352bd09570d0",
+            "text": "Yeah, that's a very interesting take . And in fact you're taking a position which has been discussed around photography in the last years: do the pictures only show the visible part of the violence or are we capable to show more of the content?",
+            "source_file": "116-Wolfgang.mp3",
+            "start_time": 2180.79,
+            "end_time": 2204.99
+        },
+        {
+            "chunk_id": "e6d685c34205966a1d5f227a0d20ae7e",
+            "text": "And Fred Ritchin for example, with whom I discussed recently, mentioned not only the very famous picture around the Vietnam War of the war photographers, but also a book called Murder, Incorporated. Which is, I think, very interesting that from the beginning on, there were people who said we have to also demonstrate how violence in less visible ways and structural violence works.",
+            "source_file": "117-Wolfgang.mp3",
+            "start_time": 2205.44,
+            "end_time": 2240.84
+        },
+        {
+            "chunk_id": "08c56c507df88c465a9f49670bc21f75",
+            "text": "Yes, Wolfgang, That's a very important point, because it's what's going on outside the frame, that's the drama . The drama is easily containable. The moment of violence is easy and we need that.",
+            "source_file": "118-Mark.mp3",
+            "start_time": 2240.88,
+            "end_time": 2252.49
+        },
+        {
+            "chunk_id": "7b02a5ee31e1a8fc57ce6849ff18e055",
+            "text": "But I think in terms of visual literacy, we have to ask ourselves, we have to train people or train ourselves to look outside the frame, look beyond what's been presented, to think in that way, to think right, OK, \"Vietnam War, young girl running , napalm bomb,\" you know, the disasters of all that stuff. But what is that about? We have to ask ourselves that question, constantly remind ourselves.",
+            "source_file": "119-Mark.mp3",
+            "start_time": 2253.28,
+            "end_time": 2274.8
+        },
+        {
+            "chunk_id": "cacd662d25ee525c7e5b4aefdf692dbe",
+            "text": "Yeah, I mean, we have to ask ourselves a question, And let's say we are more or less considering the impact of the pictures, but that's not the mainstream approach The mainstream approach is still, you know, showing tons of pictures of mutilated corpses in Syria as shown in the \"Caesar photos .\"",
+            "source_file": "120-Wolfgang.mp3",
+            "start_time": 2276.24,
+            "end_time": 2307.62
+        },
+        {
+            "chunk_id": "ea3f22d03e4728c3be3ca689a0a18a29",
+            "text": " We work with it as a human rights organization, because we try to bring those, who were tortured and killed people in Syria, to bring them justice. And the Caesar photos serve as a very important evidence in this regard.",
+            "source_file": "121-Wolfgang.mp3",
+            "start_time": 2309.81,
+            "end_time": 2326.91
+        },
+        {
+            "chunk_id": "43a62a233782abe01f12af436467ec27",
+            "text": "But there are people who present these pictures in, let's say, town halls at the U.N. or in parliamentary buildings , where in fact, you see only the pictures framed. And, you know, the text, if there is any in the catalogues or the website is not read by the people. So how do you how do we deal with the force of the pictures, that the pictures are so much more forceful than what you and I and our friends are writing about them?",
+            "source_file": "122-Wolfgang.mp3",
+            "start_time": 2327.32,
+            "end_time": 2361.24
+        },
+        {
+            "chunk_id": "1d7a89ff6bab236db061089f2ce50d38",
+            "text": "Yeah, I mean, again, I think it's about taking responsibility, isn't it? I mean, I talked to a young Syrian photographer who was doing his postgraduate work at the London School of Communications up here. And he was presenting images from Syria of wounded and broken bodies.",
+            "source_file": "123-Mark.mp3",
+            "start_time": 2362.82,
+            "end_time": 2385.41
+        },
+        {
+            "chunk_id": "66e8177de48f84e2ac4a3eee1496af66",
+            "text": "And I said it's really important, that you encourage your audience to take more responsibility , is to think about how else you communicate, what else is going on within that space.",
+            "source_file": "124-Mark.mp3",
+            "start_time": 2385.58,
+            "end_time": 2396.03
+        },
+        {
+            "chunk_id": "388c4106effda3be8c760bc3d3965e49",
+            "text": "For example, he was using a visual device where the really violent pictures were covered with a kind of veiling device, which meant that you lifted them up and peeled back and looked at them. But I found that problematic as well, because it's a bit like, well, it makes it even more exotic if we know how the veil is being constructed in Western culture.",
+            "source_file": "125-Mark.mp3",
+            "start_time": 2396.34,
+            "end_time": 2415.89
+        },
+        {
+            "chunk_id": "56dba78897a65cc0a8f3f487ec3d6b6a",
+            "text": "So you got images from Syria, you know, the Middle East , covered in a veil that you then lift up and peek into and closed down . It almost emphasized the kind of pornographic nature of that. And this was from a local photographer who was very sensitive to the situation.",
+            "source_file": "126-Mark.mp3",
+            "start_time": 2415.89,
+            "end_time": 2430.14
+        },
+        {
+            "chunk_id": "accb97bad9e700862671bf9399533909",
+            "text": "I think it's a really difficult job to bring images of violence from violent situations and unpack them in a way that people fully understand the complexities of what's going on within that situation. But I also think our audiences are not stupid. We can make them work a bit harder .",
+            "source_file": "127-Mark.mp3",
+            "start_time": 2431.0,
+            "end_time": 2448.55
+        },
+        {
+            "chunk_id": "406d63977252747b84a010afd64efbee",
+            "text": "And people will stand in front of text --we've known that--and read what's actually there. You know, I think you just I think good exhibitions take people on a really important journey. They should start... you know, it's a narrative, isn't it? You've got to take them on a journey.",
+            "source_file": "128-Mark.mp3",
+            "start_time": 2449.17,
+            "end_time": 2464.28
+        },
+        {
+            "chunk_id": "fdd698d387bc860a1f7a599e411b38ac",
+            "text": "You can't just show them something you can't go: Bing ! Look at that ! That's really awful, man with his head blown off . Bing ! This is really awful, a bomb went off here . And say who, what, where, when, why... That's the kind of benchmark for journalism.",
+            "source_file": "129-Mark.mp3",
+            "start_time": 2464.28,
+            "end_time": 2475.75
+        },
+        {
+            "chunk_id": "8accea411b84b059ca0896d20748685e",
+            "text": "It's like, what are the conditions of this happening ? Where, is .. You know, how do we do that? So, for example, when I did the \"Human Rights, Human Wrongs\" show , it was a really simple device, but I created like a collection of cards. It wasn't just about producing a book. Periodically through the exhibition, there were 52 cards which were made and each one of them replicated an image.",
+            "source_file": "130-Mark.mp3",
+            "start_time": 2476.04,
+            "end_time": 2499.73
+        },
+        {
+            "chunk_id": "b49c2d8c057747f9659020b423ee9d32",
+            "text": "And on the back of our image, you had the caption for the image, what happened on that day, but also other significant political events that happened at the same time, which meant that that image and that photograph was put in context of other events which were happening, which impacted on that image. When you read that other stuff and you turn the card over, you saw that image in a political time.",
+            "source_file": "131-Mark.mp3",
+            "start_time": 2499.99,
+            "end_time": 2524.73
+        },
+        {
+            "chunk_id": "869fc8edcc946a2c69c2662fba1d0cb4",
+            "text": "I hear you talking and I completely agree, and it's about taking responsibility and in this way our work resembles yours very much because it's the same thing we are doing. You're taking a picture and put it in a frame on the wall in your gallery, and we're taking a single case and frame it within the legal architecture, which is available for us. And sometimes it's unjust and unfair laws.",
+            "source_file": "132-Wolfgang.mp3",
+            "start_time": 2527.22,
+            "end_time": 2558.42
+        },
+        {
+            "chunk_id": "38f14a5bd61466c5981020c44dd4c02d",
+            "text": "And so to be stuck within that frame is actually something wrong. And our task is to overcome this. Especially when it's framed by others, when it's framed by those who were who are who live and work and act in the continuity of the original incidents.",
+            "source_file": "133-Wolfgang.mp3",
+            "start_time": 2559.07,
+            "end_time": 2580.45
+        },
+        {
+            "chunk_id": "38dcd9b97405af150e65bb22494c1949",
+            "text": "And that brings me to your book, \"Decolonising the Camera : Photography in Racial Time\", where you tell the kind of story you just laid out.",
+            "source_file": "134-Wolfgang.mp3",
+            "start_time": 2580.75,
+            "end_time": 2594.86
+        },
+        {
+            "chunk_id": "5b2ab60d139ff80c6a86e511bbacb783",
+            "text": "You ask in the beginning two crucial questions. One is , if photography has been a liberating device or an oppressive weapon? And in a way, we have already discussed this question. And the second question, what epistemic value has photography brought to our understanding of difference?",
+            "source_file": "135-Wolfgang.mp3",
+            "start_time": 2595.66,
+            "end_time": 2634.48
+        },
+        {
+            "chunk_id": "4c74ee278fa34b037cdf2314468361c2",
+            "text": "You know, first of all, I guess the key thing really what I wanted to interrogate is that if humanity was going to get closer to each other, has photography helped us achieve that?",
+            "source_file": "136-Mark.mp3",
+            "start_time": 2635.86,
+            "end_time": 2661.7
+        },
+        {
+            "chunk_id": "e7941d2e1a1d8ec4aad3c8a150a8be36",
+            "text": "If we take World War Two again, are we any closer to understanding ourselves and people that we see as different? Are we closer? And has photography helped us achieve that, really?",
+            "source_file": "137-Mark.mp3",
+            "start_time": 2661.93,
+            "end_time": 2674.83
+        },
+        {
+            "chunk_id": "fb4da7185d0d31a7400fcc2a534c3f74",
+            "text": "And I guess pessimistically , I was saying, it hasn't . Because of all of the kind of distancing that has been going on . The refugee is incredibly distanced through photography. The you know, the conflicts and victims are incredibly distanced through photography. Yet we consume these images daily. We don't care about the lives of many Others.",
+            "source_file": "138-Mark.mp3",
+            "start_time": 2675.92,
+            "end_time": 2698.39
+        },
+        {
+            "chunk_id": "5bb636753ae0033a4c7ac4a1a5f6d4ac",
+            "text": "Whereas in theory, I would like to think that even in my lifetime we'd have cared more about the lives of Others . Would have been more hospitable.",
+            "source_file": "139-Mark.mp3",
+            "start_time": 2698.72,
+            "end_time": 2705.93
+        },
+        {
+            "chunk_id": "27115ce90c38deeb34207a325eab111f",
+            "text": "So I talk a lot about Levinas' work, Emmanuel Levinas' work about the face of the Other and looking into the face of the Other. So does photography enable us to look into the face of the Other and take a form of responsibility for that Other?",
+            "source_file": "140-Mark.mp3",
+            "start_time": 2706.52,
+            "end_time": 2721.4
+        },
+        {
+            "chunk_id": "b640ec15f1ee131e3e1da452e9030b77",
+            "text": "And I think we have forgotten, I guess what I'm really saying, is to look into the face of the Other and again take responsibility for that subject. So when I don't take responsibility for you as a human, I'm failing my own humanity .",
+            "source_file": "141-Mark.mp3",
+            "start_time": 2722.02,
+            "end_time": 2736.17
+        },
+        {
+            "chunk_id": "2b58365b91b1d1ec612c08625a77e947",
+            "text": "This is really what the undercurrent point is in the context of this conversation, around the work that images do. That was very important for me to kind of put that point out there.",
+            "source_file": "142-Mark.mp3",
+            "start_time": 2736.6,
+            "end_time": 2745.83
+        },
+        {
+            "chunk_id": "60202aeaaa1b1499c46b06483e8ee765",
+            "text": "So, I guess , what new knowledge is there? Well, we've seen the world and we've seen all of its violence. So what do we understand about that? Do we just keep on replicating that violence because we're in a cycle of it, it seems? That we can't break this coloniality, this chain of imperialism, which now market forces drive for resources .",
+            "source_file": "143-Mark.mp3",
+            "start_time": 2746.54,
+            "end_time": 2767.77
+        },
+        {
+            "chunk_id": "dc0767ae96c8ec98bfa5119b56da6ecc",
+            "text": "Or can we go to a decolonial space where we listen more? Where we unlearn more. Where we take indigenous voices and treat them with equality.",
+            "source_file": "144-Mark.mp3",
+            "start_time": 2768.27,
+            "end_time": 2779.23
+        },
+        {
+            "chunk_id": "2d4b6dc65bb271add07d179e4b153915",
+            "text": "So these are the kind of questions that I'm beginning to or I wanted to just bring to the fore in terms of answering them . I'm not sure what the answers are. It\u00b4s a process . What my great friend Stuart Hall would say , \"It's an unfinished conversation.\"",
+            "source_file": "145-Mark.mp3",
+            "start_time": 2779.72,
+            "end_time": 2795.68
+        },
+        {
+            "chunk_id": "53dc9cfab7c90573574a7c624a286ba8",
+            "text": "But at least I wanted to put that conversation on there. If we can decolonize the camera, that means that we begin to see things differently. And if we recognize that we all don't live in the same time. I'm very interested in the concept of race and time.",
+            "source_file": "146-",
+            "start_time": 2796.22,
+            "end_time": 2810.63
+        },
+        {
+            "chunk_id": "2f4c80fa9af5cdc31d304e697a9e02d4",
+            "text": "For example, it takes five minutes to kill a black man in the streets of America, but it takes like 300 years to build a museum to celebrate African-American history and culture.",
+            "source_file": "147-Mark.mp3",
+            "start_time": 2811.06,
+            "end_time": 2820.41
+        },
+        {
+            "chunk_id": "09ca5a74a8c7e28c19dd250f93025e0f",
+            "text": "W here all it takes liberatory. .. It takes forever for the civil rights movement to kind of impact on American psyche. And it's still very much a living process. And yet some people have rights given to them inherently, they're universally theirs. They assume them. They have them, they own them. Others are continuously fighting for them. And it is because of their difference that they're continuously fighting for those spaces.",
+            "source_file": "148-Mark.mp3",
+            "start_time": 2820.87,
+            "end_time": 2845.12
+        },
+        {
+            "chunk_id": "986dd29a144a3595240f16b24fa427a0",
+            "text": "So this is as much for me a book about photography as it is about how receptive we are to difference.",
+            "source_file": "149-Mark.mp3",
+            "start_time": 2845.4,
+            "end_time": 2853.23
+        },
+        {
+            "chunk_id": "85ab0bd1c038aab6743b677c1576ad04",
+            "text": "Yeah, I think in the book I read it with a lot of pleasure, because you tell a whole lot of stories around pictures . And I think that is a wonderful example, how you can put light on what is happening outside the frame.",
+            "source_file": "150-Wolfgang.mp3",
+            "start_time": 2855.06,
+            "end_time": 2875.68
+        },
+        {
+            "chunk_id": "e0d26063b463219e0e38c8308b3be344",
+            "text": "And one striking example is, is you talk about one of the most iconic photographs of African independence struggle . The \"photograph of a young German photographer, Robert Lebeck,\" who in June 1960 shows the ceremonies of the Belgium King Baudouin, which has been as an act of resistance by a young activist taken away from the king and Lebeck showed the sequence of the act.",
+            "source_file": "151-Wolfgang.mp3",
+            "start_time": 2876.17,
+            "end_time": 2906.34
+        },
+        {
+            "chunk_id": "a940aa9bfea379136149b63ab4096de3",
+            "text": "And what I really liked about it, first of all, I mean, it's showing an act of resistance, very I mean, very, very nonviolent. The guy has a smile on his face when he takes the sword and runs away. And then you put the focus on something else. It's not only about, you know, this very doubtful ceremony that the king grants independence to Congo.",
+            "source_file": "152-Wolfgang.mp3",
+            "start_time": 2906.34,
+            "end_time": 2935.44
+        },
+        {
+            "chunk_id": "f545a9ffe5cb5bb6e15ad88f213356ce",
+            "text": "It shows and I want to quote that: \"The racist and dehumanizing violent ideology of Belgium 's rule remained intact for decades, up to and beyond Congo's independence in 1960.\" So that can be read with a picture like this. And you told the story and people like you are telling these stories. So there is no doubt that it's necessary to show these kind of pictures.",
+            "source_file": "153-Wolfgang.mp3",
+            "start_time": 2935.94,
+            "end_time": 2963.93
+        },
+        {
+            "chunk_id": "29ec2ab25e31d419b3d4dd3412d0cf03",
+            "text": "Well, I mean , what's great about that sequence, number one, it is my all time favorite sequence of photographs . If you love images, I would encourage anybody to just spend some time by looking at so many things that are happening inside the frame: King Baudouin, Kasavubu, an ex-soldier stealing a sword, crowds of white Belgian people lining up and clapping.",
+            "source_file": "154-Mark.mp3",
+            "start_time": 2964.75,
+            "end_time": 2995.72
+        },
+        {
+            "chunk_id": "c57934cb592d7a70cc51309e3c42c639",
+            "text": "Everything is supposed to be going in the right direction, but it's clearly not. It's clearly not . Because what of course that photograph enables us to do is to talk about Lumumba. He's not even in the frame.",
+            "source_file": "155-Mark.mp3",
+            "start_time": 2996.08,
+            "end_time": 3009.67
+        },
+        {
+            "chunk_id": "e724bc01461202cefee8c40ce29eba5c",
+            "text": "And it's interesting politically that his speech just the next day is already signing the death toll of his life and it allows us to talk about what they did to him.",
+            "source_file": "156-Mark.mp3",
+            "start_time": 3010.68,
+            "end_time": 3023.2
+        },
+        {
+            "chunk_id": "20f04833560bc6e444f44527a29b4812",
+            "text": "The violence, the shooting, the kidnapping, the burning body... it just shows that the ferocity of kind of imperial, post-independent colonial presence is still very much there. And the conflict that Belgium was defaced through Katanga province and the mineral extraction, and it enables the conversation to carry on. So, yes, it's a fantastic picture.",
+            "source_file": "157-Mark.mp3",
+            "start_time": 3023.2,
+            "end_time": 3055.59
+        },
+        {
+            "chunk_id": "3ec8d1741b1ca49aacdb5a9704b984f8",
+            "text": "But, yes, it brings us fundamentally into what was really happening behind the scenes in the Congo. A good image, like a good legal case, opens the door to a new chamber of knowledge.",
+            "source_file": "158-Mark.mp3",
+            "start_time": 3056.08,
+            "end_time": 3068.1
+        },
+        {
+            "chunk_id": "d7bf1fcfa5f869a6c6b81a0d849d0559",
+            "text": "So that's what you also concluded, decolonizing the photography image is an act of unburdening it from the assumed normative hegemonic colonial conditions present , consciously or unconsciously , in the moment of its original making and also in its reading and displays today.",
+            "source_file": "159-Wolfgang.mp3",
+            "start_time": 3071.09,
+            "end_time": 3092.11
+        },
+        {
+            "chunk_id": "877de1d5d3b14f931d4ca1fd3b8678ed",
+            "text": "Yes, in the present, both joining the past and the present to get new knowledge, that's the key .",
+            "source_file": "160-Mark.mp3",
+            "start_time": 3092.49,
+            "end_time": 3098.45
+        },
+        {
+            "chunk_id": "a98dd36e165e4c0b7f3a4ed695ef6a9d",
+            "text": "Understanding that door and seeing that images are not fixed in time Each time I go back to an image, I see it does different work, because I'm not in the same place and nor is the time that the image was taken.",
+            "source_file": "161-Mark.mp3",
+            "start_time": 3098.85,
+            "end_time": 3113.96
+        },
+        {
+            "chunk_id": "d3e5a9f4917a4507ab01b29e0f0c4173",
+            "text": "So you showed the pictures of Alice Seeley Harris, a missionary photographer who documented the outrageous abuses and killings by King Leopold II. from Belgium. But you also raise the question in the context of it that it's not only for the liberation and freedom of the African subject, but also for the construction of a higher and more morally colonizing authority that was understood as uniquely British and therefore, just .",
+            "source_file": "162-Wolfgang.mp3",
+            "start_time": 3117.05,
+            "end_time": 3152.67
+        },
+        {
+            "chunk_id": "0241adb7256b9191a580a992bfaba3ea",
+            "text": "So this brings me a little bit into \"Makau Mutua's\" writing, who talks about the paradigm of perpetrator, victim and saviors. So the Western humanitarian human rights people, lawyers, NGOs, go to the global south, point to one group, the perpetrators, the savages, then select another group, the victims and then the role they have for themselves is the savior.",
+            "source_file": "163-Wolfgang.mp3",
+            "start_time": 3153.02,
+            "end_time": 3189.21
+        },
+        {
+            "chunk_id": "61423bbb0e03d919ccc7777ae01ee69c",
+            "text": "So at the same time, Alice Seely Harris is taking this picture. She's part of this of this colonizing mission. In a way, it's by showing these pictures, she shows a kind of continuity, very ambivalent maneuver, which brings me also to Bartolom\u00e9 de Las Casas, he is in a similar line and established, in a way, the moral legitimation for future colonizing or better to say now civilizing all humanitarian missions. How do you see the continuity of Las Casas and Alice Seely Harris and current human rights missionaries?",
+            "source_file": "164-Wolfgang.mp3",
+            "start_time": 3189.21,
+            "end_time": 3248.57
+        },
+        {
+            "chunk_id": "9864dc1bee20aa4de0e1d696b507c738",
+            "text": "That is a fantastic question, because what is it, 40, 90 to 2020? What's changed?",
+            "source_file": "165-Mark.mp3",
+            "start_time": 3248.98,
+            "end_time": 3264.74
+        },
+        {
+            "chunk_id": "8c3aa0c31cd856e4a9dc33f430a5acfc",
+            "text": "It's almost as if that formula. This is one of the key crises, isn\u00b4t it, its like Alice is in the middle of the Congo and one of the key photographs, on which she's showing Leopold's amputations and deaths and she builds a photograph of her standing on top of a pyramid of young Congolese children, So she's at the top of this pyramid.",
+            "source_file": "166-Mark.mp3",
+            "start_time": 3266.35,
+            "end_time": 3292.79
+        },
+        {
+            "chunk_id": "3b3812b8b22e8b8643e6f538aad25cef",
+            "text": "And the violence of that image, in my view, is in is what's the word? It's not as bad, but is equally problematic as the kind of amputations . Because Leopold is kind of oppressing people through a kind of butchery, if you like, a really direct violence. And then we have this other colonial ity doing it through, in theory, a much more passive space. The result is the same . Passive black bodies.",
+            "source_file": "167-Mark.mp3",
+            "start_time": 3293.58,
+            "end_time": 3330.37
+        },
+        {
+            "chunk_id": "1e5373b295198ea8cec466bd52cb7e08",
+            "text": " It's a crazy picture you're referring to, we see this young kids from Congo all, malnourished and all naked or nearly naked.",
+            "source_file": "168-Wolfgang.mp3",
+            "start_time": 3330.37,
+            "end_time": 3351.9
+        },
+        {
+            "chunk_id": "97f6a3530587ca7ad3490fb399666772",
+            "text": "And then you see the white woman with white clothes and a white hat. And it's at the top. It's like it's taken from this religious symbolism. If you would have seen it for the first time, you would say this is a photo montage. This is like a persiflage. But it's true.",
+            "source_file": "169-Wolfgang.mp3",
+            "start_time": 3352.39,
+            "end_time": 3388.79
+        },
+        {
+            "chunk_id": "e8cb977218e874a335f6dd752c21ee6e",
+            "text": "And I think that's captured very well especially in this chapter that at the same time how impactful pictures can be if they are put in the right context. And still they are at the same time part of the problem.",
+            "source_file": "170-Wolfgang.mp3",
+            "start_time": 3389.38,
+            "end_time": 3408.83
+        },
+        {
+            "chunk_id": "f2533236b4331f4e4591f5032698f226",
+            "text": "Yes, so , I really respect what Alice did with her camera, but at the same time it's still problematic what was going on. So that hierarchy, that place of as you rightly point out, the finding, finding the victim, finding the perpetrator, and somehow you're not implicated in that space, which that photograph clearly demonstrates that she doesn't consider her presence to be a kind of violent one , is part of what we need to be mindful of.",
+            "source_file": "171-Mark.mp3",
+            "start_time": 3409.13,
+            "end_time": 3449.07
+        },
+        {
+            "chunk_id": "6b2f64783cdfefdb1c88f67cca9293d5",
+            "text": "I know that I'm talking to a photography expert, but we're talking about arts and human rights. What is the role of music in this regard?",
+            "source_file": "172-Wolfgang.mp3",
+            "start_time": 3732.55,
+            "end_time": 3742.31
+        },
+        {
+            "chunk_id": "ed1d68dd38795814818e2158f4ebc588",
+            "text": "Oh, thank God you asked that question . My God, if I could start it all over again, it would be through the lens of either journalism or music. I mean I am wearing today my John Coltrane T-shirt. I am completely, in love with what music can do to us.",
+            "source_file": "173-Mark.mp3",
+            "start_time": 3742.31,
+            "end_time": 3763.23
+        },
+        {
+            "chunk_id": "ea85bdf533432db5d283bfb8a0ae1aa4",
+            "text": " I mean, I love my jazz. I love the kind of freedom that music can bring . I mean, if we can create shows that get people to dance, then we're doing a good job, right? If we can get people to move along through the politics of our world and dance to the same rhythm, then we're doing a fantastic job.",
+            "source_file": "174-Mark.mp3",
+            "start_time": 3763.23,
+            "end_time": 3782.62
+        },
+        {
+            "chunk_id": "50e0ce5227b57af9fa388440be3b8d0b",
+            "text": "If we can get our legal services to do something, through the praxis, get people feeling that they can own it and dance with it in a way that makes them feel as though the thing that they're working through is on their side , that is in their soul, that is spiritually uplifting in that way , that only music seems to be able to do often , then we're doing good work.",
+            "source_file": "175-Mark.mp3",
+            "start_time": 3782.83,
+            "end_time": 3802.47
+        },
+        {
+            "chunk_id": "9e04a9b260c60a385df8b805910138d4",
+            "text": "So , what I love about John Coltrane is that he just kept on pushing the envelope. Absolutely did not stay still , went to the dark corners of what jazz could be and created a pure, beautiful form that each time you listen to , you get something different out of . And good ideas should be like that. And good art should do that to us as well.",
+            "source_file": "176-Mark.mp3",
+            "start_time": 3802.85,
+            "end_time": 3828.1
+        },
+        {
+            "chunk_id": "e99fca53173fc6c859c1526120668997",
+            "text": "Thank you very much, Mark, and I hope that I will be able to talk and also play some more music in the near future",
+            "source_file": "177-Wolfgang.mp3",
+            "start_time": 3830.05,
+            "end_time": 3842.52
+        },
+        {
+            "chunk_id": "cfde762f3e46945ebe4994ccffa40b3d",
+            "text": "As you as I told you, I am currently finishing a book on the concrete utopia of Human Rights. And when I finished the book and talked a lot about different pieces of literature, books, that inspired me. But when I finished it, I thought, what was really important in my own, career or in my own way of living, of resisting-it was music.",
+            "source_file": "178-Wolfgang.mp3",
+            "start_time": 3843.17,
+            "end_time": 3873.51
+        },
+        {
+            "chunk_id": "0cc0083cc8eadd7047222e28c1c1cd9a",
+            "text": "I mean, like it was not the critical study or critical legal studies that brought me to fight for human rights. It was punk musi c or it was hip hop music. It were pieces like Christian McBride, the movement revisited , the wonderfu l, nearly opera about Malcolm X, Rosa Parks, Martin Luther King and Muhammad Ali.",
+            "source_file": "179-Wolfgang.mp3",
+            "start_time": 3873.63,
+            "end_time": 3901.22
+        },
+        {
+            "chunk_id": "025833c23cd0ee2b1af4240cb4e4946d",
+            "text": "Aretha Franklin, you know, I mean, wow, I mean, you know, I mean, come on, I mean, if we could just take a little bit of what these people brought to us. Be fantastic.",
+            "source_file": "180-Mark.mp3",
+            "start_time": 3901.75,
+            "end_time": 3910.12
+        },
+        {
+            "chunk_id": "849d07e55fb943df9471319a65e31f28",
+            "text": "And I thought the best metaphor was think about people like Fela Kuti and the relationship between Fela Kuti and, say, someone like John Coltrane to think about John Coltrane and Miles Davis to think about, South African, resistance songs and think about, you know, how discourse saved people's lives, rather than thinking about this essential African subject is to kind of frame it through the lens of a kind of rhythm, really. And the idea that is kind of global and there is no escaping the presence of Africa in our everyday.",
+            "source_file": "181-Mark.mp3",
+            "start_time": 3938.26,
+            "end_time": 3974.46
+        },
+        {
+            "chunk_id": "28bec8304e5ed601f0df37577a017aa0",
+            "text": "Thank you very much, Mark. Mark Sealy, Director of the Autograph Gallery and the Association of Black Photographers in London, was my guest today in our podcast series.",
+            "source_file": "182-Wolfgang.mp3",
+            "start_time": 3976.46,
+            "end_time": 3989.37
+        },
+        {
+            "chunk_id": "d49d2d2305ff86c813a02a3eb816a94f",
+            "text": "Everybody who liked this, or at least parts of this talk, is invited to look at our website and follow us on social media and also have Mark, it was a pleasure to talk to you.",
+            "source_file": "183-Wolfgang.mp3",
+            "start_time": 3990.83,
+            "end_time": 4015.21
+        },
+        {
+            "chunk_id": "fe45f3ac95c3464d2b1127a76efb0417",
+            "text": "Well, always a pleasure to talk to you. Let's keep talking, keep working.",
+            "source_file": "184-Mark.mp3",
+            "start_time": 4059.47,
+            "end_time": 4065.25
+        },
+        {
+            "chunk_id": "a4de9cf5c917bf8534aa05c054a23511",
+            "text": "Thank you very much, Mark.",
+            "source_file": "185-Wolfgang.mp3",
+            "start_time": 4065.28,
+            "end_time": 4066.6
+        }
+    ]
+}
