@@ -3,17 +3,21 @@ import json
 import requests
 import os
 
-#%% Create Directory for Transcripts
+# %% Create Directory for Transcripts
 path = os.getcwd()
 path = path + '/transcript_storage'
 
-try:
-    os.mkdir(path)
-except OSError:
-    print ("Creation of the directory %s failed" % path)
+if not os.path.isdir(path):
+    try:
+        os.mkdir(path)
+    except OSError:
+        print ("Creation of the directory %s failed" % path)
+    else:
+        print ("Successfully created the directory %s " % path)
 else:
-    print ("Successfully created the directory %s " % path)
-
+    print("Directory %s already exists." % path)
+    
+    
 # %% GET Media IDs from SONIX AI
 headers = {
     'Authorization': 'Bearer HDx7ZSQ9CIzbwJZ90OurHAtt',
@@ -24,11 +28,13 @@ response_full = requests.get(
 r_media = response_full.json()
 media_ids = json.loads(json.dumps(r_media))
 
+
 # %% LIST with all Media IDs
 media_amount = len(media_ids['media'])
 lst = []
 for i in range(media_amount):
     lst.append(media_ids['media'][i]['id'])
+    
 
 # %% WRITE transcripts to JSON files
 for i in lst:
