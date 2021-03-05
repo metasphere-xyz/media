@@ -60,11 +60,13 @@ def main():
     file_format = data['transcript'][0]['speaker'][-3:]
     if file_format == "mp3" or "wav":
         source_type = "audio"
+        source_path = '/podcasts/episodes/' + collection_id
 
     final_transcript = {
         'collection_id': collection_id,
+        'name': data['name'],
         'source_type': source_type,
-        'source_path': '/episodes/date/file',
+        'source_path': source_path,
         'chunk_sequence': [
         ]
     }
