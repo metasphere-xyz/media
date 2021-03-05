@@ -95,7 +95,7 @@ def main():
             })
 
     with open(output_file, 'w') as json_file:
-        json.dump(final_transcript, json_file)
+        json.dump(final_transcript, json_file, indent=4)
 
 if __name__ == "__main__":
     main()

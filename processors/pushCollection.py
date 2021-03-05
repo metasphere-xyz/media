@@ -4,9 +4,9 @@ import sys
 import getopt
 import json
 import hashlib
+import progress
 
-help_message = """
-pushCollection.py:
+help_message = """pushCollection.py:
 Processes a metasphere collection.json and pushes it into the graph database
 usage: pushCollection.py [-i] <collection.json>
 -i --input-file <collection.json>: location of metasphere collection.json
@@ -38,6 +38,15 @@ def main():
 
     if not input_file:
         raise_error("Please specify the location of collection.json")
+
+    print ("Loading " + input_file)
+    try:
+        with open(input_file) as f:
+            data = json.load(f)
+        print("done.")
+    except (OSError, IOError) as error:
+        raise_error(error)
+
 
 #
 # Extracts additional information for a collection of chunks and writes it to the graph database.

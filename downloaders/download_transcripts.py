@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # %% Import and Authentication
 import json
 import requests
@@ -16,8 +18,8 @@ if not os.path.isdir(path):
         print ("Successfully created the directory %s " % path)
 else:
     print("Directory %s already exists." % path)
-    
-    
+
+
 # %% GET Media IDs from SONIX AI
 headers = {
     'Authorization': 'Bearer HDx7ZSQ9CIzbwJZ90OurHAtt',
@@ -34,7 +36,7 @@ media_amount = len(media_ids['media'])
 lst = []
 for i in range(media_amount):
     lst.append(media_ids['media'][i]['id'])
-    
+
 
 # %% WRITE transcripts to JSON files
 for i in lst:
@@ -43,4 +45,4 @@ for i in lst:
     filename = response.json()
 
     with open('./transcript_storage/{id}.json'.format(id=i), 'w') as outfile:
-        json.dump(filename, outfile)
+        json.dump(filename, outfile, indent=4, sort_keys=True)
