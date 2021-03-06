@@ -20,6 +20,13 @@ def raise_error(error):
     sys.exit(2)
 
 
+def preprocess(text):
+    text = text.replace('\u00a0', ' ') # NBSP characters
+    text = text.replace(' , ', ', ') # whitespace before punction
+    text = text.replace(' . ', '. ') # whitespace before punction
+    return text
+
+
 def main():
     input_file = ""
     output_file = ""
