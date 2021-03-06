@@ -93,9 +93,10 @@ def main():
         request_progress = progress.add_task("API request \t", total=2)
 
         for chunk in range(num_chunks):
+            progress.reset(request_progress)
             data = collection["chunk_sequence"][chunk]
             chunk_id = data["chunk_id"]
-            progress.console.print(f"\n[bold]Processing chunk [regular]#{chunk}")
+            progress.console.print(f"\n[bold]Processing chunk [regular]#{chunk+1}")
             progress.console.print(f"Chunk id: {chunk_id}")
 
             endpoint = '/graph/find'
@@ -148,9 +149,7 @@ def main():
                 progress.console.print(cross, f"[white]Chunk already exists. Skipping.")
 
             if verbose: progress.console.print(f"Extracting entities.")
-            time.sleep(.3)
             if verbose: progress.console.print(f"Extracting summaries.")
-            time.sleep(.3)
 
             progress.advance(chunk_progress)
 
