@@ -46,5 +46,5 @@ for i in lst:
     output_file = str(content['name']) + '.json'
     print("Downloading into " + output_file)
 
-    with open('./transcript_storage/{output_file}'.format(output_file=output_file), 'w') as out:
-        json.dump(content, out, indent=4, sort_keys=True)
+    with open('./transcript_storage/{output_file}'.format(output_file=output_file), 'w', encoding='utf-8') as out:
+        json.dump(content, out, ensure_ascii=False, indent=4, sort_keys=True)
