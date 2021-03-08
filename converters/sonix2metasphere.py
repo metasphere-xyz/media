@@ -103,8 +103,8 @@ def main():
                 "end_time": chunk.get('end_time')
             })
 
-    with open(output_file, 'w') as json_file:
-        json.dump(final_transcript, json_file, indent=4)
+    with open(output_file, 'w', encoding='utf8') as json_file:
+        json.dump(final_transcript, json_file, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":
     main()
