@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
-import getopt
+import argparse
 import json
 import hashlib
 import time
@@ -9,17 +9,44 @@ import requests
 from rich.progress import Progress, track
 from rich import print
 
-api_base_url = 'http://ecchr.metasphere.xyz:2342'
-media_directory = 'files'
-
-help_message = """pushCollection.py:
-Processes a metasphere collection.json and pushes it into the graph database
-usage: pushCollection.py [-i] <collection.json>
--i --input-file <collection.json>: location of metasphere collection.json
-"""
-
 checkmark = f"[green]"u'\u2713'
 cross = f"[red]"u'\u00D7'
+
+argument_parser = argparse.ArgumentParser(
+    description='Processes a metasphere collection.json and pushes it into the graph database'
+)
+
+argument_parser.add_argument('collection',
+    help='path to metasphere collection.json to process'
+)
+argument_parser.add_argument('-n --collection-name',
+    help='name of the collection (overwrites name specified in input file)'
+)
+argument_parser.add_argument('-a --api-address',
+    help='url of the metasphere api to connect to',
+    default='http://ecchr.metasphere.xyz:2342'
+)
+argument_parser.add_argument('-m --media-directory',
+    help='base location of media files',
+    default="files"
+)
+argument_parser.add_argument('-v --verbose',
+    help='verbose output for debugging',
+    action="store_true", default=False
+)
+argument_parser.add_argument('-V', '--version', action='version',
+    version='%(prog)s 0.1'
+)
+
+arguments = argument_parser.parse_args()
+
+
+api_base_url = vars(arguments)['a __api_address']
+media_directory = vars(arguments)['m __media_directory']
+collection_name = vars(arguments)['n __collection_name']
+verbose = vars(arguments)['v __verbose']
+
+if verbose: print (arguments)
 
 def request(endpoint, query):
     url = api_base_url + endpoint
@@ -42,30 +69,11 @@ def raise_error(error):
     print(help_message)
     if(error):
         print("Error: " + str(error))
-    sys.exit(2)
+        argument_parser.print_help()
+    sys.exit(1)
 
 def main():
-    input_file = ""
-    verbose = False
-
-    try:
-        opts, args = getopt.getopt(
-            sys.argv[1:],
-            "vhi:", ["input-file="]
-        )
-    except getopt.GetoptError as error:
-        raise_error(error)
-    for opt, arg in opts:
-        if opt == '-h':
-            print(help_message)
-            sys.exit()
-        elif opt in ("-i", "--input-file"):
-            input_file = arg
-        elif opt == '-v':
-            verbose = True
-
-    if not input_file:
-        raise_error("Please specify the location of collection.json")
+    input_file = arguments.collection
 
     print ("Loading " + input_file + ' ... ', end='')
     try:
@@ -77,15 +85,15 @@ def main():
 
     # Get collection meta data
 
-    collection["name"]
-    collection["collection_id"]
-    collection["source_type"]
-    collection["source_path"]
+    # collection["name"]
+    # collection["collection_id"]
+    # collection["source_type"]
+    # collection["source_path"]
 
     num_chunks = len(collection["chunk_sequence"])
 
     with Progress() as progress:
-        progress.console.print(f"\nCollection name:\t {collection['name']}")
+        progress.console.print(f"\nCollection name:\t {collection_name}")
         progress.console.print(f"Collection id:\t\t {collection['collection_id']}")
         progress.console.print(f"Collection type:\t {collection['source_type']}")
 
@@ -136,6 +144,7 @@ def main():
                     'entities': [],
                     'similarity': []
                 }
+                if verbose: progress.console.print(query)
 
                 # UNCOMMENT response = request(endpoint, query)
                 response["status"] = query
