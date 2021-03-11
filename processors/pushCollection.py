@@ -19,24 +19,30 @@ argument_parser = argparse.ArgumentParser(
 argument_parser.add_argument('collection',
     help='path to metasphere collection.json to process'
 )
-argument_parser.add_argument('-n --collection-name',
+argument_parser.add_argument('-n', '--collection-name',
     help='name of the collection (overwrites name specified in input file)'
 )
-argument_parser.add_argument('-a --api-address',
-    help='url of the metasphere api to connect to',
-    default='http://ecchr.metasphere.xyz:2342'
+argument_parser.add_argument('-s', '--start-chunk',
+    help='start processing at chunk', type=int, default=1
 )
-argument_parser.add_argument('-m --media-directory',
+argument_parser.add_argument('-e', '--end-chunk',
+    help='end processing at chunk', type=int
+)
+argument_parser.add_argument('-m', '--media-directory',
     help='base location of media files',
     default="files"
 )
-argument_parser.add_argument('-v --verbose',
-    help='verbose output for debugging',
-    action="store_true", default=False
+argument_parser.add_argument('-a', '--api-address',
+    help='url of the metasphere api to connect to',
+    default='http://ecchr.metasphere.xyz:2342'
 )
-argument_parser.add_argument('-d --dry-run',
+argument_parser.add_argument('-d', '--dry-run',
     help='do not write to graph database, show verbose output only',
     action="store_true", default=True
+)
+argument_parser.add_argument('-v', '--verbose',
+    help='verbose output for debugging',
+    action="store_true", default=False
 )
 argument_parser.add_argument('-V', '--version', action='version',
     version='%(prog)s 0.1'
@@ -45,11 +51,13 @@ argument_parser.add_argument('-V', '--version', action='version',
 arguments = argument_parser.parse_args()
 
 
-api_base_url = vars(arguments)['a __api_address']
-media_directory = vars(arguments)['m __media_directory']
-collection_name = vars(arguments)['n __collection_name']
-verbose = vars(arguments)['v __verbose']
-dry_run = vars(arguments)['d __dry_run']
+api_base_url = vars(arguments)['api_address']
+media_directory = vars(arguments)['media_directory']
+collection_name = vars(arguments)['collection_name']
+start_chunk = vars(arguments)['start_chunk']
+end_chunk = vars(arguments)['end_chunk']
+verbose = vars(arguments)['verbose']
+dry_run = vars(arguments)['dry_run']
 timeout_for_reconnect = 15
 
 if verbose: print (arguments)
@@ -93,6 +101,7 @@ def request(endpoint, query):
         else:
             break
 
+    time.sleep(2)
     if response.status_code == requests.codes.ok:
         return response.json()
     else:
@@ -129,7 +138,9 @@ with Progress() as progress:
     request_progress = progress.add_task("API request \t", total=3)
     reconnect_progress = progress.add_task("[red]Timeout until reconnect \t", total=timeout_for_reconnect, visible=False)
 
-    for chunk in range(num_chunks):
+    if not end_chunk:
+        end_chunk = num_chunks
+    for chunk in range((start_chunk-1), end_chunk):
         progress.reset(request_progress)
         data = collection["chunk_sequence"][chunk]
         chunk_id = data["chunk_id"]
@@ -171,6 +182,7 @@ with Progress() as progress:
                 progress.console.print(checkmark)
             else:
                 progress.console.print(cross, f"[red]No entities found.")
+                chunk_entities = ''
 
 
             progress.console.print(f"Extracting summaries.")
@@ -188,6 +200,7 @@ with Progress() as progress:
                 progress.console.print(checkmark)
             else:
                 progress.console.print(cross, f"[red]No summaries created.")
+                chunk_summaries = ''
 
 
             progress.console.print(f"Finding similar chunks.")
@@ -204,6 +217,7 @@ with Progress() as progress:
                 progress.console.print(checkmark)
             else:
                 progress.console.print(cross, f"[red]No similar chunks found.")
+                similar_chunks = ''
 
 
             if verbose: progress.console.print(f"Inserting chunk into database.")
