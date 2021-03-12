@@ -65,7 +65,7 @@ verbose = vars(arguments)['verbose']
 very_verbose = vars(arguments)['vv']
 dry_run = vars(arguments)['dry_run']
 timeout_for_reconnect = 15
-num_tasks = 3
+num_tasks = 2
 
 if very_verbose:
     verbose = True
@@ -75,7 +75,6 @@ if verbose: print (arguments)
 
 def update_task(current_task):
     progress.update(task_progress, visible=True, description=f"Task: {current_task}")
-    progress.advance(task_progress)
 
 def update_progress(chunk):
     progress.update(chunk_progress, description=f"Chunk [bold]#{chunk+1}[/bold] / {num_chunks} ")
@@ -111,6 +110,7 @@ def extract_summaries(text):
     else:
         progress.console.print(cross, f"No summaries created.")
         chunk_summaries = ''
+    progress.advance(task_progress)
     return chunk_summaries
 
 
@@ -128,6 +128,7 @@ def extract_entities(text):
     else:
         progress.console.print(cross, f"No entities found.")
         chunk_entities = ''
+    progress.advance(task_progress)
     return chunk_entities
 
 
@@ -147,6 +148,7 @@ def find_similar_chunks(text):
     else:
         progress.console.print(cross, f"[red]No similar chunks found.")
         similar_chunks = ''
+    progress.advance(task_progress)
     return similar_chunks
 
 
@@ -227,7 +229,7 @@ with Progress(
 
     chunk_progress = progress.add_task(f"Chunk {start_chunk-1} / {end_chunk} \t\t", total=num_chunks)
 
-    task_progress = progress.add_task(f"Task: {current_task}\t\t", total=4, visible=False)
+    task_progress = progress.add_task(f"Task: {current_task}\t\t", total=num_tasks, visible=False)
     request_progress = progress.add_task(f"API requests\t\t", total=(num_tasks * 2), visible=False)
     reconnect_progress = progress.add_task("[red]Waiting to reconnect... \t\t", total=timeout_for_reconnect, visible=False)
 
@@ -298,9 +300,15 @@ with Progress(
 
         progress.advance(chunk_progress)
 
-    while not progress.finished:
-        progress.update(chunk_progress, advance=0.5)
 
+        if chunk != end_chunk:
+            progress.update(chunk_progress, advance=1)
+        else:
+            progress.update(task_progress, visible=False)
+            progress.update(request_progress, visible=False)
+            progress.update(reconnect_progress, visible=False)
+            progress.console.print(checkmark, f"\n\n[bold]Done processing.")
+            sys.exit(0)
 #
 # Extracts additional information for a collection of chunks and writes it to the graph database.
 # Queries: collection.json
