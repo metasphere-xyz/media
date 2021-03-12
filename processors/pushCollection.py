@@ -266,7 +266,7 @@ with Progress(
                     f.close()
 
             chunk_entities = extract_entities(data['text'])
-            chunk_summaries = extract_summaries(data['text'])
+            # chunk_summaries = extract_summaries(data['text'])
             # similar_chunks = find_similar_chunks(data['text'])
             chunk_summaries = ''
             similar_chunks = ''
