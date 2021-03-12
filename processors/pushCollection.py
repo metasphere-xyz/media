@@ -6,11 +6,12 @@ import json
 import hashlib
 import time
 import requests
-from rich.progress import Progress, track
+from rich.progress import *
 from rich import print
 
-checkmark = f"[green]"u'\u2713'
-cross = f"[red]"u'\u00D7'
+checkmark = f"[green]"u'\u2713 '
+cross = f"[red]"u'\u00D7 '
+arrow = f"[grey]"u'\u21B3 '
 
 argument_parser = argparse.ArgumentParser(
     description='Processes a metasphere collection.json and pushes it into the graph database'
@@ -44,23 +45,47 @@ argument_parser.add_argument('-v', '--verbose',
     help='verbose output for debugging',
     action="store_true", default=False
 )
+argument_parser.add_argument('-vv',
+    help='very verbose output for debugging',
+    action="store_true", default=False
+)
 argument_parser.add_argument('-V', '--version', action='version',
     version='%(prog)s 0.1'
 )
 
 arguments = argument_parser.parse_args()
 
-
+current_task = 'Starting'
 api_base_url = vars(arguments)['api_address']
 media_directory = vars(arguments)['media_directory']
 collection_name = vars(arguments)['collection_name']
 start_chunk = vars(arguments)['start_chunk']
 end_chunk = vars(arguments)['end_chunk']
 verbose = vars(arguments)['verbose']
+very_verbose = vars(arguments)['vv']
 dry_run = vars(arguments)['dry_run']
 timeout_for_reconnect = 15
+num_tasks = 3
+
+if very_verbose:
+    verbose = True
 
 if verbose: print (arguments)
+
+
+def update_task(current_task):
+    progress.update(task_progress, visible=True, description=f"Task: {current_task}")
+    progress.advance(task_progress)
+
+def update_progress(chunk):
+    progress.update(chunk_progress, description=f"Chunk [bold]#{chunk+1}[/bold] / {num_chunks} ")
+
+    progress.reset(task_progress)
+    progress.update(task_progress, visible=True)
+
+    progress.reset(request_progress)
+    progress.update(request_progress, visible=True)
+
 
 def raise_error(error):
     if(error):
@@ -68,12 +93,68 @@ def raise_error(error):
         argument_parser.print_help()
     sys.exit(1)
 
+
+def extract_summaries(text):
+    update_task('Extracting summaries')
+    endpoint = '/text/summarize'
+    query = {
+        "text": text,
+        "aim": 30,
+        "deviation": 20,
+        "num_summaries": 3
+    }
+    response = request(endpoint, query)
+    num_summaries = len(response["summaries"])
+    if num_summaries >= 1:
+        chunk_summaries = response["summaries"]
+        progress.console.print(checkmark, f"Successfully extracted {num_summaries} summaries")
+    else:
+        progress.console.print(cross, f"No summaries created.")
+        chunk_summaries = ''
+    return chunk_summaries
+
+
+def extract_entities(text):
+    update_task('Extracting entities')
+    endpoint = '/text/extract/entities'
+    query = {
+        "text": text
+    }
+    response = request(endpoint, query)
+    num_entities = len(response["entities"])
+    if num_entities >= 1:
+        chunk_entities = response["entities"]
+        progress.console.print(checkmark, f"Successfully extracted {num_entities} entities")
+    else:
+        progress.console.print(cross, f"No entities found.")
+        chunk_entities = ''
+    return chunk_entities
+
+
+def find_similar_chunks(text):
+    update_task('Finding similar chunks')
+    progress.console.print(f"Finding similar chunks.")
+    endpoint = '/text/similarities'
+    query = {
+        "text": data["text"],
+        "minimum_score": 20,
+        "chunks": 5
+    }
+    response = request(endpoint, query)
+    if len(response["similar_chunks"]) >= 1:
+        similar_chunks = response["similar_chunks"]
+        progress.console.print(checkmark)
+    else:
+        progress.console.print(cross, f"[red]No similar chunks found.")
+        similar_chunks = ''
+    return similar_chunks
+
+
 def request(endpoint, query):
     progress.update(reconnect_progress, visible=False)
 
     url = api_base_url + endpoint
-    if verbose:
-        progress.console.print(f'Sending request to {url}')
+    if verbose: progress.console.print(arrow, f'Sending request to {url}')
     progress.advance(request_progress)
 
     while True:
@@ -85,12 +166,14 @@ def request(endpoint, query):
                     'Content-type': 'application/json'
                 }
             )
-            if verbose: progress.console.print(checkmark)
+            if verbose: progress.console.print(checkmark, f'Request successful: {response.status_code}')
+            if very_verbose: progress.console.print(response.json(), highlight=False)
         except (
             requests.exceptions.RequestException
         ) as e:
-            progress.console.print(cross)
-            if verbose: progress.console.print(e)
+            if verbose: progress.console.print(cross, f'[red]Error sending request')
+            if very_verbose: progress.console.print('\n[red]', e)
+            if verbose: progress.console.print('\nReconnecting.')
             progress.reset(reconnect_progress)
             progress.update(reconnect_progress, visible=True)
             for seconds in range(timeout_for_reconnect):
@@ -101,12 +184,13 @@ def request(endpoint, query):
         else:
             break
 
-    time.sleep(2)
+    time.sleep(0.2)
     if response.status_code == requests.codes.ok:
         return response.json()
     else:
         if verbose: progress.console.print(cross)
-        raise_error(f"Error {response.status_code}: {response.text}")
+        raise_error(f"Error {response.status_code}")
+        progress.console.print(cross, f"[red]Failed at chunk {chunk}")
 
 input_file = arguments.collection
 
@@ -118,34 +202,43 @@ try:
 except (OSError, IOError) as error:
     raise_error(error)
 
-# Get collection meta data
-
-# collection["name"]
-# collection["collection_id"]
-# collection["source_type"]
-# collection["source_path"]
-
 num_chunks = len(collection["chunk_sequence"])
 
-with Progress() as progress:
+
+with Progress(
+    SpinnerColumn(),
+    "[progress.percentage]{task.percentage:>3.0f}%",
+    TimeElapsedColumn(),
+    TimeRemainingColumn(),
+    BarColumn(),
+    "[progress.description]{task.description}",
+) as progress:
     if not collection_name:
         collection_name = collection['name']
-    progress.console.print(f"\nCollection name:\t {collection_name}")
+    progress.console.print(f"\nCollection name:\t [bold]{collection_name}")
     progress.console.print(f"Collection id:\t\t {collection['collection_id']}")
     progress.console.print(f"Collection type:\t {collection['source_type']}")
 
-    chunk_progress = progress.add_task("Progress \t", total=num_chunks)
-    request_progress = progress.add_task("API request \t", total=3)
-    reconnect_progress = progress.add_task("[red]Timeout until reconnect \t", total=timeout_for_reconnect, visible=False)
+    collection_base_dir = media_directory + '/'.join([
+        collection["source_path"]
+    ])
+
+    if very_verbose: progress.console.print(f"Media directory:\t {collection_base_dir}")
+
+    chunk_progress = progress.add_task(f"Chunk {start_chunk-1} / {end_chunk} \t\t", total=num_chunks)
+
+    task_progress = progress.add_task(f"Task: {current_task}\t\t", total=4, visible=False)
+    request_progress = progress.add_task(f"API requests\t\t", total=(num_tasks * 2), visible=False)
+    reconnect_progress = progress.add_task("[red]Waiting to reconnect... \t\t", total=timeout_for_reconnect, visible=False)
 
     if not end_chunk:
         end_chunk = num_chunks
     for chunk in range((start_chunk-1), end_chunk):
-        progress.reset(request_progress)
+        update_progress(chunk)
+
         data = collection["chunk_sequence"][chunk]
         chunk_id = data["chunk_id"]
-        progress.console.print(f"\n[bold]Processing chunk [regular]#{chunk+1}")
-        progress.console.print(f"Chunk id: {chunk_id}")
+        progress.console.print(f'\n[bold]Processing chunk {chunk}[/bold]:\t {chunk_id}')
 
         endpoint = '/graph/find/chunk'
         query = {"id": chunk_id}
@@ -155,11 +248,11 @@ with Progress() as progress:
             if collection["source_type"] == "audio":
                 source_file = data["source_file"]
                 source_file_path = '/'.join([
-                    media_directory,
-                    collection["source_path"],
+                    collection_base_dir,
                     'mp3/Chunks',
                     data["source_file"]
                 ])
+                if very_verbose: progress.console.print(arrow, f'Checking for associated audio file: {source_file}')
                 try:
                     f = open(source_file_path)
                     progress.console.print(checkmark, f"Associated audio file exists: {source_file} ")
@@ -170,57 +263,13 @@ with Progress() as progress:
                 finally:
                     f.close()
 
-            progress.console.print(f"Extracting entities.")
-            endpoint = '/text/extract/entities'
-            query = {
-                "text": data["text"]
-            }
-            response = request(endpoint, query)
-            if verbose: progress.console.print(response)
-            if len(response["entities"]) >= 1:
-                chunk_entities = response["entities"]
-                progress.console.print(checkmark)
-            else:
-                progress.console.print(cross, f"[red]No entities found.")
-                chunk_entities = ''
+            chunk_entities = extract_entities(data['text'])
+            chunk_summaries = extract_summaries(data['text'])
+            # similar_chunks = find_similar_chunks(data['text'])
+            chunk_summaries = ''
+            similar_chunks = ''
 
-
-            progress.console.print(f"Extracting summaries.")
-            endpoint = '/text/summarize'
-            query = {
-                "text": data["text"],
-                "aim": 30,
-                "deviation": 20,
-                "num_summaries": 3
-            }
-            response = request(endpoint, query)
-            if verbose: progress.console.print(response)
-            if len(response["summaries"]) >= 1:
-                chunk_summaries = response["summaries"]
-                progress.console.print(checkmark)
-            else:
-                progress.console.print(cross, f"[red]No summaries created.")
-                chunk_summaries = ''
-
-
-            progress.console.print(f"Finding similar chunks.")
-            endpoint = '/text/similarities'
-            query = {
-                "text": data["text"],
-                "minimum_score": 20,
-                "chunks": 5
-            }
-            response = request(endpoint, query)
-            if verbose: progress.console.print(response)
-            if len(response["similar_chunks"]) >= 1:
-                similar_chunks = response["similar_chunks"]
-                progress.console.print(checkmark)
-            else:
-                progress.console.print(cross, f"[red]No similar chunks found.")
-                similar_chunks = ''
-
-
-            if verbose: progress.console.print(f"Inserting chunk into database.")
+            if verbose: progress.console.print(f"Inserting chunk into database...")
             endpoint = '/graph/add/chunk'
             query = {
                 'chunk_id': data["chunk_id"],
@@ -232,7 +281,7 @@ with Progress() as progress:
                 'entities': [chunk_entities],
                 'similarity': [similar_chunks]
             }
-            if verbose: progress.console.print(query)
+            if verbose: progress.console.print(query, highlight=True)
 
             if not dry_run:
                 response = request(endpoint, query)
