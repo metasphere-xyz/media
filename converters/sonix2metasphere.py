@@ -69,6 +69,8 @@ def main():
         source_type = "audio"
         source_path = '/podcasts/episodes/' + collection_id
 
+# TODO: add speakers to episode header
+
     final_transcript = {
         'collection_id': collection_id,
         'name': data['name'],
@@ -80,6 +82,8 @@ def main():
 
     chunk_number = 0
     for chunk in data['transcript']:
+
+        # TODO: add speaker, duration
         text_complete = []
 
         for word in chunk['words']:
