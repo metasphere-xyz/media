@@ -1,0 +1,42 @@
+-->> Transcript
+
+- use Realign Timecode before download_transcripts.py via Sonix API
+
+- The realign Timecode function causes some random whitespaces inserts. For example:
+	7-Mark.mp3
+	-> Because prior to 2007, when the building opened, we were very much agency . By...
+
+- hashsum function correct in json-converter.py
+
+- 68-Mark: Champs \u00c9lys\u00e9es -> Fix Accent aigu
+
+- 73-Wolfgang: Remove Witespace at beginning of the chunk
+
+- 83-Wolfgang: Whitespace before _:
+
+- 87-Mark: juridical\u00a0will  \u00a0 -> insert whitespace instead
+
+- \" how to handle quotation marks
+
+- 101-Mark: missing speaker tag sonix.ai transcript -> not a failure of the json-converter.py
+
+- 102-Wolfgang: misspelling -> differ s completely."
+
+- 135-Wolfgang: fade out is missing in the audiofile -> produces snap at the end
+
+- 145-Mark: ... are. It\u00b4s a process . ... \u00b4s -> ´ instead of ' or it is
+
+- 146- : speaker tag missing -> Mark
+
+- 164-Wolfgang: ... Bartolom\u00e9 de Las Casas ... -> Fix Accent aigu
+
+- 166-Wolfgang: ... crises, isn\u00b4t it, ... -> ´ causes the problem -> replace with '
+
+
+
+
+
+
+
+
+

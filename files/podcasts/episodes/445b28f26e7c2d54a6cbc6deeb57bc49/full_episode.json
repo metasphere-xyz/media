@@ -1,0 +1,756 @@
+{
+    "collection_id": "445b28f26e7c2d54a6cbc6deeb57bc49",
+    "name": "Ixmucané Aguilar and Wolfgang Kaleck",
+    "source_type": "audio",
+    "source_path": "/podcasts/episodes/445b28f26e7c2d54a6cbc6deeb57bc49",
+    "num_chunks": 83,
+    "chunk_sequence": [
+        {
+            "chunk_id": "950929ea0309f17ead67f1237f3d1a47",
+            "speaker": "Wolfgang",
+            "text": " Hello everybody, this is Wolfgang Kaleck from the European Center for Constitutional and Human Rights (ECCHR) speaking. I have the pleasure today to talk to Ixmucané Aguilar. Hello, Ixmucané.  We met actually two years ago in Namibia.",
+            "source_file": "1-Wolfgang.mp3",
+            "start_time": 4.16,
+            "end_time": 55.32,
+            "duration": 51.16
+        },
+        {
+            "chunk_id": "0d6a2d40c4be71f860871c07306435c1",
+            "speaker": "Wolfgang",
+            "text": "Would you like to talk a little bit about your trip in 2019 and then we start our conversation from there on and talk about your life and later on about your artistic concept? For those who don’t know Ixmucané Aguilar, she’s an artist and trained photographer. But you better tell us in your own words, Ixmucané.",
+            "source_file": "2-Wolfgang.mp3",
+            "start_time": 57.87,
+            "end_time": 86.37,
+            "duration": 28.5
+        },
+        {
+            "chunk_id": "494d8128816d5bd30b68f5241447927e",
+            "speaker": "Ixmucane",
+            "text": "Yeah, thank you, Wolfgang. And, well, I also would like to say that I feel very happy and honored to be in conversation with you today. As you mentioned, I am a visual artist working with photo documentary. And in the year 2019, I started my most recent work, which compiles a multi-layer portrait of the genocide against the Herero and Nama people in Namibia.",
+            "source_file": "3-Ixmucane.mp3",
+            "start_time": 87.04,
+            "end_time": 125.65,
+            "duration": 38.61
+        },
+        {
+            "chunk_id": "a3e883971bae9b16da735e48b185a746",
+            "speaker": "Ixmucane",
+            "text": "And during my research through Namibia, I worked in collaboration with descendants of the victims of the genocide who can vividly recall what their ancestors experienced during the genocide and during the German colonialism.",
+            "source_file": "4-Ixmucane.mp3",
+            "start_time": 126.37,
+            "end_time": 147.23,
+            "duration": 20.86
+        },
+        {
+            "chunk_id": "5eaf846e92d6ebb2371c354f8409a19a",
+            "speaker": "Ixmucane",
+            "text": "So I have this great opportunity of getting to hear many stories and reflections, not only about the past, but also about how these external forces of violence and genocide enforced during the German colony are confronted today with a physical and psychological inheritance.",
+            "source_file": "5-Ixmucane.mp3",
+            "start_time": 148.21,
+            "end_time": 184.24,
+            "duration": 36.03
+        },
+        {
+            "chunk_id": "f7a27b2f5bdd5d65e24f2cdc5b882459",
+            "speaker": "Wolfgang",
+            "text": " That’s a very interesting point, and I would like to come back to that. I would like first to ask a question because you are of Guatemalan origin, living since quite a while in Berlin. You studied there in Weißensee, at the university. How how did you come up with the idea to go to Namibia? Because, even amongst the Germans, the genocide against Hereo and Nama and other indigenous communities is not very well known. So how how did that idea occur to you and how did you prepare for it?",
+            "source_file": "6-Wolfgang.mp3",
+            "start_time": 184.24,
+            "end_time": 226.0,
+            "duration": 41.76
+        },
+        {
+            "chunk_id": "ec388d7b22e139b4709e70954789a421",
+            "speaker": "Ixmucane",
+            "text": "Well, I think that a combination of many factors have influenced my decision to work in Namibia. In a way politics doesn’t seem to escape from me, my childhood was, in one form or another, political. The experience of growing up in exile far from my country of origin, Guatemala, has left an indelible mark on me.",
+            "source_file": "7-Ixmucane.mp3",
+            "start_time": 226.3,
+            "end_time": 249.63,
+            "duration": 23.33
+        },
+        {
+            "chunk_id": "55e21f82d877025a0f5ce2f906ffe48e",
+            "speaker": "Ixmucane",
+            "text": "So in this sense, even though my work is about macro-political issues, it’s also deeply personal. And during my studies at the Academy of Arts in Berlin, I had this unique opportunity to do my graduation work in photography in the northern part of Namibia. And since then, my relationship with Namibia started and it continues evolving.",
+            "source_file": "8-Ixmucane.mp3",
+            "start_time": 250.0,
+            "end_time": 278.2,
+            "duration": 28.2
+        },
+        {
+            "chunk_id": "3926c69b5c0cf1d05b7f74997e698313",
+            "speaker": "Ixmucane",
+            "text": "And yet I’m aware that I am an outsider. I am not holding an Namibian passport. But in my work of Namibia, especially in this work regarding the genocide, I also feel the subject in my process. I never felt only as the observer or as the photographer of serving the others.",
+            "source_file": "9-Ixmucane.mp3",
+            "start_time": 279.16,
+            "end_time": 310.99,
+            "duration": 31.83
+        },
+        {
+            "chunk_id": "c73c08b75b31caafb900cc0a35a023f2",
+            "speaker": "Ixmucane",
+            "text": "And this might be because my work involves these deeply emotional issues of myself as a human being, as a woman, as someone who was born in political exile. So, yeah, my work at once faces my own personal questions in life, and yet I’m interested in creating a larger discourse of Namibia’s reality.",
+            "source_file": "10-Ixmucane.mp3",
+            "start_time": 311.32,
+            "end_time": 340.63,
+            "duration": 29.31
+        },
+        {
+            "chunk_id": "3326443353961084cc25000433dcfad7",
+            "speaker": "Wolfgang",
+            "text": " That sounds very interesting, that you connect your work and your research in Namibia with your own life. As we discussed before, I have also made my experiences with Guatemala.  I went there I don’t know how many... 30 years ago, as a young lawyer to work with the Guatemalan Human Rights Commission who had to work from exile in the late 80s and then in the beginning of the 90s until the peace treaty came into force.",
+            "source_file": "11-Wolfgang.mp3",
+            "start_time": 341.48,
+            "end_time": 380.34,
+            "duration": 38.86
+        },
+        {
+            "chunk_id": "dd12cac4cde2eb064639e55cfcd9f243",
+            "speaker": "Wolfgang",
+            "text": "And the reason why they had to work in exile was that human rights defenders were in extreme danger in Guatemala because there was an ongoing genocide against the indigenous communities. And so we’re talking about the 70s and 80s of the last century. And in a way, it’s the same, let’s say, criminal type, legally spoken.",
+            "source_file": "12-Wolfgang.mp3",
+            "start_time": 380.64,
+            "end_time": 407.1,
+            "duration": 26.46
+        },
+        {
+            "chunk_id": "91405a6f7a020a4cac5345dd3051ae47",
+            "speaker": "Wolfgang",
+            "text": "There was even a court condemning [José Efraín] Ríos Montt and others for genocide in the Guatemalan context... And even more until... It’s very obvious for many people that this genocide traumatized the Guatemalan society and is part of the problems of today for the Guatemalan society. The absolute inequality within the country, the distribution of land, the access to natural resources.",
+            "source_file": "13-Wolfgang.mp3",
+            "start_time": 407.11,
+            "end_time": 446.49,
+            "duration": 39.38
+        },
+        {
+            "chunk_id": "891ed3a3342a32aaec0efee5f86b8e5f",
+            "speaker": "Wolfgang",
+            "text": "And that resembles very much the Namibian situation. But what comes to my mind is the question which is often raised, especially in Germany, especially by those who want to forget the genocide, or already forgot the genocide and want to put it off the agenda. And that is: “oh, that is a genocide nearly 120 years ago. How would that have an impact on the Namibian people of today? Why should we care for this genocide? Why do the Germans have a responsibility after nearly 120 years?” What would you answer them?",
+            "source_file": "14-Wolfgang.mp3",
+            "start_time": 447.18,
+            "end_time": 489.18,
+            "duration": 42.0
+        },
+        {
+            "chunk_id": "d5129d047b086dc39794699bcc78cbaa",
+            "speaker": "Ixmucane",
+            "text": "Yeah, well, it seems to me that there is a big struggle to make understandable to many German speakers in Namibia that the genocide does not end once it has been committed, but it lives on and it has also transgenerational effects. The genocide is not a distant past for the descendants of the victims.",
+            "source_file": "15-Ixmucane.mp3",
+            "start_time": 489.53,
+            "end_time": 510.89,
+            "duration": 21.36
+        },
+        {
+            "chunk_id": "31a31f8cad408f87cc8efa51b62cba6b",
+            "speaker": "Ixmucane",
+            "text": "And yet, Namibia is leaving behind so many stories and voices, voices longing for recognition. There is not even an acknowledgement of the genocide. And I believe that acknowledgement is based on understanding for one another. And to create this understanding, we need to communicate in a whole variety of levels. And I see arts as one of many of such levels, perhaps a tiny one. But it is also here, what I see the opportunity through my work of giving a stage to what has no stage.",
+            "source_file": "16-Ixmucane.mp3",
+            "start_time": 511.31,
+            "end_time": 558.41,
+            "duration": 47.1
+        },
+        {
+            "chunk_id": "63ec49ff6c654deee61ed38b4b9486a9",
+            "speaker": "Wolfgang",
+            "text": " You pointed out that genocide and talking about genocide, dealing with genocide, coming to terms with genocidal crimes is not dealing with a frozen past, but it has a certain continuity within the individuals, within the society, within the structure of society.",
+            "source_file": "17-Wolfgang.mp3",
+            "start_time": 559.09,
+            "end_time": 581.11,
+            "duration": 22.02
+        },
+        {
+            "chunk_id": "03ecbc4d47f032f8a709b9c18b721644",
+            "speaker": "Wolfgang",
+            "text": "I think that’s true for all the situations my own organization is dealing with. And it’s a deep misunderstanding when we talk to others who have no clue about that, because there is this often-quoted “the past must be past,” you know, which comes often from the perpetrators’ side and from the side of those who profited from the genocide and the post-genocide structure. So that’s one extremely important point you made.",
+            "source_file": "18-Wolfgang.mp3",
+            "start_time": 582.22,
+            "end_time": 622.27,
+            "duration": 40.05
+        },
+        {
+            "chunk_id": "75269a031b2c7d74d558b36fd4b595c1",
+            "speaker": "Ixmucane",
+            "text": "Yeah, I would just like to add that it seems to me that when people are privileged, they feel safe and therefore they want to avoid any kind of discourse that might question their position in society. Like, for example, several times I heard from the German community saying, “well, genocide is part of history. Let’s move on,” very enthusiastic.",
+            "source_file": "19-Ixmucane.mp3",
+            "start_time": 623.43,
+            "end_time": 653.73,
+            "duration": 30.3
+        },
+        {
+            "chunk_id": "36fd7a3bd62dc344a3b6061dbb122bf8",
+            "speaker": "Ixmucane",
+            "text": "But then I also heard from the Herero and Nama people saying: “sure, we want to move on.” It’s not that they don’t feel enthusiastic about it, but how can we do that if the past holds us back? And Namibia has drastic inequality, the concentration of wealth and land and privilege is in the hands of the white population, mostly German speakers  and white South Africans. ",
+            "source_file": "20-Ixmucane.mp3",
+            "start_time": 654.36,
+            "end_time": 684.51,
+            "duration": 30.15
+        },
+        {
+            "chunk_id": "8628d3ebc125f72f980bf08771bbb9e6",
+            "speaker": "Ixmucane",
+            "text": "So these both white communities have clearly benefited from decades and decades of violence against the indigenous communities: German colonialism and the transition to apartheid. So their memory seems to me faulty and limited by ignorance when it’s about questioning their own privileges. And of course land is here the main issue in the conflict and a privilege that they enjoy. ",
+            "source_file": "21-Ixmucane.mp3",
+            "start_time": 684.51,
+            "end_time": 722.09,
+            "duration": 37.58
+        },
+        {
+            "chunk_id": "c8407de3fcf8c64e41839912dbb632cb",
+            "speaker": "Ixmucane",
+            "text": "But they don’t question about this past and of course, if this past is suspicious, then it’s better to forget. Too much remembering embitters and might create psychosis. Well, and additionally, sadly, the white population in Namibia has received an ideological heritage from their ancestors of white supremacy and this very narrow understanding of reality, I think that goes hand-in-hand with the denial of the genocide.",
+            "source_file": "22-Ixmucane.mp3",
+            "start_time": 722.09,
+            "end_time": 758.36,
+            "duration": 36.27
+        },
+        {
+            "chunk_id": "daccebd2d369d5aaaaaea8c5bccbba22",
+            "speaker": "Ixmucane",
+            "text": "And there might be beautiful exceptions, making steps into a better direction among the German Namibians or white South Africans, I don’t know. But these exceptions are just not enough for a more equal society.",
+            "source_file": "23-Ixmucane.mp3",
+            "start_time": 759.06,
+            "end_time": 777.24,
+            "duration": 18.18
+        },
+        {
+            "chunk_id": "08ef3841c664ffa150157fac83e97713",
+            "speaker": "Wolfgang",
+            "text": "That’s a very interesting point that you insisted on the category of memory, which is obviously always important in this context, but probably even more in the context of Namibia. ",
+            "source_file": "24-Wolfgang.mp3",
+            "start_time": 777.62,
+            "end_time": 792.68,
+            "duration": 15.06
+        },
+        {
+            "chunk_id": "179e0aa6b1ee545924313ee465938d5c",
+            "speaker": "Wolfgang",
+            "text": "Because when it comes to situations like in Guatemala – so a more contemporary crime – first of all, there were international observers, there were NGOs, there were activists, transnational activists, Guatemalans linked to the international community, who reported the crimes in why they were committed, who denounced them, and later on, due to the development of law, could even use legal tools to oblige, even Guatemalan courts, but also international courts here, the Spanish courts, to investigate and eventually prosecute the crimes.",
+            "source_file": "25-Wolfgang.mp3",
+            "start_time": 792.68,
+            "end_time": 836.48,
+            "duration": 43.8
+        },
+        {
+            "chunk_id": "3868f1a554d1dd55a431c484f7aa20af",
+            "speaker": "Wolfgang",
+            "text": "And this is one of the main differences to colonial crimes, which were committed especially in the beginning of the last century, that we had neither the legal tools nor that, let’s say, international observers and coverage and the networks of NGOs.",
+            "source_file": "26-Wolfgang.mp3",
+            "start_time": 836.87,
+            "end_time": 856.36,
+            "duration": 19.49
+        },
+        {
+            "chunk_id": "41addd7f33c28b8e11746ce37dc86051",
+            "speaker": "Wolfgang",
+            "text": "So in this context, what you had been saying, that the reconstruction of memory is even more important because there are no files, no legal files and no NGO or UN reports of the of the colonial genocide of that time.",
+            "source_file": "27-Wolfgang.mp3",
+            "start_time": 856.67,
+            "end_time": 875.36,
+            "duration": 18.69
+        },
+        {
+            "chunk_id": "8683c6b6dc5f3230faf4502a066dee01",
+            "speaker": "Wolfgang",
+            "text": " You also pointed to your special role as an artist. So given the very differences between contemporary crimes of this magnitude and crimes that lie behind us one hundred and twenty years ago. So how would you describe your approach as an artist? So how did you prepare for your trip and your work in Namibia and how did you approach people? What was your own intention?",
+            "source_file": "28-Wolfgang.mp3",
+            "start_time": 879.97,
+            "end_time": 922.83,
+            "duration": 42.86
+        },
+        {
+            "chunk_id": "e2902cc0fcd2991169afeee8e8819cf8",
+            "speaker": "Ixmucane",
+            "text": "Yes, my work has a political nature at its core, yet I’m not interested in creating work that follows political agendas or a political statement. Neither I’m interested in creating more academic work on genocide or more academic work telling about general history. And I also have to say I’m not interested in political correctness.",
+            "source_file": "29-Ixmucane.mp3",
+            "start_time": 922.94,
+            "end_time": 947.99,
+            "duration": 25.05
+        },
+        {
+            "chunk_id": "2cba281a6959a3770d68d66d18037ac5",
+            "speaker": "Ixmucane",
+            "text": "I am foremost interested in making work that’s from different angles, a search for human perspectives of a reality and in this sense, guided by this interest, I exchanged with a wide variety of people in Namibia. It was very important for me to have the opportunity to get to know different stories and reflections. ",
+            "source_file": "30-Ixmucane.mp3",
+            "start_time": 949.37,
+            "end_time": 979.01,
+            "duration": 29.64
+        },
+        {
+            "chunk_id": "01058e15cbc6a33434d16209bfefa0d1",
+            "speaker": "Ixmucane",
+            "text": "And from these many different human encounters emerges a photo documentary as documentary fragments in form of a large sequence of portraits and a large sequence of narratives in form of poems, lamentations, family testimonies, mourning rituals. And yet, rather than depictions of single stories of scattered people who suffer an exotic fate, this large sequence of material, of portraits and narratives, are a collective evidence of different human perspectives. So the narratives is a crucial part in my work.",
+            "source_file": "31-Ixmucane.mp3",
+            "start_time": 979.34,
+            "end_time": 1028.15,
+            "duration": 48.81
+        },
+        {
+            "chunk_id": "a12ba2aba24801b5e8a379cdfdbd8dcd",
+            "speaker": "Ixmucane",
+            "text": "These many different narratives are the voices. I see them as pieces of humanity and time. Voices that in the midst of an emotional rupture of a violent past, are voices expressing – not only very well-versed – but also voices with so much poetry and voices which are allegorical.",
+            "source_file": "32-Ixmucane.mp3",
+            "start_time": 1028.81,
+            "end_time": 1053.98,
+            "duration": 25.17
+        },
+        {
+            "chunk_id": "91054dabecd805f2f634cd0019e18ed9",
+            "speaker": "Wolfgang",
+            "text": "So you have been laying out your own approach, which is on one hand easy to understand,  on the other hand, very difficult, because what does that mean in concrete? So obviously, you approach the people and ask them to take photographs as well as you recorded testimonies and later on you went into archives. But how did you approach the people? How did the Namibians, the Herero and Nama, react to it?",
+            "source_file": "33-Wolfgang.mp3",
+            "start_time": 1055.29,
+            "end_time": 1093.96,
+            "duration": 38.67
+        },
+        {
+            "chunk_id": "10700fab40c8f6d5fcd91bd3e6027924",
+            "speaker": "Ixmucane",
+            "text": "Yes, well, my work process is very organic, since I work with so many different people and in so many different places in Namibia. In my process, I involved long sessions of conversations. Sometimes, I will have three days of a session, for example. And of course, sometimes it was also shorter. And only after having this intense period of human exchange came the portrait.",
+            "source_file": "34-Ixmucane.mp3",
+            "start_time": 1094.03,
+            "end_time": 1129.91,
+            "duration": 35.88
+        },
+        {
+            "chunk_id": "ca445e607b1af30c535d984c5f826789",
+            "speaker": "Ixmucane",
+            "text": "So the portrait is the very last part of the work, almost as it is the closure of my encounter. So for me, the portrait needs this intimate space and it can happen only after a process which evolves into a certain complicity. It is a bond. And I will say that only about 10 percent of my work is with the camera. Most of my process is about research, about having conversations and, well, all these guided by my interest or this restless mood of getting to hear as much reflections as I can.",
+            "source_file": "35-Ixmucane.mp3",
+            "start_time": 1129.95,
+            "end_time": 1180.4,
+            "duration": 50.45
+        },
+        {
+            "chunk_id": "c8b7da911e2e6ad54439ed4e4dc93129",
+            "speaker": "Wolfgang",
+            "text": " I perfectly understand but you must acknowledge,  that this is fairly a different approach than many other photographers develop, or not? Because you’re actually combining your work as a photographer with the work of, let’s say, an anthropologist or a researcher. Or am I wrong?",
+            "source_file": "36-Wolfgang.mp3",
+            "start_time": 1180.7,
+            "end_time": 1211.12,
+            "duration": 30.42
+        },
+        {
+            "chunk_id": "725216116a0910b9db86608c38ea2561",
+            "speaker": "Ixmucane",
+            "text": "I definitely involve a lot of research in my work, and I think for me it’s more about these encounters andcomplicity. I’m not interested in the image that is stolen or is spontaneously snapped away from the people. So, yes, it may be that my work has an anthropological approach rather than just using the camera at its most powerful performance.",
+            "source_file": "37-Ixmucane.mp3",
+            "start_time": 1211.68,
+            "end_time": 1247.53,
+            "duration": 35.85
+        },
+        {
+            "chunk_id": "6ff6d2c08756299caa40e15d1c00ba26",
+            "speaker": "Ixmucane",
+            "text": "In fact, I think in general, in my work, I tried to remove old features, which feel unnecessary. Kind of like feeling exhausted of this aesthetic embellishment or of using the camera in this way. So, yes, I think for me it’s more about the human encounters and creating a bond with the people I work with.",
+            "source_file": "38-Ixmucane.mp3",
+            "start_time": 1248.28,
+            "end_time": 1281.49,
+            "duration": 33.21
+        },
+        {
+            "chunk_id": "6726a64655ea0321da7da3edd4764e93",
+            "speaker": "Wolfgang",
+            "text": " That’s indeed very interesting, because you nearly used the same words as Mark Sealy, curator and also head of the Black Photographers Association in London, with whom I spoke in another podcast.",
+            "source_file": "39-Wolfgang.mp3",
+            "start_time": 1281.93,
+            "end_time": 1310.03,
+            "duration": 28.1
+        },
+        {
+            "chunk_id": "1520177003114792225762dc6042ff65",
+            "speaker": "Wolfgang",
+            "text": "And so Mark Sealy explicitly claims, that we have to see what is outside the frame. And that is exactly what you just said, that you have to embed your photographical work in a much broader research and you have to understand the political and social background.  And Mark actually lays out his ideas in his recent book, “Decolonising the Camera. Photography in Racial Times.” ",
+            "source_file": "40-Wolfgang.mp3",
+            "start_time": 1310.31,
+            "end_time": 1344.84,
+            "duration": 34.53
+        },
+        {
+            "chunk_id": "4e15e87b60cc7e90ab2159af8d1e7b72",
+            "speaker": "Wolfgang",
+            "text": " And I would like to hear your opinion on that. He describes how Western photographic practices have been used as a tool for creating Eurocentric and violent visual regimes. And so, he asks the question, has photography been a liberating device or an oppressive weapon that holds the viewer, producer and citizen subject in a violent system of continual exposure?",
+            "source_file": "41-Wolfgang.mp3",
+            "start_time": 1344.84,
+            "end_time": 1373.54,
+            "duration": 28.7
+        },
+        {
+            "chunk_id": "30cd60ac6684ea7078c2b7522f6474fd",
+            "speaker": "Wolfgang",
+            "text": "And then he comes to this quite well-known British missionary photographer, Alice Seeley Harris and her Congo Reform Association. And so Alice Seeley Harris  has published photos taken in Congo, in the Congo under the regime of King Leopold II about the outrageous abuses and killings.And now the interesting thing is that these photos had a huge impact, because the European public was outraged. And so Leopold II himself had to withdraw from Congo.",
+            "source_file": "42-Wolfgang.mp3",
+            "start_time": 1373.73,
+            "end_time": 1420.13,
+            "duration": 46.4
+        },
+        {
+            "chunk_id": "2ee265fcaedcb17bbc2af0029060602d",
+            "speaker": "Wolfgang",
+            "text": "But what happened then was that the Belgian state took over the colony  and Mark Sealy points to it, that the British audience took the photos not as an incentive for liberation and freedom of African subjects, but for the construction of a higher morally colonizing authority that was understood as uniquely British and therefore just. So he is putting this ambivalence of photography, of colonial crimes in the forefront of his thoughts. So what is your opinion on that?",
+            "source_file": "43-Wolfgang.mp3",
+            "start_time": 1420.41,
+            "end_time": 1459.08,
+            "duration": 38.67
+        },
+        {
+            "chunk_id": "1a5b94fa532982a29d3f374bc41e5aca",
+            "speaker": "Ixmucane",
+            "text": "It is very interesting what you are just saying. Personally, I am constantly reflecting and confronting myself about the way of making photography, especially because there is an important human component in my work. And there might be different ways of making good photography or reflective photography.",
+            "source_file": "44-Ixmucane.mp3",
+            "start_time": 1460.27,
+            "end_time": 1482.95,
+            "duration": 22.68
+        },
+        {
+            "chunk_id": "8f7edc500feea3059d97e552ede0bdb8",
+            "speaker": "Ixmucane",
+            "text": "But, yes, I agree that photography is very fragile and very vulnerable. The camera, as this extension of the conscious of the photographer or of the artist working with the camera, has the risk of depicting the subject as “the Other,” as the exotic, as the victim.",
+            "source_file": "45-Ixmucane.mp3",
+            "start_time": 1484.03,
+            "end_time": 1507.55,
+            "duration": 23.52
+        },
+        {
+            "chunk_id": "93985b54daef5a8633a9b0f86c65b202",
+            "speaker": "Ixmucane",
+            "text": "So the photographer has this position of imposing values on the subject. And there might be good intentions, but these values, which are not only on an aesthetical level, but also on an ideological level, might create an unbalanced relationship between the artist and the subject. ",
+            "source_file": "46-Ixmucane.mp3",
+            "start_time": 1508.42,
+            "end_time": 1534.99,
+            "duration": 26.57
+        },
+        {
+            "chunk_id": "6b430ded5804668f48400e5b7b83e73e",
+            "speaker": "Ixmucane",
+            "text": "And then, of course, if these photographs are going to be presented in a beautiful gallery serving only one audience – and in the case of Western visual arts – serving a Western audience, then yes, the discourse to be delivered might be limited and only one-sided. So, yes, photography is fragile. And as I said, I don’t think that there is only one way of making photography. ",
+            "source_file": "47-Ixmucane.mp3",
+            "start_time": 1535.36,
+            "end_time": 1566.77,
+            "duration": 31.41
+        },
+        {
+            "chunk_id": "2977622578cb27f25df2ef1216834dd9",
+            "speaker": "Ixmucane",
+            "text": "In my personal approach, I see my work as more than a collection of data and faces from a distant past, from a distant place. In fact, it means engaging with stories that belong not only to the past and belong not only to a specific group. ",
+            "source_file": "48-Ixmucane.mp3",
+            "start_time": 1567.55,
+            "end_time": 1588.79,
+            "duration": 21.24
+        },
+        {
+            "chunk_id": "a2d2d80e18d7aa90cbbc8fcdc703e007",
+            "speaker": "Ixmucane",
+            "text": "In my most recent work, it belongs not only to Namibian society, but it goes in a deeper level. I think, that is more about our challenge as human beings living within environments that have embedded codes of social injustice and within these injustices that we live in each society, we are all facing similar existential questions. ",
+            "source_file": "49-Ixmucane.mp3",
+            "start_time": 1588.79,
+            "end_time": 1618.16,
+            "duration": 29.37
+        },
+        {
+            "chunk_id": "095f3b82c9f600e58f9520975a6e0051",
+            "speaker": "Ixmucane",
+            "text": "Questions of the need of rebelling against violence, against torture, against oppression, against foreign intervention. And in the case of Namibia, for acknowledgement as a first step to justice.",
+            "source_file": "50-Ixmucane.mp3",
+            "start_time": 1618.16,
+            "end_time": 1631.98,
+            "duration": 13.82
+        },
+        {
+            "chunk_id": "7f9a21c9c2a725a4081cf41518cae4e2",
+            "speaker": "Ixmucane",
+            "text": "So my attempt is to create a broader understanding of reality. And I think that it is vital then for arts to work with other disciplines if we want to create a broader picture of this reality.",
+            "source_file": "51-Ixmucane.mp3",
+            "start_time": 1632.92,
+            "end_time": 1655.63,
+            "duration": 22.71
+        },
+        {
+            "chunk_id": "a33bf6eb4a52de684a8558be9b8e9955",
+            "speaker": "Wolfgang",
+            "text": "Yeah, this is exactly how we met, we as lawyers and you as an artist. Because we are in a way trying to develop a similar approach for law and basically with the same words: that legal actions standing alone do not really change the situation but can contribute to a change of the situation when they are interconnected with other disciplines.",
+            "source_file": "52-Wolfgang.mp3",
+            "start_time": 1656.32,
+            "end_time": 1688.56,
+            "duration": 32.24
+        },
+        {
+            "chunk_id": "b3e9aa33e619c5d33c66e04ca438874c",
+            "speaker": "Wolfgang",
+            "text": " Maybe you want to talk a little bit about what kind of work you did recently for ECCHR, for our latest annual report, which is published now in April 2021. I call it in my introduction of your work, “Decolonizing the camera in practice.” So why don’t you introduce your work a little bit for the listeners? Obviously, one has to see it, but probably people are still interested in hearing how you put together the material for our annual report.",
+            "source_file": "53-Wolfgang.mp3",
+            "start_time": 1688.57,
+            "end_time": 1729.16,
+            "duration": 40.59
+        },
+        {
+            "chunk_id": "8deb7fee7fde2c4fcd2b4d31a85b7690",
+            "speaker": "Ixmucane",
+            "text": "In the annual report for ECCHR, which I see as a great opportunity to reach a larger audience of my work, a selection of portraits and a selection of narratives are presented. It is a small selection of the many different chapters of my work. One of them is sexual violence, which is an unpleasant matter in Namibia, yet is not a taboo. ",
+            "source_file": "54-Ixmucane.mp3",
+            "start_time": 1730.01,
+            "end_time": 1756.11,
+            "duration": 26.1
+        },
+        {
+            "chunk_id": "601abd15e447b01b12c46f9010d566b7",
+            "speaker": "Ixmucane",
+            "text": "And many conversations I had with the descendents... It is possible for them to trace back the names of the German settlers or German soldiers with outright intimate violence, abuse against the women and sank the dignity of women. There is no doubt that the colony was a masculine and rough world.",
+            "source_file": "55-Ixmucane.mp3",
+            "start_time": 1757.22,
+            "end_time": 1785.48,
+            "duration": 28.26
+        },
+        {
+            "chunk_id": "443e074e568c49a85985fd3a3cecfdbd",
+            "speaker": "Ixmucane",
+            "text": "And there was this particular way of waging war not only against the leaders, but also against the people, against women. So there are also other topics, including in the annual report, concentration camps and land loss, and all these have documental fragments of the genocide.",
+            "source_file": "56-Ixmucane.mp3",
+            "start_time": 1786.86,
+            "end_time": 1808.85,
+            "duration": 21.99
+        },
+        {
+            "chunk_id": "f88ff5ed515bd58d576b5937bcaaa678",
+            "speaker": "Ixmucane",
+            "text": "Archive is also another part of my work, as a cross-referencing Source with the oral history. During my research in Namibia, I did and intensive research in the National Archives. Sometimes the archives complement or sometimes they collide with the narratives, and it also evidences that archives do not hold the truth of the genocide: it shows a one-sided reality.",
+            "source_file": "57-Ixmucane.mp3",
+            "start_time": 1808.85,
+            "end_time": 1837.55,
+            "duration": 28.7
+        },
+        {
+            "chunk_id": "fdd59c6bdc629f4e64dc7a9641780b5a",
+            "speaker": "Ixmucane",
+            "text": "So I find it very interesting to create this tension between these many tangible data, which is possible to find in the archives with the human side of the conflict. So it also shows you that archives are missing this more intangible, more human perspective of the whole conflict.",
+            "source_file": "58-Ixmucane.mp3",
+            "start_time": 1837.83,
+            "end_time": 1863.08,
+            "duration": 25.25
+        },
+        {
+            "chunk_id": "a9ed21a7a4a0ab158677ff55758130c9",
+            "speaker": "Wolfgang",
+            "text": " When I visited your studio in Berlin a couple of months ago, you told me several stories of sexualized violence committed by the colonizers, by the German colonizers, against Herero and Nama women and the impact of this violence until today. So why don’t you tell us a little bit of this particular experience you made?",
+            "source_file": "59-Wolfgang.mp3",
+            "start_time": 1862.82,
+            "end_time": 1903.14,
+            "duration": 40.32
+        },
+        {
+            "chunk_id": "d99370a2fdbda1d15ad113ce5181ae86",
+            "speaker": "Ixmucane",
+            "text": "The German colony, it was no doubt that it was a masculine world. Many of the German soldiers settled on the newly acquired land. So it is definitely one of the many, many chapters. ",
+            "source_file": "60-Ixmucane.mp3",
+            "start_time": 1905.26,
+            "end_time": 1923.32,
+            "duration": 18.06
+        },
+        {
+            "chunk_id": "5415b97b979760db6b0e6734bef59422",
+            "speaker": "Ixmucane",
+            "text": "When speaking of genocide, it’s not only about the genocide itself and the human loss, but sexual violence, for example, is a tremendous part of this past. ",
+            "source_file": "61-Ixmucane.mp3",
+            "start_time": 1923.32,
+            "end_time": 1940.84,
+            "duration": 17.52
+        },
+        {
+            "chunk_id": "890c38cd7fd4cc03cd46334f56f73633",
+            "speaker": "Ixmucane",
+            "text": "It’s the wanted relationships that nonetheless were based on a power gap between German soldiers or settlers and female prisoners. There was this rotten masculine sadism which was legitimized by military codes. ",
+            "source_file": "62-Ixmucane.mp3",
+            "start_time": 1940.84,
+            "end_time": 1958.78,
+            "duration": 17.94
+        },
+        {
+            "chunk_id": "c7f559d442f4f10cfbcde0b4958e0c83",
+            "speaker": "Ixmucane",
+            "text": "And all this was hidden normality during the period of the German colonialism. So this German fatherhood, in the Herero and Nama families is something which today is part of what the genocide has left.",
+            "source_file": "63-Ixmucane.mp3",
+            "start_time": 1958.78,
+            "end_time": 1984.1,
+            "duration": 25.32
+        },
+        {
+            "chunk_id": "ff4f77d47940fe7e7e1c6ebbb038bba0",
+            "speaker": "Wolfgang",
+            "text": " I think that’s an extremely important point. Because what we see now is... You mentioned the question of land. What we see now is that the land titles of the fertile land are in the hands of the Germans or the descendants of the German colonizers or the South African colonizers, who were the second set of colonizers.",
+            "source_file": "64-Wolfgang.mp3",
+            "start_time": 1985.34,
+            "end_time": 2009.73,
+            "duration": 24.39
+        },
+        {
+            "chunk_id": "7b5efe0b9b6586522c54d8efc0f75252",
+            "speaker": "Wolfgang",
+            "text": "And the way how it’s presented now, it’s a sober story. I mean, there was a certain war with a certain level of violence on both sides. That’s how the Germans and the German descendants tell it now. But when you grab a little bit deeper, like you did, stories of incredible violence in the concentration camps on Shark Island or Swakopmund come out, stories of sexualized violence.",
+            "source_file": "65-Wolfgang.mp3",
+            "start_time": 2009.73,
+            "end_time": 2039.88,
+            "duration": 30.15
+        },
+        {
+            "chunk_id": "1c7b53c0f489538eb4b16e2d976aaa7b",
+            "speaker": "Wolfgang",
+            "text": "And that’s something, I have to say, it’s very difficult for us as lawyers to find an angle how to challenge that legally. What we can challenge legally is, in general, the question of acknowledgement or generally the question of reparation. But all these hidden layers of this story, shows the importance of you as an artist.",
+            "source_file": "66-Wolfgang.mp3",
+            "start_time": 2040.09,
+            "end_time": 2071.59,
+            "duration": 31.5
+        },
+        {
+            "chunk_id": "dba12827d9f74301b73ccd1832343daf",
+            "speaker": "Wolfgang",
+            "text": "And in this regard, I would like to know from you what is your idea, how do you want to present the whole project in Namibia and in Germany? You have some plans to present your work.",
+            "source_file": "67-Wolfgang.mp3",
+            "start_time": 2072.43,
+            "end_time": 2090.49,
+            "duration": 18.06
+        },
+        {
+            "chunk_id": "740cc0446ed302f398bb32a645d5702a",
+            "speaker": "Ixmucane",
+            "text": "The work is planned to be presented in a form of a photographic exhibition and also in form of a publication. I think it is vital to present the work not only in Namibia, but also in Germany. Yes, and well, rather than presenting portraits hanging on the wall to look at them, it is planned to present the work as an installation in which the portraits have their own setting and they stand on their own and the narratives as well.",
+            "source_file": "68-Ixmucane.mp3",
+            "start_time": 2091.49,
+            "end_time": 2137.33,
+            "duration": 45.84
+        },
+        {
+            "chunk_id": "d6e695aae5047af752494a75ea4fd18e",
+            "speaker": "Ixmucane",
+            "text": "So for me, I see that this interaction, this back and forth between portraits and text is crucial so that you look at the portraits, then you step back and you can – you read the narratives and then you step back with a more informed eye. And well, the portraits are all set in this none-place background. And here my attempt is to leave the individuality out of the complex realities of the everyday environment.",
+            "source_file": "69-Ixmucane.mp3",
+            "start_time": 2137.54,
+            "end_time": 2184.4,
+            "duration": 46.86
+        },
+        {
+            "chunk_id": "01d437b87535c6e41604ac3e2cd28d6d",
+            "speaker": "Ixmucane",
+            "text": "So this repetition creates a patterning of this non-place and suggests the viewer that the portraits should be followed as a collective rather than individual characters.",
+            "source_file": "70-Ixmucane.mp3",
+            "start_time": 2185.15,
+            "end_time": 2200.69,
+            "duration": 15.54
+        },
+        {
+            "chunk_id": "5631b6ddf767b8a8b78dc2910634ee14",
+            "speaker": "Wolfgang",
+            "text": " I like that particular approach very much, because it’s something that’s really needed. On the one hand, you present single stories, single portraits. But you make, through the form of presentation, you make very clear that they are only a fragment of a collective reality. And that is what we need. And that is what struck me about your work.",
+            "source_file": "71-Wolfgang.mp3",
+            "start_time": 2202.26,
+            "end_time": 2234.01,
+            "duration": 31.75
+        },
+        {
+            "chunk_id": "6f6bd9ca205e043ace7431e41a5e6559",
+            "speaker": "Wolfgang",
+            "text": "Coming to an eventual presentation in Germany: what would be your message to the Germans? So what would you like to tell them?",
+            "source_file": "72-Wolfgang.mp3",
+            "start_time": 2234.15,
+            "end_time": 2244.5,
+            "duration": 10.35
+        },
+        {
+            "chunk_id": "5485f13c4c76e7fa34b1d2750ec4a5c5",
+            "speaker": "Ixmucane",
+            "text": "I think this might be the most challenging part of the work, to deliver a message. I am more interested in creating spaces for reflection – more than delivering a single message. I’m interested in creating work that communicates, provokes in a variety of levels. ",
+            "source_file": "73-Ixmucane.mp3",
+            "start_time": 2245.14,
+            "end_time": 2267.31,
+            "duration": 22.17
+        },
+        {
+            "chunk_id": "63bbf568c7dd0ce1c2e64a757e46d10c",
+            "speaker": "Ixmucane",
+            "text": "With my work in Namibia, as a process of understanding the genocide, is sharing stories as a collective evidence, which are not only important to preserve as testimonies or correct the official historical records of the genocide.",
+            "source_file": "74-Ixmucane.mp3",
+            "start_time": 2267.31,
+            "end_time": 2283.93,
+            "duration": 16.62
+        },
+        {
+            "chunk_id": "cf5671de43d157b3302d43aee37d64c8",
+            "speaker": "Ixmucane",
+            "text": "But I think also it goes beyond... I see that beyond the narratives is wisdom and knowledge. And beyond the many portraits and images stands the human. And I think this is exactly what I would like to deliver to the audience.",
+            "source_file": "75-Ixmucane.mp3",
+            "start_time": 2284.26,
+            "end_time": 2300.97,
+            "duration": 16.71
+        },
+        {
+            "chunk_id": "d5c8cab5328094f16c10f4ef3300cc77",
+            "speaker": "Wolfgang",
+            "text": " So, you say, you insist, and I think it’s important, you insist that many voices have to be heard in this context of the Namibian genocide, but also in other situations. And therefore, it’s not about you delivering certain messages and not you being the voice. But on the other hand, in the absence of other voices, you are the one who will be heard.",
+            "source_file": "76-Wolfgang.mp3",
+            "start_time": 2302.1,
+            "end_time": 2335.63,
+            "duration": 33.53
+        },
+        {
+            "chunk_id": "b57635d4c7022dafb3cc91a08ea87b23",
+            "speaker": "Wolfgang",
+            "text": "I mean, you are the one who will be invited to an exhibition. And if you are not presenting your material there and if you don’t speak there, visually or through words, nobody tells the story. And that is something what worries me: that by insisting – and rightly insisting – that many voices have to be heard, people who can deliver messages, should start to deliver messages, say that they don’t want to be the voice because the others are not there.",
+            "source_file": "77-Wolfgang.mp3",
+            "start_time": 2335.64,
+            "end_time": 2377.55,
+            "duration": 41.91
+        },
+        {
+            "chunk_id": "df697ee20b252b1c57eaa3daab700424",
+            "speaker": "Ixmucane",
+            "text": "But somewhere, the reconstruction of the memory, the storytelling has to be started, obviously, together with the Namibians. But we have to start somewhere, or not? In a way, it’s the same question Mark Sealy phrased in different terms. I mean, we have to show the pictures of the cruelties of the colonial crimes. But by doing that, we violate other principles.",
+            "source_file": "78-Ixmucane.mp3",
+            "start_time": 2378.33,
+            "end_time": 2412.97,
+            "duration": 34.64
+        },
+        {
+            "chunk_id": "0ba82a280693c9800f9db12b7b1ed958",
+            "speaker": "Wolfgang",
+            "text": "What I want to say it’s not perfect, what we’re doing, but it’s a start. Can we understand our practices like that or do we need the setting where all these many voices can be heard?",
+            "source_file": "79-Wolfgang.mp3",
+            "start_time": 2413.82,
+            "end_time": 2430.56,
+            "duration": 16.74
+        },
+        {
+            "chunk_id": "bd1f0fec6750e0292e6ae1a54e1194c7",
+            "speaker": "Ixmucane",
+            "text": "Well, I also think that I already said it. Maybe I can say it a different way. But I think there is this need of communicating in these many different levels. And here is where I see that arts can be one of these levels. So I think that the message that we deliver is that this reality of all the Nama and Herero people is a reality whose origin lies beyond fate. And and it’s also a reality which needs to be heard in order to be acknowledged as a first step for justice.",
+            "source_file": "80-Ixmucane.mp3",
+            "start_time": 2432.08,
+            "end_time": 2489.95,
+            "duration": 57.87
+        },
+        {
+            "chunk_id": "9423f71613119d7d4b079cfff108dd4b",
+            "speaker": "Wolfgang",
+            "text": " Thank you very much, Ixmucané. I think especially the last remark was extremely important, because you showed the importance of interconnecting the reconstruction of memory with the question of justice. And that’s actually something we at ECCHR feel very obliged to do because the reconstruction of memory obviously is not not only about legal investigation, it’s not only about establishing files and documents about crimes of the past.",
+            "source_file": "81-Wolfgang.mp3",
+            "start_time": 2491.18,
+            "end_time": 2533.12,
+            "duration": 41.94
+        },
+        {
+            "chunk_id": "a327753afba00027a813bd3e00eda26a",
+            "speaker": "Wolfgang",
+            "text": "It’s a, as you framed it, a multilayered process. And I liked also that you immediately connect it to the question of justice. And justice is as well a very multilayered process. And the interesting thing is that both of us take a different approach. But in the end, we conclude both that memory and justice are necessary, not only in the context of the Namibian genocide, but in many other situations. So, let me thank you for this talk and thank you for your work.",
+            "source_file": "82-Wolfgang.mp3",
+            "start_time": 2533.39,
+            "end_time": 2585.43,
+            "duration": 52.04
+        },
+        {
+            "chunk_id": "d9516fe6c84a97d7f82af2227ad09ca2",
+            "speaker": "Ixmucane",
+            "text": "Well, thank you. Thank you for this special conversation and also thank you for beautiful opportunity to contribute with my work in the annual report.",
+            "source_file": "83-Ixmucane.mp3",
+            "start_time": 2585.72,
+            "end_time": 2598.77,
+            "duration": 13.05
+        }
+    ]
+}
