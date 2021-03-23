@@ -6,8 +6,6 @@ import json
 import hashlib
 
 # TODO: change getopt to argparse
-# TODO: add option to specify episode name
-# TODO: add duration
 
 help_message = """
 sonix2metasphere.py:
@@ -34,6 +32,7 @@ def preprocess(text):
 def main():
     input_file = ""
     output_file = ""
+    episode_name = ""
 
     try:
         opts, args = getopt.getopt(
@@ -50,6 +49,9 @@ def main():
             input_file = arg
         elif opt in ("-o", "--output-file"):
             output_file = arg
+        elif opt in ("-n", "--episode-name"):
+            episode_name = arg
+
 
     if not input_file:
         raise_error("Please specify the location of transcript.json")
@@ -61,8 +63,10 @@ def main():
     except (OSError, IOError) as error:
         raise_error(error)
 
+    if not episode_name:
+        episode_name = data['name']
 
-    hash = hashlib.md5(data['name'].encode("utf-8"))
+    hash = hashlib.md5(episode_name.encode("utf-8"))
     collection_id = hash.hexdigest()
 
     if not output_file:
@@ -77,7 +81,7 @@ def main():
 
     final_transcript = {
         'collection_id': collection_id,
-        'name': data['name'],
+        'name': episode_name,
         'source_type': source_type,
         'source_path': source_path,
         'chunk_sequence': [
