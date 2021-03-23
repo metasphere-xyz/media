@@ -5,6 +5,10 @@ import getopt
 import json
 import hashlib
 
+# TODO: change getopt to argparse
+# TODO: add option to specify episode name
+# TODO: add duration
+
 help_message = """
 sonix2metasphere.py:
 Convert a sonix.ai JSON transcript into a metasphere collection.json
@@ -99,12 +103,16 @@ def main():
             chunk_number = chunk_number + 1
             speaker_name = str(chunk.get('speaker')[13:]).capitalize()
 
+            duration = (chunk.get('end_time') - chunk.get('start_time')) * -1
+
             final_transcript['chunk_sequence'].append({
                 "chunk_id": chunk_id,
+                "speaker": speaker_name,
                 "text": text_transcript,
                 "source_file": str(chunk_number) + "-" + speaker_name,
                 "start_time": chunk.get('start_time'),
-                "end_time": chunk.get('end_time')
+                "end_time": chunk.get('end_time'),
+                "duration": duration
             })
 
     with open(output_file, 'w', encoding='utf8') as json_file:
