@@ -13,6 +13,7 @@ Convert a sonix.ai JSON transcript into a metasphere collection.json
 usage: sonix2metasphere.py [-i] <transcript.json> [-o output.json]
 -i --input-file <transcript.json>: location of the sonix transcript
 -o --output-file <output.json>: output file (default: collection.json)
+-n --episode-name <name>: episode name (overwrites name of sonix session)
 """
 
 def raise_error(error):
@@ -37,7 +38,7 @@ def main():
     try:
         opts, args = getopt.getopt(
             sys.argv[1:],
-            "hi:o:", ["input-file=", "output-file="]
+            "hi:o:n:", ["input-file=", "output-file=", "episode-name="]
         )
     except getopt.GetoptError as error:
         raise_error(error)
@@ -79,16 +80,18 @@ def main():
 
 # TODO: add speakers to episode header
 
+    chunk_number = 0
+
     final_transcript = {
         'collection_id': collection_id,
         'name': episode_name,
         'source_type': source_type,
         'source_path': source_path,
+        'num_chunks': chunk_number,
         'chunk_sequence': [
         ]
     }
 
-    chunk_number = 0
     for chunk in data['transcript']:
 
         # TODO: add speaker, duration
@@ -105,19 +108,21 @@ def main():
 
         if text_transcript != "":
             chunk_number = chunk_number + 1
-            speaker_name = str(chunk.get('speaker')[13:]).capitalize()
+            speaker_name = str(chunk.get('speaker')[13:]).capitalize().replace('.mp3', '')
 
-            duration = (chunk.get('end_time') - chunk.get('start_time')) * -1
+            duration = round(chunk.get('end_time') - chunk.get('start_time'), 2)
 
             final_transcript['chunk_sequence'].append({
                 "chunk_id": chunk_id,
                 "speaker": speaker_name,
                 "text": text_transcript,
-                "source_file": str(chunk_number) + "-" + speaker_name,
+                "source_file": str(chunk_number) + "-" + speaker_name + '.mp3',
                 "start_time": chunk.get('start_time'),
                 "end_time": chunk.get('end_time'),
                 "duration": duration
             })
+
+            final_transcript['num_chunks'] = chunk_number
 
     with open(output_file, 'w', encoding='utf8') as json_file:
         json.dump(final_transcript, json_file, ensure_ascii=False, indent=4)
