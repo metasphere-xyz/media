@@ -94,7 +94,6 @@ def main():
 
     for chunk in data['transcript']:
 
-        # TODO: add speaker, duration
         text_complete = []
 
         for word in chunk['words']:
@@ -108,7 +107,9 @@ def main():
 
         if text_transcript != "":
             chunk_number = chunk_number + 1
-            speaker_name = str(chunk.get('speaker')[13:]).capitalize().replace('.mp3', '')
+            # speaker_name = str(chunk.get('speaker')[13:]).capitalize().replace('.mp3', '')
+            speaker_name = str(chunk.get('speaker')).capitalize()
+            print ("speaker: " + speaker_name)
 
             duration = round(chunk.get('end_time') - chunk.get('start_time'), 2)
 
