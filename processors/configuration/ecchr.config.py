@@ -29,10 +29,84 @@ matched_entities = {
     'Susan': 'Susan Meiselas',
     'Rabih': 'Rabih Mroué',
     'Mark': 'Mark Sealy',
-    'Ixmucane': 'Ixmucané Aguilar',
     'Christina': 'Christina Varvia',
     'Ixmucane': 'Ixmucané Aguilar',
     'Claudia': 'Claudia Salazar Jimenéz',
     'Karina': 'Karina Theurer',
+    'Eyal': 'Eyal Weizman',
     '': ''
+}
+
+# speaker infos
+
+
+
+speaker_colors = {
+    'Wolfgang Kaleck': ['#0395A9', '#8CDCE7'],
+    'Fred Ritchin': ['#2468CD', '#50B7F1'],
+    'Susan Meiselas': ['#F8BF2D', '#FEDD9E'],
+    'Rabih Mroué': ['#F057AA', '#F992C9'],
+    'Mark Sealy': ['#7F69BF', '#AD9CDE'],
+    'Christina Varvia': ['#94B5C0', '#CFE2E8'],
+    'Ixmucané Aguilar': ['#55A2CD', '#56C1FD'],
+    'Claudia Salazar Jimenéz': ['#E84F7D', '#F08CAA'],
+    'Karina Theurer': ['#F8BF2D', '#FEDD9E'],
+    'Eyal Weizman': ['#BB7737', '#CDB196'],
+}
+
+speaker_short_description = {
+    'Wolfgang Kaleck': '',
+    'Fred Ritchin': '',
+    'Susan Meiselas': '',
+    'Rabih Mroué': '',
+    'Mark Sealy': '',
+    'Christina Varvia': '',
+    'Ixmucané Aguilar': '',
+    'Claudia Salazar Jimenéz': '',
+    'Karina Theurer': '',
+    'Eyal Weizman': '',
+}
+
+
+speaker_bios {
+    'Wolfgang Kaleck':
+    '''
+Wolfgang Kaleck is the founder and General Secretary of the European Center for Constitutional and Human Rights (ECCHR) in Berlin. Together with partners around the world, ECCHR challenges human rights violations through legal action. Kaleck represents whistleblower Edward Snowden in Europe. He has written several books, including  Die konkrete Utopie der Menschenrechte. Ein Blick zurück in die Zukunft (2021) and Mit Recht gegen die Macht (2015)/Law versus Power (2018). In recognition of his human rights work, he received the Centre for International Law Research and Policy Bassiouni Justice Award in 2019, and the Bayerischer Anwaltverband (Bavarian Lawyer's Association) Max Friedlaender Prize in 2018.
+    ''',
+    'Fred Ritchin':
+    '''
+
+    ''',
+    'Susan Meiselas':
+    '''
+
+    ''',
+    'Rabih Mroué':
+    '''
+
+    ''',
+    'Mark Sealy':
+    '''
+Dr Mark Sealy, Executive Director of Autograph ABP (1991) and Principal Research Fellow: Decolonising Photography at University of the Arts London (University Arts London). Sealy is a core member of the Photography Archive Research Centre at London College of Communication. He is interested in the relationship between photography and social change, identity politics, race, and human rights. He has produced numerous artist publications, curated exhibitions, and commissioned photographers and filmmakers worldwide.
+    ''',
+    'Christina Varvia':
+    '''
+Christina Varvia, currently a Research Fellow, was formerly the Deputy Director and Lead Researcher of Forensic Architecture (FA). She was trained as an architect at the Architectural Association (AA) and Westminster University, and has taught a Diploma unit (March) at the AA (2018-2020). She was a member of the Technology Advisory Board for the International Criminal Court (2018). Currently, Christina is pursuing her PhD at Aarhus University where her research focuses on biopolitics and imaging of the human body. She has received the Novo Nordisk Foundation Mads Øvlisen PhD Scholarship for Practice-based Artistic Research, and is also a Fellow at Louisiana Museum of Modern Art.
+    ''',
+    'Ixmucané Aguilar':
+    '''
+Ixmucané Aguilar (1983) is a Berlin-based visual artist/designer who graduated from Weißensee Academy of Art Berlin - in the class of Prof. Tristan Pranyko. She works with documentary photography, which she combines with research and conversations, guided by an interest in looking for truth and human perspectives. Ixmucané often engages with communities of people sharing a reality affected by political and historical layers. In this sense her work turns text and images into artistic photo-documentaries as fragments of human reality.
+    ''',
+    'Claudia Salazar Jimenéz':
+    '''
+Claudia Salazar Jiménez, born in Lima, Peru, in 1976, one of the most recognized Peruvian writers of her generation, is also a literary critic, university professor, and the founder of the literary journal Fuegos de Arena. She studied literature at the Universidad Nacional Mayor de San Marcos and holds a PhD from NYU. She edited the anthologies "Escribir en Nueva York" (2014) about Hispanic American narrators and "Voces para Lilith" (2011) on contemporary South American women writers. Mre recently she has published the anthology "Pachakuti feminista" (2020) on feminist essays in contemporary Peru. Her debut novel "Blood of the Dawn" was awarded the Las Americas Narrative Prize in 2014. She also received the TUMI-USA Award in 2015 and the Sylvia Molloy Prize for her academic work in Gender and Sexuality Studies. She has also published the collection of short stories "Coordenadas Temporales" (2016) and the novel for young adults "1814. Año de la independencia". She is currently based in New York City.
+    ''',
+    'Karina Theurer':
+    '''
+Karina Theurer is a feminist lawyer and writer. Since 2018, she is director of the Institute for Legal Intervention at the European Center for Constitutional and Human Rights. Prior to that, she coordinated and taught the Humboldt Law Clinic for Fundamental and Human Rights at Humboldt University in Berlin for ten years. She teaches international public law, human rights litigation, and decolonial and feminist legal critique at several universities in Berlin. She also holds a Master of Arts in Interdisciplinary Latin American Studies and co-founded the bilingual literary magazine alba.lateinamerika lesen, which she edited for ten years. She regularly translates poetry from Spanish to German, including works by renowned artists such as Tomás González, Cristina Peri Rossi or Héctor Abad Faciolince.
+    ''',
+    'Eyal Weizman':
+    '''
+Eyal Weizman is an architect, Professor of Spatial and Visual Cultures and director of Forensic Architecture, which he founded in 2010. In 2019 he has been awarded a British Academy Fellowship and an MBE from Buckingham Palace. Since 2019 he is a Guest Professor at the ETH in Zurich. In 2005 he founded the Centre for Research Architecture at Goldsmiths, University of London. Between 2014-2018 he was a Global Scholar at Princeton University. In 2007 he set up, with Sandi Hilal and Alessandro Petti, the architectural collective DAAR in Beit Sahour/Palestine. His books include Forensic Architecture: Violence at the Threshold of Detectability (Zone, 2017) The Conflict Shoreline (Steidl and Cabinet, 2015), Mengele’s Skull (Sternberg, 2012), The Least of all Possible Evils (Verso, 2011), Hollow Land (Verso, 2007), A Civilian Occupation (Verso, 2003). Weizman is on the Technology Advisory Board of the International Criminal Court in The Hague. He studied architecture at the Architectural Association in London and completed his PhD at the London Consortium/Birkbeck College.
+    '''
 }
