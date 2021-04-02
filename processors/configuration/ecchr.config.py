@@ -75,7 +75,7 @@ Wolfgang Kaleck is the founder and General Secretary of the European Center for 
     ''',
     'Fred Ritchin':
     '''
-
+Fred Ritchin is Dean Emeritus of the International Center of Photography and previously was professor of Photography and Imaging at New York University. Ritchin served as picture editor of the New York Times Magazine, created the first multimedia version of the New York Times, and then conceived and edited the Times’s first non-linear online non-linear documentary project, “Bosnia: Uncertain Paths to Peace,” nominated for a Pulitzer Prize in public service. His books on the future of imaging include In Our Own Image: The Coming Revolution in Photography, After Photography, and Bending the Frame: Photojournalism, Documentary, and the Citizen. Recently he helped found the online visual journal Fotodemic.org, conceptualized the Four Corners Project to provide greater context to photographs, and also launched TheFifthCorner.org, a resource for those interested in exploring and implementing the current paradigm shift in visual media. He writes, lectures, and teaches courses on image-based strategies for social justice and human rights in multiple venues.
     ''',
     'Susan Meiselas':
     '''
@@ -83,7 +83,7 @@ Wolfgang Kaleck is the founder and General Secretary of the European Center for 
     ''',
     'Rabih Mroué':
     '''
-
+Rabih Mroué, born in Beirut lives now in Berlin, is a theatre director, actor, visual artist and playwright. Rooted in theatre, his work includes videos and installation art. He is a contributing editor for The Drama Review/TDR (New York) and co-founder and a board member of the Beirut Art Center (BAC). Mroué is a fellow at The International Research Center: Interweaving Performance Cultures/ FU/Berlin since 2013 and theatre director at Münchner Kammerspiele (Munich). Mouré has performed and exhibited internationally including dOCUMENTA (13) – Kassel, CA2M Centro de Arte Dos de Mayo – Madrid, The ICP Triennial and MoMa – New York, Centre Pompidou – Paris, SALT – Istanbul, among others.
     ''',
     'Mark Sealy':
     '''
