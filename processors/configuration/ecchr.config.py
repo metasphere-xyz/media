@@ -55,16 +55,16 @@ speaker_colors = {
 }
 
 speaker_short_description = {
-    'Wolfgang Kaleck': '',
-    'Fred Ritchin': '',
+    'Wolfgang Kaleck': 'Founder and General Secretary of the European Center for Constitutional and Human Rights',
+    'Fred Ritchin': 'Dean Emeritus of the International Center of Photography',
     'Susan Meiselas': '',
-    'Rabih Mroué': '',
-    'Mark Sealy': '',
-    'Christina Varvia': '',
-    'Ixmucané Aguilar': '',
-    'Claudia Salazar Jimenéz': '',
-    'Karina Theurer': '',
-    'Eyal Weizman': '',
+    'Rabih Mroué': 'Director, actor, visual artist and playwright',
+    'Mark Sealy': 'Executive Director of Autograph Gallery',
+    'Christina Varvia': 'Research Fellow, former Deputy Director and Lead Researcher of Forensic Architecture',
+    'Ixmucané Aguilar': 'Visual artist/designer and documentary pphotographer',
+    'Claudia Salazar Jimenéz': 'Peruvian writer, literary critic and university professor',
+    'Karina Theurer': 'Director of the Institute for Legal Intervention at ECCHR',
+    'Eyal Weizman': 'Architect, Professor of Spatial and Visual Cultures and director of Forensic Architecture',
 }
 
 
