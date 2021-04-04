@@ -1,10 +1,8 @@
 # Configuration file for metasphere processor
 
-# scope: episode IDs
+# episode infos
 
 episodes = {
-    '4ece0d064575609367f665d617d95d30':
-        'Visuals of Violence with Mark Sealy and Wolfgang Kaleck',
     '7cd79ca6d4999a07e969b647a82057eb':
         'On artistic and human rights interventions 1/4 with Fred Ritchin and Wolfgang Kaleck',
     '2792e8ea6aa32398937276841d9b2414':
@@ -13,13 +11,68 @@ episodes = {
         'On Artistic and Human Rights Interventions 3/4 with Rabih Mroué and Wolfgang Kaleck',
     '102d3a312808a19439b8a7b6f9917dbe':
         'On Artistic and Human Rights Interventions 4/4 with Christina Varvia and Wolfgang Kaleck',
-    '275b1e9261bbfb863c0e62cfa2aa9d73':
+    '455f1001b9fcfda09b2b471e941853e4':
+        'The Blood of the Dawn with Claudia Salazar Jimenéz and Karina Theurer',
+    '4ece0d064575609367f665d617d95d30':
         'Visuals of Violence with Mark Sealy and Wolfgang Kaleck',
     '445b28f26e7c2d54a6cbc6deeb57bc49':
-        'Ixmucané Aguilar and Wolfgang Kaleck',
-    '455f1001b9fcfda09b2b471e941853e4':
-        'The Blood of the Dawn with Claudia Salazar Jimenéz and Karina Theurer'
+        'Decolonizing the camera in practice with Ixmucané Aguilar and Wolfgang Kaleck'
 }
+
+episode_intros = {
+    '7cd79ca6d4999a07e969b647a82057eb':
+        '''
+The following talk was part of a panel discussion at the Akademie der Künste in Berlin for the Opening Days of the European Month of Photography (EMOP) in October 2020, in cooperation with ECCHR.
+
+In this episode, Fred Ritchin (USA), photographer and Dean Emeritus of the International Center of Photography School, discusses the role graphic images have had in photojournalism to raise political awareness. For this purpose, he looks to some of recent history’s most iconic examples.
+
+Ritchin unpacks widely-held ideas about documentary truth, examining how photography can shine light on violence and repression, while also questioning the ways in which this transmission might be limited.
+        ''',
+    '2792e8ea6aa32398937276841d9b2414':
+        '''
+The following talk was part of a panel discussion at the Akademie der Künste in Berlin for the Opening Days of the European Month of Photography (EMOP) in October 2020, in cooperation with ECCHR.
+
+Join us for a talk from Susan Meiselas (USA), documentary photographer and president of the Magnum Foundation, about her practice, including her experiences as a photojournalist covering human rights issues in Central America, beginning with the popular insurrection in Nicaragua 1978 and her six-year long project creating a photographic history of Kurdistan.
+
+Meiselas addresses the ethical responsibility of photographers as witnesses: what evidence should be made visible, who is it for and who does it serve? What responsibility do photographers have towards those affected? Where does the evidential work to document a process begin and end?
+
+Please be advised, this episode contains themes of violence that some listeners may find distressing.
+        ''',
+    'f8487321ec78207ffa6a25f9fbff7079':
+        '''
+The following talk was part of a panel discussion at the Akademie der Künste in Berlin for the Opening Days of the European Month of Photography (EMOP) in October 2020, in cooperation with ECCHR.
+
+Join us in this episode as we hear a talk from Lebanese performance and video artist Rabih Mroué about how he treats the impact of violent images in his work.
+Beginning with his piece PIXELATED REVOLUTION, which uses the moment of the civilian witness capturing violence on their cellphone camera, Mroué lays out a complicated web of connections between the witnessing acts of viewer, victim, and perpetrator.
+        ''',
+    '102d3a312808a19439b8a7b6f9917dbe':
+        '''
+The following talk was part of a panel discussion at the Akademie der Künste in Berlin for the Opening Days of the European Month of Photography (EMOP) in October 2020, in cooperation with ECCHR.
+
+Join us in this episode for a closer look at several of Forensic Architecture’s investigations and working methodologies in Gaza, Germany, and Cameroon with architect and former Deputy Director of Forensic Architecture, Christina Varvia.
+        ''',
+    '455f1001b9fcfda09b2b471e941853e4':
+        '''
+Today we’ll talk about the debut novel The Blood of the Dawn — La Sangre de la Aurora by Claudia Salazar Jimenéz. Your host today is Karina Theurer, ECCHR Director of the Institute for Legal intervention
+
+Set in Peru during the heyday of the militant Maoist insurgency group known as Sendero Luminoso – Shining Path – the book explores the experiences of internal armed conflict through the voices of three women from diﬀerent backgrounds. In their interweaving stories, Salazar Jimenéz chronicles sexual and gender-based violence suﬀered by countless women at the hands of both the Peruvian authorities and members of Shining Path.
+
+Salazar Jimenéz and Theurer will discuss the enduring consequences of gender discrimination and using fiction as a tool for visibility and for sensitizing us to the suﬀering of others.
+
+We’ll begin with an excerpt from the novel, read by Salazar Jeminéz herself. Please be advised, this episode contains themes of sexual and gender-based violence that some listeners may find distressing.
+        ''',
+    '4ece0d064575609367f665d617d95d30':
+        '''
+Join us in this episode as curator and cultural historian Mark Sealy talks about the challenges of visual representation. Your host of today is Wolfgang Kaleck, ECCHR General Secretary.
+
+Sealy and Kaleck discuss the visuals of violence and the viewers’ responsibility. They will interrogate diﬀerent ways of dealing with photography produced in colonial and postcolonial contexts and try to answer the questions: How do we deploy these images… and to what purpose?
+        ''',
+    '445b28f26e7c2d54a6cbc6deeb57bc49':
+        '''
+Today, Guatemalan visual artist Ixmucané Aguilar discusses with Wolfgang Kaleck her documentary photography practice exploring the enduring effects of German colonialism in Namibia and the genocide against the Herero and Nama. Anchored in different Namibian regions, and often based on portraits, narratives, poems, and lamentations, Aguilar’s work draws from the anthropologist’s playbook, working with oral histories from living descendants as much as archival sources. The conversation addresses the fragility of photography as a medium, the risk the photographer runs of imposing their values upon their subject, the importance of collective evidence and recognizing the many nuances of truth.
+        '''
+}
+
 
 # Entity matching
 
@@ -37,9 +90,8 @@ matched_entities = {
     '': ''
 }
 
+
 # speaker infos
-
-
 
 speaker_colors = {
     'Wolfgang Kaleck': ['#0395A9', '#8CDCE7'],
@@ -110,3 +162,5 @@ Karina Theurer is a feminist lawyer and writer. Since 2018, she is director of t
 Eyal Weizman is an architect, Professor of Spatial and Visual Cultures and director of Forensic Architecture, which he founded in 2010. In 2019 he has been awarded a British Academy Fellowship and an MBE from Buckingham Palace. Since 2019 he is a Guest Professor at the ETH in Zurich. In 2005 he founded the Centre for Research Architecture at Goldsmiths, University of London. Between 2014-2018 he was a Global Scholar at Princeton University. In 2007 he set up, with Sandi Hilal and Alessandro Petti, the architectural collective DAAR in Beit Sahour/Palestine. His books include Forensic Architecture: Violence at the Threshold of Detectability (Zone, 2017) The Conflict Shoreline (Steidl and Cabinet, 2015), Mengele’s Skull (Sternberg, 2012), The Least of all Possible Evils (Verso, 2011), Hollow Land (Verso, 2007), A Civilian Occupation (Verso, 2003). Weizman is on the Technology Advisory Board of the International Criminal Court in The Hague. He studied architecture at the Architectural Association in London and completed his PhD at the London Consortium/Birkbeck College.
     '''
 }
+
+
