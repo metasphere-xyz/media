@@ -3,6 +3,8 @@
     "name": "Ixmucané Aguilar and Wolfgang Kaleck",
     "source_type": "audio",
     "source_path": "/podcasts/episodes/445b28f26e7c2d54a6cbc6deeb57bc49",
+    "intro_audio": "00-Intro.mp3",
+    "intro_text": "XXX",
     "num_chunks": 83,
     "chunk_sequence": [
         {

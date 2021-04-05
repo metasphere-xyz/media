@@ -3,6 +3,8 @@
     "name": "The Blood of the Dawn with Claudia Salazar Jimenéz and Karina Theurer",
     "source_type": "audio",
     "source_path": "/podcasts/episodes/455f1001b9fcfda09b2b471e941853e4",
+    "intro_audio": "00-Intro.mp3",
+    "intro_text": "XXX",
     "num_chunks": 79,
     "chunk_sequence": [
         {
@@ -62,7 +64,7 @@
         {
             "chunk_id": "730008e8042928cb6f5c8ef8266bebea",
             "speaker": "Claudia",
-            "text": "The idea that gender is not just the only thing important, but also class and race. And just seeing how sexual violence could be something that actually is something that is always present in the life of women. I don’t want to talk much about the plot, actually I want to let the readers to discover this in the novel. ",
+            "text": "The idea that gender is not just the only thing important, but also class and race. And just seeing how sexual violence could be something that actually is always present in the life of women. I don’t want to talk much about the plot, actually I want to let the readers discover this in the novel. ",
             "source_file": "7-Claudia.mp3",
             "start_time": 188.87,
             "end_time": 219.93,
@@ -98,7 +100,7 @@
         {
             "chunk_id": "5dd3f0eb18715701fb6d946defda5ba5",
             "speaker": "Claudia",
-            "text": "And I love your presentation of this topic. Because, yeah: which justice? Specifically on this sexual and gender-based violence, you know... Because I mentioned in your question about the plot: the three women presented in my novel are very different. From different social classes. Different race. Different context of living. But one thing that I could say unites their experiences is sexual violence.",
+            "text": "And I love your presentation of this topic. Because, yeah: which justice? Specifically on this sexual and gender-based violence, you know, because the three women presented in my novel are very different. From different social classes. Different race. Different context of living. But one thing that I could say unites their experiences is sexual violence.",
             "source_file": "11-Claudia.mp3",
             "start_time": 281.03,
             "end_time": 319.64,
@@ -206,7 +208,7 @@
         {
             "chunk_id": "73b9dd3cfb1f9bb99b0e96e93f4970d9",
             "speaker": "Claudia",
-            "text": "But also in a more specific way, I think it’s important for the people who are administering justices. And I’m talking especially about the justices or prosecutors. It’s important for them to approach through this kind of cultural productions, you know, not only literature, but also cinemas, you know, testimony also is important. ",
+            "text": "But also in a more specific way, I think it’s important for the people who are administering justices. And I’m talking especially about prosecutors. It’s important for them to approach through this kind of cultural productions, you know, not only literature, but also cinemas, you know, testimony also is important. ",
             "source_file": "23-Claudia.mp3",
             "start_time": 700.49,
             "end_time": 731.51,
@@ -215,7 +217,7 @@
         {
             "chunk_id": "9456332c2be616c32d413752e697bb41",
             "speaker": "Claudia",
-            "text": "The idea of this, of how literature can help, in this way, I think is in the matter of sensibilization. When the people in charge of administering justice read these stories, I am trying to suspect that they get some idea, you know, some idea of the suffering of these many, many women. And I think I wouldn’t expect more, and expect to sensibilize them. It is a lot, at the same time.",
+            "text": "The idea of how literature can help, in this way, I think is in the matter of sensibilization. When the people in charge of administering justice read these stories, I am trying to suspect that they get some idea, you know, some idea of the suffering of these many, many women. And I think I wouldn’t expect more, and expect to sensibilize them. It is a lot, at the same time.",
             "source_file": "24-Claudia.mp3",
             "start_time": 731.51,
             "end_time": 804.05,
@@ -368,7 +370,7 @@
         {
             "chunk_id": "6a707d8ca3a9f1fe92d5ba503d98a03c",
             "speaker": "Claudia",
-            "text": "And I think maybe, I’m sorry to expand on this a little further than the novel, but I think, for example, from the historical point of view, it will be also important to start telling again those stories from this perspective. Because I think even if we are thinking from for example, with the colonization.",
+            "text": "And I think, I’m sorry to expand on this a little further than the novel, but I think, for example, from the historical point of view, it will be also important to start telling again those stories from this perspective. Because I think even if we are thinking from the colonization.",
             "source_file": "41-Claudia.mp3",
             "start_time": 1532.3,
             "end_time": 1562.69,
@@ -548,7 +550,7 @@
         {
             "chunk_id": "1dbad237e7e7181f3170ba09c4df267b",
             "speaker": "Karina",
-            "text": "And I really don’t mean it as something that one of these persons or a person from these social backgrounds is like per se, capable or not of something. But it is easier in some social contexts to cope with different experiences, because you can have access to more help or you have financially a little bit more of security. So what I would be interested in, what kind of different positions do you see there in reality, but also reflected in your novel?",
+            "text": "And I really don’t mean it as something that one of these persons or a person from these social backgrounds is like per se, capable or not of something. But it is easier in some social contexts to cope with different experiences, because you can have access to more help or you have financially a little bit more of security. So I would be interested in, what kind of different positions do you see there in reality, but also reflected in your novel?",
             "source_file": "61-Karina.mp3",
             "start_time": 2392.62,
             "end_time": 2477.6,
@@ -638,7 +640,7 @@
         {
             "chunk_id": "95edfdf67e311a3765e0c9f0f945e428",
             "speaker": "Claudia",
-            "text": "But there is no, you know, there’s no procedure as to how to administer it. So there’s no procedures to do it. Some medical institutions are not providing that. And also, which is more important than that, I think in Peru, we still have a very strong influence of religions, which are the Christian religion, Catholic church. And it’s definitely not something that morally women can gain access to that.",
+            "text": "But, you know, there is no procedure as to how to administer it. So there’s no procedures to do it. Some medical institutions are not providing that. And also, which is more important than that, I think in Peru, we still have a very strong influence of religions, which are the Christian religion, Catholic church. And it’s definitely not something that morally women can gain access to that.",
             "source_file": "71-Claudia.mp3",
             "start_time": 2827.54,
             "end_time": 2863.14,
@@ -692,29 +694,11 @@
         {
             "chunk_id": "fda1a36f70b36c904298ea5a0d429555",
             "speaker": "Claudia",
-            "text": "Hopefully,",
+            "text": "Hopefully. Yeah, that would be awesome. Hopefully, yeah...",
             "source_file": "77-Claudia.mp3",
             "start_time": 3014.81,
             "end_time": 3015.53,
             "duration": 0.72
-        },
-        {
-            "chunk_id": "664020d74cb784a23ad914a430ee4814",
-            "speaker": "Karina",
-            "text": "Here as well.",
-            "source_file": "78-Karina.mp3",
-            "start_time": 3015.11,
-            "end_time": 3015.68,
-            "duration": 0.57
-        },
-        {
-            "chunk_id": "f3e7c2724e8cd5bc2c1e9d1e1e9ecec9",
-            "speaker": "Claudia",
-            "text": "Yeah, that would be awesome. Hopefully, yeah, we’re still looking for that.",
-            "source_file": "79-Claudia.mp3",
-            "start_time": 3015.56,
-            "end_time": 3021.74,
-            "duration": 6.18
         }
     ]
 }

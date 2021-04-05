@@ -3,6 +3,8 @@
     "name": "On artistic and human rights interventions 1/4 with Fred Ritchin and Wolfgang Kaleck",
     "source_type": "audio",
     "source_path": "/podcasts/episodes/7cd79ca6d4999a07e969b647a82057eb",
+    "intro_audio": "00-Intro.mp3",
+    "intro_text": "XXX",
     "num_chunks": 63,
     "chunk_sequence": [
         {
@@ -332,7 +334,7 @@
         {
             "chunk_id": "c4766a878d80ca17a46c7c87397c2c53",
             "speaker": "Fred",
-            "text": "But something else has begun to happen. There was a disconnection between the \"signifier and the signified\". Pictures stopped having meaning anymore. They were, they floated in a way, open to any interpretation. So when you saw the imagery that “Caesar”, codename, from Syria, the military policeman, smuggled out 55,000 images of 11,000 young Syrian men who were tortured and killed –",
+            "text": "But something else has begun to happen. There was a disconnection between the \"signifier and the signified\". Pictures stopped having meaning anymore. They floated in a way, open to any interpretation. So when you saw the imagery that “Caesar”, codename, from Syria, the military policeman, smuggled out 55,000 images of 11,000 young Syrian men who were tortured and killed –",
             "source_file": "37-Fred.mp3",
             "start_time": 1307.55,
             "end_time": 1337.27,
