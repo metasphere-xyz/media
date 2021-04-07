@@ -9,9 +9,7 @@ import requests
 from rich.progress import *
 from rich import print
 
-checkmark = f"[green]"u'\u2713 '
-cross = f"[red]"u'\u00D7 '
-arrow = f"[grey]"u'\u21B3 '
+version_number = '0.2'
 
 argument_parser = argparse.ArgumentParser(
     description='Processes a metasphere collection.json and pushes it into the graph database'
@@ -28,6 +26,9 @@ argument_parser.add_argument('-s', '--start-chunk',
 )
 argument_parser.add_argument('-e', '--end-chunk',
     help='end processing at chunk', type=int
+)
+argument_parser.add_argument('-o', '--output-file',
+    help='write collection.json to output file'
 )
 argument_parser.add_argument('-m', '--media-directory',
     help='base location of media files',
@@ -58,7 +59,7 @@ argument_parser.add_argument('-vv',
     action="store_true", default=False
 )
 argument_parser.add_argument('-V', '--version', action='version',
-    version='%(prog)s 0.1'
+    version="%(prog)s "+version_number
 )
 
 arguments = argument_parser.parse_args()
@@ -67,6 +68,7 @@ current_task = 'Starting'
 api_base_url = vars(arguments)['api_address']
 media_directory = vars(arguments)['media_directory']
 collection_name = vars(arguments)['collection_name']
+output_file = vars(arguments)['output_file']
 start_chunk = vars(arguments)['start_chunk']
 end_chunk = vars(arguments)['end_chunk']
 verbose = vars(arguments)['verbose']
@@ -74,15 +76,17 @@ very_verbose = vars(arguments)['vv']
 dry_run = vars(arguments)['dry_run']
 skip_media_check = vars(arguments)['skip_media_check']
 tasks = vars(arguments)['task']
-
-print (tasks)
+recognized_tasks = ['extract_entities', 'generate_summaries', 'find_similar_chunks']
 
 timeout_for_reconnect = 15
 num_tasks = int(len(tasks))
-recognized_tasks = ['extract_entities', 'generate_summaries', 'find_similar_chunks']
 
 if very_verbose:
     verbose = True
+
+checkmark = f"[green]"u'\u2713 '
+cross = f"[red]"u'\u00D7 '
+arrow = f"[grey]"u'\u21B3 '
 
 if verbose: print (arguments)
 
