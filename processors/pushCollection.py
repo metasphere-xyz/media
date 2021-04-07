@@ -33,11 +33,19 @@ argument_parser.add_argument('-m', '--media-directory',
     help='base location of media files',
     default="files"
 )
-argument_parser.add_argument('-a', '--api-address',
+argument_parser.add_argument('--skip-media-check', action='store_true',
+    help='skip checking for associated media files',
+    default=False
+)
+argument_parser.add_argument('--api-address',
     help='url of the metasphere api to connect to',
     default='http://ecchr.metasphere.xyz:2342'
 )
-argument_parser.add_argument('-d', '--dry-run',
+argument_parser.add_argument('--task', type=str, action='append',
+    help='task to execute [extract_entities generate_summaries find_similar_chunks]',
+    default=[]
+)
+argument_parser.add_argument('--dry-run',
     help='do not write to graph database, show verbose output only',
     action="store_true", default=True
 )
@@ -64,8 +72,14 @@ end_chunk = vars(arguments)['end_chunk']
 verbose = vars(arguments)['verbose']
 very_verbose = vars(arguments)['vv']
 dry_run = vars(arguments)['dry_run']
+skip_media_check = vars(arguments)['skip_media_check']
+tasks = vars(arguments)['task']
+
+print (tasks)
+
 timeout_for_reconnect = 15
-num_tasks = 2
+num_tasks = int(len(tasks))
+recognized_tasks = ['extract_entities', 'generate_summaries', 'find_similar_chunks']
 
 if very_verbose:
     verbose = True
@@ -194,6 +208,27 @@ def request(endpoint, query):
         raise_error(f"Error {response.status_code}")
         progress.console.print(cross, f"[red]Failed at chunk {chunk}")
 
+def check_media(chunk):
+    if collection["source_type"] == "audio":
+        source_file = chunk["source_file"]
+        source_file_path = '/'.join([
+            collection_base_dir,
+            'mp3/Chunks',
+            chunk["source_file"]
+        ])
+        if very_verbose: progress.console.print(arrow, f'Checking for associated audio file: {source_file}')
+        try:
+            f = open(source_file_path)
+            progress.console.print(checkmark, f"Associated audio file exists: {source_file} ")
+        except IOError:
+            progress.console.print(cross, f"Associated audio file not found: {source_file} ")
+            progress.console.print(f"\n[red bold]Aborting.")
+            sys.exit(2)
+        finally:
+            f.close()
+
+
+
 input_file = arguments.collection
 
 print ("Loading " + input_file + ' ... ', end='')
@@ -220,6 +255,7 @@ with Progress(
     progress.console.print(f"\nCollection name:\t [bold]{collection_name}")
     progress.console.print(f"Collection id:\t\t {collection['collection_id']}")
     progress.console.print(f"Collection type:\t {collection['source_type']}")
+    progress.console.print(f"Number of chunks:\t {collection['num_chunks']}")
 
     collection_base_dir = media_directory + '/'.join([
         collection["source_path"]
@@ -233,82 +269,85 @@ with Progress(
     request_progress = progress.add_task(f"API requests\t\t", total=(num_tasks * 2), visible=False)
     reconnect_progress = progress.add_task("[red]Waiting to reconnect... \t\t", total=timeout_for_reconnect, visible=False)
 
+
+    # tasks: ['extract_entities', 'extract_summaries', 'find_similar_chunks']
+
     if not end_chunk:
         end_chunk = num_chunks
-    for chunk in range((start_chunk-1), end_chunk):
-        update_progress(chunk)
 
-        data = collection["chunk_sequence"][chunk]
-        chunk_id = data["chunk_id"]
-        progress.console.print(f'\n[bold]Processing chunk {chunk}[/bold]:\t {chunk_id}')
+    for task in tasks:
+        if task not in recognized_tasks:
+            raise_error(f"Task not recognized: {task}")
+        else:
+            for chunk_number in range((start_chunk), end_chunk):
+                update_progress(chunk_number)
 
-        endpoint = '/graph/find/chunk'
-        query = {"id": chunk_id}
-        response = request(endpoint, query)
+                chunk = collection["chunk_sequence"][chunk_number-1]
+                chunk_id = chunk["chunk_id"]
+                progress.console.print(f'\n[bold]Processing chunk {chunk_number}[/bold]:\t {chunk_id}')
 
-        if response["status"] == "failed":
-            if collection["source_type"] == "audio":
-                source_file = data["source_file"]
-                source_file_path = '/'.join([
-                    collection_base_dir,
-                    'mp3/Chunks',
-                    data["source_file"]
-                ])
-                if very_verbose: progress.console.print(arrow, f'Checking for associated audio file: {source_file}')
-                try:
-                    f = open(source_file_path)
-                    progress.console.print(checkmark, f"Associated audio file exists: {source_file} ")
-                except IOError:
-                    progress.console.print(cross, f"Associated audio file not found: {source_file} ")
-                    progress.console.print(f"\n[red bold]Aborting.")
-                    sys.exit(2)
-                finally:
-                    f.close()
-
-            chunk_entities = extract_entities(data['text'])
-            # chunk_summaries = extract_summaries(data['text'])
-            # similar_chunks = find_similar_chunks(data['text'])
-            chunk_summaries = ''
-            similar_chunks = ''
-
-            if verbose: progress.console.print(f"Inserting chunk into database...")
-            endpoint = '/graph/add/chunk'
-            query = {
-                'chunk_id': data["chunk_id"],
-                'text': data["text"],
-                'source_file': data["source_file"],
-                'start_time': data["start_time"],
-                'end_time': data["end_time"],
-                'summaries': [chunk_summaries],
-                'entities': [chunk_entities],
-                'similarity': [similar_chunks]
-            }
-            if verbose: progress.console.print(query, highlight=True)
-
-            if not dry_run:
+                endpoint = '/graph/find/chunk'
+                query = {"id": chunk_id}
                 response = request(endpoint, query)
-            else:
-                response["status"] = query
-            progress.advance(request_progress)
 
-            if response["status"] != "failed":
-                progress.console.print(checkmark, f"Successfully inserted chunk.")
-            else:
-                progress.console.print(cross, f"[red]Error inserting chunk.")
-        else:
-            progress.console.print(cross, f"[white]Chunk already exists. Skipping.")
+                if response["status"] == "failed":
+                    # chunk does not exist in database, so we continue to process
+                    if not skip_media_check:
+                        check_media(chunk)
 
-        progress.advance(chunk_progress)
+                    chunk_entities = ''
+                    chunk_summaries = ''
+                    similar_chunks = ''
+
+                    if task == 'extract_entities':
+                        chunk_entities = extract_entities(chunk['text'])
+                    elif task == 'extract_summaries':
+                        chunk_summaries = extract_summaries(chunk['text'])
+                    elif task == 'find_similar_chunks':
+                        similar_chunks = find_similar_chunks(chunk['text'])
+
+                    if verbose: progress.console.print(f"Inserting chunk into database...")
+                    endpoint = '/graph/add/chunk'
+                    query = {
+                        'chunk_id': chunk["chunk_id"],
+                        'text': chunk["text"],
+                        'source_file': chunk["source_file"],
+                        'start_time': chunk["start_time"],
+                        'end_time': chunk["end_time"],
+                        'summaries': [chunk_summaries],
+                        'entities': [chunk_entities],
+                        'similarity': [similar_chunks]
+                    }
+                    if verbose: progress.console.print(query, highlight=True)
+
+                    if not dry_run:
+                        response = request(endpoint, query)
+                        if response["status"] != "failed":
+                            progress.console.print(checkmark, f"Successfully inserted chunk.")
+                        else:
+                            progress.console.print(cross, f"[red]Error inserting chunk.")
+                    else:
+                        if verbose: progress.console.print(f"[black on yellow]Dry-run. Skipping.")
+                        response["status"] = query
+                    progress.advance(request_progress)
+
+                else:
+                    progress.console.print(cross, f"[white]Chunk already exists. Skipping.")
+
+                progress.advance(chunk_progress)
 
 
-        if chunk != end_chunk:
-            progress.update(chunk_progress, advance=1)
-        else:
-            progress.update(task_progress, visible=False)
-            progress.update(request_progress, visible=False)
-            progress.update(reconnect_progress, visible=False)
-            progress.console.print(checkmark, f"\n\n[bold]Done processing.")
-            sys.exit(0)
+                if chunk_number != end_chunk:
+                    progress.update(chunk_progress, advance=1)
+                else:
+                    progress.update(task_progress, visible=False)
+                    progress.update(request_progress, visible=False)
+                    progress.update(reconnect_progress, visible=False)
+                    progress.console.print(checkmark, f"\n\n[bold]Done processing.")
+                    sys.exit(0)
+
+
+
 #
 # Extracts additional information for a collection of chunks and writes it to the graph database.
 # Queries: collection.json
