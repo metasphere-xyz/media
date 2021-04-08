@@ -120,7 +120,7 @@ speaker_short_description = {
 }
 
 
-speaker_bios {
+speaker_bios = {
     'Wolfgang Kaleck':
     '''
 Wolfgang Kaleck is the founder and General Secretary of the European Center for Constitutional and Human Rights (ECCHR) in Berlin. Together with partners around the world, ECCHR challenges human rights violations through legal action. Kaleck represents whistleblower Edward Snowden in Europe. He has written several books, including  Die konkrete Utopie der Menschenrechte. Ein Blick zurück in die Zukunft (2021) and Mit Recht gegen die Macht (2015)/Law versus Power (2018). In recognition of his human rights work, he received the Centre for International Law Research and Policy Bassiouni Justice Award in 2019, and the Bayerischer Anwaltverband (Bavarian Lawyer's Association) Max Friedlaender Prize in 2018.
@@ -164,3 +164,28 @@ Eyal Weizman is an architect, Professor of Spatial and Visual Cultures and direc
 }
 
 
+legal_disclaimer = {
+    "text":
+    '''
+Das ECCHR bietet Ihnen mit ECCHR Explore eine besondere Plattform für Medieninhalte an. Mit der Nutzung der ECCHR Explore App werden Sie auf den Server von metasphere  (www.metasphere.xyz) weitergeleitet, den wir für dieses Angebot nutzen. ECCHR erhebt und nutzt dazu auf ECCHR Explore Daten, die möglicherweise eine Identifizierung zulassen. Dies sind: IP-Adresse des anfordernden Rechners, Datum und Uhrzeit der Anforderung, gewünschte Zugriffsmethode, Name der angeforderten Datei, URL des anfragenden Endgeräts (von der aus die Datei angefordert wurde oder die gewünschte Aktion veranlasst wurde). Nach dem Ende des Besuchs bei ECCHR Explore wird die IP-Adresse sofort gelöscht und bleiben keine personenbezogenen Daten gespeichert. Eine Auswertung findet nicht statt.
+
+ECCHR Explore setzt keine Cookies.
+
+ECCHR Explore verweist auch auf sogenannte Hyperlinks – also Links zur Webseite von anderen Anbietern. Wenn Sie auf diese Links klicken, werden Sie direkt auf die Webseite der anderen Anbieter weitergeleitet. Dies erkennen Sie unter anderem am Wechsel der URL. Wir können keine Verantwortung für den vertraulichen Umgang Ihrer Daten übernehmen, da wir keinen Einfluss darauf haben, dass diese Unternehmen die Datenschutzbestimmungen einhalten. Über den Umgang mit Ihren personenbezogenen Daten durch diese Unternehmen informieren Sie sich bitte auf deren Websites direkt.
+
+Verantwortliche Stelle für die Datenverarbeitung ist das
+
+ECCHR
+European Center for Constitutional and Human Rights e.V.
+Zossener Straße 55–58
+Aufgang D
+10961 Berlin
+
+T: +49 (0)30 400 485 90
+F: +49 (0)30 400 485 92
+info@ecchr.eu
+
+Datenschutzbeauftragter des ECCHR ist Dieter Hummel
+dataprotectionofficer@ecchr.eu
+    '''
+}
