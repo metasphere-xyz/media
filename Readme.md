@@ -41,7 +41,7 @@ Processors process metasphere compatible JSON structures and load them into the 
 Processes a metasphere collection.json and passes it into the graph database.
 
 Usage:
-```bash
+```
 pushCollection.py <collection>
     [-n COLLECTION_NAME]
     [-s START_CHUNK] [-e END_CHUNK]
