@@ -36,7 +36,7 @@ argument_parser.add_argument('-m', '--media-directory',
     default="files"
 )
 argument_parser.add_argument('--skip-media-check', action='store_true',
-    help='skip checking for associated media files',
+    help='skip filesystem check for associated media files',
     default=False
 )
 argument_parser.add_argument('--api-address',
@@ -48,7 +48,7 @@ argument_parser.add_argument('--task', type=str, action='append',
     default=[]
 )
 argument_parser.add_argument('--dry-run',
-    help='do not write to graph database, show verbose output only',
+    help='do not write to graph database',
     action="store_true", default=True
 )
 argument_parser.add_argument('-v', '--verbose',
@@ -404,7 +404,6 @@ with Progress(
                 for i, chunk in enumerate(updated_chunk_sequence, start=1):
                     insert_chunk_into_database(chunk)
                     time.sleep(1)
-
 
             if task_number == num_tasks:
                 progress.update(task_progress, visible=False)

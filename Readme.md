@@ -52,12 +52,12 @@ pushCollection.py <collection>
     [-h -v -vv -V]
 
 positional arguments:
-  collection            path to metasphere collection.json to process
+  collection - path to metasphere collection.json to process
 
 optional arguments:
-  -n --collection-name COLLECTION_NAME
+  -n --collection-name COLLECTION_NAME:
       name of the collection (overwrites name specified in input file)
-  -s --start-chunk START_CHUNK
+  -s --start-chunk START_CHUNK:
       start processing at chunk
   -e --end-chunk END_CHUNK
       end processing at chunk
@@ -66,7 +66,7 @@ optional arguments:
   -m --media-directory MEDIA_DIRECTORY
       base location of media files
   --skip-media-check
-    skip checking for associated media files
+    skip filesystem check for associated media files
   --api-address API_ADDRESS
     url of the metasphere api to connect to
   --task TASK
