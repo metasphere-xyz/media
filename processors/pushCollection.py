@@ -71,15 +71,27 @@ collection_name = vars(arguments)['collection_name']
 output_file = vars(arguments)['output_file']
 start_chunk = vars(arguments)['start_chunk']
 end_chunk = vars(arguments)['end_chunk']
+skip_media_check = vars(arguments)['skip_media_check']
 verbose = vars(arguments)['verbose']
 very_verbose = vars(arguments)['vv']
 dry_run = vars(arguments)['dry_run']
-skip_media_check = vars(arguments)['skip_media_check']
+
 tasks = vars(arguments)['task']
-recognized_tasks = ['extract_entities', 'generate_summaries', 'find_similar_chunks']
+tasks.append('store_chunks')
+recognized_tasks = [
+    'extract_entities',
+    'generate_summaries',
+    'find_similar_chunks',
+    'store_chunks'
+]
 
 timeout_for_reconnect = 15
 num_tasks = int(len(tasks))
+
+if start_chunk and end_chunk > 1:
+    num_chunks = end_chunk - start_chunk + 1
+else:
+    num_chunks = len(collection["chunk_sequence"])
 
 if very_verbose:
     verbose = True
@@ -88,7 +100,7 @@ checkmark = f"[green]"u'\u2713 '
 cross = f"[red]"u'\u00D7 '
 arrow = f"[grey]"u'\u21B3 '
 
-if verbose: print (arguments)
+if very_verbose: print (arguments)
 
 
 def update_task(current_task):
@@ -111,8 +123,8 @@ def raise_error(error):
     sys.exit(1)
 
 
-def extract_summaries(text):
-    update_task('Extracting summaries')
+def generate_summaries(text):
+    update_task('Generating summaries')
     endpoint = '/text/summarize'
     query = {
         "text": text,
@@ -150,13 +162,13 @@ def extract_entities(text):
     return chunk_entities
 
 
-def find_similar_chunks(text):
+def find_similar_chunks(chunk):
     update_task('Finding similar chunks')
     progress.console.print(f"Finding similar chunks.")
     endpoint = '/text/similarities'
     query = {
-        "text": data["text"],
-        "minimum_score": 20,
+        "text": chunk["text"],
+        "minimum_score": 80,
         "chunks": 5
     }
     response = request(endpoint, query)
@@ -231,6 +243,33 @@ def check_media(chunk):
         finally:
             f.close()
 
+def insert_chunk_into_database(chunk):
+    update_task('Uploading chunks')
+
+    endpoint = '/graph/find/chunk'
+    query = {"id": chunk_id}
+    response = request(endpoint, query)
+
+    if response["status"] == "failed":
+        # chunk does not exist in database, so we continue to process
+        if not skip_media_check:
+            check_media(chunk)
+        if verbose: progress.console.print(f"Inserting chunk into database...")
+        if verbose: progress.console.print(chunk)
+
+        endpoint = '/graph/add/chunk'
+        if not dry_run:
+            response = request(endpoint, chunk)
+            if response["status"] != "failed":
+                progress.console.print(checkmark, f"Successfully inserted chunk.")
+            else:
+                progress.console.print(cross, f"[red]Error inserting chunk.")
+        else:
+            progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
+        progress.advance(request_progress)
+
+    else:
+        progress.console.print(cross, f"[white]Chunk already exists. Skipping.")
 
 
 input_file = arguments.collection
@@ -242,9 +281,6 @@ try:
     print("done.")
 except (OSError, IOError) as error:
     raise_error(error)
-
-num_chunks = len(collection["chunk_sequence"])
-
 
 with Progress(
     SpinnerColumn(),
@@ -259,7 +295,8 @@ with Progress(
     progress.console.print(f"\nCollection name:\t [bold]{collection_name}")
     progress.console.print(f"Collection id:\t\t {collection['collection_id']}")
     progress.console.print(f"Collection type:\t {collection['source_type']}")
-    progress.console.print(f"Number of chunks:\t {collection['num_chunks']}")
+    progress.console.print(f"Chunks in collection:\t {collection['num_chunks']}")
+    progress.console.print(f"Chunks to process:\t {num_chunks}")
 
     collection_base_dir = media_directory + '/'.join([
         collection["source_path"]
@@ -274,81 +311,70 @@ with Progress(
     reconnect_progress = progress.add_task("[red]Waiting to reconnect... \t\t", total=timeout_for_reconnect, visible=False)
 
 
-    # tasks: ['extract_entities', 'extract_summaries', 'find_similar_chunks']
+    updated_chunk_sequence = []
 
     if not end_chunk:
         end_chunk = num_chunks
 
-    for task in tasks:
+    for task_number, task in enumerate(tasks, start=1):
+        if very_verbose: progress.console.print(f'\n[black on #FF9900][bold]Starting task {task_number}[/bold]:\t {task}')
+        update_task(task)
+
         if task not in recognized_tasks:
             raise_error(f"Task not recognized: {task}")
         else:
-            for chunk_number in range((start_chunk), end_chunk):
-                update_progress(chunk_number)
+            if task != 'store_chunks':
+                for chunk_number in range(start_chunk, end_chunk+1):
+                    chunk_index = chunk_number -1
+                    update_progress(chunk_index)
 
-                chunk = collection["chunk_sequence"][chunk_number-1]
-                chunk_id = chunk["chunk_id"]
-                progress.console.print(f'\n[bold]Processing chunk {chunk_number}[/bold]:\t {chunk_id}')
+                    chunk = collection["chunk_sequence"][chunk_index]
+                    chunk_id = chunk["chunk_id"]
+                    progress.console.print(f'\n[bold]Processing chunk {chunk_number}[/bold]:\t {chunk_id}')
 
-                endpoint = '/graph/find/chunk'
-                query = {"id": chunk_id}
-                response = request(endpoint, query)
+                    updated_chunk = {
+                        "chunk_id": chunk["chunk_id"],
+                        "text": chunk["text"],
+                        "source_file": chunk["source_file"],
+                        "start_time": chunk["start_time"],
+                        "end_time": chunk["end_time"],
+                        "entities": [],
+                        "summaries": [],
+                        "similarity": []
+                    }
 
-                if response["status"] == "failed":
-                    # chunk does not exist in database, so we continue to process
-                    if not skip_media_check:
-                        check_media(chunk)
-
-                    chunk_entities = ''
-                    chunk_summaries = ''
-                    similar_chunks = ''
+                    if task_number == 1:
+                        updated_chunk_sequence.append(updated_chunk)
 
                     if task == 'extract_entities':
                         chunk_entities = extract_entities(chunk['text'])
-                    elif task == 'extract_summaries':
-                        chunk_summaries = extract_summaries(chunk['text'])
+                        updated_chunk.update(entities = chunk_entities)
+                    elif task == 'generate_summaries':
+                        chunk_summaries = generate_summaries(chunk['text'])
+                        updated_chunk.update(summaries = chunk_summaries)
                     elif task == 'find_similar_chunks':
-                        similar_chunks = find_similar_chunks(chunk['text'])
+                        similar_chunks = find_similar_chunks(chunk)
+                        updated_chunk.update(similarity = similar_chunks)
 
-                    if verbose: progress.console.print(f"Inserting chunk into database...")
-                    endpoint = '/graph/add/chunk'
-                    query = {
-                        'chunk_id': chunk["chunk_id"],
-                        'text': chunk["text"],
-                        'source_file': chunk["source_file"],
-                        'start_time': chunk["start_time"],
-                        'end_time': chunk["end_time"],
-                        'summaries': [chunk_summaries],
-                        'entities': [chunk_entities],
-                        'similarity': [similar_chunks]
-                    }
-                    if verbose: progress.console.print(query, highlight=True)
+                    updated_chunk_sequence[chunk_index].update(updated_chunk)
 
-                    if not dry_run:
-                        response = request(endpoint, query)
-                        if response["status"] != "failed":
-                            progress.console.print(checkmark, f"Successfully inserted chunk.")
-                        else:
-                            progress.console.print(cross, f"[red]Error inserting chunk.")
-                    else:
-                        if verbose: progress.console.print(f"[black on yellow]Dry-run. Skipping.")
-                        response["status"] = query
-                    progress.advance(request_progress)
-
-                else:
-                    progress.console.print(cross, f"[white]Chunk already exists. Skipping.")
-
-                progress.advance(chunk_progress)
-
+                    progress.advance(chunk_progress)
 
                 if chunk_number != end_chunk:
                     progress.update(chunk_progress, advance=1)
-                else:
-                    progress.update(task_progress, visible=False)
-                    progress.update(request_progress, visible=False)
-                    progress.update(reconnect_progress, visible=False)
-                    progress.console.print(checkmark, f"\n\n[bold]Done processing.")
-                    sys.exit(0)
+
+            if task == 'store_chunks':
+                for i, chunk in enumerate(updated_chunk_sequence, start=1):
+                    insert_chunk_into_database(chunk)
+                    time.sleep(1)
+
+            progress.update(task_progress, visible=False)
+            progress.update(request_progress, visible=False)
+            progress.update(reconnect_progress, visible=False)
+
+            if task_number == num_tasks:
+                progress.console.print(checkmark, f"\n\n[bold]Done processing.")
+                sys.exit(0)
 
 
 
