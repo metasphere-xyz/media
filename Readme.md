@@ -42,9 +42,45 @@ Processes a metasphere collection.json and passes it into the graph database.
 
 Usage:
 ```bash
-pushCollection.py [-i] <collection.json>
+pushCollection.py <collection>
+    [-n COLLECTION_NAME]
+    [-s START_CHUNK] [-e END_CHUNK]
+    [-o OUTPUT_FILE]
+    [-m MEDIA_DIRECTORY] [--skip-media-check]
+    [--api-address API_ADDRESS]
+    [--task TASK] [--dry-run]
+    [-h -v -vv -V]
 
--i --input-file <filename>: location of metasphere collection.json
+positional arguments:
+  collection            path to metasphere collection.json to process
+
+optional arguments:
+  -n --collection-name COLLECTION_NAME
+      name of the collection (overwrites name specified in input file)
+  -s --start-chunk START_CHUNK
+      start processing at chunk
+  -e --end-chunk END_CHUNK
+      end processing at chunk
+  -o --output-file OUTPUT_FILE
+      write collection.json to output file
+  -m --media-directory MEDIA_DIRECTORY
+      base location of media files
+  --skip-media-check
+    skip checking for associated media files
+  --api-address API_ADDRESS
+    url of the metasphere api to connect to
+  --task TASK
+    task to execute [extract_entities generate_summaries find_similar_chunks]
+  --dry-run
+    do not write to graph database
+  -v, --verbose
+    verbose output for debugging
+  -vv
+    very verbose output for debugging
+  -V, --version
+    show program's version number and exit
+  -h, --help
+      show this help message and exit
 ```
 
 #### pullCollection.py
