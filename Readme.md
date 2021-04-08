@@ -42,7 +42,7 @@ Processes a metasphere collection.json and passes it into the graph database.
 
 Usage:
 ```
-pushCollection.py <collection>
+pushCollection.py <COLLECTION>
     [-n COLLECTION_NAME]
     [-s START_CHUNK] [-e END_CHUNK]
     [-o OUTPUT_FILE]
@@ -52,7 +52,7 @@ pushCollection.py <collection>
     [-h -v -vv -V]
 
 positional arguments:
-  collection - path to metasphere collection.json to process
+  <COLLECTION>                              path to metasphere collection.json to process
 
 optional arguments:
   -n --collection-name <COLLECTION_NAME>    name of the collection (overwrites name specified in input file)
