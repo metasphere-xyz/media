@@ -88,7 +88,7 @@ recognized_tasks = [
 
 timeout_for_reconnect = 15
 max_reconnect_tries = 5
-failed_requests = []
+request_queue = []
 num_tasks = int(len(tasks))
 
 if start_chunk and end_chunk > 1:
@@ -212,7 +212,7 @@ def request(endpoint, query):
         except (
             requests.exceptions.RequestException
         ) as e:
-            failed_requests.append(query)
+            request_queue.append(query)
             if verbose: progress.console.print(cross, f'[red]Error sending request')
             if very_verbose: progress.console.print('\n[red]', e)
             if verbose: progress.console.print('\nReconnecting.')
@@ -225,11 +225,11 @@ def request(endpoint, query):
                 progress.advance(reconnect_progress)
             # request(endpoint, query)
             if reconnect_tries <= max_reconnect_tries:
-                failed_requests.remove(query)
+                request_queue.remove(query)
                 continue
             else:
                 progress.console.print(f"\n[red bold]API is not responding. Aborting.")
-                dump_failed_requests()
+                dump_request_queue()
                 sys.exit(2)
         else:
             break
@@ -249,7 +249,7 @@ def check_media(chunk):
         except IOError:
             progress.console.print(cross, f"Associated audio file not found: {source_file} ")
             progress.console.print(f"\n[red bold]Aborting.")
-            dump_failed_requests()
+            dump_request_queue()
             sys.exit(2)
         finally:
             f.close()
@@ -273,11 +273,12 @@ def insert_chunk_into_database(chunk):
             response = request(endpoint, chunk)
             if response["status"] != "failed":
                 progress.console.print(checkmark, f"Successfully inserted chunk.")
-                failed_requests.remove(chunk)
+                request_queue.remove(chunk)
             else:
                 progress.console.print(cross, f"[red]Error inserting chunk.")
         else:
             progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
+            request_queue.remove(chunk)
         progress.advance(request_progress)
 
     elif response["status"] == "success":
@@ -295,11 +296,11 @@ def insert_chunk_into_database(chunk):
                     progress.console.print(cross, f"[red]Error updating chunk.")
 
 
-def dump_failed_requests():
+def dump_request_queue():
     if very_verbose:
         progress.console.print(f"[red]Insertion failed for the following chunks:\n")
     logging.basicConfig(filename='error.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
-    for chunk in failed_requests:
+    for chunk in request_queue:
         if very_verbose:
             progress.console.print(f"{chunk}\n")
         logging.error(f"\n{chunk}\n")
@@ -378,7 +379,9 @@ with Progress(
 
                 if task_number == 1:
                     updated_chunk_sequence.append(updated_chunk)
+                    request_queue.append(updated_chunk)
 
+            for chunk_number in range(start_chunk, end_chunk+1):
                 if task == 'extract_entities':
                     chunk_entities = extract_entities(chunk['text'])
                     updated_chunk.update(entities = chunk_entities)
@@ -390,6 +393,7 @@ with Progress(
                     updated_chunk.update(similarity = similar_chunks)
 
                 updated_chunk_sequence[chunk_index].update(updated_chunk)
+                request_queue[chunk_index].update(updated_chunk)
 
                 progress.advance(chunk_progress)
 
@@ -397,21 +401,22 @@ with Progress(
                     progress.update(chunk_progress, advance=1)
 
             if task == 'store_chunks':
-                failed_requests = updated_chunk_sequence
                 for i, chunk in enumerate(updated_chunk_sequence, start=1):
                     insert_chunk_into_database(chunk)
                     time.sleep(1)
 
-            progress.update(task_progress, visible=False)
-            progress.update(request_progress, visible=False)
-            progress.update(reconnect_progress, visible=False)
 
             if task_number == num_tasks:
-                progress.console.print(checkmark, f"\n\n[bold]Done processing.")
-                if len(failed_requests) > 1:
-                    dump_failed_requests()
+                progress.update(task_progress, visible=False)
+                progress.update(request_progress, visible=False)
+                progress.update(reconnect_progress, visible=False)
+                progress.update(chunk_progress, visible=False)
+                progress.console.print(f"\n\n[bold white]Done processing.")
+                if len(request_queue) > 1:
+                    dump_request_queue()
                     sys.exit(1)
                 else:
+                    progress.console.print(f"{checkmark}No errors encountered.")
                     sys.exit(0)
 
 
