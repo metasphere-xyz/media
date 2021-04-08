@@ -12,7 +12,7 @@ Downloaders download content from a specific site or service.
 Downloads a JSON file of a transcript from sonix.ai
 
 Usage:
-```bash
+```
 downloadFromSonix.py [-i] <sonix media id>
 
 -i --id <sonix media id>: media id of the transcript location
@@ -26,7 +26,7 @@ Converters convert different data formats into metasphere compatible JSON struct
 Converts a sonix.ai JSON transcript into a metasphere collection.json
 
 Usage:
-```bash
+```
 sonix2metasphere.py [-i] <transcript.json> [-o output.json]
 
 -i --input-file <transcript.json>: location of the sonix transcript
@@ -45,10 +45,11 @@ Usage:
 pushCollection.py <COLLECTION>
     [-n COLLECTION_NAME]
     [-s START_CHUNK] [-e END_CHUNK]
-    [-o OUTPUT_FILE]
     [-m MEDIA_DIRECTORY] [--skip-media-check]
     [--api-address API_ADDRESS]
-    [--task TASK] [--dry-run]
+    [--task TASK]
+    [-o OUTPUT_FILE]
+    [--dry-run]
     [-h -v -vv -V]
 
 positional arguments:
