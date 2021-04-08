@@ -59,27 +59,27 @@ optional arguments:
       name of the collection (overwrites name specified in input file)
   -s --start-chunk START_CHUNK:
       start processing at chunk
-  -e --end-chunk END_CHUNK
+  -e --end-chunk END_CHUNK:
       end processing at chunk
-  -o --output-file OUTPUT_FILE
+  -o --output-file OUTPUT_FILE:
       write collection.json to output file
-  -m --media-directory MEDIA_DIRECTORY
+  -m --media-directory MEDIA_DIRECTORY:
       base location of media files
-  --skip-media-check
+  --skip-media-check:
     skip filesystem check for associated media files
-  --api-address API_ADDRESS
+  --api-address API_ADDRESS:
     url of the metasphere api to connect to
-  --task TASK
+  --task TASK:
     task to execute [extract_entities generate_summaries find_similar_chunks]
-  --dry-run
+  --dry-run:
     do not write to graph database
-  -v, --verbose
+  -v, --verbose:
     verbose output for debugging
-  -vv
+  -vv:
     very verbose output for debugging
-  -V, --version
+  -V, --version:
     show program's version number and exit
-  -h, --help
+  -h, --help:
       show this help message and exit
 ```
 
