@@ -12,6 +12,13 @@ from rich import print
 
 version_number = '0.2'
 
+recognized_tasks = [
+    'extract_entities',
+    'generate_summaries',
+    'find_similar_chunks',
+    'store_chunks'
+]
+
 argument_parser = argparse.ArgumentParser(
     description='Processes a metasphere collection.json and pushes it into the graph database'
 )
@@ -44,7 +51,7 @@ argument_parser.add_argument('--api-address',
     default='http://ecchr.metasphere.xyz:2342'
 )
 argument_parser.add_argument('--task', type=str, action='append',
-    help='task to execute [extract_entities generate_summaries find_similar_chunks]',
+    help=f"task to execute {recognized_tasks}",
     default=[]
 )
 argument_parser.add_argument('--dry-run',
@@ -79,12 +86,6 @@ dry_run = vars(arguments)['dry_run']
 
 tasks = vars(arguments)['task']
 tasks.append('store_chunks')
-recognized_tasks = [
-    'extract_entities',
-    'generate_summaries',
-    'find_similar_chunks',
-    'store_chunks'
-]
 
 timeout_for_reconnect = 15
 max_reconnect_tries = 5
@@ -147,22 +148,50 @@ def generate_summaries(text):
     return chunk_summaries
 
 
-def extract_entities(text):
+def extract_entities(chunk, *adjacent_chunk_texts):
     update_task('Extracting entities')
     endpoint = '/text/extract/entities'
     query = {
-        "text": text
+        "text": chunk["text"]
     }
     response = request(endpoint, query)
     num_entities = len(response["entities"])
+    processed_chunk_entities = {}
     if num_entities >= 1:
         chunk_entities = response["entities"]
+        processed_chunk_entities = chunk_entities.copy()
         progress.console.print(checkmark, f"Successfully extracted {num_entities} entities")
+        if verbose: progress.console.print(f"Resolving coreferences...")
+        resolved_coreferences = 0
+        adjacent_chunk_entities = []
+        for adjacent_chunk_text in adjacent_chunk_texts:
+            query = {
+                "text": adjacent_chunk_text
+            }
+            response_adjacent_chunk_entities = request(endpoint, query)
+            adjacent_chunk_entities.append(response_adjacent_chunk_entities["entities"])
+        for (entity, entity_type) in chunk_entities.items():
+            for (index, adjacent_chunk) in enumerate(adjacent_chunk_entities):
+                for (adjacent_entity, adjacent_entity_type) in adjacent_chunk.items():
+                    if entity in adjacent_entity:
+                        if len(adjacent_entity) > len(entity):
+                            selected_entity = adjacent_entity
+                            selected_entity_type = adjacent_entity_type
+                            del processed_chunk_entities[entity]
+                        else:
+                            selected_entity = entity
+                            selected_entity_type = entity_type
+                        if verbose: progress.console.print(f"Entity found in adjacent chunk: {entity} >>> {adjacent_entity}. \nSelecting {selected_entity} ({selected_entity_type}).")
+                        processed_chunk_entities.update({
+                            selected_entity: selected_entity_type
+                        })
+                        resolved_coreferences += 1
+        if verbose: progress.console.print(checkmark, f"Successfully resolved {resolved_coreferences} coreferences.")
+        if verbose: progress.console.print(f"Extracted entities:\n {processed_chunk_entities}")
     else:
         progress.console.print(cross, f"No entities found.")
-        chunk_entities = ''
     progress.advance(task_progress)
-    return chunk_entities
+    return processed_chunk_entities
 
 
 def find_similar_chunks(chunk):
@@ -295,6 +324,33 @@ def insert_chunk_into_database(chunk):
                 else:
                     progress.console.print(cross, f"[red]Error updating chunk.")
 
+def insert_entities_into_database(entities):
+    for (entity, entity_type) in entities.items():
+        endpoint = '/graph/find/entity'
+        query = {
+            "name": entity
+        }
+        response = request(endpoint, query)
+        if response["status"] == "success":
+            progress.console.print(f"Entity {entity} already exists.")
+        else:
+            progress.console.print(f"Inserting {entity} into database.")
+            hash = hashlib.md5(entity.encode("utf-8"))
+            entity_id = hash.hexdigest()
+
+            endpoint = '/graph/add/entity'
+            query = {
+                "name": entity,
+                "entity_category": entity_type,
+                "entity_id": entity_id,
+                "chunk_id": chunk["chunk_id"]
+            }
+            if very_verbose:
+                progress.console.print(f"{query}")
+            if not dry_run:
+                response = request(endpoint, query)
+            else:
+                progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
 
 def dump_request_queue():
     if very_verbose:
@@ -363,6 +419,8 @@ with Progress(
                 update_progress(chunk_index)
 
                 chunk = collection["chunk_sequence"][chunk_index]
+                previous_chunk = collection["chunk_sequence"][chunk_index-1]
+                next_chunk = collection["chunk_sequence"][chunk_index+1]
                 chunk_id = chunk["chunk_id"]
                 progress.console.print(f'\n[bold]Processing chunk {chunk_number}[/bold]:\t {chunk_id}')
 
@@ -381,10 +439,11 @@ with Progress(
                     updated_chunk_sequence.append(updated_chunk)
                     request_queue.append(updated_chunk)
 
-            for chunk_number in range(start_chunk, end_chunk+1):
                 if task == 'extract_entities':
-                    chunk_entities = extract_entities(chunk['text'])
+                    chunk_entities = extract_entities(chunk, previous_chunk['text'], next_chunk['text'])
                     updated_chunk.update(entities = chunk_entities)
+                    insert_entities_into_database(chunk_entities)
+                    print(f"XXXX {updated_chunk}")
                 elif task == 'generate_summaries':
                     chunk_summaries = generate_summaries(chunk['text'])
                     updated_chunk.update(summaries = chunk_summaries)
