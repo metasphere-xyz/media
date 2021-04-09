@@ -89,7 +89,8 @@ tasks.append('store_chunks')
 
 timeout_for_reconnect = 15
 max_reconnect_tries = 5
-request_queue = []
+failed_inserts_chunks = []
+failed_inserts_entities = []
 num_tasks = int(len(tasks))
 
 if start_chunk and end_chunk > 1:
@@ -241,7 +242,7 @@ def request(endpoint, query):
         except (
             requests.exceptions.RequestException
         ) as e:
-            request_queue.append(query)
+            failed_inserts_chunks.append(query)
             if verbose: progress.console.print(cross, f'[red]Error sending request')
             if very_verbose: progress.console.print('\n[red]', e)
             if verbose: progress.console.print('\nReconnecting.')
@@ -254,11 +255,11 @@ def request(endpoint, query):
                 progress.advance(reconnect_progress)
             # request(endpoint, query)
             if reconnect_tries <= max_reconnect_tries:
-                request_queue.remove(query)
+                failed_inserts_chunks.remove(query)
                 continue
             else:
                 progress.console.print(f"\n[red bold]API is not responding. Aborting.")
-                dump_request_queue()
+                dump_failed_inserts()
                 sys.exit(2)
         else:
             break
@@ -278,7 +279,7 @@ def check_media(chunk):
         except IOError:
             progress.console.print(cross, f"Associated audio file not found: {source_file} ")
             progress.console.print(f"\n[red bold]Aborting.")
-            dump_request_queue()
+            dump_failed_inserts()
             sys.exit(2)
         finally:
             f.close()
@@ -300,14 +301,15 @@ def insert_chunk_into_database(chunk):
         endpoint = '/graph/add/chunk'
         if not dry_run:
             response = request(endpoint, chunk)
-            if response["status"] != "failed":
+            if response["status"] == "success":
                 progress.console.print(checkmark, f"Successfully inserted chunk.")
-                request_queue.remove(chunk)
+                failed_inserts_chunks.remove(chunk)
+                connect_entities_to_chunk(chunk)
             else:
                 progress.console.print(cross, f"[red]Error inserting chunk.")
         else:
             progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
-            request_queue.remove(chunk)
+            failed_inserts_chunks.remove(chunk)
         progress.advance(request_progress)
 
     elif response["status"] == "success":
@@ -324,7 +326,7 @@ def insert_chunk_into_database(chunk):
                 else:
                     progress.console.print(cross, f"[red]Error updating chunk.")
 
-def insert_entities_into_database(entities):
+def insert_entities_into_database(entities, chunk):
     for (entity, entity_type) in entities.items():
         endpoint = '/graph/find/entity'
         query = {
@@ -345,21 +347,64 @@ def insert_entities_into_database(entities):
                 "entity_id": entity_id,
                 "chunk_id": chunk["chunk_id"]
             }
+            failed_inserts_entities.append(query)
             if very_verbose:
                 progress.console.print(f"{query}")
             if not dry_run:
                 response = request(endpoint, query)
+                if response["status"] == "success":
+                    if verbose: progress.console.print(checkmark, f"Successfully inserted entity into database.")
+                    failed_inserts_entities.remove(query)
+                else:
+                    progress.console.print(cross, f"Could not insert entity into database.")
             else:
                 progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
 
-def dump_request_queue():
+
+def connect_entities_to_chunk(chunk):
+    for entity in chunk["entities"]:
+        endpoint = '/graph/find/entity'
+        query = {
+          "name": entity
+        }
+        response = request(endpoint, query)
+        if response["status"] == "success":
+            if verbose:
+                if verbose: progress.console.print(checkmark, f"Entity found. Connecting to chunk.")
+                endpoint = '/graph/connect/entity'
+                query = {
+                  "connect": entity_id,
+                  "with": {
+                      "id": chunk["chunk_id"]
+                    }
+                }
+                if very_verbose:
+                    progress.console.print(f"{query}")
+                if not dry_run:
+                    response = request(endpoint, query)
+                    if response["status"] == "success":
+                        if verbose: progress.console.print(checkmark, f"Successfully connected entity to chunk.")
+                    else:
+                        progress.console.print(cross, f"Could not connect entity to chunk.")
+                else:
+                    progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
+        else:
+            progress.console.print(cross, f"Entity not found.")
+
+
+
+def dump_failed_inserts():
     if very_verbose:
-        progress.console.print(f"[red]Insertion failed for the following chunks:\n")
+        progress.console.print(f"[red]Insertion failed for the following objects:\n")
     logging.basicConfig(filename='error.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
-    for chunk in request_queue:
+    for chunk in failed_inserts_chunks:
         if very_verbose:
             progress.console.print(f"{chunk}\n")
         logging.error(f"\n{chunk}\n")
+    for entity in failed_inserts_entities:
+        if very_verbose:
+            progress.console.print(f"{entity}\n")
+        logging.error(f"\n{entity}\n")
     progress.console.print(f"[red bold]Saved failed insertions to error.log\n")
 
 
@@ -429,21 +474,17 @@ with Progress(
                     "text": chunk["text"],
                     "source_file": chunk["source_file"],
                     "start_time": chunk["start_time"],
-                    "end_time": chunk["end_time"],
-                    "entities": [],
-                    "summaries": [],
-                    "similarity": []
+                    "end_time": chunk["end_time"]
                 }
 
                 if task_number == 1:
                     updated_chunk_sequence.append(updated_chunk)
-                    request_queue.append(updated_chunk)
+                    failed_inserts_chunks.append(updated_chunk)
 
                 if task == 'extract_entities':
                     chunk_entities = extract_entities(chunk, previous_chunk['text'], next_chunk['text'])
                     updated_chunk.update(entities = chunk_entities)
-                    insert_entities_into_database(chunk_entities)
-                    print(f"XXXX {updated_chunk}")
+                    insert_entities_into_database(chunk_entities, chunk)
                 elif task == 'generate_summaries':
                     chunk_summaries = generate_summaries(chunk['text'])
                     updated_chunk.update(summaries = chunk_summaries)
@@ -452,7 +493,7 @@ with Progress(
                     updated_chunk.update(similarity = similar_chunks)
 
                 updated_chunk_sequence[chunk_index].update(updated_chunk)
-                request_queue[chunk_index].update(updated_chunk)
+                failed_inserts_chunks[chunk_index].update(updated_chunk)
 
                 progress.advance(chunk_progress)
 
@@ -470,8 +511,8 @@ with Progress(
                 progress.update(reconnect_progress, visible=False)
                 progress.update(chunk_progress, visible=False)
                 progress.console.print(f"\n\n[bold white]Done processing.")
-                if len(request_queue) > 1:
-                    dump_request_queue()
+                if len(failed_inserts_chunks) > 1:
+                    dump_failed_inserts()
                     sys.exit(1)
                 else:
                     progress.console.print(f"{checkmark}No errors encountered.")
