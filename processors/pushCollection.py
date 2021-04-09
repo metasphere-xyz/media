@@ -390,8 +390,6 @@ def connect_entity_to_chunk(entity, chunk):
     else:
         progress.console.print(cross, f"Entity not found.")
 
-
-
 def dump_failed_inserts():
     if very_verbose:
         progress.console.print(f"[red]Insertion failed for the following objects:\n")
