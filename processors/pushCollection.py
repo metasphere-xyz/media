@@ -304,7 +304,6 @@ def insert_chunk_into_database(chunk):
             if response["status"] == "success":
                 progress.console.print(checkmark, f"Successfully inserted chunk.")
                 failed_inserts_chunks.remove(chunk)
-                connect_entities_to_chunk(chunk)
             else:
                 progress.console.print(cross, f"[red]Error inserting chunk.")
         else:
@@ -355,41 +354,41 @@ def insert_entities_into_database(entities, chunk):
                 if response["status"] == "success":
                     if verbose: progress.console.print(checkmark, f"Successfully inserted entity into database.")
                     failed_inserts_entities.remove(query)
+                    connect_entity_to_chunk(query, chunk)
                 else:
                     progress.console.print(cross, f"Could not insert entity into database.")
             else:
                 progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
 
 
-def connect_entities_to_chunk(chunk):
-    for entity in chunk["entities"]:
-        endpoint = '/graph/find/entity'
-        query = {
-          "name": entity
-        }
-        response = request(endpoint, query)
-        if response["status"] == "success":
-            if verbose:
-                if verbose: progress.console.print(checkmark, f"Entity found. Connecting to chunk.")
-                endpoint = '/graph/connect/entity'
-                query = {
-                  "connect": entity_id,
-                  "with": {
-                      "id": chunk["chunk_id"]
-                    }
+def connect_entity_to_chunk(entity, chunk):
+    endpoint = '/graph/find/entity'
+    query = {
+      "name": entity["name"]
+    }
+    response = request(endpoint, query)
+    if response["status"] == "success":
+        if verbose:
+            if verbose: progress.console.print(checkmark, f"Entity found. Connecting to chunk.")
+            endpoint = '/graph/connect/entity'
+            query = {
+              "connect": entity["entity_id"],
+              "with": {
+                  "id": chunk["chunk_id"]
                 }
-                if very_verbose:
-                    progress.console.print(f"{query}")
-                if not dry_run:
-                    response = request(endpoint, query)
-                    if response["status"] == "success":
-                        if verbose: progress.console.print(checkmark, f"Successfully connected entity to chunk.")
-                    else:
-                        progress.console.print(cross, f"Could not connect entity to chunk.")
+            }
+            if very_verbose:
+                progress.console.print(f"{query}")
+            if not dry_run:
+                response = request(endpoint, query)
+                if response["status"] == "success":
+                    if verbose: progress.console.print(checkmark, f"Successfully connected entity to chunk.")
                 else:
-                    progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
-        else:
-            progress.console.print(cross, f"Entity not found.")
+                    progress.console.print(cross, f"Could not connect entity to chunk.")
+            else:
+                progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
+    else:
+        progress.console.print(cross, f"Entity not found.")
 
 
 
@@ -503,6 +502,7 @@ with Progress(
             if task == 'store_chunks':
                 for i, chunk in enumerate(updated_chunk_sequence, start=1):
                     insert_chunk_into_database(chunk)
+                    # connect_chunk_to_collection(chunk)
                     time.sleep(1)
 
             if task_number == num_tasks:
