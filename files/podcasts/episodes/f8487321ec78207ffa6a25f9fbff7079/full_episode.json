@@ -3,6 +3,14 @@
     "name": "On Artistic and Human Rights Interventions 3/4 with Rabih Mroué and Wolfgang Kaleck",
     "source_type": "audio",
     "source_path": "/podcasts/episodes/f8487321ec78207ffa6a25f9fbff7079",
+    "intro_audio": "00-Intro.mp3",
+    "outro_audio": "9999-Outro.mp3",
+    "intro_text": "The following talk was part of a panel discussion at the Akademie der Künste in Berlin for the Opening Days of the European Month of Photography (EMOP) in October 2020, in cooperation with ECCHR.
+
+Join us in this episode as we hear a talk from Lebanese performance and video artist Rabih Mroué about how he treats the impact of violent images in his work.
+
+Beginning with his piece PIXELATED REVOLUTION, which uses the moment of the civilian witness capturing violence on their cellphone camera, Mroué lays out a complicated web of connections between the witnessing acts of viewer, victim, and perpetrator.
+    ",
     "num_chunks": 39,
     "chunk_sequence": [
         {
@@ -343,7 +351,7 @@
             "speaker": "Rabih",
             "text": "And actually, in order to see the video, you have to run and look at these photos and then your movement will make the photos, as in cinema, become like moving images. So it’s like in cinema, but instead of the machine that makes these still photos look as in motion photos that it’s the bodies that have to run and make them in motion.",
             "source_file": "38-Rabih.mp3",
-            "start_time": 1183.87, 
+            "start_time": 1183.87,
             "end_time": 1214.79,
             "duration": 30.92
         },
