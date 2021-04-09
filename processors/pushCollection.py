@@ -162,7 +162,7 @@ def extract_entities(chunk, *adjacent_chunk_texts):
         chunk_entities = response["entities"]
         processed_chunk_entities = chunk_entities.copy()
         progress.console.print(checkmark, f"Successfully extracted {num_entities} entities")
-        if verbose: progress.console.print(f"Resolving coreferences...")
+        if very_verbose: progress.console.print(f"Resolving coreferences...")
         resolved_coreferences = 0
         adjacent_chunk_entities = []
         for adjacent_chunk_text in adjacent_chunk_texts:
@@ -182,13 +182,13 @@ def extract_entities(chunk, *adjacent_chunk_texts):
                         else:
                             selected_entity = entity
                             selected_entity_type = entity_type
-                        if verbose: progress.console.print(f"Entity found in adjacent chunk: {entity} >>> {adjacent_entity}. \nSelecting {selected_entity} ({selected_entity_type}).")
+                        if very_verbose: progress.console.print(f"Entity found in adjacent chunk: {entity} >>> {adjacent_entity}. \nSelecting {selected_entity} ({selected_entity_type}).")
                         processed_chunk_entities.update({
                             selected_entity: selected_entity_type
                         })
                         resolved_coreferences += 1
         if verbose: progress.console.print(checkmark, f"Successfully resolved {resolved_coreferences} coreferences.")
-        if verbose: progress.console.print(f"Extracted entities:\n {processed_chunk_entities}")
+        if very_verbose: progress.console.print(f"Extracted entities:\n {processed_chunk_entities}")
     else:
         progress.console.print(cross, f"No entities found.")
     progress.advance(task_progress)
@@ -219,7 +219,7 @@ def request(endpoint, query):
     progress.update(reconnect_progress, visible=False)
 
     url = api_base_url + endpoint
-    if verbose: progress.console.print(arrow, f'Sending request to {url}')
+    if very_verbose: progress.console.print(arrow, f'Sending request to {url}')
     progress.advance(request_progress)
 
     while True:
@@ -232,7 +232,7 @@ def request(endpoint, query):
                 }
             )
             if response.status_code == requests.codes.ok:
-                if verbose: progress.console.print(checkmark, f'Request successful: {response.status_code}')
+                if very_verbose: progress.console.print(checkmark, f'Request successful: {response.status_code}')
                 if very_verbose: progress.console.print(response.json(), highlight=False)
                 return response.json()
             else:
@@ -307,7 +307,7 @@ def insert_chunk_into_database(chunk):
             else:
                 progress.console.print(cross, f"[red]Error inserting chunk.")
         else:
-            progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
+            if verbose: progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
             failed_inserts_chunks.remove(chunk)
         progress.advance(request_progress)
 
@@ -333,9 +333,9 @@ def insert_entities_into_database(entities, chunk):
         }
         response = request(endpoint, query)
         if response["status"] == "success":
-            progress.console.print(f"Entity {entity} already exists.")
+            progress.console.print(checkmark, f"Entity already exists: [bold]{entity}[/bold]")
         else:
-            progress.console.print(f"Inserting {entity} into database.")
+            if verbose: progress.console.print(f"Inserting entity into database: [bold]{entity}[/bold] ({entity_type})")
             hash = hashlib.md5(entity.encode("utf-8"))
             entity_id = hash.hexdigest()
 
@@ -352,16 +352,17 @@ def insert_entities_into_database(entities, chunk):
             if not dry_run:
                 response = request(endpoint, query)
                 if response["status"] == "success":
-                    if verbose: progress.console.print(checkmark, f"Successfully inserted entity into database.")
+                    if verbose: progress.console.print(checkmark, f"Successfully inserted entity: [bold]{entity}[/bold] ({entity_type})")
                     failed_inserts_entities.remove(query)
-                    connect_entity_to_chunk(query, chunk)
                 else:
                     progress.console.print(cross, f"Could not insert entity into database.")
             else:
-                progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
+                if verbose: progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
+            connect_entity_to_chunk(query, chunk)
 
 
 def connect_entity_to_chunk(entity, chunk):
+    if very_verbose: progress.console.print(f"Connecting entity {entity['name']}.")
     endpoint = '/graph/find/entity'
     query = {
       "name": entity["name"]
@@ -386,9 +387,9 @@ def connect_entity_to_chunk(entity, chunk):
                 else:
                     progress.console.print(cross, f"Could not connect entity to chunk.")
             else:
-                progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
+                if verbose: progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
     else:
-        progress.console.print(cross, f"Entity not found.")
+        progress.console.print(cross, f"Can't connect entity to chunk: entity not found.")
 
 def dump_failed_inserts():
     if very_verbose:
@@ -450,7 +451,7 @@ with Progress(
         end_chunk = num_chunks
 
     for task_number, task in enumerate(tasks, start=1):
-        if very_verbose: progress.console.print(f'\n[black on #FF9900][bold]Starting task {task_number}[/bold]:\t {task}')
+        progress.console.print(f'\n[black on #FF9900][bold]Starting task {task_number}[/bold]: {task}')
         update_task(task)
 
         if task not in recognized_tasks:
