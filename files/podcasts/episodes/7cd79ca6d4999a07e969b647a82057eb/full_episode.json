@@ -3,20 +3,12 @@
     "name": "On artistic and human rights interventions 1/4 with Fred Ritchin and Wolfgang Kaleck",
     "source_type": "audio",
     "source_path": "/podcasts/episodes/7cd79ca6d4999a07e969b647a82057eb",
-    "intro_audio": "00-Intro.mp3",
-    "outro_audio": "9999-Outro.mp3",
-    "intro_text": "The following talk was part of a panel discussion at the Akademie der Künste in Berlin for the Opening Days of the European Month of Photography (EMOP) in October 2020, in cooperation with ECCHR.
-
-In this episode, Fred Ritchin (USA), photographer and Dean Emeritus of the International Center of Photography School, discusses the role graphic images have had in photojournalism to raise political awareness. For this purpose, he looks to some of recent history’s most iconic examples.
-
-Ritchin unpacks widely-held ideas about documentary truth, examining how photography can shine light on violence and repression, while also questioning the ways in which this transmission might be limited.
-    ",
     "num_chunks": 63,
     "chunk_sequence": [
         {
             "chunk_id": "7fdbe8d4f17629e682325e9682cc1143",
             "speaker": "Wolfgang",
-            "text": " Tonight's panel discussion on artistic and human rights intervention is actually a continuation of an ongoing talk. We had in Berlin last year, in a workshop with a Magnum Foundation. And out of this ongoing conversation, there are basically two streams of discussion. and one is obviously the impact of photography.",
+            "text": "Tonight's panel discussion on artistic and human rights intervention is actually a continuation of an ongoing talk. We had in Berlin last year, in a workshop with a Magnum Foundation. And out of this ongoing conversation, there are basically two streams of discussion. and one is obviously the impact of photography.",
             "source_file": "1-Wolfgang.mp3",
             "start_time": 214.34,
             "end_time": 296.94,
@@ -61,7 +53,7 @@ Ritchin unpacks widely-held ideas about documentary truth, examining how photogr
         {
             "chunk_id": "fa25d5d3c13c385c0d4b4a7438c5bb84",
             "speaker": "Wolfgang",
-            "text": " What we remember is this picture with the \"pyramids of the naked bodies of the Iraqi prisoners\". On the other hand, and that’s Susan Sontag, although these pictures became so incredibly important in terms of documentation, in terms of enlightenment of the global public and also in terms of action, there are a lot of questions around it.",
+            "text": "What we remember is this picture with the \"pyramids of the naked bodies of the Iraqi prisoners\". On the other hand, and that’s Susan Sontag, although these pictures became so incredibly important in terms of documentation, in terms of enlightenment of the global public and also in terms of action, there are a lot of questions around it.",
             "source_file": "6-Wolfgang.mp3",
             "start_time": 478.98,
             "end_time": 503.94,
@@ -106,7 +98,7 @@ Ritchin unpacks widely-held ideas about documentary truth, examining how photogr
         {
             "chunk_id": "b4ff5eff37283e2d8f38e6aeec9f66e3",
             "speaker": "Wolfgang",
-            "text": "And the other stream is obviously the question of intervention I found a very nice quote by Susan [Meiselas] and she says about intervention: “Being drawn to a few violent exchanges that do occur, the media constrain overt violence, which motivates further refinement of less overt mission for domination.”",
+            "text": "That is the one strean, and the other stream is obviously the question of intervention I found a very nice quote by Susan [Meiselas] and she says about intervention: “Being drawn to a few violent exchanges that do occur, the media constrain overt violence, which motivates further refinement of less overt mission for domination.”",
             "source_file": "11-Wolfgang.mp3",
             "start_time": 582.09,
             "end_time": 612.3,
@@ -457,7 +449,7 @@ Ritchin unpacks widely-held ideas about documentary truth, examining how photogr
         {
             "chunk_id": "8698e39258f54671535517892ca83612",
             "speaker": "Fred",
-            "text": " So I’m going to show you just quickly two or three projects I’ve worked on that try to do it differently than just relying on the old idea of the photograph as witness. This is something I worked on with Al Jazeera. It was shown at the Sundance Film Festival and it was about formerly incarcerated women of color, who lived in Harlem after incarceration, after getting out of prison.",
+            "text": "So I’m going to show you just quickly two or three projects I’ve worked on that try to do it differently than just relying on the old idea of the photograph as witness. This is something I worked on with Al Jazeera. It was shown at the Sundance Film Festival and it was about formerly incarcerated women of color, who lived in Harlem after incarceration, after getting out of prison.",
             "source_file": "50-Fred.mp3",
             "start_time": 1735.12,
             "end_time": 1776.01,
@@ -547,38 +539,12 @@ Ritchin unpacks widely-held ideas about documentary truth, examining how photogr
         {
             "chunk_id": "c910ddc37989c0d572d4640b7210496f",
             "speaker": "Wolfgang",
-            "text": "Thank you very much, Fred. I want to just point to one extremely interesting point you made, and that was the Vietnam Inc. book, because there is this famous critique of photography by Robert Hariman and Ariella Azoulay that it covers the regime-made disaster. So they basically we’re saying that some of the photographs just cover the excesses, the open spectacular violence and the other forms of domination and of power are not shown by photographs.",
+            "text": "Thank you very much, Fred.",
             "source_file": "60-Wolfgang.mp3",
             "start_time": 2086.07,
             "end_time": 2131.04,
             "duration": 44.97
-        },
-        {
-            "chunk_id": "b5a748e2937df733ec1ffefc5e2e1593",
-            "speaker": "Wolfgang",
-            "text": "But here in Vietnam Inc., you had a wonderful example of how to address regime-made disaster. That’s the one remarkAnd the other remark is as, let’s say, compellingly and convincingly the Vietnam photos probably can stand on their own, it’s not the same thing for the Abu Ghraib photos, because the Abu Ghraib photos mislead. ",
-            "source_file": "61-Wolfgang.mp3",
-            "start_time": 2131.05,
-            "end_time": 2155.95,
-            "duration": 24.9
-        },
-        {
-            "chunk_id": "07a81a8bff194c18b77f515a4227fd3b",
-            "speaker": "Wolfgang",
-            "text": "And that was very well shown in Errol Morris’s two documentaries on Abu Ghraib. And especially one photo you just showed. You showed one officer, with thumb up just in front of a dead body. And so this guy and also one of the ladies shown in the pictures, were sentenced because they did this gesture, you know, but the death of the guy, the corpse, was not investigated.",
-            "source_file": "62-Wolfgang.mp3",
-            "start_time": 2156.88,
-            "end_time": 2191.35,
-            "duration": 34.47
-        },
-        {
-            "chunk_id": "ef1988eb4a117cc70696922f8cfbe546",
-            "speaker": "Wolfgang",
-            "text": " Later on, some investigative journalist and human rights organizations investigated this incident. And it came out that this guy was tortured to death by the CIA. So it was not investigated and not sanctioned. Every photograph needs in a way, its contextualization. Or it’s very clear or it needs an explanation and contextualization. Otherwise it misleads in the way the Abu Ghraib photos misled.",
-            "source_file": "63-Wolfgang.mp3",
-            "start_time": 2191.62,
-            "end_time": 2228.88,
-            "duration": 37.26
         }
+        
     ]
 }
