@@ -3,14 +3,6 @@
     "name": "On Artistic and Human Rights Interventions 3/4 with Rabih Mroué and Wolfgang Kaleck",
     "source_type": "audio",
     "source_path": "/podcasts/episodes/f8487321ec78207ffa6a25f9fbff7079",
-    "intro_audio": "00-Intro.mp3",
-    "outro_audio": "9999-Outro.mp3",
-    "intro_text": "The following talk was part of a panel discussion at the Akademie der Künste in Berlin for the Opening Days of the European Month of Photography (EMOP) in October 2020, in cooperation with ECCHR.
-
-Join us in this episode as we hear a talk from Lebanese performance and video artist Rabih Mroué about how he treats the impact of violent images in his work.
-
-Beginning with his piece PIXELATED REVOLUTION, which uses the moment of the civilian witness capturing violence on their cellphone camera, Mroué lays out a complicated web of connections between the witnessing acts of viewer, victim, and perpetrator.
-    ",
     "num_chunks": 39,
     "chunk_sequence": [
         {
@@ -97,7 +89,7 @@ Beginning with his piece PIXELATED REVOLUTION, which uses the moment of the civi
         {
             "chunk_id": "4736afbd9ea280c1e5b4282ad7cceda6",
             "speaker": "Rabih",
-            "text": " And this was one of the starting points of my work on what I call “Pixellated Revolution,” where there were like a lot of videos on the net where they were showing, someone from the regime hiding. And then he found the lens or the man who is the protester who is trying to record him and then he’d shoot.",
+            "text": "And this was one of the starting points of my work on what I call “Pixellated Revolution,” where there were like a lot of videos on the net where they were showing, someone from the regime hiding. And then he found the lens or the man who is the protester who is trying to record him and then he’d shoot.",
             "source_file": "10-Rabih.mp3",
             "start_time": 308.02,
             "end_time": 347.17,
@@ -133,7 +125,7 @@ Beginning with his piece PIXELATED REVOLUTION, which uses the moment of the civi
         {
             "chunk_id": "b3c1f3c3a3d44c8566997fef87e52920",
             "speaker": "Rabih",
-            "text": "And this eye contact... Actually it’s going directly to us as spectators, as viewers. So it goes from him to the lens to the man behind the camera and then to us because we are watching it. And then he points the rifle and he shoots.",
+            "text": "And this eye contact... It’s going directly to us as spectators, as viewers. So it goes from him to the lens to the man behind the camera and then to us because we are watching it. And then he points the rifle and he shoots.",
             "source_file": "14-Rabih.mp3",
             "start_time": 435.03,
             "end_time": 458.94,
@@ -151,7 +143,7 @@ Beginning with his piece PIXELATED REVOLUTION, which uses the moment of the civi
         {
             "chunk_id": "c3bcc15c9bdae9683f978347ca46824c",
             "speaker": "Rabih",
-            "text": " Our imagination generates the violence. And this is why they are really very, very harsh on us. Like, you cannot bear it, honestly. And this is why actually I show it to you frame by frame, because I want to avoid this feeling to shock. Maybe some of you have already seen them on the net.",
+            "text": "Our imagination generates the violence. And this is why they are really very, very harsh on us. Like, you cannot bear it, honestly. And this is why actually I show it to you frame by frame, because I want to avoid this feeling to shock. Maybe some of you have already seen them on the net.",
             "source_file": "16-Rabih.mp3",
             "start_time": 500.7,
             "end_time": 527.21,
@@ -169,7 +161,7 @@ Beginning with his piece PIXELATED REVOLUTION, which uses the moment of the civi
         {
             "chunk_id": "68be272b6d36b5d17783d9a5f5327a2a",
             "speaker": "Rabih",
-            "text": " And here I would like just to give a concrete example of this idea, which comes from 1973 from Santiago in Chile, where the first coup d’état happened against [Salvador] Allende... And it was failed.",
+            "text": "And here I would like just to give a concrete example of this idea, which comes from 1973 from Santiago in Chile, where the first coup d’état happened against [Salvador] Allende... And it was failed.",
             "source_file": "18-Rabih.mp3",
             "start_time": 562.57,
             "end_time": 581.53,
@@ -250,7 +242,7 @@ Beginning with his piece PIXELATED REVOLUTION, which uses the moment of the civi
         {
             "chunk_id": "81cf8da2125fa4d59330cbd24fcfa7c2",
             "speaker": "Rabih",
-            "text": " My point is how we can read the photos and the videos without trying to go out or to imagine the off-camera. Not to reconstruct the off-camera. We have these images how we can try to read these images. And this is one of the reasons why I tried to make them frame by frame in order to make them as a text, to read the image, not to see the image.",
+            "text": "My point is how we can read the photos and the videos without trying to go out or to imagine the off-camera. Not to reconstruct the off-camera. We have these images how we can try to read these images. And this is one of the reasons why I tried to make them frame by frame in order to make them as a text, to read the image, not to see the image.",
             "source_file": "27-Rabih.mp3",
             "start_time": 823.63,
             "end_time": 856.35,
@@ -268,7 +260,7 @@ Beginning with his piece PIXELATED REVOLUTION, which uses the moment of the civi
         {
             "chunk_id": "9dfed4209f9ae6996845b0dd41795a07",
             "speaker": "Rabih",
-            "text": " And if you go also inside, blow up the eye of the victim, then you will see also the killer inside the victim’s eyes, and if you go also blow up the eye of the killer, then you will see the eye, the victim inside and so on and so forth.",
+            "text": "And if you go also inside, blow up the eye of the victim, then you will see also the killer inside the victim’s eyes, and if you go also blow up the eye of the killer, then you will see the eye, the victim inside and so on and so forth.",
             "source_file": "29-Rabih.mp3",
             "start_time": 894.36,
             "end_time": 924.6,
@@ -351,7 +343,7 @@ Beginning with his piece PIXELATED REVOLUTION, which uses the moment of the civi
             "speaker": "Rabih",
             "text": "And actually, in order to see the video, you have to run and look at these photos and then your movement will make the photos, as in cinema, become like moving images. So it’s like in cinema, but instead of the machine that makes these still photos look as in motion photos that it’s the bodies that have to run and make them in motion.",
             "source_file": "38-Rabih.mp3",
-            "start_time": 1183.87,
+            "start_time": 1183.87, 
             "end_time": 1214.79,
             "duration": 30.92
         },
