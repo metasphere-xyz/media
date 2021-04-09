@@ -11,7 +11,7 @@
         {
            "chunk_id": “??”,
             "speaker": "Wolfgang",
-            "text": "Hello  Mark.”,
+            "text": "Hello Mark.”,
             "source_file": “1-Wolfgang.mp3",
             "start_time": 0.21,
             "end_time": 36.32,
@@ -20,7 +20,7 @@
 
 
 "chunk_id": "d0a11af617ef4b6a0c9ccdd64eaa3279",
-            "speaker": “Merkg",
+            "speaker": “Mark",
             "text": "Hello Wolfgang. Nice to be with you",
             "source_file": "2-Mark.mp3",
             "start_time": 0.21,
