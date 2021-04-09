@@ -103,6 +103,7 @@ if very_verbose:
 
 checkmark = f"[green]"u'\u2713 '
 cross = f"[red]"u'\u00D7 '
+eye = f"[white]"u'\u2022 '
 arrow = f"[grey]"u'\u21B3 '
 
 if very_verbose: print (arguments)
@@ -312,7 +313,7 @@ def insert_chunk_into_database(chunk):
         progress.advance(request_progress)
 
     elif response["status"] == "success":
-        if verbose: progress.console.print(cross, f"[white]Chunk already exists.")
+        if verbose: progress.console.print(eye, f"[white]Chunk already exists.")
         stored_chunk = response["instance"]
         if stored_chunk != chunk:
             if verbose: progress.console.print(cross, f"[white]Updating chunk...")
@@ -333,7 +334,7 @@ def insert_entities_into_database(entities, chunk):
         }
         response = request(endpoint, query)
         if response["status"] == "success":
-            progress.console.print(checkmark, f"Entity already exists: [bold]{entity}[/bold]")
+            progress.console.print(eye, f"Entity already exists: [bold]{entity}[/bold]")
         else:
             if verbose: progress.console.print(f"Inserting entity into database: [bold]{entity}[/bold] ({entity_type})")
             hash = hashlib.md5(entity.encode("utf-8"))
@@ -364,8 +365,9 @@ def insert_entities_into_database(entities, chunk):
 def connect_entity_to_chunk(entity, chunk):
     if very_verbose: progress.console.print(f"Connecting entity {entity['name']}.")
     endpoint = '/graph/find/entity'
+    entity_name = entity['name']
     query = {
-      "name": entity["name"]
+      "name": entity_name
     }
     response = request(endpoint, query)
     if response["status"] == "success":
@@ -383,13 +385,13 @@ def connect_entity_to_chunk(entity, chunk):
             if not dry_run:
                 response = request(endpoint, query)
                 if response["status"] == "success":
-                    if verbose: progress.console.print(checkmark, f"Successfully connected entity to chunk.")
+                    if verbose: progress.console.print(checkmark, f"Successfully connected entity: [bold]{entity_name}[/bold]")
                 else:
-                    progress.console.print(cross, f"Could not connect entity to chunk.")
+                    progress.console.print(cross, f"Could not connect entity (request error): [bold]{entity_name}[/bold]")
             else:
                 if verbose: progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
     else:
-        progress.console.print(cross, f"Can't connect entity to chunk: entity not found.")
+        progress.console.print(cross, f"Could not find entity: [bold]{entity_name}[/bold]")
 
 def dump_failed_inserts():
     if very_verbose:
