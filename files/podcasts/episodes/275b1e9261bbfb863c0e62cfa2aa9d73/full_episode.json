@@ -9,18 +9,17 @@
     "num_chunks": 178,
     "chunk_sequence": [
         {
-           "chunk_id": “??”,
+            "chunk_id": "7c357cc30acbd1bba07e724ef6b621ab",
             "speaker": "Wolfgang",
-            "text": "Hello Mark.”,
-            "source_file": “1-Wolfgang.mp3",
+            "text": "Hello Mark.",
+            "source_file": "1-Wolfgang.mp3",
             "start_time": 0.21,
             "end_time": 36.32,
-            "duration": 36.11
+            "duration": 1.00
         },
-
-
-"chunk_id": "d0a11af617ef4b6a0c9ccdd64eaa3279",
-            "speaker": “Mark",
+        {
+            "chunk_id": "d0a11af617ef4b6a0c9ccdd64eaa3279",
+            "speaker": "Mark",
             "text": "Hello Wolfgang. Nice to be with you",
             "source_file": "2-Mark.mp3",
             "start_time": 0.21,
@@ -1200,7 +1199,7 @@
         {
             "chunk_id": "5da8530e0e7dc8e9d36df9264e5047e4",
             "speaker": "Mark",
-            "text": "So I talk a lot about Levinas’ work, \"Emmanuel Levinas’\" work about “the face of the Other“ and looking into the face of the Other. So does photography enable us to look into the face of the Other and take a form of responsibility for that Other?",
+            "text": "So I talk a lot about Levinas’ work, \"Emmanuel Levinas’\" work about \"the face of the Other\" and looking into the face of the Other. So does photography enable us to look into the face of the Other and take a form of responsibility for that Other?",
             "source_file": "132-Mark.mp3",
             "start_time": 2706.49,
             "end_time": 2721.54,
@@ -1245,7 +1244,7 @@
         {
             "chunk_id": "a84a3488809fa6d45d99b3d91dec2589",
             "speaker": "Mark",
-            "text": "So these are the kind of questions that I’m beginning to or I wanted to just bring to the fore. In terms of answering them, I’m not sure what the answers are. It’s a process. What my great friend Stuart Hall would say, “It’s an unfinished conversation.”",
+            "text": "So these are the kind of questions that I’m beginning to or I wanted to just bring to the fore. In terms of answering them, I’m not sure what the answers are. It’s a process. What my great friend Stuart Hall would say, ”It’s an unfinished conversation.”",
             "source_file": "137-Mark.mp3",
             "start_time": 2779.69,
             "end_time": 2795.8,
@@ -1611,6 +1610,5 @@
             "end_time": 4068.56,
             "duration": 3.37
         }
-
     ]
 }
