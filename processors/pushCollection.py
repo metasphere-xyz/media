@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
+from configuration.ecchr import matched_entities
+
 import sys
-import logging
 import argparse
 import json
 import hashlib
@@ -9,11 +10,46 @@ import time
 import requests
 from rich.progress import *
 from rich import print
+from fuzzy_match import algorithims as algorithms
+from fuzzy_match import match
+
+import logging
+
+
+def setup_logger(name, log_file, format='%(message)s'):
+    formatter = logging.Formatter(format)
+    handler = logging.FileHandler(log_file)
+    handler.setFormatter(formatter)
+
+    logger = logging.getLogger(name)
+    logger.addHandler(handler)
+
+    return logger
 
 version_number = '0.2'
 
+accepted_entity_logger = setup_logger('accepted_entity_logger',
+                                      "entities-accepted.json",
+                                      format='%(message)s'
+                                      )
+rejected_entity_logger = setup_logger('rejected_entity_logger',
+                                      "entities-rejected.json",
+                                      format='%(message)s'
+                                      )
+ambiguous_entity_logger = setup_logger('ambiguous_entity_logger',
+                                      "entities-ambiguous.json",
+                                      format='%(message)s'
+                                      )
+
+error_logger = setup_logger('error_logger', "error.log", format='%(message)s')
+
+accepted_entities = []
+rejected_entities = []
+ambiguous_entities = []
+
 recognized_tasks = [
     'extract_entities',
+    'store_entities',
     'generate_summaries',
     'find_similar_chunks',
     'store_chunks'
@@ -85,18 +121,13 @@ very_verbose = vars(arguments)['vv']
 dry_run = vars(arguments)['dry_run']
 
 tasks = vars(arguments)['task']
-tasks.append('store_chunks')
 
 timeout_for_reconnect = 15
 max_reconnect_tries = 5
 failed_inserts_chunks = []
 failed_inserts_entities = []
+extracted_entities = []
 num_tasks = int(len(tasks))
-
-if start_chunk and end_chunk > 1:
-    num_chunks = end_chunk - start_chunk
-else:
-    num_chunks = len(collection["chunk_sequence"])
 
 if very_verbose:
     verbose = True
@@ -109,6 +140,12 @@ arrow = f"[grey]"u'\u21B3 '
 if very_verbose:
     print (arguments)
 
+def removeDuplicateDictFromList(list):
+    return [dict(t) for t in {tuple(d.items()) for d in list}]
+
+
+def sortDictByValues(dict):
+    return {k: v for k, v in sorted(dict.items(), key=lambda item: item[1])}
 
 def update_task(current_task):
     progress.update(task_progress, visible=True, description=f"Task: {current_task}")
@@ -160,47 +197,100 @@ def extract_entities(chunk, *adjacent_chunk_texts):
     }
     response = request(endpoint, query)
     num_entities = len(response["entities"])
-    processed_chunk_entities = {}
+    processed_chunk_entities = []
+    resolved_coreferences = 0
     if num_entities >= 1:
         chunk_entities = response["entities"]
-        processed_chunk_entities = chunk_entities.copy()
         progress.console.print(checkmark, f"Successfully extracted {num_entities} entities")
         if very_verbose:
-            progress.console.print(f"Resolving coreferences...")
-        resolved_coreferences = 0
+            progress.console.print(chunk_entities)
+        if very_verbose:
+            progress.console.print(eye, f"Resolving coreferences...")
         adjacent_chunk_entities = []
+        adjacent_chunk_entities_as_string = ""
         for adjacent_chunk_text in adjacent_chunk_texts:
+            # extract entities from adjacent chunks and store them in a list
             query = {
                 "text": adjacent_chunk_text
             }
             response_adjacent_chunk_entities = request(endpoint, query)
-            adjacent_chunk_entities.append(
-                response_adjacent_chunk_entities["entities"])
-        for (entity, entity_type) in chunk_entities.items():
-            for (index, adjacent_chunk) in enumerate(adjacent_chunk_entities):
-                for (adjacent_entity, adjacent_entity_type) in adjacent_chunk.items():
-                    if entity in adjacent_entity:
-                        if len(adjacent_entity) > len(entity):
-                            selected_entity = adjacent_entity
-                            selected_entity_type = adjacent_entity_type
-                            del processed_chunk_entities[entity]
-                        else:
-                            selected_entity = entity
-                            selected_entity_type = entity_type
-                        if very_verbose:
-                            progress.console.print(f"Entity found in adjacent chunk: {entity} >>> {adjacent_entity}. \nSelecting {selected_entity} ({selected_entity_type}).")
-                        processed_chunk_entities.update({
-                            selected_entity: selected_entity_type
-                        })
+            for entity in response_adjacent_chunk_entities["entities"]:
+                adjacent_chunk_entities.append({
+                    "entity_name": entity["entity_name"],
+                    "entity_label": entity["entity_label"]
+                })
+                adjacent_chunk_entities_as_string += " " + entity["entity_name"]
+
+        for entity in chunk_entities:
+            adjacent_chunk_entities_as_string += " " + entity["entity_name"]
+
+        for entity in chunk_entities:
+            entity_name = entity["entity_name"]
+            updated_entity = {
+                "entity_name": "",
+                "entity_label": ""
+            }
+
+            # compare entity to other chunks
+            selected_entity = match.extractOne(entity_name, adjacent_chunk_entities, score_cutoff=0.2)
+            if selected_entity != None:
+                # similar entity appears in other chunks
+                ambiguous_entity = selected_entity[0]
+                if entity != ambiguous_entity:
+                    # entry is similar but not the same
+                    # > count occurances
+                    ambiguous_entities.append(entity)
+                    ambiguous_entities.append(ambiguous_entity)
+
+                    occurances_ambiguous_entity = adjacent_chunk_entities_as_string.count(ambiguous_entity["entity_name"])
+                    occurances_entity = adjacent_chunk_entities_as_string.count(entity["entity_name"])
+                    if occurances_ambiguous_entity > occurances_entity:
+                        # > select entity with higher occurances
+                        selected_entity_name = ambiguous_entity["entity_name"]
+                        updated_entity = {
+                            "entity_name": ambiguous_entity["entity_name"],
+                            "entity_label": ambiguous_entity["entity_label"]
+                        }
+                        if verbose: progress.console.print(checkmark, f"resolved coreference: [white]{entity_name}[/white] \u2192 [bold]{selected_entity_name}[/bold].")
+                        processed_chunk_entities.append(updated_entity)
                         resolved_coreferences += 1
+                    else:
+                        processed_chunk_entities.append(entity)
+                else:
+                    # entities are the same
+                    processed_chunk_entities.append(entity)
+            else:
+                # entity is unambiguous
+                # > accept
+                processed_chunk_entities.append(entity)
+
+            for (entity_index, entity) in enumerate(processed_chunk_entities):
+                if entity["entity_name"] in matched_entities:
+                    # entity is in configuration
+                    # > select configuration value > accept
+                    updated_entity = {
+                        "entity_name": matched_entities[entity["entity_name"]],
+                        "entity_label": 'HARDCODED'
+                    }
+                    selected_entity_name = matched_entities[entity["entity_name"]]
+                    if verbose: progress.console.print(checkmark, f"Resolved coreference from configuration: [white]{entity_name}[/white] \u2192 [bold]{selected_entity_name}[/bold].")
+                    resolved_coreferences += 1
+                    processed_chunk_entities[entity_index] = updated_entity
+
+        if resolved_coreferences >= 1:
+            progress.console.print(checkmark, f"Resolved {resolved_coreferences} coreferences.")
+
+        for entity in removeDuplicateDictFromList(processed_chunk_entities):
+            accepted_entities.append(entity)
+            progress.console.print(eye, entity["entity_name"] + ':', entity["entity_label"])
+
         if verbose:
-            progress.console.print(checkmark, f"Successfully resolved {resolved_coreferences} coreferences.")
-        if very_verbose:
-            progress.console.print(f"Extracted entities:\n {processed_chunk_entities}")
+            progress.console.print(removeDuplicateDictFromList(processed_chunk_entities), highlight=True)
     else:
         progress.console.print(cross, f"No entities found.")
+
     progress.advance(task_progress)
-    return processed_chunk_entities
+    return removeDuplicateDictFromList(processed_chunk_entities)
 
 
 def find_similar_chunks(chunk):
@@ -427,16 +517,14 @@ def connect_entity_to_chunk(entity, chunk):
 def dump_failed_inserts():
     if very_verbose:
         progress.console.print(f"[red]Insertion failed for the following objects:\n")
-    logging.basicConfig(filename='error.log', filemode='w',
-                        format='%(name)s - %(levelname)s - %(message)s')
     for chunk in failed_inserts_chunks:
         if very_verbose:
             progress.console.print(f"{chunk}\n")
-        logging.error(f"\n{chunk}\n")
+        error_logger.error(f"\n{chunk}\n")
     for entity in failed_inserts_entities:
         if very_verbose:
             progress.console.print(f"{entity}\n")
-        logging.error(f"\n{entity}\n")
+        error_logger.error(f"\n{entity}\n")
     progress.console.print(f"[red bold]Saved failed insertions to error.log\n")
 
 
@@ -449,6 +537,11 @@ try:
     print("done.")
 except (OSError, IOError) as error:
     raise_error(error)
+
+if end_chunk:
+    num_chunks = end_chunk - start_chunk +1
+else:
+    num_chunks = len(collection["chunk_sequence"])
 
 with Progress(
     SpinnerColumn(),
@@ -492,15 +585,16 @@ with Progress(
         if task not in recognized_tasks:
             raise_error(f"Task not recognized: {task}")
         else:
+            updated_chunk_index = 0
             for chunk_number in range(start_chunk, end_chunk + 1):
                 chunk_index = chunk_number - 1
                 update_progress(chunk_index)
 
                 chunk = collection["chunk_sequence"][chunk_index]
                 previous_chunk = collection["chunk_sequence"][chunk_index - 1]
-                next_chunk = collection["chunk_sequence"][chunk_index + 1]
                 chunk_id = chunk["chunk_id"]
                 progress.console.print(f'\n[bold]Processing chunk {chunk_number}[/bold]:\t {chunk_id}')
+                if verbose: progress.console.print(f'\n{chunk["text"]}\n')
 
                 updated_chunk = {
                     "chunk_id": chunk["chunk_id"],
@@ -515,10 +609,27 @@ with Progress(
                     failed_inserts_chunks.append(updated_chunk)
 
                 if task == 'extract_entities':
-                    chunk_entities = extract_entities(
-                        chunk, previous_chunk['text'], next_chunk['text'])
+                    if chunk_index < (num_chunks - 3):
+                        chunk_entities = extract_entities(
+                            chunk,
+                            collection["chunk_sequence"][chunk_index - 1]["text"],
+                            collection["chunk_sequence"][chunk_index - 2]["text"],
+                            collection["chunk_sequence"][chunk_index - 3]["text"],
+                            collection["chunk_sequence"][chunk_index + 1]["text"],
+                            collection["chunk_sequence"][chunk_index + 2]["text"],
+                            collection["chunk_sequence"][chunk_index + 3]["text"]
+                        )
+                    else:
+                        chunk_entities = extract_entities(
+                        chunk,
+                        collection["chunk_sequence"][chunk_index - 1]["text"],
+                        collection["chunk_sequence"][chunk_index - 2]["text"],
+                        collection["chunk_sequence"][chunk_index - 3]["text"],
+                        )
+
                     updated_chunk.update(entities=chunk_entities)
-                    insert_entities_into_database(chunk_entities, chunk)
+                elif task == 'store_entities':
+                    insert_entities_into_database()
                 elif task == 'generate_summaries':
                     chunk_summaries = generate_summaries(chunk['text'])
                     updated_chunk.update(summaries=chunk_summaries)
@@ -526,9 +637,9 @@ with Progress(
                     similar_chunks = find_similar_chunks(chunk)
                     updated_chunk.update(similarity=similar_chunks)
 
-                updated_chunk_sequence[chunk_index].update(updated_chunk)
-                failed_inserts_chunks[chunk_index].update(updated_chunk)
-
+                updated_chunk_sequence[updated_chunk_index].update(updated_chunk)
+                failed_inserts_chunks[updated_chunk_index].update(updated_chunk)
+                updated_chunk_index += 1
                 progress.advance(chunk_progress)
 
                 if chunk_number != end_chunk:
@@ -536,9 +647,19 @@ with Progress(
 
             if task == 'store_chunks':
                 for i, chunk in enumerate(updated_chunk_sequence, start=1):
-                    insert_chunk_into_database(chunk)
+                    # insert_chunk_into_database(chunk)
                     # connect_chunk_to_collection(chunk)
                     time.sleep(1)
+            elif task == 'extract_entities':
+                for entity in removeDuplicateDictFromList(accepted_entities):
+                    accepted_entity_logger.warning(entity)
+                for entity in removeDuplicateDictFromList(rejected_entities):
+                    rejected_entity_logger.warning(entity)
+                for index, entity in enumerate(ambiguous_entities):
+                    if (index % 2 == 0) and (index != 0):
+                        ambiguous_entity_logger.warning("\n")
+                    ambiguous_entity_logger.warning(entity)
+
 
             if task_number == num_tasks:
                 progress.update(task_progress, visible=False)
