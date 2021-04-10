@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+version_number = '0.3'
+
 from configuration.ecchr import matched_entities
 
 import sys
@@ -8,40 +10,14 @@ import json
 import hashlib
 import time
 import requests
+import os.path
+from pathlib import Path
 from rich.progress import *
 from rich import print
 from fuzzy_match import algorithims as algorithms
 from fuzzy_match import match
 
 import logging
-
-
-def setup_logger(name, log_file, format='%(message)s'):
-    formatter = logging.Formatter(format)
-    handler = logging.FileHandler(log_file)
-    handler.setFormatter(formatter)
-
-    logger = logging.getLogger(name)
-    logger.addHandler(handler)
-
-    return logger
-
-version_number = '0.2'
-
-accepted_entity_logger = setup_logger('accepted_entity_logger',
-                                      "entities-accepted.json",
-                                      format='%(message)s'
-                                      )
-rejected_entity_logger = setup_logger('rejected_entity_logger',
-                                      "entities-rejected.json",
-                                      format='%(message)s'
-                                      )
-ambiguous_entity_logger = setup_logger('ambiguous_entity_logger',
-                                      "entities-ambiguous.json",
-                                      format='%(message)s'
-                                      )
-
-error_logger = setup_logger('error_logger', "error.log", format='%(message)s')
 
 accepted_entities = []
 rejected_entities = []
@@ -139,6 +115,79 @@ arrow = f"[grey]"u'\u21B3 '
 
 if very_verbose:
     print (arguments)
+
+input_file = arguments.collection
+
+print ("Loading " + input_file + ' ... ', end='')
+try:
+    with open(input_file) as f:
+        collection = json.load(f)
+    print("done.")
+except (OSError, IOError) as error:
+    raise_error(error)
+
+parent_dir = os.path.dirname(sys.argv[0]) + '/../'
+base_dir = os.path.abspath(parent_dir)
+collection_base_dir = os.path.abspath(base_dir) + '/files' + collection["source_path"]
+
+if not collection_name:
+    collection_name = collection['name']
+
+print(f"\nCollection name:\t [bold]{collection_name}")
+print(f"Collection id:\t\t {collection['collection_id']}")
+print(f"Collection type:\t {collection['source_type']}")
+print (f"Base directory:\t\t {base_dir}")
+print(f"Media directory:\t {collection_base_dir}")
+print(f"Chunks in collection:\t {collection['num_chunks']}\n")
+
+def setup_logger(name, log_file, format='%(message)s'):
+    if very_verbose:
+        print(f"Setting up logfile: {log_file}")
+    if os.path.exists(os.path.dirname(log_file)) == False:
+        print (cross, f"Directory does not exist: {os.path.dirname(log_file)}")
+        try:
+            os.mkdir(os.path.dirname(log_file))
+        except OSError as error:
+            print (f"Creation of the directory {os.path.dirname(log_file)} failed: {error}")
+            sys.exit(1)
+        else:
+            if very_verbose: print (checkmark, f"Successfully created the directory {os.path.dirname(log_file)}")
+    else:
+        if very_verbose: print(checkmark, f"Loaded directory {os.path.dirname(log_file)}")
+
+    formatter = logging.Formatter(format)
+    try:
+        handler = logging.FileHandler(log_file, mode='w')
+    except OSError as error:
+        print (f"Could not open logfile: {error}")
+        sys.exit(1)
+    else:
+        if verbose: print (checkmark, f"Successfully opened logfile for {name}")
+        handler.setFormatter(formatter)
+        logger = logging.getLogger(name)
+        logger.addHandler(handler)
+        return logger
+
+path_accepted_entities = collection_base_dir + '/entities/' + 'accepted.json'
+path_rejected_entities = collection_base_dir + '/entities/' + 'rejected.json'
+path_ambiguous_entities = collection_base_dir + '/entities/' + 'ambiguous.json'
+
+accepted_entity_logger = setup_logger('accepted_entity_logger',
+                                      path_accepted_entities,
+                                      format='%(message)s'
+                                      )
+rejected_entity_logger = setup_logger('rejected_entity_logger',
+                                      path_rejected_entities,
+                                      format='%(message)s'
+                                      )
+ambiguous_entity_logger = setup_logger('ambiguous_entity_logger',
+                                      path_ambiguous_entities,
+                                      format='%(message)s'
+                                      )
+
+
+
+error_logger = setup_logger('error_logger', collection_base_dir + "/error.log", format='%(message)s')
 
 def removeDuplicateDictFromList(list):
     return [dict(t) for t in {tuple(d.items()) for d in list}]
@@ -440,6 +489,21 @@ def insert_chunk_into_database(chunk):
 
 
 def insert_entities_into_database(entities, chunk):
+    # TODO:
+    # filesystem read entities-accepted.json into list of dicts
+    # iterate through entities
+    # if entity in accepted_entities:
+    # > upload entity
+    # if not:
+    # > add to rejected log
+
+    try:
+        with open(input_file) as f:
+            collection = json.load(f)
+        print("done.")
+    except (OSError, IOError) as error:
+        raise_error(error)
+
     for (entity, entity_type) in entities.items():
         endpoint = '/graph/find/entity'
         query = {
@@ -528,16 +592,6 @@ def dump_failed_inserts():
     progress.console.print(f"[red bold]Saved failed insertions to error.log\n")
 
 
-input_file = arguments.collection
-
-print ("Loading " + input_file + ' ... ', end='')
-try:
-    with open(input_file) as f:
-        collection = json.load(f)
-    print("done.")
-except (OSError, IOError) as error:
-    raise_error(error)
-
 if end_chunk:
     num_chunks = end_chunk - start_chunk +1
 else:
@@ -551,20 +605,7 @@ with Progress(
     BarColumn(),
     "[progress.description]{task.description}",
 ) as progress:
-    if not collection_name:
-        collection_name = collection['name']
-    progress.console.print(f"\nCollection name:\t [bold]{collection_name}")
-    progress.console.print(f"Collection id:\t\t {collection['collection_id']}")
-    progress.console.print(f"Collection type:\t {collection['source_type']}")
-    progress.console.print(f"Chunks in collection:\t {collection['num_chunks']}")
     progress.console.print(f"Chunks to process:\t {num_chunks}")
-
-    collection_base_dir = media_directory + '/'.join([
-        collection["source_path"]
-    ])
-
-    if very_verbose:
-        progress.console.print(f"Media directory:\t {collection_base_dir}")
 
     chunk_progress = progress.add_task(f"Chunk {start_chunk-1} / {end_chunk} \t\t", total=num_chunks)
 
