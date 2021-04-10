@@ -6,13 +6,23 @@
     "intro_audio": "00-Intro.mp3",
     "outro_audio": "9999-Outro.mp3",
     "intro_text": "Join us in this episode as curator and cultural historian Mark Sealy talks about the challenges of visual representation. Your host of today is Wolfgang Kaleck, ECCHR General Secretary.\nSealy and Kaleck discuss the visuals of violence and the viewers’ responsibility. They will interrogate diﬀerent ways of dealing with photography produced in colonial and postcolonial contexts and try to answer the questions: How do we deploy these images... and to what purpose?",
-    "num_chunks": 177,
+    "num_chunks": 178,
     "chunk_sequence": [
         {
-            "chunk_id": "d0a11af617ef4b6a0c9ccdd64eaa3279",
+           "chunk_id": “??”,
             "speaker": "Wolfgang",
-            "text": "So, hello everybody, to the latest edition of our podcast by ECCHR, European Center for Constitutional and Human Rights in Berlin. We’re having a series of talks on arts and human rights with some of the most well-known curators, artists, people from the arts world. And today my guest is Mark Sealy, curator, writer and director of The Association of Black Photographers in London, photography expert and scholar.",
-            "source_file": "1-Wolfgang.mp3",
+            "text": "Hello Mark.”,
+            "source_file": “1-Wolfgang.mp3",
+            "start_time": 0.21,
+            "end_time": 36.32,
+            "duration": 36.11
+        },
+
+
+"chunk_id": "d0a11af617ef4b6a0c9ccdd64eaa3279",
+            "speaker": “Mark",
+            "text": "Hello Wolfgang. Nice to be with you",
+            "source_file": "2-Mark.mp3",
             "start_time": 0.21,
             "end_time": 36.32,
             "duration": 36.11
@@ -20,8 +30,8 @@
         {
             "chunk_id": "c54f0f5320582a68619b813c003d6bde",
             "speaker": "Wolfgang",
-            "text": "So hello, Mark it’s a pleasure to have you here. Yeah, unfortunately, we cannot record this podcast at your gallery, at Autograph Gallery, Rivington Place in Shoreditch, East London. I love the space very much. Mark, would you like to tell us a little bit about the history of the place and and also about the intentions to set up a place, a physical space, like Autograph in East London?",
-            "source_file": "2-Wolfgang.mp3",
+            "text": "Yeah, it’s a pleasure to have you here. Yeah, unfortunately, we cannot record this podcast at your gallery, at Autograph Gallery, Rivington Place in Shoreditch, East London. I love the space very much. Mark, would you like to tell us a little bit about the history of the place and and also about the intentions to set up a place, a physical space, like Autograph in East London?",
+            "source_file": "3-Wolfgang.mp3",
             "start_time": 36.51,
             "end_time": 71.43,
             "duration": 34.92

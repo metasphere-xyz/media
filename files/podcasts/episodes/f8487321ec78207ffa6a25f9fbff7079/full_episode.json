@@ -13,7 +13,7 @@ Beginning with his piece PIXELATED REVOLUTION, which uses the moment of the civi
     ",
     "num_chunks": 39,
     "chunk_sequence": [
-        {
+       {
             "chunk_id": "ec13afbdafc48ffd0bc08aad178bd419",
             "speaker": "Wolfgang-rabih-mp3",
             "text": "Rabih is from Lebanon, but is now living since quite a while in Berlin. He is an artist, film director, author, does performances. And one of the most exciting pieces is obviously \"The Pixellated Revolution\" which he had shown, i think, seven years ago at the documenta (13). So Rabih, maybe you can also add some of your ideas about what artistic interventions mean for you. In a previous conversation you said: for me the intervention is, how can you deconstruct a discourse and come out with questions? That was your your vision of intervention. And maybe you can add some more remarks to that.",
@@ -351,7 +351,7 @@ Beginning with his piece PIXELATED REVOLUTION, which uses the moment of the civi
             "speaker": "Rabih",
             "text": "And actually, in order to see the video, you have to run and look at these photos and then your movement will make the photos, as in cinema, become like moving images. So it’s like in cinema, but instead of the machine that makes these still photos look as in motion photos that it’s the bodies that have to run and make them in motion.",
             "source_file": "38-Rabih.mp3",
-            "start_time": 1183.87,
+            "start_time": 1183.87, 
             "end_time": 1214.79,
             "duration": 30.92
         },
