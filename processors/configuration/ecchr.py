@@ -1,5 +1,24 @@
 # Configuration file for metasphere processor
 
+# Entity matching
+
+matched_entities = {
+    'Wolfgang': 'Wolfgang Kaleck',
+    'Fred': 'Fred Ritchin',
+    'Susan': 'Susan Meiselas',
+    'Rabih': 'Rabih Mroué',
+    'Mark': 'Mark Sealy',
+    'Christina': 'Christina Varvia',
+    'Ixmucane': 'Ixmucané Aguilar',
+    'Claudia': 'Claudia Salazar Jimenéz',
+    'Karina': 'Karina Theurer',
+    'Eyal': 'Eyal Weizman',
+    'Autograph': 'Autograph Gallery',
+    'Washington ,': 'Washington, DC',
+    'DC': 'Washington, DC'
+}
+
+
 # episode infos
 
 episodes = {
@@ -71,23 +90,6 @@ Sealy and Kaleck discuss the visuals of violence and the viewers’ responsibili
         '''
 Today, Guatemalan visual artist Ixmucané Aguilar discusses with Wolfgang Kaleck her documentary photography practice exploring the enduring effects of German colonialism in Namibia and the genocide against the Herero and Nama. Anchored in different Namibian regions, and often based on portraits, narratives, poems, and lamentations, Aguilar’s work draws from the anthropologist’s playbook, working with oral histories from living descendants as much as archival sources. The conversation addresses the fragility of photography as a medium, the risk the photographer runs of imposing their values upon their subject, the importance of collective evidence and recognizing the many nuances of truth.
         '''
-}
-
-
-# Entity matching
-
-matched_entities = {
-    'Wolfgang': 'Wolfgang Kaleck',
-    'Fred': 'Fred Ritchin',
-    'Susan': 'Susan Meiselas',
-    'Rabih': 'Rabih Mroué',
-    'Mark': 'Mark Sealy',
-    'Christina': 'Christina Varvia',
-    'Ixmucane': 'Ixmucané Aguilar',
-    'Claudia': 'Claudia Salazar Jimenéz',
-    'Karina': 'Karina Theurer',
-    'Eyal': 'Eyal Weizman',
-    '': ''
 }
 
 
