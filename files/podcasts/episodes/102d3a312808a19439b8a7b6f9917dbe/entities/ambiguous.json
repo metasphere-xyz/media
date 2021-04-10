@@ -1,0 +1,18 @@
+{'entity_name': 'Forensic Architecture', 'entity_label': 'WORK_OF_ART'}
+{'entity_name': 'Forensic Architecture', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Forensic Architecture', 'entity_label': 'ORG'}
+{'entity_name': 'Forensic Architecture', 'entity_label': 'WORK_OF_ART'}
+
+
+{'entity_name': 'investigation of Muhammad Gulzar', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Muhammad Gulzar', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'european', 'entity_label': 'NORP'}
+{'entity_name': 'European Parliament', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Parliament', 'entity_label': 'ORG'}
+{'entity_name': 'European Parliament', 'entity_label': 'ORG'}
