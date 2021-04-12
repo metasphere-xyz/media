@@ -71,6 +71,13 @@ optional arguments:
   -h, --help                                show this help message and exit
 ```
 
+##### Suggested Usage
+- run task 'extract_entities' to extract entities
+- check entities/accepted.json and entities/ambiguous.json, resolve conflicts
+- run task 'store_chunks' to insert chunks into database
+- run task 'insert_entities' to insert entities into database
+
+
 #### pullCollection.py
 Queries the graph database and compiles a JSON object of the collection.
 
