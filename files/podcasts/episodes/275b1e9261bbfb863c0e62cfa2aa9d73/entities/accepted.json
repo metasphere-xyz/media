@@ -39,7 +39,6 @@
 {'entity_name': 'Toronto', 'entity_label': 'GPE'}
 {'entity_name': 'United States', 'entity_label': 'GPE'}
 {'entity_name': 'West', 'entity_label': 'LOC'}
-{'entity_name': 'Autograph Gallery', 'entity_label': 'HARDCODED'}
 {'entity_name': 'Giorgio Agamben', 'entity_label': 'PERSON'}
 {'entity_name': 'Rivington Place', 'entity_label': 'FAC'}
 {'entity_name': 'UK', 'entity_label': 'GPE'}
