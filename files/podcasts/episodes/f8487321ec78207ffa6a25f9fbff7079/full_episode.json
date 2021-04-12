@@ -6,13 +6,14 @@
     "intro_audio": "00-Intro.mp3",
     "outro_audio": "9999-Outro.mp3",
     "intro_text": "The following talk was part of a panel discussion at the Akademie der Künste in Berlin for the Opening Days of the European Month of Photography (EMOP) in October 2020, in cooperation with ECCHR.\nJoin us in this episode as we hear a talk from Lebanese performance and video artist Rabih Mroué about how he treats the impact of violent images in his work.\nBeginning with his piece PIXELATED REVOLUTION, which uses the moment of the civilian witness capturing violence on their cellphone camera, Mroué lays out a complicated web of connections between the witnessing acts of viewer, victim, and perpetrator.",
+    "trigger_warning": "",
     "num_chunks": 39,
     "chunk_sequence": [
        {
             "chunk_id": "ec13afbdafc48ffd0bc08aad178bd419",
-            "speaker": "Wolfgang-rabih-mp3",
+            "speaker": "Wolfgang",
             "text": "Rabih is from Lebanon, but is now living since quite a while in Berlin. He is an artist, film director, author, does performances. And one of the most exciting pieces is obviously \"The Pixellated Revolution\" which he had shown, i think, seven years ago at the documenta (13). So Rabih, maybe you can also add some of your ideas about what artistic interventions mean for you. In a previous conversation you said: for me the intervention is, how can you deconstruct a discourse and come out with questions? That was your your vision of intervention. And maybe you can add some more remarks to that.",
-            "source_file": "1-Wolfgang-rabih-mp3.mp3",
+            "source_file": "1-Wolfgang.mp3",
             "start_time": 0.66,
             "end_time": 65.09,
             "duration": 64.43
