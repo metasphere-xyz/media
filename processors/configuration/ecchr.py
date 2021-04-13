@@ -32,7 +32,7 @@ episodes = {
         'On Artistic and Human Rights Interventions 4/4 with Christina Varvia and Wolfgang Kaleck',
     '455f1001b9fcfda09b2b471e941853e4':
         'The Blood of the Dawn with Claudia Salazar Jimenéz and Karina Theurer',
-    '4ece0d064575609367f665d617d95d30':
+    '275b1e9261bbfb863c0e62cfa2aa9d73':
         'Visuals of Violence with Mark Sealy and Wolfgang Kaleck',
     '445b28f26e7c2d54a6cbc6deeb57bc49':
         'Decolonizing the camera in practice with Ixmucané Aguilar and Wolfgang Kaleck'
@@ -80,7 +80,7 @@ Salazar Jimenéz and Theurer will discuss the enduring consequences of gender di
 
 We’ll begin with an excerpt from the novel, read by Salazar Jeminéz herself. Please be advised, this episode contains themes of sexual and gender-based violence that some listeners may find distressing.
         ''',
-    '4ece0d064575609367f665d617d95d30':
+    '275b1e9261bbfb863c0e62cfa2aa9d73':
         '''
 Join us in this episode as curator and cultural historian Mark Sealy talks about the challenges of visual representation. Your host of today is Wolfgang Kaleck, ECCHR General Secretary.
 
