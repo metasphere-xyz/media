@@ -1,3 +1,5 @@
-progress
-requests
-rich
+fuzzy-match>=0.0.1
+progress>=1.5
+requests>=2.25.1
+rich>=9.12.4
+urllib3>=1.26.3
