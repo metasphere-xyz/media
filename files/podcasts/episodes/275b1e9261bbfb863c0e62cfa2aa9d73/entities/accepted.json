@@ -74,7 +74,6 @@
 {'entity_name': 'Hindu', 'entity_label': 'NORP'}
 {'entity_name': 'american', 'entity_label': 'NORP'}
 {'entity_name': 'America', 'entity_label': 'GPE'}
-{'entity_name': 'suffering of Others', 'entity_label': 'WORK_OF_ART'}
 {'entity_name': 'german', 'entity_label': 'NORP'}
 {'entity_name': 'british', 'entity_label': 'NORP'}
 {'entity_name': 'Wolfgang Kaleck', 'entity_label': 'PERSON'}
