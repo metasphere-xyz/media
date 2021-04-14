@@ -429,28 +429,30 @@ def find_similar_chunks(chunk):
         progress.console.print(cross, f"[red]No similar chunks found.")
         similar_chunks = ''
     if verbose: progress.console.print(similar_chunks)
-    connect_similar_chunks(chunk, similar_chunks)
+    update_task('Connecting similar chunks')
+    for similar_chunk in similar_chunks:
+        connect_similar_chunks(chunk, similar_chunk)
     progress.advance(task_progress)
     return similar_chunks
 
 
-def connect_similar_chunks(chunk, similar_chunks):
-    update_task('Connecting similar chunks')
-    progress.console.print(eye, f"Connecting similar chunks.")
-    for similar_chunk in similar_chunks:
-        endpoint = '/graph/connect/chunk'
-        query = {
-          "connect": chunk["chunk_id"],
-          "with": {
-              "id": similar_chunk["chunk_id"],
-              "score": similar_chunk["score"]
-          }
-        }
-        response = request(endpoint, query)
-        if response["status"] == "success":
-            progress.console.print(checkmark, f"Connected similar chunks.")
-        else:
-            progress.console.print(cross, f"Could not connect similar chunks.")
+def connect_similar_chunks(chunk, similar_chunk):
+    progress.console.print(eye, f"Connecting similar chunk.")
+    endpoint = '/graph/connect/chunk'
+    query = {
+      "connect": chunk["chunk_id"],
+      "with": {
+          "id": similar_chunk["chunk_id"],
+          "score": similar_chunk["score"]
+      }
+    }
+    if verbose: print(query)
+    response = request(endpoint, query)
+    if verbose: print(response)
+    if response["status"] == "success":
+        progress.console.print(checkmark, f"Connected similar chunk.")
+    else:
+        progress.console.print(cross, f"Could not connect similar chunk.")
 
 
 def request(endpoint, query):
