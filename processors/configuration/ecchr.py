@@ -38,8 +38,7 @@ matched_entities = {
     'Universal Declaration': 'Universal Declaration of Human Rights',
     'ECCHR': 'European Center for Constitutional and Human Rights (ECCHR)',
     'European Center for Constitutional and Human Rights': 'European Center for Constitutional and Human Rights (ECCHR)',
-    'European Center for Constitutional and Human Rights ( ECCHR': 'European Center for Constitutional and Human Rights (ECCHR)',
-
+    'European Center for Constitutional and Human Rights ( ECCHR': 'European Center for Constitutional and Human Rights (ECCHR)'
 }
 
 
