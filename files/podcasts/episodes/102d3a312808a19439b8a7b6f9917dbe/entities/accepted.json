@@ -37,6 +37,7 @@
 {'entity_name': 'american', 'entity_label': 'NORP'}
 {'entity_name': 'Forensic Architecture', 'entity_label': 'ORG'}
 {'entity_name': 'Muhammad Gulzar', 'entity_label': 'PERSON'}
+{'entity_name': 'Investigation of Muhammad Gulzar', 'entity_label': 'HISTORIC_EVENT'}
 {'entity_name': 'european', 'entity_label': 'NORP'}
 {'entity_name': 'European Parliament', 'entity_label': 'ORG'}
 {'entity_name': 'Parliament', 'entity_label': 'ORG'}
