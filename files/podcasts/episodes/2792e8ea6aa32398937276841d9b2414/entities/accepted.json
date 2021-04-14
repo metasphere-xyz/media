@@ -8,7 +8,7 @@
 {'entity_name': 'El Mozote', 'entity_label': 'ORG'}
 {'entity_name': 'UK', 'entity_label': 'GPE'}
 {'entity_name': 'Mano Blanca', 'entity_label': 'ORG'}
-{'entity_name': 'Susan Meiselas', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Susan Meiselas', 'entity_label': 'PERSON'}
 {'entity_name': 'Kurds', 'entity_label': 'NORP'}
 {'entity_name': 'kurdish', 'entity_label': 'NORP'}
 {'entity_name': 'Reagan', 'entity_label': 'PERSON'}
@@ -23,7 +23,7 @@
 {'entity_name': 'Taymour', 'entity_label': 'PERSON'}
 {'entity_name': 'Washington Post', 'entity_label': 'ORG'}
 {'entity_name': 'Rufina Amaya', 'entity_label': 'PERSON'}
-{'entity_name': 'Fred Ritchin', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Fred Ritchin', 'entity_label': 'PERSON'}
 {'entity_name': 'Iraq', 'entity_label': 'GPE'}
 {'entity_name': 'anastasio ] Somoza', 'entity_label': 'PERSON'}
 {'entity_name': 'Anfal', 'entity_label': 'PERSON'}
@@ -37,7 +37,7 @@
 {'entity_name': 'american', 'entity_label': 'NORP'}
 {'entity_name': 'Saddam', 'entity_label': 'PERSON'}
 {'entity_name': 'iraqi', 'entity_label': 'NORP'}
-{'entity_name': 'Wolfgang Kaleck', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Wolfgang Kaleck', 'entity_label': 'PERSON'}
 {'entity_name': 'New York Times', 'entity_label': 'ORG'}
 {'entity_name': 'Fred Ritchin', 'entity_label': 'PERSON'}
 {'entity_name': 'Latin America', 'entity_label': 'LOC'}
