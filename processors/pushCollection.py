@@ -110,8 +110,6 @@ failed_inserts_chunks = []
 failed_inserts_entities = []
 extracted_entities = []
 
-dump_to_logfile = True
-
 if 'store_entities' in tasks:
     if 'extract_entities' not in tasks:
         dump_to_logfile = False

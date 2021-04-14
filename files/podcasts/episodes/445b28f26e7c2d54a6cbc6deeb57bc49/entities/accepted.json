@@ -5,13 +5,13 @@
 {'entity_name': 'Swakopmund', 'entity_label': 'GPE'}
 {'entity_name': 'Guatemalan Human Rights Commission', 'entity_label': 'ORG'}
 {'entity_name': 'Ríos Montt', 'entity_label': 'PERSON'}
-{'entity_name': 'Wolfgang Kaleck', 'entity_label': 'HARDCODED'}
-{'entity_name': 'decolonise Camera', 'entity_label': 'WORK_OF_ART'}
+{'entity_name': 'Wolfgang Kaleck', 'entity_label': 'PERSON'}
+{'entity_name': 'Decolonising The Camera', 'entity_label': 'WORK_OF_ART'}
 {'entity_name': 'african', 'entity_label': 'NORP'}
 {'entity_name': 'Berlin', 'entity_label': 'GPE'}
 {'entity_name': 'South Africans', 'entity_label': 'NORP'}
 {'entity_name': 'spanish', 'entity_label': 'NORP'}
-{'entity_name': 'Mark Sealy', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Mark Sealy', 'entity_label': 'PERSON'}
 {'entity_name': 'Racial Times', 'entity_label': 'ORG'}
 {'entity_name': 'namibian', 'entity_label': 'NORP'}
 {'entity_name': 'Congo', 'entity_label': 'GPE'}
@@ -26,6 +26,7 @@
 {'entity_name': 'UN', 'entity_label': 'ORG'}
 {'entity_name': 'Nama', 'entity_label': 'ORG'}
 {'entity_name': 'her Congo Reform Association', 'entity_label': 'ORG'}
+{'entity_name': 'Congo Reform Association', 'entity_label': 'ORG'}
 {'entity_name': 'british', 'entity_label': 'NORP'}
 {'entity_name': 'Black Photographers Association', 'entity_label': 'ORG'}
 {'entity_name': 'south african', 'entity_label': 'NORP'}
@@ -36,10 +37,10 @@
 {'entity_name': 'Alice Seeley Harris', 'entity_label': 'PERSON'}
 {'entity_name': 'Guatemalan', 'entity_label': 'NORP'}
 {'entity_name': 'Academy of Arts', 'entity_label': 'ORG'}
-{'entity_name': 'Ixmucané', 'entity_label': 'ORG'}
+{'entity_name': 'Ixmucané', 'entity_label': 'PERSON'}
 {'entity_name': 'belgian', 'entity_label': 'NORP'}
 {'entity_name': 'ECCHR', 'entity_label': 'ORG'}
 {'entity_name': 'Shark Island', 'entity_label': 'LOC'}
 {'entity_name': 'Mark Sealy', 'entity_label': 'PERSON'}
-{'entity_name': 'European Center for Constitutional and Human Rights ( ECCHR', 'entity_label': 'ORG'}
+{'entity_name': 'European Center for Constitutional and Human Rights (ECCHR)', 'entity_label': 'ORG'}
 {'entity_name': 'Hereo', 'entity_label': 'GPE'}

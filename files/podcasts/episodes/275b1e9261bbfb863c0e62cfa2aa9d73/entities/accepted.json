@@ -1,48 +1,35 @@
 {'entity_name': 'Article 6', 'entity_label': 'LAW'}
-{'entity_name': 'Black Star Collection', 'entity_label': 'LAW'}
-{'entity_name': 'Movement revisit', 'entity_label': 'WORK_OF_ART'}
+{'entity_name': 'Black Star Collection', 'entity_label': 'WORK_OF_ART'}
 {'entity_name': 'Robert Lebeck', 'entity_label': 'PERSON'}
 {'entity_name': 'indian', 'entity_label': 'NORP'}
-{'entity_name': 'Caesar photos', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Caesar photos', 'entity_label': 'WORK_OF_ART'}
 {'entity_name': 'Christian McBride', 'entity_label': 'PERSON'}
-{'entity_name': 'Syria', 'entity_label': 'HARDCODED'}
-{'entity_name': 'Kodak', 'entity_label': 'ORG'}
+{'entity_name': 'Syria', 'entity_label': 'GPE'}
 {'entity_name': 'belgian', 'entity_label': 'NORP'}
-{'entity_name': 'Suffering of Others', 'entity_label': 'HARDCODED'}
-{'entity_name': 'Marcelo', 'entity_label': 'PERSON'}
-{'entity_name': 'african-american', 'entity_label': 'NORP'}
+{'entity_name': 'Suffering of Others', 'entity_label': 'WORK_OF_ART'}
 {'entity_name': 'european', 'entity_label': 'NORP'}
 {'entity_name': 'african', 'entity_label': 'NORP'}
-{'entity_name': 'Sir David Adjaye', 'entity_label': 'HARDCODED'}
-{'entity_name': 'Mall', 'entity_label': 'FAC'}
+{'entity_name': 'Sir David Adjaye', 'entity_label': 'PERSON'}
 {'entity_name': 'Congo', 'entity_label': 'GPE'}
-{'entity_name': 'Alice Seeley Harris pictures', 'entity_label': 'HARDCODED'}
-{'entity_name': 'photograph of her standing on top of a pyramid of young Congolese children', 'entity_label': 'HARDCODED'}
 {'entity_name': 'African-Americans', 'entity_label': 'NORP'}
 {'entity_name': 'Miles Davis', 'entity_label': 'PERSON'}
 {'entity_name': 'ECCHR', 'entity_label': 'ORG'}
 {'entity_name': 'John Coltrane', 'entity_label': 'PERSON'}
 {'entity_name': 'India', 'entity_label': 'GPE'}
-{'entity_name': 'Bartolomé de las Casas', 'entity_label': 'HARDCODED'}
-{'entity_name': 'Congo Reform Association', 'entity_label': 'HARDCODED'}
-{'entity_name': 'Leopold', 'entity_label': 'ORG'}
-{'entity_name': 'Lumumba', 'entity_label': 'HARDCODED'}
-{'entity_name': 'Mark Sealy', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Bartolomé de las Casas', 'entity_label': 'PERSON'}
+{'entity_name': 'Congo Reform Association', 'entity_label': 'ORG'}
+{'entity_name': 'Lumumba', 'entity_label': 'PERSON'}
+{'entity_name': 'Mark Sealy', 'entity_label': 'PERSON'}
 {'entity_name': 'Susan Sontag', 'entity_label': 'PERSON'}
-{'entity_name': 'Alice', 'entity_label': 'PERSON'}
-{'entity_name': 'protestant', 'entity_label': 'NORP'}
 {'entity_name': 'Association of Black Photographers', 'entity_label': 'ORG'}
-{'entity_name': 'Casas', 'entity_label': 'GPE'}
-{'entity_name': 'Universal Declaration of Universal Rights', 'entity_label': 'LAW'}
 {'entity_name': 'Universal Declaration of Human Rights', 'entity_label': 'LAW'}
 {'entity_name': 'Fred Ritchin', 'entity_label': 'PERSON'}
 {'entity_name': 'Toronto', 'entity_label': 'GPE'}
 {'entity_name': 'United States', 'entity_label': 'GPE'}
-{'entity_name': 'West', 'entity_label': 'LOC'}
+{'entity_name': 'Autograph Gallery', 'entity_label': 'LOC'}
 {'entity_name': 'Giorgio Agamben', 'entity_label': 'PERSON'}
-{'entity_name': 'Rivington Place', 'entity_label': 'FAC'}
+{'entity_name': 'Rivington Place', 'entity_label': 'LOC'}
 {'entity_name': 'UK', 'entity_label': 'GPE'}
-{'entity_name': 'Universal Declaration', 'entity_label': 'WORK_OF_ART'}
 {'entity_name': 'London', 'entity_label': 'GPE'}
 {'entity_name': 'UN', 'entity_label': 'ORG'}
 {'entity_name': 'senegalese', 'entity_label': 'NORP'}
@@ -51,85 +38,80 @@
 {'entity_name': 'Belgium', 'entity_label': 'GPE'}
 {'entity_name': 'Germany', 'entity_label': 'GPE'}
 {'entity_name': 'Berlin', 'entity_label': 'GPE'}
-{'entity_name': 'Human Rights Human Wrongs', 'entity_label': 'HARDCODED'}
-{'entity_name': 'Decolonising Camera', 'entity_label': 'HARDCODED'}
-{'entity_name': 'Atlantic Treaty', 'entity_label': 'WORK_OF_ART'}
-{'entity_name': 'Du Bois', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Human Rights Human Wrongs', 'entity_label': 'WORK_OF_ART'}
+{'entity_name': 'Decolonising Camera', 'entity_label': 'WORK_OF_ART'}
+{'entity_name': 'Du Bois', 'entity_label': 'PERSON'}
 {'entity_name': 'Eisenhower', 'entity_label': 'PERSON'}
 {'entity_name': 'Algeria', 'entity_label': 'GPE'}
 {'entity_name': 'Concrete Utopia of Human Rights', 'entity_label': 'WORK_OF_ART'}
 {'entity_name': 'Mau Mau –', 'entity_label': 'PERSON'}
 {'entity_name': 'Autograph Gallery', 'entity_label': 'ORG'}
 {'entity_name': 'Netherlands', 'entity_label': 'GPE'}
-{'entity_name': 'Vietnam War', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Vietnam War', 'entity_label': 'HISTORIC_EVENT'}
 {'entity_name': 'Fela Kuti', 'entity_label': 'PERSON'}
-{'entity_name': 'Middle East', 'entity_label': 'LOC'}
-{'entity_name': 'Stuart Hall', 'entity_label': 'ORG'}
-{'entity_name': 'Brexit', 'entity_label': 'PERSON'}
+{'entity_name': 'Middle East', 'entity_label': 'GPE'}
+{'entity_name': 'Stuart Hall', 'entity_label': 'PERSON'}
+{'entity_name': 'Brexit', 'entity_label': 'HISTORIC_EVENT'}
 {'entity_name': 'Rosa Parks', 'entity_label': 'PERSON'}
-{'entity_name': 'catalogue', 'entity_label': 'HARDCODED'}
-{'entity_name': 'Thiaroye Massacre', 'entity_label': 'ORG'}
+{'entity_name': 'Thiaroye Massacre', 'entity_label': 'HISTORIC_EVENT'}
 {'entity_name': 'Leopold II', 'entity_label': 'PERSON'}
-{'entity_name': 'catholic', 'entity_label': 'NORP'}
-{'entity_name': 'Abu Ghraib', 'entity_label': 'FAC'}
+{'entity_name': 'Abu Ghraib', 'entity_label': 'HISTORIC_EVENT'}
 {'entity_name': 'congolese', 'entity_label': 'NORP'}
-{'entity_name': 'Alice', 'entity_label': 'ORG'}
-{'entity_name': 'Makau Mutua', 'entity_label': 'ORG'}
-{'entity_name': 'Human Rights Human Wrongs', 'entity_label': 'ORG'}
+{'entity_name': 'Makau Mutua', 'entity_label': 'PERSON'}
 {'entity_name': 'Alice Seeley Harris', 'entity_label': 'PERSON'}
-{'entity_name': 'Shoreditch', 'entity_label': 'GPE'}
 {'entity_name': 'Judith Butler', 'entity_label': 'PERSON'}
-{'entity_name': 'Senate', 'entity_label': 'ORG'}
 {'entity_name': 'Muhammad Ali', 'entity_label': 'PERSON'}
-{'entity_name': 'Caribbean', 'entity_label': 'LOC'}
-{'entity_name': 'Universal Declaration of Human Rights', 'entity_label': 'WORK_OF_ART'}
+{'entity_name': 'Caribbean', 'entity_label': 'GPE'}
 {'entity_name': 'Britain', 'entity_label': 'GPE'}
-{'entity_name': 'European Center for Constitutional and Human Rights', 'entity_label': 'ORG'}
-{'entity_name': 'Gilane Tawadros', 'entity_label': 'WORK_OF_ART'}
-{'entity_name': 'University of Chelsea School of Arts', 'entity_label': 'ORG'}
-{'entity_name': 'Ryerson Image Center', 'entity_label': 'ORG'}
+{'entity_name': 'European Center for Constitutional and Human Rights (ECCHR)', 'entity_label': 'ORG'}
+{'entity_name': 'Gilane Tawadros', 'entity_label': 'PERSON'}
+{'entity_name': 'University of Chelsea School of Arts', 'entity_label': 'LOC'}
+{'entity_name': 'Ryerson Image Center', 'entity_label': 'LOC'}
 {'entity_name': 'Mau Mau', 'entity_label': 'PERSON'}
-{'entity_name': 'North America', 'entity_label': 'LOC'}
-{'entity_name': 'Europe', 'entity_label': 'LOC'}
-{'entity_name': 'London School of Communications', 'entity_label': 'ORG'}
+{'entity_name': 'North America', 'entity_label': 'GPE'}
+{'entity_name': 'Europe', 'entity_label': 'GPE'}
+{'entity_name': 'London School of Communications', 'entity_label': 'LOC'}
 {'entity_name': 'Hindu', 'entity_label': 'NORP'}
 {'entity_name': 'american', 'entity_label': 'NORP'}
 {'entity_name': 'America', 'entity_label': 'GPE'}
 {'entity_name': 'suffering of Others', 'entity_label': 'WORK_OF_ART'}
 {'entity_name': 'german', 'entity_label': 'NORP'}
 {'entity_name': 'british', 'entity_label': 'NORP'}
-{'entity_name': 'I’m not interested in truth and reconciliation', 'entity_label': 'HARDCODED'}
-{'entity_name': 'Wolfgang Kaleck', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Wolfgang Kaleck', 'entity_label': 'PERSON'}
 {'entity_name': 'Kenya', 'entity_label': 'GPE'}
 {'entity_name': 'Aretha Franklin', 'entity_label': 'PERSON'}
-{'entity_name': 'Bing', 'entity_label': 'HARDCODED'}
-{'entity_name': 'David Adjaye', 'entity_label': 'PERSON'}
-{'entity_name': 'Washington, DC', 'entity_label': 'HARDCODED'}
 {'entity_name': 'south african', 'entity_label': 'NORP'}
-{'entity_name': 'Museum of African American History and Culture', 'entity_label': 'ORG'}
+{'entity_name': 'Museum of African American History and Culture', 'entity_label': 'LOC'}
 {'entity_name': 'Mark Sealy', 'entity_label': 'PERSON'}
-{'entity_name': 'Global South', 'entity_label': 'LOC'}
+{'entity_name': 'Global South', 'entity_label': 'GPE'}
 {'entity_name': 'Churchill', 'entity_label': 'PERSON'}
-{'entity_name': 'Alice Seely Harris', 'entity_label': 'PERSON'}
 {'entity_name': 'Syria', 'entity_label': 'GPE'}
-{'entity_name': 'Africa', 'entity_label': 'LOC'}
+{'entity_name': 'Africa', 'entity_label': 'GPE'}
 {'entity_name': 'Ghana', 'entity_label': 'GPE'}
-{'entity_name': 'Emmanuel Levinas', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Emmanuel Levinas', 'entity_label': 'PERSON'}
 {'entity_name': 'Malcolm X', 'entity_label': 'PERSON'}
-{'entity_name': 'Dakar', 'entity_label': 'PERSON'}
+{'entity_name': 'Dakar', 'entity_label': 'GPE'}
 {'entity_name': 'Argentina', 'entity_label': 'GPE'}
-{'entity_name': 'photograph of a young German photographer', 'entity_label': 'HARDCODED'}
-{'entity_name': 'Leopold', 'entity_label': 'PERSON'}
-{'entity_name': 'Champs Élysées', 'entity_label': 'ORG'}
-{'entity_name': 'Institute of International Visual Arts', 'entity_label': 'ORG'}
+{'entity_name': 'Champs Élysées', 'entity_label': 'FAC'}
+{'entity_name': 'Institute of International Visual Arts', 'entity_label': 'LOC'}
 {'entity_name': 'US', 'entity_label': 'GPE'}
-{'entity_name': 'Mau Mau Movement', 'entity_label': 'PERSON'}
 {'entity_name': 'syrian', 'entity_label': 'NORP'}
-{'entity_name': 'Human Rights Human Wrongs', 'entity_label': 'WORK_OF_ART'}
-{'entity_name': 'Tate Modern', 'entity_label': 'WORK_OF_ART'}
-{'entity_name': 'Rivington Place', 'entity_label': 'PERSON'}
+{'entity_name': 'Tate Modern', 'entity_label': 'LOC'}
 {'entity_name': 'Martin Luther King', 'entity_label': 'PERSON'}
-{'entity_name': 'South West Africa', 'entity_label': 'LOC'}
-{'entity_name': 'Kasavubu', 'entity_label': 'GPE'}
+{'entity_name': 'South West Africa', 'entity_label': 'GPE'}
+{'entity_name': 'Kasavubu', 'entity_label': 'PERSON'}
 {'entity_name': 'Marcelo Brodsky', 'entity_label': 'PERSON'}
-{'entity_name': 'Zoom', 'entity_label': 'PERSON'}
+{'entity_name': 'London', 'entity_label': 'GPE'}
+{'entity_name': 'Autograph Gallery', 'entity_label': 'ORG'}
+{'entity_name': 'London', 'entity_label': 'GPE'}
+{'entity_name': 'Stuart Hall Library', 'entity_label': 'LOC'}
+{'entity_name': 'Stuart Hall', 'entity_label': 'PERSON'}
+{'entity_name': 'North American', 'entity_label': 'NORP'}
+{'entity_name': 'North America', 'entity_label': 'GPE'}
+{'entity_name': 'african-american', 'entity_label': 'NORP'}
+{'entity_name': 'North American', 'entity_label': 'NORP'}
+{'entity_name': 'american', 'entity_label': 'NORP'}
+{'entity_name': 'African-Americans', 'entity_label': 'NORP'}
+{'entity_name': 'Abu Ghraib', 'entity_label': 'HISTORIC_EVENT'}
+{'entity_name': 'Syria', 'entity_label': 'GPE'}
+{'entity_name': 'America', 'entity_label': 'GPE'}
