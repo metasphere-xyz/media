@@ -10,12 +10,35 @@ matched_entities = {
     'Mark': 'Mark Sealy',
     'Christina': 'Christina Varvia',
     'Ixmucane': 'Ixmucané Aguilar',
-    'Claudia': 'Claudia Salazar Jimenéz',
+    'Ixmucané': 'Ixmucané Aguilar',
+    'Claudia': 'Claudia Salazar Jiménez',
     'Karina': 'Karina Theurer',
     'Eyal': 'Eyal Weizman',
     'Autograph': 'Autograph Gallery',
     'Washington ,': 'Washington, DC',
-    'DC': 'Washington, DC'
+    'DC': 'Washington, DC',
+    'New York City': 'New York',
+    'Marcelo': 'Marcelo Brodsky',
+    'african-american': 'African-American',
+    'Leopold': 'Leopold II',
+    'Alice': 'Alice Seeley Harris',
+    'Alice Seely Harris': 'Alice Seeley Harris',
+    'Casas': 'Bartolomé de las Casas',
+    'East London': 'London',
+    'Stuart': 'Stuart Hall',
+    'shine Path': 'Shining Path',
+    'Halit': 'Halit Yozgat',
+    'US': 'United States',
+    'McLuhan': 'Marshall McLuhan',
+    'Hereo': 'Herero',
+    'David Adjaye': 'Sir David Adjaye',
+    'her Congo Reform Association': 'Congo Reform Association',
+    'decolonise Camera': 'Decolonising The Camera',
+    'Universal Declaration of Universal Rights': 'Universal Declaration of Human Rights',
+    'Universal Declaration': 'Universal Declaration of Human Rights',
+    'ECCHR': 'European Center for Constitutional and Human Rights (ECCHR)',
+    'European Center for Constitutional and Human Rights': 'European Center for Constitutional and Human Rights (ECCHR)',
+    'European Center for Constitutional and Human Rights ( ECCHR': 'European Center for Constitutional and Human Rights (ECCHR)'
 }
 
 
@@ -32,7 +55,7 @@ episodes = {
         'On Artistic and Human Rights Interventions 4/4 with Christina Varvia and Wolfgang Kaleck',
     '455f1001b9fcfda09b2b471e941853e4':
         'The Blood of the Dawn with Claudia Salazar Jimenéz and Karina Theurer',
-    '4ece0d064575609367f665d617d95d30':
+    '275b1e9261bbfb863c0e62cfa2aa9d73':
         'Visuals of Violence with Mark Sealy and Wolfgang Kaleck',
     '445b28f26e7c2d54a6cbc6deeb57bc49':
         'Decolonizing the camera in practice with Ixmucané Aguilar and Wolfgang Kaleck'
@@ -80,7 +103,7 @@ Salazar Jimenéz and Theurer will discuss the enduring consequences of gender di
 
 We’ll begin with an excerpt from the novel, read by Salazar Jeminéz herself. Please be advised, this episode contains themes of sexual and gender-based violence that some listeners may find distressing.
         ''',
-    '4ece0d064575609367f665d617d95d30':
+    '275b1e9261bbfb863c0e62cfa2aa9d73':
         '''
 Join us in this episode as curator and cultural historian Mark Sealy talks about the challenges of visual representation. Your host of today is Wolfgang Kaleck, ECCHR General Secretary.
 

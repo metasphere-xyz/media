@@ -11,6 +11,11 @@ import hashlib
 import time
 import requests
 import os.path
+import glob
+import ast
+import datetime
+
+from collections import OrderedDict
 from pathlib import Path
 from rich.progress import *
 from rich import print
@@ -25,9 +30,10 @@ ambiguous_entities = []
 
 recognized_tasks = [
     'extract_entities',
-    'store_entities',
     'generate_summaries',
+    'store_entities',
     'find_similar_chunks',
+    'store_collection',
     'store_chunks'
 ]
 
@@ -68,7 +74,7 @@ argument_parser.add_argument('--task', type=str, action='append',
                              )
 argument_parser.add_argument('--dry-run',
                              help='do not write to graph database',
-                             action="store_true", default=True
+                             action="store_true", default=False
                              )
 argument_parser.add_argument('-v', '--verbose',
                              help='verbose output for debugging',
@@ -103,6 +109,12 @@ max_reconnect_tries = 5
 failed_inserts_chunks = []
 failed_inserts_entities = []
 extracted_entities = []
+
+if 'store_entities' in tasks:
+    if 'extract_entities' not in tasks:
+        dump_to_logfile = False
+        tasks.insert(0, 'extract_entities')
+
 num_tasks = int(len(tasks))
 
 if very_verbose:
@@ -112,6 +124,7 @@ checkmark = f"[green]"u'\u2713 '
 cross = f"[red]"u'\u00D7 '
 eye = f"[white]"u'\u2022 '
 arrow = f"[grey]"u'\u21B3 '
+database = f"[white]DATABASE[/white]:"
 
 if very_verbose:
     print (arguments)
@@ -130,8 +143,20 @@ parent_dir = os.path.dirname(sys.argv[0]) + '/../'
 base_dir = os.path.abspath(parent_dir)
 collection_base_dir = os.path.abspath(base_dir) + '/files' + collection["source_path"]
 
+path_accepted_entities  = collection_base_dir + '/entities/' + 'accepted.json'
+path_rejected_entities  = collection_base_dir + '/entities/' + 'rejected.json'
+path_ambiguous_entities = collection_base_dir + '/entities/' + 'ambiguous.json'
+
+accepted_entities_from_file = []
+
 if not collection_name:
     collection_name = collection['name']
+
+if end_chunk:
+    num_chunks = end_chunk - start_chunk +1
+else:
+    num_chunks = len(collection["chunk_sequence"])
+    end_chunk = num_chunks
 
 print(f"\nCollection name:\t [bold]{collection_name}")
 print(f"Collection id:\t\t {collection['collection_id']}")
@@ -155,6 +180,14 @@ def setup_logger(name, log_file, format='%(message)s'):
     else:
         if very_verbose: print(checkmark, f"Loaded directory {os.path.dirname(log_file)}")
 
+    if os.path.isfile(log_file):
+        if os.stat(log_file).st_size > 0:
+            print (f"Logfile already exists. Creating new one.")
+            file_name = os.path.splitext(log_file)[0]
+            file_ending = os.path.splitext(log_file)[1]
+            pattern = file_name + '*'
+            log_file = file_name + '-' + str(len(glob.glob(pattern))) + file_ending
+
     formatter = logging.Formatter(format)
     try:
         handler = logging.FileHandler(log_file, mode='w')
@@ -168,24 +201,6 @@ def setup_logger(name, log_file, format='%(message)s'):
         logger.addHandler(handler)
         return logger
 
-path_accepted_entities = collection_base_dir + '/entities/' + 'accepted.json'
-path_rejected_entities = collection_base_dir + '/entities/' + 'rejected.json'
-path_ambiguous_entities = collection_base_dir + '/entities/' + 'ambiguous.json'
-
-accepted_entity_logger = setup_logger('accepted_entity_logger',
-                                      path_accepted_entities,
-                                      format='%(message)s'
-                                      )
-rejected_entity_logger = setup_logger('rejected_entity_logger',
-                                      path_rejected_entities,
-                                      format='%(message)s'
-                                      )
-ambiguous_entity_logger = setup_logger('ambiguous_entity_logger',
-                                      path_ambiguous_entities,
-                                      format='%(message)s'
-                                      )
-
-
 
 error_logger = setup_logger('error_logger', collection_base_dir + "/error.log", format='%(message)s')
 
@@ -195,6 +210,23 @@ def removeDuplicateDictFromList(list):
 
 def sortDictByValues(dict):
     return {k: v for k, v in sorted(dict.items(), key=lambda item: item[1])}
+
+
+def sortListOfDictsByValue(list, value):
+    return sorted(list, key=lambda k: k[value])
+
+
+def searchDictInList(list, key, value):
+    for item in list:
+        if item[key] == value:
+            return item
+
+
+def removeDictInList(list, key, value):
+    for item in list:
+        if item[key] == value:
+            list.remove(item)
+
 
 def update_task(current_task):
     progress.update(task_progress, visible=True, description=f"Task: {current_task}")
@@ -211,9 +243,12 @@ def update_progress(chunk):
 
 
 def raise_error(error):
+    progress.update(task_progress, visible=False)
+    progress.update(request_progress, visible=False)
+    progress.update(reconnect_progress, visible=False)
+    progress.update(chunk_progress, visible=False)
     if(error):
         print("Error: " + str(error))
-        argument_parser.print_help()
     sys.exit(1)
 
 
@@ -236,6 +271,38 @@ def generate_summaries(text):
         chunk_summaries = ''
     progress.advance(task_progress)
     return chunk_summaries
+
+
+def load_accepted_entities():
+    try:
+        with open(path_accepted_entities, 'r') as file:
+            lines = file.readlines()
+            num_entities = len(lines)
+            list = []
+            string = '[' + "\n"
+            for line_index, line in enumerate(lines):
+                if line_index < num_entities -1:
+                    string += "\t" + line.strip() + ',' + "\n"
+                else:
+                    string += "\t" + line
+            string += ']'
+            if num_entities > 1:
+                accepted_entities_from_file = ast.literal_eval(string)
+                if len(accepted_entities_from_file) == num_entities:
+                    progress.console.print(checkmark, f"Loaded {num_entities} accepted entities from entities/accepted.json")
+                    sortedList = sortListOfDictsByValue(accepted_entities_from_file, 'entity_name')
+                    sortedList = sortListOfDictsByValue(accepted_entities_from_file, 'entity_name')
+                    if verbose:
+                        progress.console.print(sortedList)
+                return sortedList
+            else:
+                progress.console.print(cross, f"Could not load accepted entities from entities/accepted.json")
+                raise_error("Please run entity extraction first and try again. Exiting.")
+
+    except (OSError, IOError) as error:
+        raise_error(error)
+    finally:
+        file.close()
 
 
 def extract_entities(chunk, *adjacent_chunk_texts):
@@ -339,12 +406,13 @@ def extract_entities(chunk, *adjacent_chunk_texts):
         progress.console.print(cross, f"No entities found.")
 
     progress.advance(task_progress)
-    return removeDuplicateDictFromList(processed_chunk_entities)
+    sortedList = sortListOfDictsByValue(processed_chunk_entities, 'entity_name')
+    return sortedList
 
 
 def find_similar_chunks(chunk):
     update_task('Finding similar chunks')
-    progress.console.print(f"Finding similar chunks.")
+    progress.console.print(eye, f"Finding similar chunks.")
     endpoint = '/text/similarities'
     query = {
         "text": chunk["text"],
@@ -354,12 +422,34 @@ def find_similar_chunks(chunk):
     response = request(endpoint, query)
     if len(response["similar_chunks"]) >= 1:
         similar_chunks = response["similar_chunks"]
-        progress.console.print(checkmark)
+        num_similar_chunks = len(response["similar_chunks"])
+        progress.console.print(checkmark, f"found {num_similar_chunks} similar chunks")
     else:
         progress.console.print(cross, f"[red]No similar chunks found.")
         similar_chunks = ''
+    if verbose: progress.console.print(similar_chunks)
+    connect_similar_chunks(chunk, similar_chunks)
     progress.advance(task_progress)
     return similar_chunks
+
+
+def connect_similar_chunks(chunk, similar_chunks):
+    update_task('Connecting similar chunks')
+    progress.console.print(eye, f"Connecting similar chunks.")
+    for similar_chunk in similar_chunks:
+        endpoint = '/graph/connect/chunk'
+        query = {
+          "connect": chunk["chunk_id"],
+          "with": {
+              "id": similar_chunk["chunk_id"],
+              "score": similar_chunk["score"]
+          }
+        }
+        response = request(endpoint, query)
+        if response["status"] == "success":
+            progress.console.print(checkmark, f"Connected similar chunks.")
+        else:
+            progress.console.print(cross, f"Could not connect similar chunks.")
 
 
 def request(endpoint, query):
@@ -445,7 +535,7 @@ def insert_chunk_into_database(chunk):
     update_task('Uploading chunks')
 
     endpoint = '/graph/find/chunk'
-    query = {"id": chunk_id}
+    query = { "id": chunk['chunk_id'] }
     response = request(endpoint, query)
 
     if response["status"] == "failed":
@@ -461,19 +551,19 @@ def insert_chunk_into_database(chunk):
         if not dry_run:
             response = request(endpoint, chunk)
             if response["status"] == "success":
-                progress.console.print(checkmark, f"Successfully inserted chunk.")
+                progress.console.print(checkmark, database, f"Successfully inserted chunk.")
                 failed_inserts_chunks.remove(chunk)
             else:
-                progress.console.print(cross, f"[red]Error inserting chunk.")
+                progress.console.print(cross, database, f"[red]Error inserting chunk.")
         else:
             if verbose:
-                progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
+                progress.console.print(arrow, database, f"Dry-run. Skipping database update.")
             failed_inserts_chunks.remove(chunk)
         progress.advance(request_progress)
 
     elif response["status"] == "success":
         if verbose:
-            progress.console.print(eye, f"[white]Chunk already exists.")
+            progress.console.print(eye, database, f"[white]Chunk already exists.")
         stored_chunk = response["instance"]
         if stored_chunk != chunk:
             if verbose:
@@ -483,68 +573,141 @@ def insert_chunk_into_database(chunk):
             if not dry_run:
                 response_update = request(endpoint, query)
                 if response_update["status"] == "success":
-                    progress.console.print(checkmark, f"Successfully updated chunk.")
+                    progress.console.print(checkmark, database, f"Successfully updated chunk.")
                 else:
-                    progress.console.print(cross, f"[red]Error updating chunk.")
+                    progress.console.print(cross, database, f"[red]Error updating chunk.")
 
 
-def insert_entities_into_database(entities, chunk):
-    # TODO:
-    # filesystem read entities-accepted.json into list of dicts
-    # iterate through entities
-    # if entity in accepted_entities:
-    # > upload entity
-    # if not:
-    # > add to rejected log
-
-    try:
-        with open(input_file) as f:
-            collection = json.load(f)
-        print("done.")
-    except (OSError, IOError) as error:
-        raise_error(error)
-
-    for (entity, entity_type) in entities.items():
-        endpoint = '/graph/find/entity'
-        query = {
-            "name": entity
-        }
-        response = request(endpoint, query)
-        if response["status"] == "success":
-            progress.console.print(eye, f"Entity already exists: [bold]{entity}[/bold]")
+def insert_entity_into_database(chunk):
+# iterates through all extracted entities, compares them with a list of
+# accepted entities and inserts them into the graph database
+    for entity in chunk["entities"]:
+        entity_name = entity["entity_name"]
+        accepted_entity = searchDictInList(accepted_entities_from_file, "entity_name", entity_name)
+        if not accepted_entity:
+            # entity not found in accepted entities
+            if verbose: progress.console.print(cross, f"Entity not accepted: {entity}")
+            chunk["entities"].remove(entity)
         else:
-            if verbose:
-                progress.console.print(f"Inserting entity into database: [bold]{entity}[/bold] ({entity_type})")
-            hash = hashlib.md5(entity.encode("utf-8"))
-            entity_id = hash.hexdigest()
-
-            endpoint = '/graph/add/entity'
-            query = {
-                "name": entity,
-                "entity_category": entity_type,
-                "entity_id": entity_id,
-                "chunk_id": chunk["chunk_id"]
-            }
-            failed_inserts_entities.append(query)
-            if very_verbose:
-                progress.console.print(f"{query}")
-            if not dry_run:
+            if accepted_entity != entity:
+                # entities don't match
+                if verbose: progress.console.print(cross, f"Entity not accepted: {entity}")
+                chunk["entities"].remove(entity)
+            else:
+                # entity is in accepted entities, inserting into database
+                endpoint = '/graph/find/entity'
+                query = {
+                    "name": entity["entity_name"]
+                }
                 response = request(endpoint, query)
                 if response["status"] == "success":
-                    if verbose:
-                        progress.console.print(checkmark, f"Successfully inserted entity: [bold]{entity}[/bold] ({entity_type})")
-                    failed_inserts_entities.remove(query)
+                    progress.console.print(eye, database, f"Entity already exists: [bold]{entity_name}[/bold]")
                 else:
-                    progress.console.print(cross, f"Could not insert entity into database.")
+                    if verbose:
+                        progress.console.print(eye, f"Inserting entity [bold]{entity_name}[/bold]")
+                    hash = hashlib.md5(entity_name.encode("utf-8"))
+                    entity_id = hash.hexdigest()
+
+                    endpoint = '/graph/add/entity'
+                    query = {
+                        "name": entity["entity_name"],
+                        "entity_label": [entity["entity_label"]],
+                        "entity_id": entity_id,
+                        "url": '',
+                        "text": '',
+                        "chunk_id": chunk["chunk_id"]
+                    }
+                    failed_inserts_entities.append(query)
+                    if very_verbose:
+                        progress.console.print(f"{query}")
+                    if not dry_run:
+                        response = request(endpoint, query)
+                        if response["status"] == "success":
+                            if verbose:
+                                progress.console.print(checkmark, database, f"Successfully inserted entity: [bold]{entity_name}[/bold]")
+                            failed_inserts_entities.remove(query)
+                        else:
+                            progress.console.print(cross, database, f"[red]Could not insert entity into database.[/red]")
+                    else:
+                        if verbose:
+                            progress.console.print(arrow, database, f"Dry-run. Skipping database update.")
+                # regardless if entity is new or not, connect it to the chunk
+                connect_entity_to_chunk(query, chunk)
+    if verbose: print(chunk)
+
+
+def insert_collection_into_database():
+    # adds a collection with chunk sequence to the database
+    date = str(datetime.datetime.now())
+    collection_id = collection["collection_id"]
+    updated_collection = {
+        "collection_id": collection["collection_id"],
+        "name": collection["name"],
+        "source_type": collection["source_type"],
+        "source_path": collection["source_path"],
+        "date": date,
+        "intro_audio": collection["intro_audio"],
+        "outro_audio": collection["outro_audio"],
+        "intro_text": collection["intro_text"],
+        "trigger_warning": collection["trigger_warning"],
+        "num_chunks": collection["num_chunks"],
+        "chunk_sequence": []
+    }
+
+    for chunk in updated_chunk_sequence:
+
+        # append only chunk_id to reduce redundancy
+        # updated_collection["chunk_sequence"].append(chunk["chunk_id"])
+
+        # append whole chunk:
+        updated_collection["chunk_sequence"].append(chunk)
+
+        # discard entities and add them later:
+        chunk["entities"] = []
+
+    query = {
+        "id": collection["collection_id"]
+    }
+    response = request('/graph/find/collection', query)
+    if response["status"] == "success":
+        # collection already exists, update
+        id_in_database = response["instance"]["collection_id"]
+        progress.console.print(eye, database, f"Collection already exists: [bold]{id_in_database}[/bold]")
+        if very_verbose:
+            progress.console.print(response["instance"])
+        progress.console.print(eye, f"Updating collection {id_in_database}")
+        if very_verbose:
+            progress.console.print(updated_collection)
+        # if not dry_run:
+        #     response_update = request('/graph/update/collection', updated_collection)
+        #     if response_update["status"] == "success":
+        #         progress.console.print(checkmark, database, f"Successfully updated collection.")
+        #     elif response_update["status"] == "failed":
+        #         error = response_update["message"]
+        #         progress.console.print(cross, database, f"Could not update collection: {error}")
+    else:
+        # collection does not exist, insert
+        if verbose:
+            progress.console.print(eye, f"Inserting collection.")
+        progress.console.print(updated_collection)
+        if not dry_run:
+            response = request('/graph/add/collection', updated_collection)
+            if response["status"] == "success":
+                progress.console.print(checkmark, database, f"Successfully uploaded collection.")
             else:
-                if verbose:
-                    progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
-            connect_entity_to_chunk(query, chunk)
+                progress.console.print(cross, database, f"Error uploading collection.")
+        else:
+            progress.console.print(query)
+            if verbose:
+                progress.console.print(arrow, database, f"Dry-run. Skipping database update.")
+
+
 
 
 def connect_entity_to_chunk(entity, chunk):
-    if very_verbose:
-        progress.console.print(f"Connecting entity {entity['name']}.")
+    if verbose:
+        progress.console.print(eye, f"Connecting entity {entity['name']}.")
+
     endpoint = '/graph/find/entity'
     entity_name = entity['name']
     query = {
@@ -553,29 +716,30 @@ def connect_entity_to_chunk(entity, chunk):
     response = request(endpoint, query)
     if response["status"] == "success":
         if verbose:
-            if verbose:
-                progress.console.print(checkmark, f"Entity found. Connecting to chunk.")
-            endpoint = '/graph/connect/entity'
-            query = {
-                "connect": entity["entity_id"],
-                "with": {
-                    "id": chunk["chunk_id"]
-                }
+            progress.console.print(checkmark, f"Entity found. Connecting to chunk.")
+        entity = response["instance"]
+        endpoint = '/graph/connect/entity'
+        query = {
+            "connect": entity["entity_id"],
+            "with": {
+                "id": chunk["chunk_id"]
             }
-            if very_verbose:
-                progress.console.print(f"{query}")
-            if not dry_run:
-                response = request(endpoint, query)
-                if response["status"] == "success":
-                    if verbose:
-                        progress.console.print(checkmark, f"Successfully connected entity: [bold]{entity_name}[/bold]")
-                else:
-                    progress.console.print(cross, f"Could not connect entity (request error): [bold]{entity_name}[/bold]")
-            else:
+        }
+        if very_verbose:
+            progress.console.print(f"{query}")
+        if not dry_run:
+            response = request(endpoint, query)
+            if response["status"] == "success":
                 if verbose:
-                    progress.console.print(f"[black on #FF9900]\nDry-run. Skipping database update.\n")
+                    progress.console.print(checkmark, f"Successfully connected entity: [bold]{entity_name}[/bold]")
+            else:
+                progress.console.print(cross, f"Could not connect entity (request error): [bold]{entity_name}[/bold]")
+        else:
+            if verbose:
+                progress.console.print(arrow, database, f"Dry-run. Skipping database update.")
     else:
-        progress.console.print(cross, f"Could not find entity: [bold]{entity_name}[/bold]")
+        if verbose:
+            progress.console.print(arrow, database, f"Could not find entity: [bold]{entity_name}[/bold]")
 
 
 def dump_failed_inserts():
@@ -592,10 +756,70 @@ def dump_failed_inserts():
     progress.console.print(f"[red bold]Saved failed insertions to error.log\n")
 
 
-if end_chunk:
-    num_chunks = end_chunk - start_chunk +1
-else:
-    num_chunks = len(collection["chunk_sequence"])
+
+def iterate_through_chunks(task):
+    updated_chunk_index = 0
+    for chunk_number in range(start_chunk, end_chunk + 1):
+        chunk_index = chunk_number - 1
+        update_progress(chunk_index)
+
+        chunk = collection["chunk_sequence"][chunk_index]
+        chunk_id = chunk["chunk_id"]
+        progress.console.print(f'\n[bold]Processing chunk {chunk_number}[/bold]:\t {chunk_id}')
+        if verbose: progress.console.print(f'\n{chunk["text"]}\n')
+
+        updated_chunk = {
+            "collection_id": collection["collection_id"],
+            "chunk_id": chunk["chunk_id"],
+            "text": chunk["text"],
+            "source_file": chunk["source_file"],
+            "start_time": chunk["start_time"],
+            "end_time": chunk["end_time"],
+            "entities": [],
+            "summaries": [],
+            "similarity": []
+        }
+
+        if task_number == 1:
+            updated_chunk_sequence.append(updated_chunk)
+            failed_inserts_chunks.append(updated_chunk)
+
+        if task == 'extract_entities':
+            if chunk_index < (num_chunks - 3):
+                chunk_entities = extract_entities(
+                    chunk,
+                    collection["chunk_sequence"][chunk_index - 1]["text"],
+                    collection["chunk_sequence"][chunk_index - 2]["text"],
+                    collection["chunk_sequence"][chunk_index - 3]["text"],
+                    collection["chunk_sequence"][chunk_index + 1]["text"],
+                    collection["chunk_sequence"][chunk_index + 2]["text"],
+                    collection["chunk_sequence"][chunk_index + 3]["text"]
+                )
+            else:
+                chunk_entities = extract_entities(
+                chunk,
+                collection["chunk_sequence"][chunk_index - 1]["text"],
+                collection["chunk_sequence"][chunk_index - 2]["text"],
+                collection["chunk_sequence"][chunk_index - 3]["text"],
+                )
+            updated_chunk.update(entities=chunk_entities)
+        elif task == 'store_entities':
+            insert_entity_into_database(updated_chunk_sequence[chunk_index])
+        elif task == 'generate_summaries':
+            chunk_summaries = generate_summaries(chunk['text'])
+            updated_chunk.update(summaries=chunk_summaries)
+        elif task == 'find_similar_chunks':
+            similar_chunks = find_similar_chunks(chunk)
+            updated_chunk.update(similarity=similar_chunks)
+
+        updated_chunk_sequence[updated_chunk_index].update(updated_chunk)
+        failed_inserts_chunks[updated_chunk_index].update(updated_chunk)
+        updated_chunk_index += 1
+        progress.advance(chunk_progress)
+
+        if chunk_number != end_chunk:
+            progress.update(chunk_progress, advance=1)
+
 
 with Progress(
     SpinnerColumn(),
@@ -607,17 +831,14 @@ with Progress(
 ) as progress:
     progress.console.print(f"Chunks to process:\t {num_chunks}")
 
-    chunk_progress = progress.add_task(f"Chunk {start_chunk-1} / {end_chunk} \t\t", total=num_chunks)
-
-    task_progress = progress.add_task(f"Task: {current_task}\t\t", total=num_tasks, visible=False)
-    request_progress = progress.add_task(f"API requests\t\t", total=(num_tasks * 2), visible=False)
-    reconnect_progress = progress.add_task(
+    chunk_progress =        progress.add_task(f"Chunk {start_chunk-1} / {end_chunk} \t\t", total=num_chunks)
+    task_progress =         progress.add_task(f"Task: {current_task}\t\t", total=num_tasks, visible=False)
+    request_progress =      progress.add_task(f"API requests\t\t", total=(num_tasks * 2), visible=False)
+    reconnect_progress =    progress.add_task(
         "[red]Waiting to reconnect... \t\t", total=timeout_for_reconnect, visible=False)
 
     updated_chunk_sequence = []
-
-    if not end_chunk:
-        end_chunk = num_chunks
+    finished_tasks = []
 
     for task_number, task in enumerate(tasks, start=1):
         progress.console.print(f'\n[black on #FF9900][bold]Starting task {task_number}[/bold]: {task}')
@@ -626,81 +847,51 @@ with Progress(
         if task not in recognized_tasks:
             raise_error(f"Task not recognized: {task}")
         else:
-            updated_chunk_index = 0
-            for chunk_number in range(start_chunk, end_chunk + 1):
-                chunk_index = chunk_number - 1
-                update_progress(chunk_index)
+            if task == 'store_collection':
+                insert_collection_into_database()
+                finished_tasks.append('store_collection')
+            # elif task == 'store_chunks':
+            #     for i, chunk in enumerate(updated_chunk_sequence, start=1):
+            #         insert_chunk_into_database(chunk)
+            #         # connect_chunk_to_collection(chunk)
+            #         time.sleep(0.5)
+            #     finished_tasks.append('store_chunks')
 
-                chunk = collection["chunk_sequence"][chunk_index]
-                previous_chunk = collection["chunk_sequence"][chunk_index - 1]
-                chunk_id = chunk["chunk_id"]
-                progress.console.print(f'\n[bold]Processing chunk {chunk_number}[/bold]:\t {chunk_id}')
-                if verbose: progress.console.print(f'\n{chunk["text"]}\n')
+            elif task == 'store_entities':
+                accepted_entities_from_file = load_accepted_entities()
+                iterate_through_chunks('store_entities')
+                finished_tasks.append('store_entities')
 
-                updated_chunk = {
-                    "chunk_id": chunk["chunk_id"],
-                    "text": chunk["text"],
-                    "source_file": chunk["source_file"],
-                    "start_time": chunk["start_time"],
-                    "end_time": chunk["end_time"]
-                }
+            elif task == 'find_similar_chunks':
+                iterate_through_chunks('find_similar_chunks')
+                finished_tasks.append('find_similar_chunks')
 
-                if task_number == 1:
-                    updated_chunk_sequence.append(updated_chunk)
-                    failed_inserts_chunks.append(updated_chunk)
-
-                if task == 'extract_entities':
-                    if chunk_index < (num_chunks - 3):
-                        chunk_entities = extract_entities(
-                            chunk,
-                            collection["chunk_sequence"][chunk_index - 1]["text"],
-                            collection["chunk_sequence"][chunk_index - 2]["text"],
-                            collection["chunk_sequence"][chunk_index - 3]["text"],
-                            collection["chunk_sequence"][chunk_index + 1]["text"],
-                            collection["chunk_sequence"][chunk_index + 2]["text"],
-                            collection["chunk_sequence"][chunk_index + 3]["text"]
-                        )
-                    else:
-                        chunk_entities = extract_entities(
-                        chunk,
-                        collection["chunk_sequence"][chunk_index - 1]["text"],
-                        collection["chunk_sequence"][chunk_index - 2]["text"],
-                        collection["chunk_sequence"][chunk_index - 3]["text"],
-                        )
-
-                    updated_chunk.update(entities=chunk_entities)
-                elif task == 'store_entities':
-                    insert_entities_into_database()
-                elif task == 'generate_summaries':
-                    chunk_summaries = generate_summaries(chunk['text'])
-                    updated_chunk.update(summaries=chunk_summaries)
-                elif task == 'find_similar_chunks':
-                    similar_chunks = find_similar_chunks(chunk)
-                    updated_chunk.update(similarity=similar_chunks)
-
-                updated_chunk_sequence[updated_chunk_index].update(updated_chunk)
-                failed_inserts_chunks[updated_chunk_index].update(updated_chunk)
-                updated_chunk_index += 1
-                progress.advance(chunk_progress)
-
-                if chunk_number != end_chunk:
-                    progress.update(chunk_progress, advance=1)
-
-            if task == 'store_chunks':
-                for i, chunk in enumerate(updated_chunk_sequence, start=1):
-                    # insert_chunk_into_database(chunk)
-                    # connect_chunk_to_collection(chunk)
-                    time.sleep(1)
             elif task == 'extract_entities':
-                for entity in removeDuplicateDictFromList(accepted_entities):
-                    accepted_entity_logger.warning(entity)
-                for entity in removeDuplicateDictFromList(rejected_entities):
-                    rejected_entity_logger.warning(entity)
-                for index, entity in enumerate(ambiguous_entities):
-                    if (index % 2 == 0) and (index != 0):
-                        ambiguous_entity_logger.warning("\n")
-                    ambiguous_entity_logger.warning(entity)
+                iterate_through_chunks('extract_entities')
 
+                if dump_to_logfile:
+                    accepted_entity_logger  = setup_logger('accepted_entity_logger',
+                                                          path_accepted_entities,
+                                                          format='%(message)s'
+                                                          )
+                    rejected_entity_logger  = setup_logger('rejected_entity_logger',
+                                                          path_rejected_entities,
+                                                          format='%(message)s'
+                                                          )
+                    ambiguous_entity_logger = setup_logger('ambiguous_entity_logger',
+                                                          path_ambiguous_entities,
+                                                          format='%(message)s'
+                                                          )
+
+                    for entity in sortListOfDictsByValue(removeDuplicateDictFromList(accepted_entities), 'entity_name'):
+                        accepted_entity_logger.warning(entity)
+                    for entity in sortListOfDictsByValue(removeDuplicateDictFromList(rejected_entities), 'entity_name'):
+                        rejected_entity_logger.warning(entity)
+                    for index, entity in enumerate(ambiguous_entities):
+                        if (index % 2 == 0) and (index != 0):
+                            ambiguous_entity_logger.warning("\n")
+                        ambiguous_entity_logger.warning(entity)
+                finished_tasks.append('extract_entities')
 
             if task_number == num_tasks:
                 progress.update(task_progress, visible=False)
@@ -708,6 +899,9 @@ with Progress(
                 progress.update(reconnect_progress, visible=False)
                 progress.update(chunk_progress, visible=False)
                 progress.console.print(f"\n\n[bold white]Done processing.")
+                progress.console.print(f"Finished tasks:")
+                for task in finished_tasks:
+                    progress.console.print(f"{task}")
                 if len(failed_inserts_chunks) > 1:
                     dump_failed_inserts()
                     sys.exit(1)

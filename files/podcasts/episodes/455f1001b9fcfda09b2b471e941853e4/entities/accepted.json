@@ -1,32 +1,31 @@
-{'entity_name': 'Karina Theurer', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Karina Theurer', 'entity_label': 'PERSON'}
 {'entity_name': 'Shining Path', 'entity_label': 'ORG'}
 {'entity_name': 'ECCHR', 'entity_label': 'ORG'}
 {'entity_name': 'Maria Lugones', 'entity_label': 'PERSON'}
 {'entity_name': 'Gérard Genette', 'entity_label': 'PERSON'}
-{'entity_name': 'Sendero Luminoso', 'entity_label': 'PERSON'}
+{'entity_name': 'Sendero Luminoso', 'entity_label': 'ORG'}
 {'entity_name': 'Peru', 'entity_label': 'GPE'}
-{'entity_name': 'Andes', 'entity_label': 'LOC'}
+{'entity_name': 'Andes', 'entity_label': 'GPE'}
 {'entity_name': 'german', 'entity_label': 'NORP'}
-{'entity_name': 'Claudia Salazar Jimenéz', 'entity_label': 'HARDCODED'}
-{'entity_name': 'christian', 'entity_label': 'NORP'}
+{'entity_name': 'Claudia Salazar Jimenéz', 'entity_label': 'PERSON'}
 {'entity_name': 'La Sangre de la Aurora', 'entity_label': 'WORK_OF_ART'}
 {'entity_name': 'United States', 'entity_label': 'GPE'}
 {'entity_name': 'Lima', 'entity_label': 'GPE'}
 {'entity_name': 'blood of Dawn', 'entity_label': 'WORK_OF_ART'}
-{'entity_name': 'Modesta', 'entity_label': 'GPE'}
+{'entity_name': 'Modesta', 'entity_label': 'PERSON'}
 {'entity_name': 'Melanie', 'entity_label': 'PERSON'}
 {'entity_name': 'Argentina', 'entity_label': 'GPE'}
-{'entity_name': 'Plaza Italia', 'entity_label': 'ORG'}
+{'entity_name': 'Plaza Italia', 'entity_label': 'FAC'}
 {'entity_name': 'Vilcas', 'entity_label': 'PERSON'}
 {'entity_name': 'Plaza de la Indignidad', 'entity_label': 'FAC'}
 {'entity_name': 'German', 'entity_label': 'NORP'}
 {'entity_name': 'catholic', 'entity_label': 'NORP'}
-{'entity_name': 'Marta', 'entity_label': 'GPE'}
-{'entity_name': 'Susan Sontag', 'entity_label': 'ORG'}
+{'entity_name': 'Marta', 'entity_label': 'PERSON'}
+{'entity_name': 'Susan Sontag', 'entity_label': 'PERSON'}
 {'entity_name': 'US', 'entity_label': 'GPE'}
-{'entity_name': 'shine Path', 'entity_label': 'ORG'}
-{'entity_name': 'Rome Statute', 'entity_label': 'ORG'}
+{'entity_name': 'Rome Statute', 'entity_label': 'LAW'}
 {'entity_name': 'Memory Commission', 'entity_label': 'ORG'}
 {'entity_name': 'Modesta', 'entity_label': 'PERSON'}
 {'entity_name': 'Chile', 'entity_label': 'GPE'}
 {'entity_name': 'Oyèrónkẹ́ Oyěwùmí', 'entity_label': 'PERSON'}
+{'entity_name': 'Modesta', 'entity_label': 'PERSON'}
