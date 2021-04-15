@@ -19,6 +19,7 @@ import wikipedia
 import re
 import inquirer
 from inquirer.themes import GreenPassion
+from py2neo import Graph
 
 from collections import OrderedDict
 from rich.progress import *
@@ -82,7 +83,6 @@ if very_verbose:
 
 def connect_to_graph_database():
     print (eye, f"[bold]Connecting to[/bold] graph database.")
-    from py2neo import Graph
     try:
         graph = Graph(
             db_address,
@@ -99,7 +99,7 @@ graph = connect_to_graph_database()
 failed_requests = []
 entities_to_process = []
 def load_entities_from_database():
-    print(f"Loading entities from database.")
+    print(database, f"Loading entities from database.")
 
     query = 'MATCH (e:Entity) WHERE e:PERSON or e:ORG RETURN e'
     parameters = {}
@@ -115,6 +115,31 @@ def load_entities_from_database():
         })
     return entities
 
+
+def save_entity_to_database(entity):
+    entity_id = entity["entity_id"]
+    name = entity["name"]
+    text = entity["text"]
+    print(database, f"Saving entity to database: [bold]{entity_name}[/bold] {entity_id}")
+    if verbose: print (entity)
+    query = 'MATCH (e:Entity) WHERE e.entity_id = "$entity_id" \
+            SET e.name = "$name", \
+            e.text = "$text" \
+            RETURN e'
+    parameters = {
+        "entity_id": entity_id,
+        "name": name,
+        "text": text
+    }
+    results = [record for record in graph.run(query, parameters).data()]
+    # db_result = graph.run(query, name=name, text=text).data()
+    print (results)
+    # results = [record for record in db_result]
+    # if verbose: print(results)
+    # if results['e']["entity_id"] == entity_id:
+    #     return True
+    # else:
+    #     return False
 
 
 
@@ -162,7 +187,6 @@ def get_wikipedia_summary(entity_name):
 
     if len(entries) > 1:
         answers = inquire_list("Please choose entry:", entries)
-        print(answers)
         entry_name = str(answers["list"])
     else:
         entry_name = entity_name
@@ -218,13 +242,15 @@ entities = load_entities_from_database()
 
 for entity in entities:
     entity_name = entity["name"]
-    print (f"Processing {entity_name}")
-    if entity["text"] == '':
-        description = get_wikipedia_summary(entity_name)
-        print(f"Summary for {entity_name}:")
-        description = inquire_submit_text(description)
-        print (checkmark, "Updating entity")
-        print (description)
+    entity_id = entity["entity_id"]
+    print (f"Processing {entity_name} {entity_id}")
+    # if entity["text"] == '':
+    description = get_wikipedia_summary(entity_name)
+    print(f"Summary for {entity_name}:")
+    entity["text"] = inquire_submit_text(description)
+    print (checkmark, "Updating entity")
+    if save_entity_to_database(entity):
+        print (checkmark, database, "Successfully updated entity.")
 
 
 print(cross, f"\nThe following entities had request issues:")
