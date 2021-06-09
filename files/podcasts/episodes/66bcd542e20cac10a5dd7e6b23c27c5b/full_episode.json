@@ -1,0 +1,751 @@
+{
+    "collection_id": "66bcd542e20cac10a5dd7e6b23c27c5b",
+    "name": "Restitutionen und eine neue Ethik der Beziehungen mit Bénédicte Savoy und Wolfgang Kaleck",
+    "source_type": "audio",
+    "source_path": "/podcasts/episodes/66bcd542e20cac10a5dd7e6b23c27c5b",
+    "intro_audio": "00-Intro.mp3",
+    "outro_audio": "9999-Outro.mp3",
+    "intro_text": "",
+    "trigger_warning": "",
+    "num_chunks": 82,
+    "chunk_sequence": [
+        {
+            "chunk_id": "e18d11030028441854ea9968c0a398f6",
+            "speaker": "Wolfgang",
+            "text": " Hallo und ein herzliches Willkommen Bénédicte Savoy, hallo Bénédicte!",
+            "source_file": "1-Wolfgang.mp3",
+            "start_time": 0.81,
+            "end_time": 11.31,
+            "duration": 10.5
+        },
+        {
+            "chunk_id": "1c8a4b25c96f385671a0989bd50daf8f",
+            "speaker": "Benedicte",
+            "text": "Hallo!",
+            "source_file": "2-Benedicte.mp3",
+            "start_time": 11.31,
+            "end_time": 11.96,
+            "duration": 0.65
+        },
+        {
+            "chunk_id": "978931475038d99fe19914a9699a16c2",
+            "speaker": "Wolfgang",
+            "text": "Ich freue mich darauf, heute im Rahmen unseres Podcast über die Restitution von geraubter Kolonialkunst zu sprechen. Wir wollen auf das Berliner Humboldt Forum eingehen, auf den Report, den du gemeinsam mit Felwine Sarr im Auftrag von Präsident [Emmanuel] Macron gefertigt hast. Wir wollen auch über einige der wichtigsten Kunstgegenstände sprechen, die geraubt wurden und die hochumstritten sind, nämlich die Benin-Bronzen und so ein bisschen darüber, was sich eigentlich in den letzten Jahren in Frankreich und in Deutschland, in beiden Ländern – die du deswegen gut kennst, weil du sowohl am Collège de France in Paris als auch an der Technischen Universität in Berlin Professorin bist und jeweils auch in verschiedenen Gremien aktiv bist.",
+            "source_file": "3-Wolfgang.mp3",
+            "start_time": 12.36,
+            "end_time": 69.66,
+            "duration": 57.3
+        },
+        {
+            "chunk_id": "07ae38595f9dc53f9199c1b9c9134885",
+            "speaker": "Wolfgang",
+            "text": "Ich würde gerne anfangen mit dem Akt sozusagen des Protestes, mit dem du einer größeren Öffentlichkeit in Deutschland bekannt wurdest: Als du nämlich in der Süddeutschen Zeitung 2017 erklärt hast, dass du aus dem Expertengremium austrittst, das sich das Humboldt Forum sozusagen begleitend gegeben hat. Du hast dort gesagt, dass das Expertengremium eine reine Staffage ist, dass es keine wirkliche Rolle spielt.",
+            "source_file": "4-Wolfgang.mp3",
+            "start_time": 69.66,
+            "end_time": 99.33,
+            "duration": 29.67
+        },
+        {
+            "chunk_id": "7c90e1eaf10d72f45866689c38a1d81f",
+            "speaker": "Wolfgang",
+            "text": "Aber du hast auch inhaltliche Kritik an dem ganzen Prozedere geübt und hast damit eine Diskussion ausgelöst in Deutschland, die bis heute andauert. Kannst du vielleicht nochmal die Gründe erklären, warum du damals ausgetreten bist und vielleicht auch ein bisschen darauf eingehen, was sich seitdem getan hat.",
+            "source_file": "5-Wolfgang.mp3",
+            "start_time": 99.33,
+            "end_time": 118.5,
+            "duration": 19.17
+        },
+        {
+            "chunk_id": "26051f21603b01cc70c6c239de6e5160",
+            "speaker": "Benedicte",
+            "text": "Vielen, vielen Dank! Ja, das war der Auslöser von einigen... Ein bisschen, wie wenn man eine Cola-Dose sehr lange geschüttelt hat. Seit 50 Jahren, etwa seit den afrikanischen Unabhängigkeiten, gibt es die Debatte und 2017 bin ich ausgetreten. Und das war ein bisschen wie das Aufmachen der Dose: Pschhh. Und dann ist das explodiert.",
+            "source_file": "6-Benedicte.mp3",
+            "start_time": 118.83,
+            "end_time": 140.4,
+            "duration": 21.57
+        },
+        {
+            "chunk_id": "145ccab35bb7e29a830787f8b503ceb2",
+            "speaker": "Benedicte",
+            "text": "Was ich damit sagen will ist, ich glaube nicht, dass meine Rolle so wichtig war. Das war nur ein Ventil. Ich war in einem der zahlreichen Expertenbeiräte des Humboldt Forums. Das Humboldt Forum hatte ja diese Besonderheit, viele zu haben. Und wenn man viele solche Beiräte hat, dann heißt das in der Regel, dass sie nichts bedeuten.",
+            "source_file": "7-Benedicte.mp3",
+            "start_time": 140.43,
+            "end_time": 162.3,
+            "duration": 21.87
+        },
+        {
+            "chunk_id": "a5a9fdd7040eeaaf1296d220417114c8",
+            "speaker": "Benedicte",
+            "text": "Meiner war der \"Internationale Beirat\" und traf sich einmal in zwei Jahren und dann ein zweites Mal. Und klar wurde bei diesen zwei Malen, dass es nicht da war, um zu denken oder um etwas mitzugestalten, sondern es war eine reine pro-forma-Veranstaltung. Was mich besonders gestört hat, weil es mein Fach ist, weil ich seit 20 Jahren mich mit solchen Fragen befasse, die sogenannte Provenienz von Objekten oder einfach viel einfacher und banaler formuliert: die Sammlungsgeschichte von Museen.",
+            "source_file": "8-Benedicte.mp3",
+            "start_time": 162.75,
+            "end_time": 201.48,
+            "duration": 38.73
+        },
+        {
+            "chunk_id": "d8d8942f7600e70c12f7626a8e18ca22",
+            "speaker": "Benedicte",
+            "text": "Also wie sind Museen entstanden, nicht als Architekturen, sondern als Sammlungen. Das ist mein Thema in der Forschung seit vielen Jahren. Und ich habe in diesem Gremium und auch in vielen anderen informelleren Zusammenhängen, auf Fluren oder in anderen Gremien immer wieder gesagt: Das wäre wirklich gut, wenn das Humboldt Forum eröffnet, dass man weiß, woher die Objekte kommen.",
+            "source_file": "9-Benedicte.mp3",
+            "start_time": 201.54,
+            "end_time": 222.93,
+            "duration": 21.39
+        },
+        {
+            "chunk_id": "c26d58fb01b1a75234fa808eb49c551a",
+            "speaker": "Benedicte",
+            "text": " Nicht, dass man's im ethnologischen Sinne weiß, im Sinne von \"Benin 16. Jahrhundert\", sondern \"Benin 16. Jahrhundert; 1897 im Rahmen einer blutigen Expedition der Briten in Benin City geraubt\". Wenn man mutig ist, kann man das als Institution sagen, ansonsten würde man etwas anderes sagen: \"Dann nach Europa gebracht, und dort von den Staatlichen Museen zu Berlin damals auf dem Kunsthandel gekauft\". ",
+            "source_file": "10-Benedicte.mp3",
+            "start_time": 223.23,
+            "end_time": 257.22,
+            "duration": 33.99
+        },
+        {
+            "chunk_id": "572c7f9bf2bdf37c38d09bb2d3e4529d",
+            "speaker": "Benedicte",
+            "text": "Das ist Provenienz. Also Provenienz heißt nicht woher, sondern durch welche Hände, mit welchem Geld, wann genau. Und das hab ich immer wieder gesagt, und zwar in meiner Art, die eigentlich eine ruhige Art ist und in den verschiedenen Möglichkeiten, die eine Wissenschaftlerin hat, also entweder so im Gespräch oder in Vorträgen oder in Aufsätzen etc. Und das wurde einfach überhört und nicht gehört oder nett kleingeredet, bis ich den Eindruck hatte, die wollen gar nicht darüber reden.",
+            "source_file": "11-Benedicte.mp3",
+            "start_time": 257.28,
+            "end_time": 290.04,
+            "duration": 32.76
+        },
+        {
+            "chunk_id": "b4f6b2c2575c3d33d5671ff8e5b7c428",
+            "speaker": "Benedicte",
+            "text": "Am Anfang geht man ja mit Naivität in sowas rein und denkt: Ja, vielleicht wissen sie nicht, dass es wichtig ist. Also ich muss es ihnen erklären. Ich erkläre euch, warum es wichtig ist und das hab ich gemacht. Und dann merkte ich, sie wollen es einfach lieber gar nicht thematisieren. Und dann hab ich das Humboldt Forum mit Tschernobyl verglichen. Das war das, was zu einer gewissen Explosion geführt hat. Oder Implosion.",
+            "source_file": "12-Benedicte.mp3",
+            "start_time": 290.52,
+            "end_time": 316.47,
+            "duration": 25.95
+        },
+        {
+            "chunk_id": "80a44c80fc255bc0b21afa7c571f6d83",
+            "speaker": "Benedicte",
+            "text": "Die Wahl des Wortes war auch bedacht. Also es war nicht so, dass ich eine falsche Metapher benutzt hätte, sondern ich dachte, wenn ich jetzt als Wissenschaftlerin meine einzige Waffe, nämlich die Sprache in allen möglichen Formulierungen schon verwendet habe,  und keiner hört das, dann muss man das anders machen. Und dann hab ich ein starkes Wort benutzt, mit dem Ergebnis, dass es tatsächlich dann gehört wurde und mit starken Folgen bis heute, tatsächlich.",
+            "source_file": "13-Benedicte.mp3",
+            "start_time": 316.77,
+            "end_time": 348.36,
+            "duration": 31.59
+        },
+        {
+            "chunk_id": "44722668a611771f93a8eca90a0f068a",
+            "speaker": "Wolfgang",
+            "text": "Ja, du hast schon gerade darauf verwiesen, dass es im Grunde genommen ja eine sehr lange andauernde Debatte schon ist. Ich selber habe auch vor ein paar Jahren angefangen, mich damit zu befassen und eine langjährige Freundin von mir drückte mir daraufhin ein Buch in die Hand und sagte: Guck mal, als ich Kunstgeschichte studiert habe in den Achzigerjahren, da gab es schon ein Standardwerk von Gert von Paczensky und [Herbert] Ganslmayr, die im Grunde genommen die ganze Geschichte schon aufgearbeitet haben.",
+            "source_file": "14-Wolfgang.mp3",
+            "start_time": 350.26,
+            "end_time": 388.42,
+            "duration": 38.16
+        },
+        {
+            "chunk_id": "0593642c364c8712ee8e13da5bf3c05c",
+            "speaker": "Wolfgang",
+            "text": "Und dann habe ich in diesem Buch nachgelesen und festgestellt, dass die Debatte sich in großen Zügen ja eigentlich schon in den 70ern und Achzigerjahren abgespielt hat. Und du hast es ja jetzt auch nochmal in deinem jüngsten Werk \"Afrikas Kampf um seine Kunst: Geschichte einer postkolonialen Niederlage\" nachvollzogen und auch nochmal anhand der Benin-Bronzen klargemacht, dass es keine neuere Forderung von Seiten einzelner afrikanischer Staaten ist, sondern im Grunde genommen das zu den Ausflüssen des Unabhängigkeitsprozesses in vielen afrikanischen Staaten war.",
+            "source_file": "15-Wolfgang.mp3",
+            "start_time": 389.08,
+            "end_time": 432.91,
+            "duration": 43.83
+        },
+        {
+            "chunk_id": "a9888453e5107a0a70bb722461114fab",
+            "speaker": "Wolfgang",
+            "text": " Könntest du vielleicht nochmal ganz kurz sagen, was du in deinem neuen Buch beschreibst und warum eigentlich diese Forderung nach Rückgabe dieser Kulturgegenstände so wichtig war für die frisch unabhängig gewordenen Staaten?",
+            "source_file": "16-Wolfgang.mp3",
+            "start_time": 433.31,
+            "end_time": 446.71,
+            "duration": 13.4
+        },
+        {
+            "chunk_id": "11f1df8dc37aade42a354ce982a3ce1b",
+            "speaker": "Benedicte",
+            "text": "Ja, die Erwähnung von Gert von Paczensky und Herbert Ganslmayer berührt mich gerade sehr, weil das tatsächlich ein Buch von 1983/84 ist, das damals von zwei der Hauptakteuren der Debatte geschrieben wurde, und zwar am Ende des Prozesses. Also in diesem Buch fassen die beiden im Grunde diese Siebzigerjahre-Debatte... Aber in Wahrheit war diese Debatte heute vor einem Jahr oder zwei komplett vergessen. Man wusste das nicht.",
+            "source_file": "17-Benedicte.mp3",
+            "start_time": 446.52,
+            "end_time": 473.73,
+            "duration": 27.21
+        },
+        {
+            "chunk_id": "64c4aadfba10ad186433f8b4839bbc2e",
+            "speaker": "Benedicte",
+            "text": "Und als Felwine Sarr und ich acht Monate lang an diesem Bericht für Emmanuel Macron gearbeitet haben, haben wir einerseits sehr starke Erkenntnisse in Afrika selbst, in verschiedenen afrikanischen Ländern, gesammelt, zum Beispiel die physische Erfahrung der Abwesenheit von Objekten an einem Ort. Und am nächsten Tag – wir fliegen über Nacht nach Paris zurück – am nächsten Tag sehen wir die Objekte im Musée du Quai Branly die wir am Tag vorher in Cotonou oder in Abomey in der Republik Benin nicht gesehen hatten. Das ist eine extrem starke Erfahrung. ",
+            "source_file": "18-Benedicte.mp3",
+            "start_time": 473.77,
+            "end_time": 506.22,
+            "duration": 32.45
+        },
+        {
+            "chunk_id": "0f4928f8300ab499568d58f017894451",
+            "speaker": "Benedicte",
+            "text": "Aber die andere Erfahrung, die wir machten, war nicht körperlicher Art, sondern intellektueller Art: nämlich das Finden in Archiven in Paris, zunächst von Stapeln von Presseartikeln, Stellungnahmen, Briefen etc. aus den 70ern, also aus der Zeit, wo Felwine und ich acht Jahre alt waren. Und daraufhin habe ich weiter geforscht und vor allem in deutschen Archiven und festgestellt, dass die Debatte erstens schon einmal stattgefunden hat und zweitens, anders als manche behaupten, kein Hirngespinst von gelangweilten Europäerinnen, die heute postkoloniales Gehabe pflegen, sondern das Ganze ist ganz eindeutig schon Mitte der Sechzigerjahre von einer Handvoll sehr hochkarätiger Intellektueller, Künstler etc. aus dem afrikanischen Kontinent formuliert worden.",
+            "source_file": "19-Benedicte.mp3",
+            "start_time": 506.22,
+            "end_time": 563.46,
+            "duration": 57.24
+        },
+        {
+            "chunk_id": "981caf6a20e3a1b239f181b1fb7049c1",
+            "speaker": "Benedicte",
+            "text": "Zunächst von Künstlern, auch von Staaten, in manchen Staaten, in Nigeria zum Beispiel. Und dort war die Forderung nach Wiederaneignung des eigenen Kulturerbes...sie wurde in einem sehr starken Artikel 1965 formuliert mit dem Titel \"Rendez-nous l'art nègre\", also gibt uns die sogenannte \"Negerkunst\" zurück. Das schrieb ein Paulin Joachim, ein großer Intellektueller des Black Paris. ",
+            "source_file": "20-Benedicte.mp3",
+            "start_time": 563.46,
+            "end_time": 597.22,
+            "duration": 33.76
+        },
+        {
+            "chunk_id": "492d0e726d35aacad55bbb3af90e7c56",
+            "speaker": "Benedicte",
+            "text": "Jedenfalls beschrieb er auf einer Seite etwas, was viele dachten, sagten im Rahmen von Festivals und sonst. Aber er hat das auf den Punkt gebracht, dass wenn die nun in die Unabhängigkeit entlassenen afrikanischen Staaten sich weiterentwickeln wollen und sie brauchen Kraft für diese Entwicklung, dass diese Kraft ihnen durch die eigene Kultur wiedergegeben wird. Es hat etwas energetisches, wenn man so will.",
+            "source_file": "21-Benedicte.mp3",
+            "start_time": 597.24,
+            "end_time": 629.04,
+            "duration": 31.8
+        },
+        {
+            "chunk_id": "6c6d3dd140ef19775385154bd89b3cd3",
+            "speaker": "Benedicte",
+            "text": "Wenn ich das ganz runterbreche, auf wenige Sätze. Was er sagt ist: Wir Afrikaner, Afrikanerinnen, Schwarze Menschen haben jahrzehntelang gehört, dass unsere Kultur nicht existiert, nicht würdig ist, keine Bedeutung hat. Wir mussten andere Sprachen lernen. Wir haben gehört, dass unsere Götter nicht existieren dürfen. Und das hat uns ausgeleert, ausgepowert, sozusagen. Und wenn wir jetzt in die Unabhängigkeit gehen, das ist ein riesiger Kraftakt für uns, jetzt diese Unabhängigkeiten zu gestalten. Und für diesen Kraftakt brauchen wir Kraftnahrung, wenn man so will.",
+            "source_file": "22-Benedicte.mp3",
+            "start_time": 631.26,
+            "end_time": 673.17,
+            "duration": 41.91
+        },
+        {
+            "chunk_id": "d3c0f35aab3e74ba9b4f3543ba510645",
+            "speaker": "Benedicte",
+            "text": "Und die Kraftnahrung ist unsere eigene Kultur auf theoretischer Ebene, auf immaterieller Ebene, unsere Sprachen, unsere Literatur, unsere eigenen Traditionen, unsere eigenen Religionen einerseits, aber auch in materieller Hinsicht. Und da meint er ganz konkret die Abertausenden, Hunderttausenden von Artefakten, von Objekten, die gar keine Objekte sind. Das sind ja oft Subjekte, die weggenommen wurden in den hundert Jahren Kolonialzeit und heute in den europäischen Museen sind.",
+            "source_file": "23-Benedicte.mp3",
+            "start_time": 673.47,
+            "end_time": 707.04,
+            "duration": 33.57
+        },
+        {
+            "chunk_id": "db71ca5a003d9c38deadf1bedec1453c",
+            "speaker": "Benedicte",
+            "text": "Also ist es kein Blick in die Vergangenheit damals, sowas wie eine Rache. Sowas wie, jetzt zeigen wir denen das. Es ist kein Kräftemessen, sondern es ist ein...Sich-Sammeln oder Zurück-Sammeln, wenn man so will, von Objekten, um in die Zukunft zu schauen. Um sich behaupten zu können und sie wieder aufbauen zu können als Gemeinschaft. Er vergleicht auch... Er sagt: Ja, wir sind wie die Griechen, wie die alten Griechen, und den alten Griechen ist auch die Kunst weggenommen worden.",
+            "source_file": "24-Benedicte.mp3",
+            "start_time": 707.05,
+            "end_time": 742.62,
+            "duration": 35.57
+        },
+        {
+            "chunk_id": "87b598be1bb03307736b72ade8badbb9",
+            "speaker": "Benedicte",
+            "text": "Wenn wir etwas davon zurückbekommen würden, hätten wir das, was wir brauchen, um die schweren Jahre, die uns bevorstehen, zu gestalten. Und das ist extrem wichtig, finde ich, für die aktuelle Diskussion. Man hört heute: Ja, wird das klappen mit Restitutionen etc. Manchmal frage ich mich, ob die Zeit sogar nicht zu spät ist. Also damals wäre es sehr, sehr, sehr wichtig gewesen und es ist nichts passiert. Das Buch heißt \"Eine postkoloniale Niederlage\". Aber ich meine, das ist eine Niederlage der Europäer, oder Europas. Nämlich das nicht geschafft zu haben, damals, oder das blockiert zu haben. So, das war jetzt eine lange Antwort.",
+            "source_file": "25-Benedicte.mp3",
+            "start_time": 742.62,
+            "end_time": 784.18,
+            "duration": 41.56
+        },
+        {
+            "chunk_id": "7b604de1577f55bf2e73d840b43488b7",
+            "speaker": "Wolfgang",
+            "text": "Ja, interessant, was du sagst, dass der Impuls damals eben nicht der der Rache war, sondern man wollte verlorengegangene Energie wieder zurück. Man wollte sich sammeln. Kunst hatte eine andere Bedeutung und es ging nicht nur um den bloßen Akt der Rückgabe, der Anerkennung, auch dass Verbrechen begangen wurden. Das ist eine Beobachtung, die ich auch teile, wenn ich mir nämlich diese Zeit anschaue, Vierziger-, Fünfziger-, Sechzigerjahre.",
+            "source_file": "26-Wolfgang.mp3",
+            "start_time": 784.21,
+            "end_time": 819.8,
+            "duration": 35.59
+        },
+        {
+            "chunk_id": "24c8b4cb16a3e70bfbb714711b75faf6",
+            "speaker": "Wolfgang",
+            "text": "Auf der einen Seite wurde 1948 die Allgemeine Erklärung der Menschenrechte verabschiedet, die Anti-Völkermord-Konvention und viele andere Menschenrechtskonventionen. Und zur gleichen Zeit haben einige der europäischen Kolonialmächte, nämlich die Belgier, die Franzosen, die Briten und die Niederländer noch blutige Kriege mit allen Mitteln geführt, um die Staaten in kolonialer Abhängigkeit zu halten.",
+            "source_file": "27-Wolfgang.mp3",
+            "start_time": 821.09,
+            "end_time": 847.34,
+            "duration": 26.25
+        },
+        {
+            "chunk_id": "788e0e4b9e3745095bffbd052d1d28fa",
+            "speaker": "Wolfgang",
+            "text": "Das Interessante ist, dass viele Verbrechen dort begangen wurden, die heute vor dem Internationalen Strafgerichtshof verhandelt werden müssen und dass aber die postkolonialen Staatsoberhäupter und Regierungen darauf gerade nicht hingewiesen haben und das nicht zum Thema gemacht haben. Dass also die Belgier und die Franzosen im Grunde genommen vor Gericht gestellt gehörten. Das belegt auch nochmal deine These, dass es weniger darum ging, die ehemaligen Kolonialherren zu denunzieren, als vielmehr darum ging, etwas zurückzubekommen.",
+            "source_file": "28-Wolfgang.mp3",
+            "start_time": 847.91,
+            "end_time": 885.65,
+            "duration": 37.74
+        },
+        {
+            "chunk_id": "0b1f69c6b911df89d1ef19b05800e541",
+            "speaker": "Wolfgang",
+            "text": " Du hast schon ein bisschen in die Geschichte zurück- und auch vorgeblickt. Nochmal zurück auf den Akt, mit dem für dich die gemeinsame Mission mit Felwine Sarr losging, nämlich am 28. November 2017: die Rede von Macron in Burkina Faso, in Ouagadougou, wo er erklärt hat, dass in fünf Jahren die Voraussetzungen erfüllt sein sollen, um das afrikanische Erbe zeitweise oder endgültig an Afrika zu restituieren.",
+            "source_file": "29-Wolfgang.mp3",
+            "start_time": 887.15,
+            "end_time": 927.23,
+            "duration": 40.08
+        },
+        {
+            "chunk_id": "69ab795aa6a71ac7836a45afd89267aa",
+            "speaker": "Wolfgang",
+            "text": "Ihr seid dann 2018 damit beauftragt worden, einen Bericht vorzulegen und habt diesen Bericht in Teilen auch in anderen Sprachen veröffentlicht. So auch in Deutsch in dem Buch \"Zurückgeben: Über die Restitution afrikanischer Kulturgüter\".",
+            "source_file": "30-Wolfgang.mp3",
+            "start_time": 927.95,
+            "end_time": 948.77,
+            "duration": 20.82
+        },
+        {
+            "chunk_id": "545ce2bbdec4a1200d722e5e936845b4",
+            "speaker": "Wolfgang",
+            "text": "Und während die Diskussion gerade in Deutschland von den Museen immer auf einer sehr oberflächlichen Ebene geführt wird, wo nämlich im Grunde genommen nur so ein \"Zweiecks-Verhältnis\" gesehen wird, nämlich hier diejenigen, die etwas zurückfordern und diejenigen, an die sich der Anspruch richtet. Und das Ganze wird dann rechtlich untersucht, habt ihr eigentlich versucht, sozusagen die gesellschaftlichen Zusammenhänge zu ergründen, den Kontext, über den da verhandelt wird. Und unter anderem schreibt ihr dazu: ",
+            "source_file": "31-Wolfgang.mp3",
+            "start_time": 949.76,
+            "end_time": 991.97,
+            "duration": 42.21
+        },
+        {
+            "chunk_id": "fed8aeb6957bfc4cc1d892db31e63429",
+            "speaker": "Wolfgang",
+            "text": "\"Restitution-Denken impliziert mehr als nur eine Erforschung der Vergangenheit. Es bedeutet, Brücken zu zukünftigen, gerechteren Beziehungen zu bauen, von Dialog, Vielstimmigkeit und Austausch geleitet, darf die Restitution keinesfalls als ein unheilvoller Akt von Identitätszuschreibung von Kulturgütern verstanden werden. Sie lädt im Gegenteil dazu ein, die Bedeutungsumgebung der Objekte zu öffnen und dem Universellen die Möglichkeit zu geben, auch anderswo erfahren zu werden.\"",
+            "source_file": "32-Wolfgang.mp3",
+            "start_time": 992.39,
+            "end_time": 1023.89,
+            "duration": 31.5
+        },
+        {
+            "chunk_id": "3fc0717f1f7fe987e609d3c7a61c49ca",
+            "speaker": "Wolfgang",
+            "text": "Das ist ja eine ganz andere Deutung von Restitution, als in der allgemeinen Diskussion üblich. Könntest du das vielleicht auch nochmal kurz erläutern?",
+            "source_file": "33-Wolfgang.mp3",
+            "start_time": 1023.9,
+            "end_time": 1032.07,
+            "duration": 8.17
+        },
+        {
+            "chunk_id": "6031dde068ab5863335bfa13381c614b",
+            "speaker": "Benedicte",
+            "text": "Der Bericht heißt mit Untertiteln in der französischen Fassung \"Pour une nouvelle éthique relationnelle\", also für eine neue Ethik der Beziehung und eine These oder ein Werkzeug in diesem Buch  ist, dass diese Restitutionen einen Raum öffnen, wenn sie stattfinden, einen Diskussionsraum öffnen sollen, um eben über die gemeinsame Vergangenheit anders zu sprechen. Und zwar in einer Art, die zukunftsgerichtet ist.",
+            "source_file": "34-Benedicte.mp3",
+            "start_time": 1033.56,
+            "end_time": 1067.32,
+            "duration": 33.76
+        },
+        {
+            "chunk_id": "02d83300acc8cd62dd7fd46741a80438",
+            "speaker": "Benedicte",
+            "text": "Also wir schauen eben nicht in die Vergangenheit, sondern überlegen: Wie wollen wir als Menschheit und jetzt als afrikanische/europäische Menschheit in dem Fall, die Zukunft gestalten? Wie soll es aussehen? Und das ist eigentlich das Allerwichtigste in diesem Bericht und in unserer ganzen Arbeit. Wir sagen nicht: Chinesische Kunst muss nur in China gezeigt werden, französische nur in Frankreich und deutsche nur in Deutschland. Das ist uns oft vorgeworfen worden. Das ist absurd.",
+            "source_file": "35-Benedicte.mp3",
+            "start_time": 1067.38,
+            "end_time": 1098.03,
+            "duration": 30.65
+        },
+        {
+            "chunk_id": "8534db369694129c52c450ddce698e49",
+            "speaker": "Benedicte",
+            "text": "Wir sagen, und das hast du gerade vorgelesen, es gibt den eurozentristischen Despotismus des Universalmuseums. Also die Europäer entscheiden, dass ihre Museen dem Universalismus dienen, weil man dorthin immer hingehen kann. So heißt es als Form der Legitimation. Und wir sagen: Nein, wenn Objekte zurückgegeben werden, dann werden auch andere Formen des Universalismus oder bzw. andere Orte, andere Zentren des Universalismus sichtbar. Also man kann einen Universalismus von Afrika aus denken, zum Beispiel.",
+            "source_file": "36-Benedicte.mp3",
+            "start_time": 1098.48,
+            "end_time": 1143.8,
+            "duration": 45.32
+        },
+        {
+            "chunk_id": "681c3f9b3b6b0872307350f525d946bb",
+            "speaker": "Benedicte",
+            "text": "Und jetzt mache ich das etwas konkreter in zwei Beispielen. Neue Ethik der Beziehungen. Als wir mit Felwine Sarr in Dakar eine Werkstatt organisiert haben, mit 20 Museumsdirektorinnen und -direktoren aus dem afrikanischen Kontinent, war die allererste Frage:Sagt mal, wenn ihr uns Sachen zurückgebt, sagte ein Kollege aus Kamerun, dann stehen bei euch leere Sockel. Was können wir im Gegenzug euch geben? Also die erste Idee war: Was schenken wir im Gegenzug, wenn ihr was Leeres in Europa habt?",
+            "source_file": "37-Benedicte.mp3",
+            "start_time": 1143.9,
+            "end_time": 1176.33,
+            "duration": 32.43
+        },
+        {
+            "chunk_id": "81bd7d83742ddaebdf688acfeb58afd5",
+            "speaker": "Benedicte",
+            "text": "Und das hat mich als die Europäerin, die ich bin, mit diesen permanenten Verlustängsten einfach sofort geöffnet. Ich merkte, okay, wir gehen dahin, wir wollen über schwierige, schmerzhafte Themen sprechen. Nein, überhaupt nicht. Das Erste, was passierte, war die Idee eines Austausches, einer Gegengabe, einer Gestaltung. Und vor allem war sein Vorschlag: Wollt ihr zeitgenössische Kunst aus Afrika im Gegenzug? Das heißt, hier war sofort ein Raum der Ideengestaltung, der Projektion in die Zukunft gegeben. Ja, das ist vielleicht das wichtigste Beispiel für das, was wir unter neuer Ethik der Beziehung denken.",
+            "source_file": "38-Benedicte.mp3",
+            "start_time": 1176.33,
+            "end_time": 1222.92,
+            "duration": 46.59
+        },
+        {
+            "chunk_id": "51e9e318da8e49f832895f5357482eb8",
+            "speaker": "Benedicte",
+            "text": "Das kann man weiter erklären, wenn man zum Beispiel sagt: Museen in der westlichen Welt, wenn sie eine Ausstellung machen wollen, wenn Paris einen Raffael aus Rom haben will, dann sagt Rom: Okay, aber wir kriegen einen Leonardo von euch. Solange in Afrika die Institutionen keine eigene Sammlung haben, dann können sie auch nicht mitspielen in diesem großen Spiel. Das ist alles verlogen zu sagen, ja, Augenhöhe etc. Augenhöhe gibt es, wenn du etwas im Gegenzug geben kannst.",
+            "source_file": "39-Benedicte.mp3",
+            "start_time": 1222.92,
+            "end_time": 1257.81,
+            "duration": 34.89
+        },
+        {
+            "chunk_id": "420f59a7972896a470f01078658221d6",
+            "speaker": "Benedicte",
+            "text": "Und vielleicht zum Universalismus, ganz, ganz kurz. Auch das hat mich persönlich sehr beeindruckt. Auch im Rahmen einer solchen Diskussion in Dakar sagte ein Kollege: Ja, Restitutionen sind wichtig, damit können wir Berlin abschaffen. Okay, für mich als Berlinerin, die keine Ahnung hatte, muss ich an der Stelle sagen, war das erst einmal ein Rätsel. Berlin abschaffen mit Restitution? Was meinen sie?",
+            "source_file": "40-Benedicte.mp3",
+            "start_time": 1257.99,
+            "end_time": 1286.82,
+            "duration": 28.83
+        },
+        {
+            "chunk_id": "43fd83e5b6fdc50f799caedc87adf064",
+            "speaker": "Benedicte",
+            "text": "Die meinten natürlich, dass man damit die willkürlichen Grenzen der Berlin-Konferenz, also die willkürlichen afrikanischen Grenzen von heute, die in Berlin um 1884-85 entworfen wurden, oder die Bedingungen dafür, dass man die durch Restitution deswegen abschaffen kann, weil manche Objekte, die zum Beispiel nach Mali zurückgehen würden, dann von Mali aus, von Bamako zum Beispiel, entlang des Flusses Niger ausgeliehen werden könnten oder zirkulieren könnten. Also da, wo die Kulturen sich befinden. Und diese Kulturen haben andere Logiken als die staatlichen Grenzen.",
+            "source_file": "41-Benedicte.mp3",
+            "start_time": 1287.27,
+            "end_time": 1329.39,
+            "duration": 42.12
+        },
+        {
+            "chunk_id": "85e504c75c08c5112ad603754eb7043e",
+            "speaker": "Benedicte",
+            "text": "Und ein Museumsdirektor sagt: Ja, wenn wenn ich Objekte habe, dann lasse ich sie nach Niamey reisen, weil das dieselbe Kultur ist, aber nicht dasselbe Land. Und damit haben wir Berlin abgeschafft. Und das sind die zwei Punkte. Eine Logik des Austausches, aber nicht eines leeren, wie hier immer wieder proklamierten Dialog der Kulturen. Das bedeutet gar nichts. Wie kompensieren wir einerseits und andererseits eine Logik anderer Universalismen, anderer Möglichkeiten von Zirkulation, eine andere Geographie des Kulturerbes. Das hängt unter anderem mit den Restitutionen zusammen.",
+            "source_file": "42-Benedicte.mp3",
+            "start_time": 1329.69,
+            "end_time": 1376.2,
+            "duration": 46.51
+        },
+        {
+            "chunk_id": "e11d1f6ad14a92a8bff8daca283102ce",
+            "speaker": "Wolfgang",
+            "text": "Ich finde es deswegen so interessant, weil es im Grunde genommen aus der Aufarbeitung der kolonialen Vergangenheit eine zukunftsgerichtete Vision macht und dass dieser Vorschlag nicht von ungefähr von Kulturschaffenden kommt, während in Deutschland, ich sag jetzt mal Verwaltungsjuristen, Bürokraten die Diskussion dominieren und eben ein solch kreatives Denken gerade nicht vorherrscht. Aber ein bisschen müssen wir ja schon in die Vergangenheit gucken, weil in der Vergangenheit ja der Grund dafür liegt, dass die Diskussion überhaupt jetzt aufkommt.",
+            "source_file": "43-Wolfgang.mp3",
+            "start_time": 1376.42,
+            "end_time": 1418.36,
+            "duration": 41.94
+        },
+        {
+            "chunk_id": "3b06a4646b473a0dcf18d494b5386191",
+            "speaker": "Wolfgang",
+            "text": "Und auch Emmanuel Macron hat das dargestellt, indem er gesagt hat: Es sind Verbrechen gegen die Menschlichkeit und Barbareien begangen worden in der Phase des französischen Kolonialismus. Und das gilt natürlich für andere Kolonialismen auch. Und die Frage ist: Wie geht man mit diesen Akten von Verbrechen gegen die Menschlichkeit um? Und mit den Begleiterscheinungen. Und zu den Begleiterscheinungen, du hast dich vorhin gescheut zu sagen, die Benin-Bronzen wurden geraubt, beziehungsweise du hast gesagt, man könnte es sozusagen etwas vorsichtiger ausdrücken als Museen. Warum eigentlich?",
+            "source_file": "44-Wolfgang.mp3",
+            "start_time": 1418.39,
+            "end_time": 1458.59,
+            "duration": 40.2
+        },
+        {
+            "chunk_id": "ea49497a548d33649ce1fe12aaa92e10",
+            "speaker": "Wolfgang",
+            "text": "Weil es ist doch klar, dass der Raub der Benin-Bronzen auch nach heutigem Recht als Raub im Rahmen eines entweder Verbrechen gegen die Menschlichkeit oder als Kriegsverbrechen bezeichnet würde. Und dass der Rückgabe vorgelagert ja eigentlich ein Akt stehen würde, den ich mal als Anerkennung von Unrecht bezeichnen würde. Und dazu ist es ja bisher auch nicht gekommen.",
+            "source_file": "45-Wolfgang.mp3",
+            "start_time": 1458.62,
+            "end_time": 1488.6,
+            "duration": 29.98
+        },
+        {
+            "chunk_id": "8f86bf6a3a3b17b6082bb9f7737c887d",
+            "speaker": "Wolfgang",
+            "text": "Also das heißt weder haben die maßgeblichen Leute in Deutschland, die mitdiskutieren, weder haben die eine solche zukunftsgerichtete Vision von Restitution, Zirkulation, noch sind sie bereit, sich der Vergangenheit in der Weise zu nähern, dass sie sagen: Wir haben Verbrechen begangen, wir anerkennen, dass wir diese Verbrechen begangen haben, und wir versuchen jetzt so gut wie möglich, das zu reparieren, das was geht, zu restituieren, in welcher Weise auch immer. Wie siehst du das? Der französische Präsident hat es ausgesprochen. In Deutschland hat niemand das so deutlich ausgesprochen.",
+            "source_file": "46-Wolfgang.mp3",
+            "start_time": 1488.83,
+            "end_time": 1533.2,
+            "duration": 44.37
+        },
+        {
+            "chunk_id": "e5087cf0651b22846303058c82ed37ea",
+            "speaker": "Benedicte",
+            "text": "Ja, wunderbar. Also jetzt sind gerade sehr viele Begriffe gefallen, Reparation, Restitution, Anerkennung von Unrecht, die Schlüsselbegriffe für die Diskussion sind. Tatsächlich und ich würde ganz gerne mit einer kleinen, es ist keine Begriffsgeschichte, das wäre viel zu hochgestochen. Aber das Wort Restitution ist extrem wichtig in der ganzen Diskussion. Du hast ganz kurz in einem Satz gesagt \"Restitution, Zirkulation\". Da steckt etwas sehr, sehr Wichtiges.",
+            "source_file": "47-Benedicte.mp3",
+            "start_time": 1533.22,
+            "end_time": 1562.08,
+            "duration": 28.86
+        },
+        {
+            "chunk_id": "66d58f8e63170822ae1a1e0586b017d8",
+            "speaker": "Benedicte",
+            "text": "Wenn man sich die Debatten der Vergangenheit oder die Positionierungen, Stellungnahmen anschaut, dann stellt man fest, dass sich die politische Klasse und vor allem die Museen jahrzehntelang gegen das Wort Restitution gestemmt haben. Es gab sogar ganze Arbeitsgruppen für die Abwehr der Terminologie des Begriffs. Warum? Warum will man als Museum der 70er, 80er bis heute das Wort Restitution nicht hören? Weil das Wort Restitution in sich Zeit trägt, durch \"r e\", Re heißt \"wieder\". Das heißt, es ist etwas vorher passiert und es wird wiederhergestellt. Die Zeit dazwischen ist im Wort.",
+            "source_file": "48-Benedicte.mp3",
+            "start_time": 1562.11,
+            "end_time": 1606.51,
+            "duration": 44.4
+        },
+        {
+            "chunk_id": "5dad739c68ce3be41a52766f974ac779",
+            "speaker": "Benedicte",
+            "text": "In Zirkulation hat man das nicht. Zirkulation ist ahistorisch, ist nur geografisch. Es zirkuliert. Und deswegen war es uns auch mit Felwine ein Anliegen, immer von Restitution zu sprechen, das auch klarzustellen. Denn Restitution impliziert, dass etwas passiert ist, was man so nicht mehr haben will. Und das ist eine Form, schon eine sprachliche, schon auf der Ebene der Sprache eine Anerkennung von Unrecht, also hat es eine ethische oder moralische Dimension. Und genau das konnten die Museen bis vor Kurzem gar nicht aushalten. ",
+            "source_file": "49-Benedicte.mp3",
+            "start_time": 1606.93,
+            "end_time": 1645.87,
+            "duration": 38.94
+        },
+        {
+            "chunk_id": "2a957ef22c2918a123c3c9275d452e5c",
+            "speaker": "Benedicte",
+            "text": "Und die Tatsache, dass Emmanuel Macron als junger Mann, das Wort Restitution in dieser Rede \"Je veux que soient restitués\", dieser Rede in Ouagadougou benutzt hat, das ist für jemanden, der sich für solche Themen interessiert, wie mich seit 20 Jahren, das war ein Big Bang, das war eine totale Revolution. Wie kann ein Politiker oder eine Politikerin das Wort in den Mund nehmen, wenn man weiß, dass genau das damit drinsteckt, nämlich die Anerkennung von von einer furchtbaren Schuld in der Vergangenheit?",
+            "source_file": "50-Benedicte.mp3",
+            "start_time": 1645.87,
+            "end_time": 1681.57,
+            "duration": 35.7
+        },
+        {
+            "chunk_id": "6b3b7ae6a3cc7c7a931d3696cc066030",
+            "speaker": "Wolfgang",
+            "text": "Ja, das provoziert natürlich die Frage, wie kam er dazu? Dass eben nicht, ich sage mal, westafrikanische Staaten eine Konferenz in Paris veranstaltet haben und gesagt: Jetzt wollen wir aber daran anschließen, was wir in den Siebzigerjahren schon gefordert haben, sondern Emmanuel Macron hat es auf die Agenda gesetzt.",
+            "source_file": "51-Wolfgang.mp3",
+            "start_time": 1683.14,
+            "end_time": 1706.06,
+            "duration": 22.92
+        },
+        {
+            "chunk_id": "bec6b9563c6a064b4a7ad4683b149a53",
+            "speaker": "Benedicte",
+            "text": "Er hat es aufdie Agendagesetzt. Es gibt viele Hypothesen, man könnte sagen: Okay, er wusste nicht, was er sagt. Er wusste nicht, dass Restitution so ein unglaubliches Wort ist für die Debatte. Eine andere wäre vielleicht ein bisschen psychoanalytisch. Nämlich dann, wenn historisch etwas passieren muss, dass es durch solche Personen, wie ein junger Präsident also in einer exponierten Situation, dass er, wenn er einen Teil seiner Rede improvisiert, das richtige Wort benutzt. ",
+            "source_file": "52-Benedicte.mp3",
+            "start_time": 1705.87,
+            "end_time": 1749.64,
+            "duration": 43.77
+        },
+        {
+            "chunk_id": "d5ea48dceab6a863a090df9a583ef08f",
+            "speaker": "Benedicte",
+            "text": "Und er war ja seit Monaten in einer Logik der Anerkennung, der Gräuel der Kolonisation. Er hatte einige Wochen vorher in Algier, in Algerien darüber gesprochen. Das heißt, er war in dieser Logik und dann spricht sein Körper sozusagen mit den richtigen Wörtern.",
+            "source_file": "53-Benedicte.mp3",
+            "start_time": 1749.64,
+            "end_time": 1767.34,
+            "duration": 17.7
+        },
+        {
+            "chunk_id": "55c9449312e7901235e47940771e977c",
+            "speaker": "Benedicte",
+            "text": "Und die dritte Hypothese wäre und ich glaube, das ist sie auch, er wusste genau, was er macht und er wollte und er will und er weiß, warum, dass ein Teil des afrikanischen Kulturerbes – des sehr zahlreichen afrikanischen, materiellen, historischen Kulturerbes, was in französischen Museen ist – dass es nicht nur in Frankreich, man muss fast hinzufügen, in Paris zu sehen ist, sondern auch in zum Teil in den Ländern, aus denen die Objekte stammen. Genau.",
+            "source_file": "54-Benedicte.mp3",
+            "start_time": 1767.34,
+            "end_time": 1799.29,
+            "duration": 31.95
+        },
+        {
+            "chunk_id": "744503d1aa17044f8bf898abe4fb7155",
+            "speaker": "Benedicte",
+            "text": "Also das ist extrem wichtig, diese moralische Dimension. Und genauso richtig ist das, was du sagtest, dass die Diskussion sich oft sozusagen ohne Fleisch und ohne Emotion auf juristische Positionen reduziert wird, auf solche Positionen, wie auf ein Skelett, sozusagen. Auf etwas, was ganz trocken ist, nämlich die Legalität oder Illegalität der Anschaffungen. Natürlich war Kriegsbeute im kolonialen Kontext um 1900 legal in vielen Kriegen, war, also in deutsch-französischen Kriegen, im 19. Jahrhundert, Napoleon etc., war es okay, Beute zu machen, wenn man eine Schlacht gewonnen hatte.",
+            "source_file": "55-Benedicte.mp3",
+            "start_time": 1799.35,
+            "end_time": 1848.97,
+            "duration": 49.62
+        },
+        {
+            "chunk_id": "3da781beb5b2e744437e403c36e31bf1",
+            "speaker": "Benedicte",
+            "text": "Das ist erst später geregelt worden und die Kolonien waren ausgenommen von diesen Regelungen. Also irgendwann hören die Europäer auf, sich das gegenseitig anzutun und sie exportieren die Praxis der Kriegstrophäe in die Kolonien, nach China, nach Asien oder nach Afrika. Und ja, das ist ein Moment, wo die Frage der Legalität oder Illegalität uns überhaupt nicht weiterbringt. Ja, es war vielleicht legal.",
+            "source_file": "56-Benedicte.mp3",
+            "start_time": 1849.18,
+            "end_time": 1885.46,
+            "duration": 36.28
+        },
+        {
+            "chunk_id": "7721785481b793ab3e4549dc841b4e87",
+            "speaker": "Wolfgang",
+            "text": "Da würde ich dir schon widersprechen. Es war vielleicht nach dem herrschenden westlichen Völkerrecht und dem westlichen Verständnis von Recht legal, aber das Interessante ist ja, dass die Debatte jetzt auch im Globalen Süden weitergegangen ist. Du weißt, wir arbeiten viel mit der Gruppe Third World Approaches to International Law zusammen, TWAIL, die auch nochmal deutlich gemacht haben, dass es während der Kolonialzeit auch andere Rechtsvorstellungen gab, nämlich in den vorkolonialen Rechtsordnungen, zum Teil auch noch in den Kolonien.",
+            "source_file": "57-Wolfgang.mp3",
+            "start_time": 1889.61,
+            "end_time": 1926.79,
+            "duration": 37.18
+        },
+        {
+            "chunk_id": "0646f895ef6b765dd917b4ff0ef46a8f",
+            "speaker": "Wolfgang",
+            "text": "Und dass man zur Bestimmung dessen, was Völkerrecht war, auch diese Rechtsvorstellung heranziehen muss und außerdem selbst nach westlichem Verständnis bestimmte Akte der Kriegsführung eben im ausklingenden 19. und beginnenden 20. Jahrhundert verboten waren. Erst recht natürlich dann nach dem Zweiten Weltkrieg. Also das heißt, Macron bezieht sich ja vornehmlich auf die französische Folter in Algerien, aber auch die Ermordung von Patrice Lumumba in Kongo. Das sind ganz klar Verbrechen. Da brauchen wir gar nicht zu diskutieren.",
+            "source_file": "58-Wolfgang.mp3",
+            "start_time": 1927.53,
+            "end_time": 1962.69,
+            "duration": 35.16
+        },
+        {
+            "chunk_id": "5daf101e5a61765c70719cb4a90827a3",
+            "speaker": "Wolfgang",
+            "text": "Die Frage ist: Was machen wir mit den Geschehnissen vor 115, 120, 130 Jahren, als diese Rechtskategorien so noch nicht existierten? Und da gibt es mittlerweile auch Diskussionen darüber, dass das auch nach damaligem Verständnis nicht legal war. Und das finde ich auch sehr spannend, dass sozusagen die Diskussion auch dort irgendwie weitergegangen ist. Und das bringt mich zu einem anderen Punkt.",
+            "source_file": "59-Wolfgang.mp3",
+            "start_time": 1963.02,
+            "end_time": 1990.26,
+            "duration": 27.24
+        },
+        {
+            "chunk_id": "6eda82cdc62672428c1a165c73d83613",
+            "speaker": "Wolfgang",
+            "text": "Provenienzforschung ist ja im Moment durchaus anerkannt, dass das stattzufinden hat. Zum Teil natürlich eine Ausflucht, vor wirklichen Konsequenzen flüchtet man sich erst einmal in die Provenienzforschung, stellt Anträge, legt riesige Projekte auf und so weiter. Aber immerhin, es gibt den sogenannten Museumsleitfaden, also einen Leitfaden des Deutschen Museumsbundes zum Umgang mit Sammlungsgut aus kolonialen Kontexten, der interessanterweise auch fortgeschrieben wird.",
+            "source_file": "60-Wolfgang.mp3",
+            "start_time": 2029.74,
+            "end_time": 2064.96,
+            "duration": 35.22
+        },
+        {
+            "chunk_id": "bc17dd0f8e5bb240f4bbd176b59d6354",
+            "speaker": "Wolfgang",
+            "text": "Das heißt also, der erste Leitfaden sieht deutlich konservativer aus als heute. Das heißt, sie reflektieren ja durchaus auch Kritik, weswegen ich dich erst einmal für die deutsche Diskussion fragen würde: Würdest du mir zustimmen, dass sich da schon einiges getan hat in den letzten vier, fünf Jahren, dass sich einiges bewegt hat? Und was fehlt da eigentlich im Moment noch?",
+            "source_file": "61-Wolfgang.mp3",
+            "start_time": 2065.29,
+            "end_time": 2091.1,
+            "duration": 25.81
+        },
+        {
+            "chunk_id": "527240221859d923c8b93d469de417d4",
+            "speaker": "Benedicte",
+            "text": "Also auf jeden Fall würde ich dir zustimmen. Es hat sich massiv etwas bewegt, nicht nur in der Museumslandschaft, in der Museumswelt, sondern vor allem in der Zivilgesellschaft, in der Öffentlichkeit. Vor fünf Jahren war es wahrscheinlich so, dass wenn man jemand gefragt hätte, so auf der Straße oder nach einem Museumsbesuch: Wissen Sie, woher die Objekte kommen?, ein großes Fragezeichen in den Augen erschienen wäre. Und heute weiß das ungefähr jeder.",
+            "source_file": "62-Benedicte.mp3",
+            "start_time": 2091.28,
+            "end_time": 2119.77,
+            "duration": 28.49
+        },
+        {
+            "chunk_id": "279a36c132451a0795b073abc58075b0",
+            "speaker": "Benedicte",
+            "text": "Das liegt daran, man muss nur eine Zeitung aufschlagen oder das Radio anmachen oder Fernsehen gucken. Das ist omnipräsent, das Thema. Und das ist neu. Und ich glaube, dass jeder und jede Museumsbesucher, -besucherin jetzt ein historisches Gefühl für das, was er sieht, hat. Und zweitens würde ich sagen, und ich weiß hier in Deutschland klagt man gerne, dass sich nichts bewegt etc. Aber ich finde persönlich, dass die Diskussion auf sehr hohem Niveau läuft. Also im Vergleich zu Frankreich gibt es hier eine hochkarätige Debatte, wo viele Stimmen sich einmischen: Künstler, Juristinnen und Juristen, Akademikerinnen, die Museen etc.",
+            "source_file": "63-Benedicte.mp3",
+            "start_time": 2119.78,
+            "end_time": 2168.71,
+            "duration": 48.93
+        },
+        {
+            "chunk_id": "3085ee896862613d913df3ab4fd4af18",
+            "speaker": "Benedicte",
+            "text": "Also es ist ein Orchester an Stimmen, eine große Polyphonie, die sich hoch steigert, finde ich. Das darf man eigentlich gar nicht sagen, weil hier immer alle schimpfen, dass es nicht genug ist. Aber es ist im Vergleich zu anderen europäischen Ländern schon auf hohem Niveau und die politische Klasse hat sich aus dem Fenster gelehnt. Also gut, das sind nur Diskurse. Aber gleich nach der Abgabe unseres Berichtes erschien in der Frankfurter Allgemeinen Zeitung ein gemeinsamer Artikel von Michelle Müntefering und Monika Grütters. In dem stand, schwarz auf weiß: Ja, der Bericht hat recht. Wir müssen restituieren, wenn etwas etc. Das heißt auf der Ebene der Sprache, der Rhetorik, von dem, was man verspricht, ist schon sehr, sehr viel passiert. Und ich finde das sehr gut. ",
+            "source_file": "64-Benedicte.mp3",
+            "start_time": 2168.77,
+            "end_time": 2218.57,
+            "duration": 49.8
+        },
+        {
+            "chunk_id": "29212f3b1f236e0766ec2c4b10b63f1f",
+            "speaker": "Benedicte",
+            "text": "Zum Thema Provenienzforschung muss man sagen, dass in Deutschland deswegen so viel gemacht werden muss, weil die westdeutschen Museen in den 80ern sich selbst das verboten haben, von nun an über die Geschichte ihrer Bestände zu publizieren. Es ist nicht so, dass man nicht weiß, woher die Objekte kommen in den Museen. Provenienzforschung meint nicht wirklich, dass man so viel suchen muss, in Wahrheit. In Wahrheit ist das Problem, dass man es erzählen muss.",
+            "source_file": "65-Benedicte.mp3",
+            "start_time": 2218.57,
+            "end_time": 2249.68,
+            "duration": 31.11
+        },
+        {
+            "chunk_id": "d6bf0c88f400a837bdc6b3458154045f",
+            "speaker": "Benedicte",
+            "text": " Deswegen entsteht manchmal der Eindruck, dass Provenienzforschung hierzulande benutzt wird, um Zeit zu gewinnen. Weil eigentlich - Benin-Bronzen, da muss man nicht ewig forschen, um rauszukriegen, wann sie nach Europa kamen. Und wenn Provenienzforschung bedeuten soll, dass man wissen will, ob das in der rechten oder linken Tasche eines Offiziers war, ist es bescheuert. Also das brauchen wir nicht. Was wir brauchen, was die Museen tun müssen, ist, dass sie neben den Objekten erzählen. Denn in dem Augenblick, wo das Publikum, das dadurch aufgeklärte Publikum weiß um die Umstände, dann ist die politische Entscheidung am Ende, Restituieren, nicht mehr sehr weit.",
+            "source_file": "66-Benedicte.mp3",
+            "start_time": 2250.13,
+            "end_time": 2295.52,
+            "duration": 45.39
+        },
+        {
+            "chunk_id": "94b1ecffa94e0382d73d333e5dd6ceb1",
+            "speaker": "Benedicte",
+            "text": "Also solange keiner weiß, wie die Objekte gekommen sind, dann ist es so eine Art Schock. Wieso sollen wir was restituieren? In dem Augenblick, wo man sehr deutlich erfährt, wie viel Blut daran klebt, dann ist es fast eine Selbstverständlichkeit. Und so ist es, glaube ich, dass hoffentlich bald, dass es gar nicht mehr anders gehen wird, als zu restituieren.",
+            "source_file": "67-Benedicte.mp3",
+            "start_time": 2295.56,
+            "end_time": 2326.51,
+            "duration": 30.95
+        },
+        {
+            "chunk_id": "54edbcbc5a817ed89b75180b1f4e9d3e",
+            "speaker": "Wolfgang",
+            "text": " Ich sehe das ähnlich und ich beobachte halt auch Tendenzen in der Zivilgesellschaft, sich mit dem Kolonialismus auseinanderzusetzen, die vorher vor zehn Jahren, vor 20 Jahren so nicht präsent waren. Das sehen wir ja auch bei dem Thema des großen kolonialen Völkermordes an den Herero und Nama im heutigen Namibia, wo vor zehn Jahren ganz wenige Leute überhaupt sich damit beschäftigt haben und wo das Thema jetzt einfach zumindestens in diversen communitys viel präsenter ist. Vor allem auch deswegen, weil die Herero und Nama auch oft noch nach Deutschland gekommen sind und ihre Geschichte erzählt haben.",
+            "source_file": "68-Wolfgang.mp3",
+            "start_time": 2327.69,
+            "end_time": 2368.01,
+            "duration": 40.32
+        },
+        {
+            "chunk_id": "b66930c7414090baa3aeb39662f38e35",
+            "speaker": "Benedicte",
+            "text": " Was kann das Humboldt Forum da für eine Rolle spielen, in diesem Prozess, die Restitution der Kulturgüter voranzutreiben? Was ist von einem Forum zu halten, das in seiner Eröffnungsausstellung genau diese Benin-Bronzen präsentieren will, die, wie du selber sagst, bekanntermaßen in einem blutigen Expeditionsfeldzug geraubt und dann kreuz und quer durch Europa und die Welt verteilt wurden?",
+            "source_file": "69-Benedicte.mp3",
+            "start_time": 2369.06,
+            "end_time": 2399.75,
+            "duration": 30.69
+        },
+        {
+            "chunk_id": "038ed9a6705d505e116f493e58e038f8",
+            "speaker": "Benedicte",
+            "text": "Ich erwarte nichts vom Humboldt Forum. Also ich glaube, die Verantwortlichen dieser Institution haben riesige Schritte gemacht. Das ist keine Frage. Also das, was jetzt nach außen drängt, ist auf jeden Fall besser als das, was vor fünf Jahren formuliert wurde. Aber ich erwarte deswegen nichts, weil ich die Tendenz beobachte... Also das Gebäude selbst ist ja für 100/150 Jahre gebaut. Wahrscheinlich kommt danach die nächste Generation und reißt es wieder ab. Das ist in Berlin ja üblich. Aber 100 Jahre wird das wohl bestehen.",
+            "source_file": "70-Benedicte.mp3",
+            "start_time": 2401.75,
+            "end_time": 2436.64,
+            "duration": 34.89
+        },
+        {
+            "chunk_id": "ac21d91392c3545a7bacd17d602e7e7d",
+            "speaker": "Benedicte",
+            "text": "Und vielleicht ist es so, dass in 20/30 Jahren etwas Gutes da drin passiert. Aber ich glaube, jetzt wird das nicht funktionieren. Und zwar solange das Humboldt Forum sich zum Beispiel als Eröffnungsausstellung eine Ausstellung über Elfenbein ausdenkt.. Elfenbein. Also wenn man die Frage stellt, wie viel Blut klebt an etwas, dann ist Elfenbein, die Inkarnation des Tötens, sozusagen.",
+            "source_file": "71-Benedicte.mp3",
+            "start_time": 2436.64,
+            "end_time": 2469.07,
+            "duration": 32.43
+        },
+        {
+            "chunk_id": "e05e2e9859cf4f0465dc9940236100b4",
+            "speaker": "Benedicte",
+            "text": "Das sind natürlich schöne Kunstwerke, die dadurch entstehen. Und man kann ganz wunderbar von Kulturtransfer zwischen Afrika und Indien und Europa etc. erzählen. Aber das ist so daneben, eigentlich, dass ich glaube, dass die Institution das noch nicht merkt, denn sonst würde sie so eine Ausstellung als Eröffnungsausstellung nicht nehmen. Oder es ist wie wir vorhin erwähnten, psychoanalytisch, das ist die Wahrheit dieser Institution. Sie redet etwas anderes, aber was sie ist und was sie zeigt, sind Elfenbein - Gebeine. Und wir reden gerade jetzt nicht von menschlichen Überresten. Aber es sind tierische Überreste. Wenn man so will.",
+            "source_file": "72-Benedicte.mp3",
+            "start_time": 2469.4,
+            "end_time": 2519.57,
+            "duration": 50.17
+        },
+        {
+            "chunk_id": "a3b3c9e7484eb86c642486aa0428ef29",
+            "speaker": "Benedicte",
+            "text": " Ich glaube deswegen nicht, dass das Humboldt Forum irgendetwas schafft. Auch weil es seit seiner Eröffnung zeigt, wie es den Hang hat, Positionen, die möglicherweise postkolonial sind oder Menschen, die so etwas sagen, einfach sich anzueignen, fast kannibalistisch und das dann in großen Zitaten an die Wand zu bringen. Da drunter steht Felwine Sarr oder was weiß ich. Statt ein eigenes Denken zu entfachen, also nur durch das Schlucken von gegnerischen Positionen wird man nicht besser. Man muss sich selber anstrengen und das, glaube ich, fehlt noch. Aber mal sehen.",
+            "source_file": "73-Benedicte.mp3",
+            "start_time": 2520.2,
+            "end_time": 2579.26,
+            "duration": 59.06
+        },
+        {
+            "chunk_id": "da8bdd499da41de9781cd8fa4a6505a2",
+            "speaker": "Wolfgang",
+            "text": " Das wäre jetzt ein gutes Schlusswort, aber ich würde dich gerne noch eine letzte Frage fragen. Und zwar, ihr habt ja mit Felwine Sarr mehrere afrikanische Staaten bereist. Du hast von ersten Diskussionen in Dakar berichtet.. Wie, würdest du sagen, ist im Moment die Stimmung in den afrikanischen Staaten, die du besucht hast, in denen ihr gesprochen habt? Was sind sozusagen aktuelle Forderungen? Was sind aktuelle Positionen? Vielleicht nicht nur zur Thematik Restitution der geraubten Artefakte, sondern auch zu Kolonialismus insgesamt.",
+            "source_file": "74-Wolfgang.mp3",
+            "start_time": 2578.94,
+            "end_time": 2633.51,
+            "duration": 54.57
+        },
+        {
+            "chunk_id": "8f3d3c5a6f2364f6cd3f96d3a7556e97",
+            "speaker": "Benedicte",
+            "text": "Ja, die Frage kann ich natürlich nicht gut beantworten, weil ich in Berlin bin und nicht tagtäglich beobachte, wie die Stimmung in manchen Städten ist. Da wäre Felwine sicherlich ein besserer Gesprächspartner. Was ich sagen kann: In Frankreich wurde vor einigen Wochen ein Gesetz verabschiedet mit null Gegenstimmen in der Nationalversammlung, damit 26 Objekte in die Republik Benin, also nach Cotonou, zurückgehen. Diese Objekte wurden seit langer Zeit reklamiert. Das heißt, ich kann mir nur vorstellen, dass dort Zufriedenheit herrscht und ein Museum wird gebaut.",
+            "source_file": "75-Benedicte.mp3",
+            "start_time": 2634.01,
+            "end_time": 2671.24,
+            "duration": 37.23
+        },
+        {
+            "chunk_id": "c4cc466be551d75c285b584cab35207b",
+            "speaker": "Benedicte",
+            "text": "Die Objekte gehören jetzt wieder der Republik Benin. Und materiell oder physisch sollen sie im November, im Herbst restituiert werden. Und das ist, glaube ich, eine große Sache. Dasselbe ist passiert...eine Restitution, eine hoch symbolische nur eines Objektes, aber hoch symbolisch, nach Dakar. Und das Objekt, da geht es um ein eine Waffe, die jetzt im Musée des Civilisations Noires in Dakar ausgestellt wird. ",
+            "source_file": "76-Benedicte.mp3",
+            "start_time": 2671.27,
+            "end_time": 2699.77,
+            "duration": 28.5
+        },
+        {
+            "chunk_id": "c1f21d5806ff3c84803e372125490b71",
+            "speaker": "Benedicte",
+            "text": "Und allgemeiner zur Frage der Dekolonisation/Kolonisation. Ich würde sagen - und das ist eine eigene Empfindung, durch die Gespräche, die wir geführt haben - dass da eine, auf Französisch würde man sagen, eine \"jeunesse décomplexée\", also eine Jugend ohne Komplexe da ist. Also diese Haltung des geduckten, ehemals Kolonisierten, die gibt es überhaupt nicht mehr. Die Kritik ist ganz offen und die Kritik Frankreich gegenüber, auch so Sprüche gegen Frankreich an die Wände gesprüht etc., sieht man überall. Und das ist ein Zeichen von Selbstermächtigung.",
+            "source_file": "77-Benedicte.mp3",
+            "start_time": 2699.92,
+            "end_time": 2749.63,
+            "duration": 49.71
+        },
+        {
+            "chunk_id": "5a294ea25722d99b952734d37cd69929",
+            "speaker": "Benedicte",
+            "text": " Und diese Selbstbehauptung beobachte ich auch in den Diasporen, also unter Studierenden, die zum Beispiel mit afrikanischen biografischen Zusammenhängen hier in die Uni kommen. Und wir sehen 20-Jährige wahnsinnig gut informiert über postkoloniale Positionen, Theorien etc. Und das müssen sie sich selber angeeignet haben, denn das lernt man in der Schule hier noch nicht. Und das stimmt sehr, sehr zuversichtlich.",
+            "source_file": "78-Benedicte.mp3",
+            "start_time": 2749.96,
+            "end_time": 2797.54,
+            "duration": 47.58
+        },
+        {
+            "chunk_id": "855006d831e2454f3a333c947694dff8",
+            "speaker": "Benedicte",
+            "text": "Die junge Generation ist wach, ist extrem wach und ich bin immer voller Bewunderung. Ich lasse mich auch gerne belehren von diesen Jüngeren, von ihren Empfindungen. Das ist mein Glück an der Uni, dass ich immer in Kontakt bin mit 20-Jährigen. Wenn ich 60 bin, bin ich immer noch in Kontakt mit 20-Jährigen. Und momentan finde ich die 20-Jährigen super.",
+            "source_file": "79-Benedicte.mp3",
+            "start_time": 2797.57,
+            "end_time": 2822.58,
+            "duration": 25.01
+        },
+        {
+            "chunk_id": "5747ec01acb3a3818fb298893db18653",
+            "speaker": "Wolfgang",
+            "text": "Vielen Dank, Bénédicte Savoy für dieses Gespräch mit einem sehr optimistischen Ausblick. Und wir sprechen uns dann in ein paar Jahren wieder, wenn du 60 bist.",
+            "source_file": "80-Wolfgang.mp3",
+            "start_time": 2824.42,
+            "end_time": 2836.9,
+            "duration": 12.48
+        },
+        {
+            "chunk_id": "38c66ed369ed372ab4dc2b3cd3a77b5f",
+            "speaker": "Benedicte",
+            "text": "Ja, das würde mich sehr, sehr freuen.",
+            "source_file": "81-Benedicte.mp3",
+            "start_time": 2837.41,
+            "end_time": 2839.66,
+            "duration": 2.25
+        },
+        {
+            "chunk_id": "521d1e4a1f2d32cdff79d07bb6366714",
+            "speaker": "Wolfgang",
+            "text": "Vielen Dank und a bientôt!",
+            "source_file": "82-Wolfgang.mp3",
+            "start_time": 2857.43,
+            "end_time": 2911.94,
+            "duration": 54.51
+        }
+    ]
+}
