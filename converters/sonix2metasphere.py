@@ -87,6 +87,10 @@ def main():
         'name': episode_name,
         'source_type': source_type,
         'source_path': source_path,
+        "intro_audio": "00-Intro.mp3",
+        "outro_audio": "9999-Outro.mp3",
+        "intro_text": "",
+        "trigger_warning": "",
         'num_chunks': chunk_number,
         'chunk_sequence': [
         ]
