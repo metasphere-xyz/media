@@ -52,6 +52,7 @@ matched_entities = {
 # episode infos
 
 episodes = {
+    '66bcd542e20cac10a5dd7e6b23c27c5b': 'Restitutionen und eine neue Ethik der Beziehungen mit Bénédicte Savoy und Wolfgang Kaleck',
     '7cd79ca6d4999a07e969b647a82057eb':
         'On artistic and human rights interventions 1/4 with Fred Ritchin and Wolfgang Kaleck',
     '2792e8ea6aa32398937276841d9b2414':
@@ -69,6 +70,10 @@ episodes = {
 }
 
 episode_intros = {
+    '66bcd542e20cac10a5dd7e6b23c27c5b':
+        '''
+Heute im Gespräch: Bénédicte Savoy, Kunsthistorikerin und Professorin an der TU Berlin spricht mit ECCHR-Generalsekretär Wolfgang Kaleck über Restitutionen von geraubter Kolonialkunst und ihre Kritik zur Debatte über das Humboldt Forum in Berlin.
+        ''',
     '7cd79ca6d4999a07e969b647a82057eb':
         '''
 The following talk was part of a panel discussion at the Akademie der Künste in Berlin for the Opening Days of the European Month of Photography (EMOP) in October 2020, in cooperation with ECCHR.
