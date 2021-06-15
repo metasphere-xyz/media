@@ -40,7 +40,12 @@ matched_entities = {
     'Universal Declaration': 'Universal Declaration of Human Rights',
     'ECCHR': 'European Center for Constitutional and Human Rights (ECCHR)',
     'European Center for Constitutional and Human Rights': 'European Center for Constitutional and Human Rights (ECCHR)',
-    'European Center for Constitutional and Human Rights ( ECCHR': 'European Center for Constitutional and Human Rights (ECCHR)'
+    'European Center for Constitutional and Human Rights ( ECCHR': 'European Center for Constitutional and Human Rights (ECCHR)',
+    'Internationale Strafgerichtshof': 'Internationaler Strafgerichtshof',
+    'Staatliche Museum zu Berlin': 'Staatliche Museen zu Berlin',
+    'Deutsche Museumsbundes': 'Deutscher Museumsbund',
+    'Benedicte': 'Bénédicte Savoy',
+    'Bénédicte': 'Bénédicte Savoy'
 }
 
 
