@@ -173,7 +173,6 @@ def create_resource_node_for_chunk(chunk, resource):
         "description": resource["description"]
     }
     if verbose: print(query)
-<<<<<<< HEAD
     if not dry_run:
         response = request(endpoint, query)
         if response["status"] == "success":
@@ -182,7 +181,6 @@ def create_resource_node_for_chunk(chunk, resource):
         else:
             print(cross, database, f"Could not create resource node.")
             return False
-=======
     response = request(endpoint, query)
     if response["status"] == "success":
         print(checkmark, database, f"Created resource node.")
@@ -190,7 +188,6 @@ def create_resource_node_for_chunk(chunk, resource):
     else:
         print(cross, database, f"Could not create resource node.")
         return False
->>>>>>> 0b3a8f4b0fe2c3fdf3ebe73087ab1600f6c0edf9
 
 
 def connect_resource_node_to_chunk(chunk, resource):
@@ -203,7 +200,6 @@ def connect_resource_node_to_chunk(chunk, resource):
         }
     }
     if verbose: print(query)
-<<<<<<< HEAD
     if not dry_run:
         response = request(endpoint, query)
         if response["status"] == "success":
@@ -212,7 +208,6 @@ def connect_resource_node_to_chunk(chunk, resource):
         else:
             print(cross, database, f"Could not connect resource node.")
             return False
-=======
     response = request(endpoint, query)
     if response["status"] == "success":
         print(checkmark, database, f"Successfully connected resource node.")
@@ -220,7 +215,6 @@ def connect_resource_node_to_chunk(chunk, resource):
     else:
         print(cross, database, f"Could not connect resource node.")
         return False
->>>>>>> 0b3a8f4b0fe2c3fdf3ebe73087ab1600f6c0edf9
 
 
 questions = []
