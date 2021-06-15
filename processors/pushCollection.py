@@ -66,7 +66,7 @@ argument_parser.add_argument('--skip-media-check', action='store_true',
                              )
 argument_parser.add_argument('--api-address',
                              help='url of the metasphere api to connect to',
-                             default='http://ecchr.metasphere.xyz:2342'
+                             default='https://ecchr.metasphere.xyz:2342'
                              )
 argument_parser.add_argument('--task', type=str, action='append',
                              help=f"task to execute {recognized_tasks}",
