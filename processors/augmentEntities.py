@@ -27,7 +27,7 @@ argument_parser.add_argument('--create-resource-nodes',
                              help='create resource nodes for entities with links',
                              action="store_true", default=False
                              )
-argument_parser.add_argument('--entity-type',
+argument_parser.add_argument('--entity-types',
                              help='entity types to update',
                              default=augmented_entities
                              )
@@ -76,11 +76,10 @@ verbose = vars(arguments)['verbose']
 very_verbose = vars(arguments)['vv']
 dry_run = vars(arguments)['dry_run']
 
-entity_type = vars(arguments)['entity_type']
-print (entity_type)
-search_pattern = 'e:' + entity_type + ' '
-# for accepted_type_index in range(1, len(entity_type)):
-#     search_pattern += 'OR e:' + entity_type[accepted_type_index] + ' '
+entity_types = vars(arguments)['entity_types']
+search_pattern = 'e:' + entity_types[0] + ' '
+for accepted_type_index in range(1, len(entity_types)):
+    search_pattern += 'OR e:' + entity_types[accepted_type_index] + ' '
 
 print(search_pattern)
 
