@@ -1,24 +1,22 @@
+import logging
+from fuzzy_match import match
+from fuzzy_match import algorithims as algorithms
+from rich import print
+from rich.progress import *
+from collections import OrderedDict
+from py2neo import Graph
+from inquirer.themes import GreenPassion
+import inquirer
+import re
+import wikipedia
+import requests
+import time
+import hashlib
+import json
+import argparse
+import sys
 version_number = '0.3'
 
-import sys
-import argparse
-import json
-import hashlib
-import time
-import requests
-import wikipedia
-import re
-import inquirer
-from inquirer.themes import GreenPassion
-from py2neo import Graph
-
-from collections import OrderedDict
-from rich.progress import *
-from rich import print
-from fuzzy_match import algorithims as algorithms
-from fuzzy_match import match
-
-import logging
 
 def removeDuplicateDictFromList(list):
     return [dict(t) for t in {tuple(d.items()) for d in list}]
@@ -43,6 +41,7 @@ def removeDictInList(list, key, value):
         if item[key] == value:
             list.remove(item)
 
+
 def raise_error(error):
     if(error):
         print("Error: " + str(error))
@@ -63,8 +62,6 @@ def dump_failed_inserts():
     print(f"[red bold]Saved failed insertions to error.log\n")
 
 
-
-
 # --------  argument parser --------
 
 def add_arguments(argument_parser, list):
@@ -77,7 +74,7 @@ def add_arguments(argument_parser, list):
         elif section == "database":
             argument_parser.add_argument('--db-address',
                                          help='url of the metasphere graph database to connect to',
-                                         default='bolt://ecchr.metasphere.xyz:7687/'
+                                         default='bolt://.xyz:7687/'
                                          )
             argument_parser.add_argument('--db-username',
                                          help='username for graph database',
