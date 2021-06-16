@@ -1,19 +1,21 @@
 #!/usr/bin/env python3
 
+from functions import *
+from configuration.ecchr import matched_entities
 version_number = '0.1'
 
-from configuration.ecchr import matched_entities
-from functions import *
 
 augmented_entities = [
     'PERSON',
     'ORG'
 ]
 
+
 def searchDictInList(list, key, value):
     for item in list:
         if item[key] == value:
             return item
+
 
 argument_parser = argparse.ArgumentParser(
     description='Fetches entities from metasphere graph database and lets you augment their properties'
@@ -35,17 +37,25 @@ argument_parser.add_argument('--api-address',
                              help='url of the metasphere api to connect to',
                              default='http://ecchr.metasphere.xyz:2342'
                              )
+# argument_parser.add_argument('--db-address',
+#                              help='url of the metasphere graph database to connect to',
+#                              default='bolt://ecchr.metasphere.xyz:7687/'
+#                              )
 argument_parser.add_argument('--db-address',
                              help='url of the metasphere graph database to connect to',
-                             default='bolt://ecchr.metasphere.xyz:7687/'
+                             default='bolt://levimur.com:7687/'
                              )
 argument_parser.add_argument('--db-username',
                              help='username for graph database',
                              default='neo4j'
                              )
+# argument_parser.add_argument('--db-password',
+#                              help='password for graph database',
+#                              default='burr-query-duel-cherry'
+#                              )
 argument_parser.add_argument('--db-password',
                              help='password for graph database',
-                             default='burr-query-duel-cherry'
+                             default='uWrMiyM885at72'
                              )
 argument_parser.add_argument('--dry-run',
                              help='do not write to graph database',
@@ -90,25 +100,29 @@ arrow = f"[grey]"u'\u21B3 '
 database = f"[white]DATABASE[/white]:"
 
 if very_verbose:
-    print (arguments)
+    print(arguments)
 
 
 def connect_to_graph_database():
-    print (eye, f"[bold]Connecting to[/bold] graph database.")
+    print(eye, f"[bold]Connecting to[/bold] graph database.")
     try:
         graph = Graph(
             db_address,
             auth=(db_username, db_password)
         )
     except:
-        print (cross, f"Can't connect to graph database. Exiting.")
+        print(cross, f"Can't connect to graph database. Exiting.")
         sys.exit(1)
     finally:
-        print (checkmark, f"Connected to graph database.")
+        print(checkmark, f"Connected to graph database.")
     return graph
+
+
 graph = connect_to_graph_database()
 
 failed_requests = []
+
+
 def request(endpoint, query):
     url = api_base_url + endpoint
     if very_verbose:
@@ -125,7 +139,8 @@ def request(endpoint, query):
             )
             if response.status_code == requests.codes.ok:
                 if very_verbose:
-                    print(checkmark, f'Request successful: {response.status_code}')
+                    print(
+                        checkmark, f'Request successful: {response.status_code}')
                 if very_verbose:
                     print(response.json(), highlight=False)
                 return response.json()
@@ -160,6 +175,8 @@ def request(endpoint, query):
 
 
 entities_to_process = []
+
+
 def load_entities_from_database():
     print(database, f"Loading entities from database.")
 
@@ -167,7 +184,8 @@ def load_entities_from_database():
     parameters = {}
     results = [record for record in graph.run(query).data()]
     entities = []
-    if verbose: print(results)
+    if verbose:
+        print(results)
     for record in results:
         entities.append({
             "entity_id": record['e']["entity_id"],
@@ -181,8 +199,10 @@ def load_entities_from_database():
 def save_entity_to_database(entity):
     entity_id = entity["entity_id"]
     entity_name = entity["name"]
-    print(database, f"Saving entity to database: [bold]{entity_name}[/bold] {entity_id}")
-    if verbose: print (entity)
+    print(
+        database, f"Saving entity to database: [bold]{entity_name}[/bold] {entity_id}")
+    if verbose:
+        print(entity)
     endpoint = '/graph/update/entity'
     query = {
         "entity_id": entity["entity_id"],
@@ -205,7 +225,8 @@ def create_resource_node_for_entity(entity, resource):
     hash = hashlib.md5(entity["url"].encode("utf-8"))
     resource_id = hash.hexdigest()
     resource["resource_id"] = resource_id
-    print(eye, database, f"Creating resource node for: [bold]{entity_name}[/bold] {entity_id}")
+    print(eye, database,
+          f"Creating resource node for: [bold]{entity_name}[/bold] {entity_id}")
     endpoint = '/graph/add/resource'
     query = {
         "resource_type": resource["resource_type"],
@@ -214,7 +235,8 @@ def create_resource_node_for_entity(entity, resource):
         "name": resource["name"],
         "description": resource["description"]
     }
-    if verbose: print(query)
+    if verbose:
+        print(query)
     response = request(endpoint, query)
     if response["status"] == "success":
         print(checkmark, database, f"Created resource node.")
@@ -231,10 +253,11 @@ def connect_resource_node_to_entity(entity, resource):
     query = {
         "connect": resource["resource_id"],
         "with": {
-          "id": entity["entity_id"],
+            "id": entity["entity_id"],
         }
     }
-    if verbose: print(query)
+    if verbose:
+        print(query)
     response = request(endpoint, query)
     if response["status"] == "success":
         print(checkmark, database, f"Successfully connected resource node.")
@@ -253,9 +276,10 @@ def create_resource_nodes():
                 "name": entity["url"],
                 "description": entity["text"]
             }
-            created_resource = create_resource_node_for_entity(entity, resource)
+            created_resource = create_resource_node_for_entity(
+                entity, resource)
             if created_resource:
-                print ("XXXXX")
+                print("XXXXX")
                 print(created_resource)
                 connect_resource_node_to_entity(entity, created_resource)
 
@@ -271,6 +295,8 @@ def clean(text):
 
 
 questions = []
+
+
 def inquire_list(message, list):
     questions = [
         inquirer.List(
@@ -297,10 +323,12 @@ def inquire_editor(message, text):
     ]
     return inquirer.prompt(questions)
 
+
 def get_wikipedia_summary(entity_name):
     entries = wikipedia.search(entity_name)
     description = ''
-    if verbose: print(entries)
+    if verbose:
+        print(entries)
 
     if len(entries) > 1:
         answers = inquire_list("Please choose entry:", entries)
@@ -308,11 +336,12 @@ def get_wikipedia_summary(entity_name):
     else:
         entry_name = entity_name
     descriptions = []
-    if verbose: print(eye, f"fetching summary for {entry_name}")
+    if verbose:
+        print(eye, f"fetching summary for {entry_name}")
     try:
         descriptions = wikipedia.summary(entry_name, sentences=2).split("\n")
     except:
-        print (cross, f"Could not fetch description for {entry_name}\n")
+        print(cross, f"Could not fetch description for {entry_name}\n")
         # The suggest() method returns suggestions related to the search query entered as a parameter to it, or it will return "None" if no suggestions were found.
         # > use for entity disambiguation
         # suggestion = wikipedia.suggest(entity_name)
@@ -326,11 +355,12 @@ def get_wikipedia_summary(entity_name):
         if description:
             return description
 
+
 def inquire_submit_text(variable):
     answers = ['yes', 'edit', 'delete']
     answer = "no"
     while answer == "no":
-        print (variable)
+        print(variable)
         answer = inquire_list("Submit?", answers)["list"]
     if answer == "edit":
         variable = inquire_editor("", variable)["editor"]
@@ -341,26 +371,26 @@ def inquire_submit_text(variable):
 
 
 def update_entity(entity):
-    print (f"Updating [bold]" + entity["name"] + "[/bold]")
+    print(f"Updating [bold]" + entity["name"] + "[/bold]")
     answer = inquire_text("Name:", entity["name"])
     entity_name = answer["text"]
     entity["name"] = answer["text"]
-    print (checkmark, f"Setting name to [bold]{entity_name}[/bold]")
-    print (f"Description:\n" + entity["text"])
+    print(checkmark, f"Setting name to [bold]{entity_name}[/bold]")
+    print(f"Description:\n" + entity["text"])
     answer = inquire_list("Accept?", ["yes", "no"])
     if answer["list"] == "yes":
-        print (checkmark, f"Accepted description:")
-        print (entity["text"])
+        print(checkmark, f"Accepted description:")
+        print(entity["text"])
     else:
-        print (f"Fetching description for {entity_name}")
+        print(f"Fetching description for {entity_name}")
         description = get_wikipedia_summary(entity_name)
         print(f"Summary for {entity_name}:")
         entity["text"] = inquire_submit_text(description)
     answer = inquire_text("URL:", entity["url"])
     entity["url"] = answer["text"]
-    print (checkmark, database, "Updating entity")
+    print(checkmark, database, "Updating entity")
     if save_entity_to_database(entity):
-        print (checkmark, database, "Successfully updated entity.")
+        print(checkmark, database, "Successfully updated entity.")
 
 
 entities = load_entities_from_database()
@@ -370,22 +400,20 @@ if update_all:
         update_entity(entity)
 else:
     if task_create_resource_nodes:
-        print ("Creating resource nodes.")
+        print("Creating resource nodes.")
         create_resource_nodes()
     else:
         entity_names = [entity["name"] for entity in entities]
-        answer = inquire_list("Please choose the entity you want to update:", entity_names)
+        answer = inquire_list(
+            "Please choose the entity you want to update:", entity_names)
         entity_to_update = answer["list"]
         entity = searchDictInList(entities, "name", entity_to_update)
         update_entity(entity)
-        print (entity)
-
-
-
+        print(entity)
 
 
 if len(failed_requests) > 1:
     print("\n", cross, f"The following entities had request issues:")
     for entity in failed_requests:
         entity_name = entity["name"]
-        print (f"[red]{entity_name}[/red]")
+        print(f"[red]{entity_name}[/red]")

@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 
-version_number = '0.1'
-
-from configuration.ecchr import matched_entities
 from functions import *
+from configuration.ecchr import matched_entities
+version_number = '0.1'
 
 
 def searchDictInList(list, key, value):
     for item in list:
         if item[key] == value:
             return item
+
 
 def searchDictInListFuzzy(list, key, value):
     items = []
@@ -27,17 +27,25 @@ argument_parser.add_argument('--api-address',
                              help='url of the metasphere api to connect to',
                              default='http://ecchr.metasphere.xyz:2342'
                              )
+# argument_parser.add_argument('--db-address',
+#                              help='url of the metasphere graph database to connect to',
+#                              default='bolt://ecchr.metasphere.xyz:7687/'
+#                              )
 argument_parser.add_argument('--db-address',
                              help='url of the metasphere graph database to connect to',
-                             default='bolt://ecchr.metasphere.xyz:7687/'
+                             default='bolt://levimur.com:7687/'
                              )
 argument_parser.add_argument('--db-username',
                              help='username for graph database',
                              default='neo4j'
                              )
+# argument_parser.add_argument('--db-password',
+#                              help='password for graph database',
+#                              default='burr-query-duel-cherry'
+#                              )
 argument_parser.add_argument('--db-password',
                              help='password for graph database',
-                             default='burr-query-duel-cherry'
+                             default='uWrMiyM885at72'
                              )
 argument_parser.add_argument('--dry-run',
                              help='do not write to graph database',
@@ -73,25 +81,29 @@ arrow = f"[grey]"u'\u21B3 '
 database = f"[white]DATABASE[/white]:"
 
 if very_verbose:
-    print (arguments)
+    print(arguments)
 
 
 def connect_to_graph_database():
-    print (eye, f"[bold]Connecting to[/bold] graph database.")
+    print(eye, f"[bold]Connecting to[/bold] graph database.")
     try:
         graph = Graph(
             db_address,
             auth=(db_username, db_password)
         )
     except:
-        print (cross, f"Can't connect to graph database. Exiting.")
+        print(cross, f"Can't connect to graph database. Exiting.")
         sys.exit(1)
     finally:
-        print (checkmark, f"Connected to graph database.")
+        print(checkmark, f"Connected to graph database.")
     return graph
+
+
 graph = connect_to_graph_database()
 
 failed_requests = []
+
+
 def request(endpoint, query):
     url = api_base_url + endpoint
     if very_verbose:
@@ -108,7 +120,8 @@ def request(endpoint, query):
             )
             if response.status_code == requests.codes.ok:
                 if very_verbose:
-                    print(checkmark, f'Request successful: {response.status_code}')
+                    print(
+                        checkmark, f'Request successful: {response.status_code}')
                 if very_verbose:
                     print(response.json(), highlight=False)
                 return response.json()
@@ -143,18 +156,22 @@ def request(endpoint, query):
 
 
 chunks = []
+
+
 def load_chunks_from_database():
     print(database, f"Loading chunks from database.")
 
     query = f'MATCH (c:Chunk) RETURN c'
     parameters = {}
     results = [record for record in graph.run(query).data()]
-    if verbose: print(results)
+    if verbose:
+        print(results)
     num_chunks = 0
     for record in results:
         num_chunks += 1
         chunks.append(dict(record['c']))
-    print(checkmark, database, f"Successfully loaded {num_chunks} chunks from database.")
+    print(checkmark, database,
+          f"Successfully loaded {num_chunks} chunks from database.")
     return chunks
 
 
@@ -163,7 +180,8 @@ def create_resource_node_for_chunk(chunk, resource):
     hash = hashlib.md5(resource["url"].encode("utf-8"))
     resource_id = hash.hexdigest()
     resource["resource_id"] = resource_id
-    print(eye, database, f"Creating resource node for: [bold]{chunk_id}[/bold]")
+    print(eye, database,
+          f"Creating resource node for: [bold]{chunk_id}[/bold]")
     endpoint = '/graph/add/resource'
     query = {
         "resource_type": resource["resource_type"],
@@ -172,7 +190,8 @@ def create_resource_node_for_chunk(chunk, resource):
         "name": resource["name"],
         "description": resource["description"]
     }
-    if verbose: print(query)
+    if verbose:
+        print(query)
     if not dry_run:
         response = request(endpoint, query)
         if response["status"] == "success":
@@ -189,10 +208,11 @@ def connect_resource_node_to_chunk(chunk, resource):
     query = {
         "connect": resource["resource_id"],
         "with": {
-          "id": chunk["chunk_id"],
+            "id": chunk["chunk_id"],
         }
     }
-    if verbose: print(query)
+    if verbose:
+        print(query)
     if not dry_run:
         response = request(endpoint, query)
         if response["status"] == "success":
@@ -204,6 +224,8 @@ def connect_resource_node_to_chunk(chunk, resource):
 
 
 questions = []
+
+
 def inquire_list(message, list):
     questions = [
         inquirer.List(
@@ -235,7 +257,7 @@ def inquire_submit_text(variable):
     answers = ['yes', 'edit', 'delete']
     answer = "no"
     while answer == "no":
-        print (variable)
+        print(variable)
         answer = inquire_list("Submit?", answers)["list"]
     if answer == "edit":
         variable = inquire_editor("", variable)["editor"]
@@ -248,7 +270,7 @@ def inquire_submit_text(variable):
 chunks = load_chunks_from_database()
 answer = inquire_text("Search chunk")
 search_pattern = answer["text"]
-print (f"Searching for chunks containing {search_pattern}")
+print(f"Searching for chunks containing {search_pattern}")
 chunks_to_process = searchDictInListFuzzy(chunks, "text", search_pattern)
 chunk_ids = []
 if len(chunks_to_process) >= 1:
@@ -260,7 +282,7 @@ if len(chunks_to_process) >= 1:
     answer = inquire_list("Choose chunk to augment", chunk_ids)
     chunk_id = answer["list"]
     chunk = searchDictInList(chunks_to_process, "chunk_id", chunk_id)
-    print (f"Processing {chunk}")
+    print(f"Processing {chunk}")
     keep_processing = "yes"
     resources_to_process = []
     while keep_processing == "yes":
@@ -295,10 +317,9 @@ if len(chunks_to_process) >= 1:
         answer = inquirer.prompt(questions, theme=GreenPassion())
         keep_processing = answer["continue"]
         resources_to_process.append(resource)
-        print (keep_processing)
+        print(keep_processing)
         continue
     if len(resources_to_process) >= 1:
         for resource in resources_to_process:
             create_resource_node_for_chunk(chunk, resource)
             connect_resource_node_to_chunk(chunk, resource)
-
