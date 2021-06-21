@@ -16,7 +16,6 @@ Usage:
 downloadFromSonix.py [-i] <sonix media id>
 
 -i --id <sonix media id>: media id of the transcript location
-```
 
 
 ## converters

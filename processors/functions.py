@@ -67,9 +67,13 @@ def dump_failed_inserts():
 def add_arguments(argument_parser, list):
     for section in list:
         if section == "api":
+            # argument_parser.add_argument('--api-address',
+            #                              help='url of the metasphere api to connect to',
+            #                              default='http://ecchr.metasphere.xyz:2342'
+            #                              )
             argument_parser.add_argument('--api-address',
                                          help='url of the metasphere api to connect to',
-                                         default='http://ecchr.metasphere.xyz:2342'
+                                         default='http://127.0.0.1:5000'
                                          )
         elif section == "database":
             argument_parser.add_argument('--db-address',
@@ -80,9 +84,13 @@ def add_arguments(argument_parser, list):
                                          help='username for graph database',
                                          default='neo4j'
                                          )
+            # argument_parser.add_argument('--db-password',
+            #                              help='password for graph database',
+            #                              default='burr-query-duel-cherry'
+            #                              )
             argument_parser.add_argument('--db-password',
                                          help='password for graph database',
-                                         default='burr-query-duel-cherry'
+                                         default='zigzag-harbor-prelude-brigade-pigment-8784'
                                          )
         elif section == "common":
             argument_parser.add_argument('--dry-run',

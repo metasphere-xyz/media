@@ -1,7 +1,7 @@
 {'entity_name': 'AFRICOM', 'entity_label': 'ORG'}
 {'entity_name': 'Amnesty International', 'entity_label': 'ORG'}
-{'entity_name': 'Andreas Temme', 'entity_label': 'FAC'}
 {'entity_name': 'Andreas Temme', 'entity_label': 'PERSON'}
+{'entity_name': 'Andreas Temme', 'entity_label': 'FAC'}
 {'entity_name': 'Antifa', 'entity_label': 'NORP'}
 {'entity_name': 'Bellingcat', 'entity_label': 'ORG'}
 {'entity_name': 'Cameroon', 'entity_label': 'LOC'}
@@ -9,8 +9,8 @@
 {'entity_name': 'Der Spiegel', 'entity_label': 'PERSON'}
 {'entity_name': 'Europe', 'entity_label': 'LOC'}
 {'entity_name': 'European Parliament', 'entity_label': 'ORG'}
-{'entity_name': 'Forensic Architecture', 'entity_label': 'HARDCODED'}
 {'entity_name': 'Forensic Architecture', 'entity_label': 'ORG'}
+{'entity_name': 'Forensic Architecture', 'entity_label': 'HARDCODED'}
 {'entity_name': 'Frontex', 'entity_label': 'ORG'}
 {'entity_name': 'Gaza', 'entity_label': 'GPE'}
 {'entity_name': 'Germany', 'entity_label': 'GPE'}

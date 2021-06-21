@@ -23,9 +23,13 @@ argument_parser = argparse.ArgumentParser(
     description='Augments chunks in a metasphere graph database with additional resources'
 )
 
+# argument_parser.add_argument('--api-address',
+#                              help='url of the metasphere api to connect to',
+#                              default='http://ecchr.metasphere.xyz:2342'
+#                              )
 argument_parser.add_argument('--api-address',
                              help='url of the metasphere api to connect to',
-                             default='http://ecchr.metasphere.xyz:2342'
+                             default='http://127.0.0.1:5000'
                              )
 # argument_parser.add_argument('--db-address',
 #                              help='url of the metasphere graph database to connect to',
@@ -45,7 +49,7 @@ argument_parser.add_argument('--db-username',
 #                              )
 argument_parser.add_argument('--db-password',
                              help='password for graph database',
-                             default='uWrMiyM885at72'
+                             default='zigzag-harbor-prelude-brigade-pigment-8784'
                              )
 argument_parser.add_argument('--dry-run',
                              help='do not write to graph database',
