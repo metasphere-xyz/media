@@ -3,6 +3,10 @@
     "name": "Locked In and Out: Decolonizing knowledge with Priya Basil and Wolfgang Kaleck",
     "source_type": "audio",
     "source_path": "/podcasts/episodes/46e3411e23979c876587f3e3150399bc",
+    "intro_audio": "00-Intro.mp3",
+    "outro_audio": "9999-Outro.mp3",
+    "intro_text": "",
+    "trigger_warning": "",
     "num_chunks": 74,
     "chunk_sequence": [
         {
@@ -43,9 +47,9 @@
         },
         {
             "chunk_id": "9ab77d5505de25611076a16814b101cd",
-            "speaker": "",
+            "speaker": "Wolfgang",
             "text": " It continues, in a way, a conversation I had with Bénédicte Savoy in another podcast [episode] about robbed arts and also about the fact or the question if the Humboldt Forum can serve at all as a platform, as a forum, for a conversation about the colonial legacy of Europe.",
-            "source_file": "5-.mp3",
+            "source_file": "5-Wolfgang.mp3",
             "start_time": 406.19,
             "end_time": 433.13,
             "duration": 26.94

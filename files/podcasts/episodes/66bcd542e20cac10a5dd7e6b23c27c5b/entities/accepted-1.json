@@ -1,0 +1,474 @@
+{'entity_name': 'Aber', 'entity_label': 'PERSON'}
+{'entity_name': 'Abertausenden', 'entity_label': 'GPE'}
+{'entity_name': 'Abgabe', 'entity_label': 'PERSON'}
+{'entity_name': 'Abomey', 'entity_label': 'PERSON'}
+{'entity_name': 'Abwehr', 'entity_label': 'ORG'}
+{'entity_name': 'Abwesenheit von Objekten', 'entity_label': 'PERSON'}
+{'entity_name': 'Achzigerjahren', 'entity_label': 'PERSON'}
+{'entity_name': 'Afrika', 'entity_label': 'PERSON'}
+{'entity_name': 'Afrika', 'entity_label': 'GPE'}
+{'entity_name': 'Afrikanerinnen', 'entity_label': 'PERSON'}
+{'entity_name': 'Afrikas Kampf um seine Kunst', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Agenda', 'entity_label': 'PRODUCT'}
+{'entity_name': 'Ahnung', 'entity_label': 'ORG'}
+{'entity_name': 'Akademikerinnen', 'entity_label': 'GPE'}
+{'entity_name': 'Akt', 'entity_label': 'PERSON'}
+{'entity_name': 'Akte', 'entity_label': 'GPE'}
+{'entity_name': 'Algerien', 'entity_label': 'GPE'}
+{'entity_name': 'Allgemeine Erklärung', 'entity_label': 'PERSON'}
+{'entity_name': 'Als', 'entity_label': 'ORG'}
+{'entity_name': 'Anerkennung', 'entity_label': 'PERSON'}
+{'entity_name': 'Anerkennung von Unrecht', 'entity_label': 'PERSON'}
+{'entity_name': 'Anliegen', 'entity_label': 'ORG'}
+{'entity_name': 'Anschaffungen', 'entity_label': 'ORG'}
+{'entity_name': 'Anträge', 'entity_label': 'ORG'}
+{'entity_name': 'Antwort', 'entity_label': 'GPE'}
+{'entity_name': 'Arbeit', 'entity_label': 'GPE'}
+{'entity_name': 'Architekturen', 'entity_label': 'PERSON'}
+{'entity_name': 'Archiven', 'entity_label': 'PERSON'}
+{'entity_name': 'Art Schock', 'entity_label': 'PERSON'}
+{'entity_name': 'Artefakte', 'entity_label': 'ORG'}
+{'entity_name': 'Artikel von Michelle Müntefering', 'entity_label': 'PERSON'}
+{'entity_name': 'Asien', 'entity_label': 'GPE'}
+{'entity_name': 'Aufarbeitung', 'entity_label': 'PERSON'}
+{'entity_name': 'Aufmachen', 'entity_label': 'LOC'}
+{'entity_name': 'Aufsätzen', 'entity_label': 'PERSON'}
+{'entity_name': 'Auftrag von Präsident', 'entity_label': 'PERSON'}
+{'entity_name': 'Augen', 'entity_label': 'PERSON'}
+{'entity_name': 'Augenblick', 'entity_label': 'PERSON'}
+{'entity_name': 'Augenhöhe', 'entity_label': 'PERSON'}
+{'entity_name': 'Ausblick', 'entity_label': 'PERSON'}
+{'entity_name': 'Ausflucht', 'entity_label': 'GPE'}
+{'entity_name': 'Auslöser von', 'entity_label': 'PERSON'}
+{'entity_name': 'Ausstellung', 'entity_label': 'PERSON'}
+{'entity_name': 'Austausches', 'entity_label': 'PERSON'}
+{'entity_name': 'Barbareien', 'entity_label': 'PERSON'}
+{'entity_name': 'Bedeutung', 'entity_label': 'PERSON'}
+{'entity_name': 'Bedeutungsumgebung der Objekte zu', 'entity_label': 'WORK_OF_ART'}
+{'entity_name': 'Bedingungen', 'entity_label': 'NORP'}
+{'entity_name': 'Begleiterscheinungen', 'entity_label': 'PERSON'}
+{'entity_name': 'Begriffe', 'entity_label': 'GPE'}
+{'entity_name': 'Begriffsgeschichte', 'entity_label': 'ORG'}
+{'entity_name': 'Beiräte', 'entity_label': 'PERSON'}
+{'entity_name': 'Beispiel', 'entity_label': 'ORG'}
+{'entity_name': 'Belgier', 'entity_label': 'PERSON'}
+{'entity_name': 'Benin', 'entity_label': 'PERSON'}
+{'entity_name': 'Benin 16', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Benin City', 'entity_label': 'GPE'}
+{'entity_name': 'Benin-Bronzen', 'entity_label': 'ORG'}
+{'entity_name': 'Benin-Bronzen', 'entity_label': 'PERSON'}
+{'entity_name': 'Beobachtung', 'entity_label': 'PERSON'}
+{'entity_name': 'Bericht', 'entity_label': 'PERSON'}
+{'entity_name': 'Berichtes', 'entity_label': 'PERSON'}
+{'entity_name': 'Berlin', 'entity_label': 'GPE'}
+{'entity_name': 'Berlin Professorin', 'entity_label': 'GPE'}
+{'entity_name': 'Berlin bin', 'entity_label': 'GPE'}
+{'entity_name': 'Besonderheit', 'entity_label': 'ORG'}
+{'entity_name': 'Bestände', 'entity_label': 'GPE'}
+{'entity_name': 'Bewunderung', 'entity_label': 'GPE'}
+{'entity_name': 'Beziehung', 'entity_label': 'PERSON'}
+{'entity_name': 'Big Bang', 'entity_label': 'PERSON'}
+{'entity_name': 'Blick', 'entity_label': 'PERSON'}
+{'entity_name': 'Briefen', 'entity_label': 'PERSON'}
+{'entity_name': 'Briten', 'entity_label': 'PERSON'}
+{'entity_name': 'Brücken', 'entity_label': 'GPE'}
+{'entity_name': 'Buch Zurückgeben', 'entity_label': 'PERSON'}
+{'entity_name': 'Bénédicte Savoy', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Bénédicte Savoy', 'entity_label': 'ORG'}
+{'entity_name': 'China', 'entity_label': 'GPE'}
+{'entity_name': 'Cola-Dose', 'entity_label': 'PRODUCT'}
+{'entity_name': 'Collège de France', 'entity_label': 'ORG'}
+{'entity_name': 'Cotonou', 'entity_label': 'PERSON'}
+{'entity_name': 'Dakar', 'entity_label': 'PERSON'}
+{'entity_name': 'Dann nach Europa gebracht', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Das Buch', 'entity_label': 'PERSON'}
+{'entity_name': 'Das Erste', 'entity_label': 'PERSON'}
+{'entity_name': 'Dass', 'entity_label': 'PERSON'}
+{'entity_name': 'Debatte', 'entity_label': 'ORG'}
+{'entity_name': 'Debatten', 'entity_label': 'PERSON'}
+{'entity_name': 'Dekolonisation / Kolonisation', 'entity_label': 'ORG'}
+{'entity_name': 'Denken', 'entity_label': 'PERSON'}
+{'entity_name': 'Denken', 'entity_label': 'PRODUCT'}
+{'entity_name': 'Der Bericht', 'entity_label': 'PERSON'}
+{'entity_name': 'Deswegen', 'entity_label': 'ORG'}
+{'entity_name': 'Deutsch', 'entity_label': 'ORG'}
+{'entity_name': 'Deutschland', 'entity_label': 'GPE'}
+{'entity_name': 'Deutung von Restitution', 'entity_label': 'ORG'}
+{'entity_name': 'Diasporen', 'entity_label': 'PERSON'}
+{'entity_name': 'Diese', 'entity_label': 'NORP'}
+{'entity_name': 'Dimension', 'entity_label': 'ORG'}
+{'entity_name': 'Diskussionen', 'entity_label': 'ORG'}
+{'entity_name': 'Diskussionsraum', 'entity_label': 'ORG'}
+{'entity_name': 'Du', 'entity_label': 'ORG'}
+{'entity_name': 'Ein', 'entity_label': 'ORG'}
+{'entity_name': 'Eindruck', 'entity_label': 'PERSON'}
+{'entity_name': 'Eine postkoloniale Niederlage', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Elfenbein', 'entity_label': 'ORG'}
+{'entity_name': 'Emmanuel Macron', 'entity_label': 'PERSON'}
+{'entity_name': 'Empfindung', 'entity_label': 'NORP'}
+{'entity_name': 'Ende des Prozesses', 'entity_label': 'ORG'}
+{'entity_name': 'Energie', 'entity_label': 'PERSON'}
+{'entity_name': 'Entscheidung be Ende', 'entity_label': 'ORG'}
+{'entity_name': 'Entwicklung', 'entity_label': 'PERSON'}
+{'entity_name': 'Erbe', 'entity_label': 'GPE'}
+{'entity_name': 'Erfahrung', 'entity_label': 'ORG'}
+{'entity_name': 'Erforschung', 'entity_label': 'PERSON'}
+{'entity_name': 'Erkenntnisse', 'entity_label': 'PERSON'}
+{'entity_name': 'Ermordung von Patrice Lumumba', 'entity_label': 'ORG'}
+{'entity_name': 'Erwähnung von Gert von Paczensky', 'entity_label': 'WORK_OF_ART'}
+{'entity_name': 'Eröffnung', 'entity_label': 'PERSON'}
+{'entity_name': 'Europa', 'entity_label': 'LOC'}
+{'entity_name': 'Europas', 'entity_label': 'NORP'}
+{'entity_name': 'Europäer', 'entity_label': 'PERSON'}
+{'entity_name': 'Expertenbeiräte', 'entity_label': 'ORG'}
+{'entity_name': 'Expertengremium', 'entity_label': 'PERSON'}
+{'entity_name': 'Explosion', 'entity_label': 'PERSON'}
+{'entity_name': 'Fassung Pour', 'entity_label': 'PERSON'}
+{'entity_name': 'Felwine', 'entity_label': 'NORP'}
+{'entity_name': 'Felwine Sarr', 'entity_label': 'PERSON'}
+{'entity_name': 'Fernsehen', 'entity_label': 'PERSON'}
+{'entity_name': 'Finden in Archiven', 'entity_label': 'WORK_OF_ART'}
+{'entity_name': 'Fluren', 'entity_label': 'PERSON'}
+{'entity_name': 'Flusses Niger', 'entity_label': 'PERSON'}
+{'entity_name': 'Folgen', 'entity_label': 'PERSON'}
+{'entity_name': 'Folter', 'entity_label': 'PERSON'}
+{'entity_name': 'Forderung von Seiten', 'entity_label': 'FAC'}
+{'entity_name': 'Forderungen', 'entity_label': 'ORG'}
+{'entity_name': 'Formen', 'entity_label': 'GPE'}
+{'entity_name': 'Formulierungen', 'entity_label': 'ORG'}
+{'entity_name': 'Forschung', 'entity_label': 'PERSON'}
+{'entity_name': 'Fragen', 'entity_label': 'ORG'}
+{'entity_name': 'Frankfurter Allgemeinen Zeitung', 'entity_label': 'PERSON'}
+{'entity_name': 'Frankreich', 'entity_label': 'PERSON'}
+{'entity_name': 'Frankreich', 'entity_label': 'ORG'}
+{'entity_name': 'Franzosen', 'entity_label': 'PERSON'}
+{'entity_name': 'Französisch', 'entity_label': 'PERSON'}
+{'entity_name': 'Freundin von', 'entity_label': 'PERSON'}
+{'entity_name': 'Ganze', 'entity_label': 'GPE'}
+{'entity_name': 'Gegengabe', 'entity_label': 'ORG'}
+{'entity_name': 'Gegenteil', 'entity_label': 'PERSON'}
+{'entity_name': 'Gehabe', 'entity_label': 'PERSON'}
+{'entity_name': 'Geld', 'entity_label': 'PERSON'}
+{'entity_name': 'Gemeinschaft', 'entity_label': 'ORG'}
+{'entity_name': 'Gericht', 'entity_label': 'GPE'}
+{'entity_name': 'Geschichte', 'entity_label': 'PERSON'}
+{'entity_name': 'Gesetz verabschiedet mit', 'entity_label': 'PERSON'}
+{'entity_name': 'Gespräch', 'entity_label': 'PERSON'}
+{'entity_name': 'Gespräche', 'entity_label': 'PERSON'}
+{'entity_name': 'Gestaltung', 'entity_label': 'PERSON'}
+{'entity_name': 'Globalen Süden', 'entity_label': 'PERSON'}
+{'entity_name': 'Gremien', 'entity_label': 'PERSON'}
+{'entity_name': 'Gremium', 'entity_label': 'GPE'}
+{'entity_name': 'Grenzen', 'entity_label': 'ORG'}
+{'entity_name': 'Grenzen von heute', 'entity_label': 'PERSON'}
+{'entity_name': 'Griechen', 'entity_label': 'GPE'}
+{'entity_name': 'Grund', 'entity_label': 'PERSON'}
+{'entity_name': 'Grunde', 'entity_label': 'ORG'}
+{'entity_name': 'Gruppe Third', 'entity_label': 'PERSON'}
+{'entity_name': 'Gräuel', 'entity_label': 'PERSON'}
+{'entity_name': 'Gutes', 'entity_label': 'PERSON'}
+{'entity_name': 'Haltung', 'entity_label': 'PERSON'}
+{'entity_name': 'Handvoll', 'entity_label': 'PERSON'}
+{'entity_name': 'Hauptakteuren', 'entity_label': 'PERSON'}
+{'entity_name': 'Herbert Ganslmayer', 'entity_label': 'PERSON'}
+{'entity_name': 'Herbert ] Ganslmayr', 'entity_label': 'ORG'}
+{'entity_name': 'Herbst', 'entity_label': 'GPE'}
+{'entity_name': 'Herero', 'entity_label': 'ORG'}
+{'entity_name': 'Hinsicht', 'entity_label': 'PERSON'}
+{'entity_name': 'Hirngespinst von gelangweilten Europäerinnen', 'entity_label': 'PERSON'}
+{'entity_name': 'Humboldt Forum', 'entity_label': 'ORG'}
+{'entity_name': 'Hunderttausenden von Artefakten', 'entity_label': 'PERSON'}
+{'entity_name': 'Hypothesen', 'entity_label': 'PERSON'}
+{'entity_name': 'Hände', 'entity_label': 'ORG'}
+{'entity_name': 'Idee', 'entity_label': 'PERSON'}
+{'entity_name': 'Ideengestaltung', 'entity_label': 'GPE'}
+{'entity_name': 'Illegalität', 'entity_label': 'NORP'}
+{'entity_name': 'Illegalität', 'entity_label': 'ORG'}
+{'entity_name': 'Indien', 'entity_label': 'PERSON'}
+{'entity_name': 'Inkarnation des Tötens', 'entity_label': 'ORG'}
+{'entity_name': 'Institution', 'entity_label': 'ORG'}
+{'entity_name': 'Institutionen', 'entity_label': 'PERSON'}
+{'entity_name': 'Intellektueller', 'entity_label': 'ORG'}
+{'entity_name': 'Internationale Beirat', 'entity_label': 'PERSON'}
+{'entity_name': 'Internationalen Strafgerichtshof', 'entity_label': 'PERSON'}
+{'entity_name': 'Jahr', 'entity_label': 'PERSON'}
+{'entity_name': 'Jahre', 'entity_label': 'GPE'}
+{'entity_name': 'Jahren', 'entity_label': 'PERSON'}
+{'entity_name': 'Jahren Kolonialzeit', 'entity_label': 'PERSON'}
+{'entity_name': 'Jahrhundert', 'entity_label': 'PERSON'}
+{'entity_name': 'Je veux que soient restitués', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Juristen', 'entity_label': 'PERSON'}
+{'entity_name': 'Jüngeren', 'entity_label': 'PERSON'}
+{'entity_name': 'Klasse', 'entity_label': 'PERSON'}
+{'entity_name': 'Klasse', 'entity_label': 'ORG'}
+{'entity_name': 'Kollege aus Kamerun', 'entity_label': 'ORG'}
+{'entity_name': 'Kolonialherren zu denunzieren', 'entity_label': 'PERSON'}
+{'entity_name': 'Kolonialismen', 'entity_label': 'PERSON'}
+{'entity_name': 'Kolonialismus', 'entity_label': 'PERSON'}
+{'entity_name': 'Kolonialkunst', 'entity_label': 'PERSON'}
+{'entity_name': 'Kolonialmächte', 'entity_label': 'PERSON'}
+{'entity_name': 'Kolonialzeit', 'entity_label': 'PERSON'}
+{'entity_name': 'Kolonien', 'entity_label': 'GPE'}
+{'entity_name': 'Kolonisation', 'entity_label': 'ORG'}
+{'entity_name': 'Kolonisierten', 'entity_label': 'PERSON'}
+{'entity_name': 'Komplexe', 'entity_label': 'PERSON'}
+{'entity_name': 'Konferenz', 'entity_label': 'PRODUCT'}
+{'entity_name': 'Kongo', 'entity_label': 'GPE'}
+{'entity_name': 'Kontakt', 'entity_label': 'GPE'}
+{'entity_name': 'Kontakt bin', 'entity_label': 'GPE'}
+{'entity_name': 'Kontext', 'entity_label': 'ORG'}
+{'entity_name': 'Kontext', 'entity_label': 'GPE'}
+{'entity_name': 'Kontexten', 'entity_label': 'PERSON'}
+{'entity_name': 'Kraft', 'entity_label': 'ORG'}
+{'entity_name': 'Kraftakt', 'entity_label': 'PERSON'}
+{'entity_name': 'Kraftnahrung', 'entity_label': 'PERSON'}
+{'entity_name': 'Kriegen', 'entity_label': 'PERSON'}
+{'entity_name': 'Kriegsführung', 'entity_label': 'GPE'}
+{'entity_name': 'Kritik', 'entity_label': 'PERSON'}
+{'entity_name': 'Kritik Frankreich', 'entity_label': 'PERSON'}
+{'entity_name': 'Kräftemessen', 'entity_label': 'PRODUCT'}
+{'entity_name': 'Kultur', 'entity_label': 'PERSON'}
+{'entity_name': 'Kulturen', 'entity_label': 'PERSON'}
+{'entity_name': 'Kulturgegenstände', 'entity_label': 'ORG'}
+{'entity_name': 'Kulturgüter', 'entity_label': 'PERSON'}
+{'entity_name': 'Kulturgüter', 'entity_label': 'GPE'}
+{'entity_name': 'Kunst', 'entity_label': 'PERSON'}
+{'entity_name': 'Kunst', 'entity_label': 'GPE'}
+{'entity_name': 'Kunst aus', 'entity_label': 'PERSON'}
+{'entity_name': 'Kunsthandel', 'entity_label': 'PERSON'}
+{'entity_name': 'Kunstwerke', 'entity_label': 'PERSON'}
+{'entity_name': 'Kurzem', 'entity_label': 'ORG'}
+{'entity_name': 'Körper', 'entity_label': 'ORG'}
+{'entity_name': 'Künstler', 'entity_label': 'PERSON'}
+{'entity_name': 'Leeres', 'entity_label': 'PERSON'}
+{'entity_name': 'Legalität', 'entity_label': 'ORG'}
+{'entity_name': 'Leitfaden', 'entity_label': 'GPE'}
+{'entity_name': 'Leonardo von', 'entity_label': 'PERSON'}
+{'entity_name': 'Leute', 'entity_label': 'FAC'}
+{'entity_name': 'Literatur', 'entity_label': 'PERSON'}
+{'entity_name': 'Logik', 'entity_label': 'NORP'}
+{'entity_name': 'Logiken', 'entity_label': 'ORG'}
+{'entity_name': 'Ländern', 'entity_label': 'NORP'}
+{'entity_name': 'Ländern', 'entity_label': 'ORG'}
+{'entity_name': 'Macron', 'entity_label': 'PERSON'}
+{'entity_name': 'Mal', 'entity_label': 'PERSON'}
+{'entity_name': 'Malen', 'entity_label': 'ORG'}
+{'entity_name': 'Mali', 'entity_label': 'GPE'}
+{'entity_name': 'Mann', 'entity_label': 'PERSON'}
+{'entity_name': 'Menschenrechte verabschiedet', 'entity_label': 'PERSON'}
+{'entity_name': 'Menschenrechtskonventionen', 'entity_label': 'PERSON'}
+{'entity_name': 'Menschheit', 'entity_label': 'ORG'}
+{'entity_name': 'Menschlichkeit', 'entity_label': 'PERSON'}
+{'entity_name': 'Mitte', 'entity_label': 'NORP'}
+{'entity_name': 'Mitteln', 'entity_label': 'PERSON'}
+{'entity_name': 'Monate', 'entity_label': 'ORG'}
+{'entity_name': 'Monaten', 'entity_label': 'PERSON'}
+{'entity_name': 'Museen', 'entity_label': 'ORG'}
+{'entity_name': 'Museen', 'entity_label': 'PERSON'}
+{'entity_name': 'Museum', 'entity_label': 'ORG'}
+{'entity_name': 'Museumsbesucher', 'entity_label': 'PERSON'}
+{'entity_name': 'Museumsdirektorinnen', 'entity_label': 'PERSON'}
+{'entity_name': 'Museumslandschaft', 'entity_label': 'PERSON'}
+{'entity_name': 'Museumsleitfaden', 'entity_label': 'PERSON'}
+{'entity_name': 'Museumswelt', 'entity_label': 'PERSON'}
+{'entity_name': 'Musée \xa0 des Civilisations Noires', 'entity_label': 'PERSON'}
+{'entity_name': 'Möglichkeiten', 'entity_label': 'PERSON'}
+{'entity_name': 'Möglichkeiten von Zirkulation', 'entity_label': 'PERSON'}
+{'entity_name': 'Naivität', 'entity_label': 'PERSON'}
+{'entity_name': 'Nama', 'entity_label': 'ORG'}
+{'entity_name': 'Namibia', 'entity_label': 'GPE'}
+{'entity_name': 'Nationalversammlung', 'entity_label': 'GPE'}
+{'entity_name': 'Negerkunst', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Nein', 'entity_label': 'PERSON'}
+{'entity_name': 'Niamey', 'entity_label': 'ORG'}
+{'entity_name': 'Niederlage', 'entity_label': 'ORG'}
+{'entity_name': 'Niederländer', 'entity_label': 'PERSON'}
+{'entity_name': 'Nigeria', 'entity_label': 'GPE'}
+{'entity_name': 'Objekte', 'entity_label': 'PERSON'}
+{'entity_name': 'Objektes', 'entity_label': 'ORG'}
+{'entity_name': 'Orte', 'entity_label': 'PERSON'}
+{'entity_name': 'Ouagadougou', 'entity_label': 'GPE'}
+{'entity_name': 'Paris', 'entity_label': 'GPE'}
+{'entity_name': 'Paulin Joachim', 'entity_label': 'GPE'}
+{'entity_name': 'Personen', 'entity_label': 'ORG'}
+{'entity_name': 'Politiker', 'entity_label': 'PERSON'}
+{'entity_name': 'Polyphonie', 'entity_label': 'PERSON'}
+{'entity_name': 'Positionen', 'entity_label': 'PERSON'}
+{'entity_name': 'Positionierungen', 'entity_label': 'PERSON'}
+{'entity_name': 'Pour une nouvelle éthique relationnelle', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Problem', 'entity_label': 'GPE'}
+{'entity_name': 'Provenienz', 'entity_label': 'PERSON'}
+{'entity_name': 'Provenienzforschung', 'entity_label': 'PERSON'}
+{'entity_name': 'Präsident', 'entity_label': 'ORG'}
+{'entity_name': 'Punkt', 'entity_label': 'ORG'}
+{'entity_name': 'Rache', 'entity_label': 'ORG'}
+{'entity_name': 'Radio', 'entity_label': 'ORG'}
+{'entity_name': 'Raffael', 'entity_label': 'GPE'}
+{'entity_name': 'Rahmen', 'entity_label': 'NORP'}
+{'entity_name': 'Rahmen von Festivals', 'entity_label': 'PERSON'}
+{'entity_name': 'Raub', 'entity_label': 'PERSON'}
+{'entity_name': 'Raum', 'entity_label': 'ORG'}
+{'entity_name': 'Recht', 'entity_label': 'GPE'}
+{'entity_name': 'Rechtskategorien', 'entity_label': 'ORG'}
+{'entity_name': 'Rechtsordnungen', 'entity_label': 'ORG'}
+{'entity_name': 'Rechtsvorstellung', 'entity_label': 'PERSON'}
+{'entity_name': 'Rede', 'entity_label': 'ORG'}
+{'entity_name': 'Rede', 'entity_label': 'PERSON'}
+{'entity_name': 'Rede Je', 'entity_label': 'PERSON'}
+{'entity_name': 'Regel', 'entity_label': 'PERSON'}
+{'entity_name': 'Regelungen', 'entity_label': 'PERSON'}
+{'entity_name': 'Regierungen', 'entity_label': 'ORG'}
+{'entity_name': "Rendez-nous\xa0l'art\xa0nègre", 'entity_label': 'HARDCODED'}
+{'entity_name': 'Republik Benin', 'entity_label': 'PERSON'}
+{'entity_name': 'Restituieren', 'entity_label': 'PERSON'}
+{'entity_name': 'Restitution', 'entity_label': 'ORG'}
+{'entity_name': 'Restitution', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Restitution-Denken impliziert mehr als nur eine Erforschung der Vergangenheit', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Restitutionen', 'entity_label': 'ORG'}
+{'entity_name': 'Rhetorik', 'entity_label': 'PERSON'}
+{'entity_name': 'Rolle', 'entity_label': 'PERSON'}
+{'entity_name': 'Rätsel', 'entity_label': 'ORG'}
+{'entity_name': 'Sache', 'entity_label': 'ORG'}
+{'entity_name': 'Sachen', 'entity_label': 'GPE'}
+{'entity_name': 'Sammlungen', 'entity_label': 'ORG'}
+{'entity_name': 'Sammlungsgeschichte von Museen', 'entity_label': 'PERSON'}
+{'entity_name': 'Sammlungsgut', 'entity_label': 'PERSON'}
+{'entity_name': 'Satz', 'entity_label': 'PERSON'}
+{'entity_name': 'Schlusswort', 'entity_label': 'GPE'}
+{'entity_name': 'Schlüsselbegriffe', 'entity_label': 'PERSON'}
+{'entity_name': 'Schritte', 'entity_label': 'NORP'}
+{'entity_name': 'Schwarze Menschen', 'entity_label': 'PERSON'}
+{'entity_name': 'Sechzigerjahre', 'entity_label': 'GPE'}
+{'entity_name': 'Sechzigerjahre von', 'entity_label': 'PERSON'}
+{'entity_name': 'Seit', 'entity_label': 'PERSON'}
+{'entity_name': 'Seite', 'entity_label': 'PERSON'}
+{'entity_name': 'Selbstbehauptung', 'entity_label': 'GPE'}
+{'entity_name': 'Selbstverständlichkeit', 'entity_label': 'ORG'}
+{'entity_name': 'Siebzigerjahre-Debatte Aber', 'entity_label': 'ORG'}
+{'entity_name': 'Siebzigerjahren', 'entity_label': 'PERSON'}
+{'entity_name': 'Sinne von Benin', 'entity_label': 'PERSON'}
+{'entity_name': 'Skelett', 'entity_label': 'PERSON'}
+{'entity_name': 'Spiel', 'entity_label': 'GPE'}
+{'entity_name': 'Sprüche', 'entity_label': 'ORG'}
+{'entity_name': 'Staaten', 'entity_label': 'ORG'}
+{'entity_name': 'Staatlichen Museen', 'entity_label': 'PERSON'}
+{'entity_name': 'Standardwerk von Gert von Paczensky', 'entity_label': 'PERSON'}
+{'entity_name': 'Statt', 'entity_label': 'PERSON'}
+{'entity_name': 'Stelle', 'entity_label': 'PERSON'}
+{'entity_name': 'Stimmung', 'entity_label': 'PERSON'}
+{'entity_name': 'Straße', 'entity_label': 'GPE'}
+{'entity_name': 'Studierenden', 'entity_label': 'ORG'}
+{'entity_name': 'Subjekte', 'entity_label': 'GPE'}
+{'entity_name': 'Sätze', 'entity_label': 'PERSON'}
+{'entity_name': 'Süddeutschen Zeitung', 'entity_label': 'PERSON'}
+{'entity_name': 'Tasche', 'entity_label': 'ORG'}
+{'entity_name': 'Technischen Universität', 'entity_label': 'PERSON'}
+{'entity_name': 'Teil', 'entity_label': 'PERSON'}
+{'entity_name': 'Teilen', 'entity_label': 'GPE'}
+{'entity_name': 'Tendenzen', 'entity_label': 'ORG'}
+{'entity_name': 'Terminologie des Begriffs', 'entity_label': 'PERSON'}
+{'entity_name': 'Themen', 'entity_label': 'GPE'}
+{'entity_name': 'Theorien', 'entity_label': 'GPE'}
+{'entity_name': 'Titel', 'entity_label': 'ORG'}
+{'entity_name': 'Traditionen', 'entity_label': 'PERSON'}
+{'entity_name': 'Tschernobyl', 'entity_label': 'PERSON'}
+{'entity_name': 'Umgang', 'entity_label': 'PERSON'}
+{'entity_name': 'Umstände', 'entity_label': 'ORG'}
+{'entity_name': 'Unabhängigkeit', 'entity_label': 'ORG'}
+{'entity_name': 'Unabhängigkeiten', 'entity_label': 'ORG'}
+{'entity_name': 'Universalismus', 'entity_label': 'PERSON'}
+{'entity_name': 'Universalismus von Afrika', 'entity_label': 'PERSON'}
+{'entity_name': 'Ventil', 'entity_label': 'PERSON'}
+{'entity_name': 'Verantwortlichen', 'entity_label': 'ORG'}
+{'entity_name': 'Verbrechen', 'entity_label': 'PERSON'}
+{'entity_name': 'Vergangenheit', 'entity_label': 'ORG'}
+{'entity_name': 'Vergangenheit', 'entity_label': 'PERSON'}
+{'entity_name': 'Verständnis', 'entity_label': 'NORP'}
+{'entity_name': 'Verwaltungsjuristen', 'entity_label': 'ORG'}
+{'entity_name': 'Vielen Dank', 'entity_label': 'PERSON'}
+{'entity_name': 'Vielstimmigkeit', 'entity_label': 'GPE'}
+{'entity_name': 'Vision', 'entity_label': 'NORP'}
+{'entity_name': 'Vor', 'entity_label': 'PERSON'}
+{'entity_name': 'Vorschlag', 'entity_label': 'GPE'}
+{'entity_name': 'Vorschlag', 'entity_label': 'PERSON'}
+{'entity_name': 'Vorträgen', 'entity_label': 'ORG'}
+{'entity_name': 'Völkermordes', 'entity_label': 'PERSON'}
+{'entity_name': 'Völkerrecht', 'entity_label': 'ORG'}
+{'entity_name': 'Waffe', 'entity_label': 'GPE'}
+{'entity_name': 'Wahrheit', 'entity_label': 'ORG'}
+{'entity_name': 'Wahrheit', 'entity_label': 'GPE'}
+{'entity_name': 'Wand', 'entity_label': 'GPE'}
+{'entity_name': 'Weise', 'entity_label': 'PERSON'}
+{'entity_name': 'Welt', 'entity_label': 'PERSON'}
+{'entity_name': 'Wenn', 'entity_label': 'ORG'}
+{'entity_name': 'Werkstatt', 'entity_label': 'ORG'}
+{'entity_name': 'Werkzeug', 'entity_label': 'PERSON'}
+{'entity_name': 'Wie', 'entity_label': 'PERSON'}
+{'entity_name': 'Wiederaneignung', 'entity_label': 'PERSON'}
+{'entity_name': 'Wir Afrikaner', 'entity_label': 'PERSON'}
+{'entity_name': 'Wissen Sie', 'entity_label': 'PERSON'}
+{'entity_name': 'Wissenschaftlerin', 'entity_label': 'NORP'}
+{'entity_name': 'Wissenschaftlerin', 'entity_label': 'PERSON'}
+{'entity_name': 'Wort', 'entity_label': 'GPE'}
+{'entity_name': 'Wort Restitution', 'entity_label': 'ORG'}
+{'entity_name': 'Wörtern', 'entity_label': 'ORG'}
+{'entity_name': 'Zeichen von Selbstermächtigung', 'entity_label': 'PERSON'}
+{'entity_name': 'Zeit', 'entity_label': 'PERSON'}
+{'entity_name': 'Zeit', 'entity_label': 'GPE'}
+{'entity_name': 'Zeitung', 'entity_label': 'GPE'}
+{'entity_name': 'Zentren des Universalismus', 'entity_label': 'ORG'}
+{'entity_name': 'Zivilgesellschaft', 'entity_label': 'PERSON'}
+{'entity_name': 'Zufriedenheit', 'entity_label': 'GPE'}
+{'entity_name': 'Zukunft', 'entity_label': 'ORG'}
+{'entity_name': 'Zum Teil', 'entity_label': 'PERSON'}
+{'entity_name': 'Zum Thema Provenienzforschung', 'entity_label': 'PERSON'}
+{'entity_name': 'Zunächst von Künstlern', 'entity_label': 'PERSON'}
+{'entity_name': 'Zurück-Sammeln', 'entity_label': 'PERSON'}
+{'entity_name': 'Zurückgeben', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Zusammenhängen', 'entity_label': 'ORG'}
+{'entity_name': 'Zweiecks-Verhältnis', 'entity_label': 'ORG'}
+{'entity_name': 'Zweiten Weltkrieg', 'entity_label': 'PERSON'}
+{'entity_name': 'Zügen', 'entity_label': 'PERSON'}
+{'entity_name': 'anti-Völkermord-Konvention', 'entity_label': 'PERSON'}
+{'entity_name': 'art', 'entity_label': 'PERSON'}
+{'entity_name': 'bin', 'entity_label': 'PERSON'}
+{'entity_name': 'dasselbe', 'entity_label': 'ORG'}
+{'entity_name': 'die Wahl des Wortes', 'entity_label': 'ORG'}
+{'entity_name': 'die Zeit', 'entity_label': 'PERSON'}
+{'entity_name': 'die objekte', 'entity_label': 'PERSON'}
+{'entity_name': 'diskurse', 'entity_label': 'PERSON'}
+{'entity_name': 'expedition', 'entity_label': 'ORG'}
+{'entity_name': 'forderung', 'entity_label': 'PERSON'}
+{'entity_name': 'gegenstimman', 'entity_label': 'GPE'}
+{'entity_name': 'gegenzug', 'entity_label': 'WORK_OF_ART'}
+{'entity_name': 'glück', 'entity_label': 'PERSON'}
+{'entity_name': 'hypothese', 'entity_label': 'NORP'}
+{'entity_name': 'ihr', 'entity_label': 'PERSON'}
+{'entity_name': 'jeunesse décomplexée', 'entity_label': 'HARDCODED'}
+{'entity_name': 'konsequenzen', 'entity_label': 'PERSON'}
+{'entity_name': 'kraftnahrung', 'entity_label': 'PERSON'}
+{'entity_name': 'kunst', 'entity_label': 'NORP'}
+{'entity_name': 'leute', 'entity_label': 'GPE'}
+{'entity_name': 'meiner', 'entity_label': 'PERSON'}
+{'entity_name': 'museum', 'entity_label': 'ORG'}
+{'entity_name': 'nacht', 'entity_label': 'PERSON'}
+{'entity_name': 'nicht', 'entity_label': 'ORG'}
+{'entity_name': 'objekte', 'entity_label': 'PERSON'}
+{'entity_name': 'offizier war', 'entity_label': 'LAW'}
+{'entity_name': 'orchester an Stimmen', 'entity_label': 'ORG'}
+{'entity_name': 'r e', 'entity_label': 'HARDCODED'}
+{'entity_name': 'staffage', 'entity_label': 'ORG'}
+{'entity_name': 'teil', 'entity_label': 'ORG'}
+{'entity_name': 'verbrechen', 'entity_label': 'PERSON'}
+{'entity_name': 'von Kulturschaffenden', 'entity_label': 'PERSON'}
+{'entity_name': 'von Kulturtransfer', 'entity_label': 'PERSON'}
+{'entity_name': 'von Mali', 'entity_label': 'PERSON'}
+{'entity_name': 'von Objekten', 'entity_label': 'PERSON'}
+{'entity_name': 'von Recht', 'entity_label': 'PERSON'}
+{'entity_name': 'von Stapeln von Presseartikeln', 'entity_label': 'PERSON'}
+{'entity_name': 'von menschlichen überresten', 'entity_label': 'PERSON'}
+{'entity_name': 'völkerrecht war', 'entity_label': 'ORG'}
+{'entity_name': 'warum', 'entity_label': 'PERSON'}
+{'entity_name': 'wieder', 'entity_label': 'HARDCODED'}
+{'entity_name': 'zitaten', 'entity_label': 'PERSON'}
+{'entity_name': 'Öffentlichkeit', 'entity_label': 'ORG'}

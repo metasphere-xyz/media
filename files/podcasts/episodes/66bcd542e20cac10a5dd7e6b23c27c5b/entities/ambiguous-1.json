@@ -1,0 +1,286 @@
+{'entity_name': 'Bénédicte', 'entity_label': 'WORK_OF_ART'}
+{'entity_name': 'Bénédicte Savoy', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Humboldt Forums', 'entity_label': 'ORG'}
+{'entity_name': 'Humboldt Forum', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Provenienz von Objekten', 'entity_label': 'PERSON'}
+{'entity_name': 'Provenienz', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Provenienz', 'entity_label': 'PERSON'}
+{'entity_name': 'Provenienz von Objekten', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Wissenschaftlerin', 'entity_label': 'PERSON'}
+{'entity_name': 'Wissenschaftlerin', 'entity_label': 'NORP'}
+
+
+{'entity_name': 'Wissenschaftlerin', 'entity_label': 'NORP'}
+{'entity_name': 'Wissenschaftlerin', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Kunstgeschichte', 'entity_label': 'PERSON'}
+{'entity_name': 'Geschichte', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Standardwerk von Gert von Paczensky', 'entity_label': 'PERSON'}
+{'entity_name': 'Erwähnung von Gert von Paczensky', 'entity_label': 'WORK_OF_ART'}
+
+
+{'entity_name': 'Herbert ] Ganslmayr', 'entity_label': 'ORG'}
+{'entity_name': 'Herbert Ganslmayer', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Forderung von Seiten', 'entity_label': 'FAC'}
+{'entity_name': 'forderung', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'forderung', 'entity_label': 'PERSON'}
+{'entity_name': 'Forderung von Seiten', 'entity_label': 'FAC'}
+
+
+{'entity_name': 'Erwähnung von Gert von Paczensky', 'entity_label': 'WORK_OF_ART'}
+{'entity_name': 'Standardwerk von Gert von Paczensky', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Herbert Ganslmayer', 'entity_label': 'PERSON'}
+{'entity_name': 'Herbert ] Ganslmayr', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Felwine Sarr', 'entity_label': 'PERSON'}
+{'entity_name': 'Felwine', 'entity_label': 'NORP'}
+
+
+{'entity_name': 'Felwine', 'entity_label': 'NORP'}
+{'entity_name': 'Felwine Sarr', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Intellektueller', 'entity_label': 'ORG'}
+{'entity_name': 'Intellektueller des Black Paris', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'von Staaten', 'entity_label': 'PERSON'}
+{'entity_name': 'Staaten', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Intellektueller des Black Paris', 'entity_label': 'ORG'}
+{'entity_name': 'Intellektueller', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Unabhängigkeiten', 'entity_label': 'PERSON'}
+{'entity_name': 'Unabhängigkeit', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Kraftnahrung', 'entity_label': 'PERSON'}
+{'entity_name': 'kraftnahrung', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'kraftnahrung', 'entity_label': 'PERSON'}
+{'entity_name': 'Kraftnahrung', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Kunst', 'entity_label': 'GPE'}
+{'entity_name': 'kunst', 'entity_label': 'NORP'}
+
+
+{'entity_name': 'kunst', 'entity_label': 'NORP'}
+{'entity_name': 'Kunst', 'entity_label': 'GPE'}
+
+
+{'entity_name': 'Deutsch', 'entity_label': 'ORG'}
+{'entity_name': 'Deutschland', 'entity_label': 'GPE'}
+
+
+{'entity_name': 'Deutschland', 'entity_label': 'GPE'}
+{'entity_name': 'Deutsch', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Vergangenheit', 'entity_label': 'PERSON'}
+{'entity_name': 'Vergangenheit', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Beziehungen', 'entity_label': 'ORG'}
+{'entity_name': 'Beziehung', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Akt von Identitätszuschreibung von Kulturgütern', 'entity_label': 'PERSON'}
+{'entity_name': 'Kulturgüter', 'entity_label': 'GPE'}
+
+
+{'entity_name': 'Deutung von Restitution', 'entity_label': 'ORG'}
+{'entity_name': 'Restitutionen', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Beziehung', 'entity_label': 'PERSON'}
+{'entity_name': 'Beziehungen', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Restitutionen', 'entity_label': 'ORG'}
+{'entity_name': 'Deutung von Restitution', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Europäer', 'entity_label': 'PERSON'}
+{'entity_name': 'Europäerin', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Beziehungen', 'entity_label': 'ORG'}
+{'entity_name': 'Beziehung', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Europäerin', 'entity_label': 'PERSON'}
+{'entity_name': 'Europäer', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Afrika', 'entity_label': 'PERSON'}
+{'entity_name': 'Afrika', 'entity_label': 'GPE'}
+
+
+{'entity_name': 'Beziehung', 'entity_label': 'PERSON'}
+{'entity_name': 'Beziehungen', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Afrika', 'entity_label': 'GPE'}
+{'entity_name': 'Afrika', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Institutionen', 'entity_label': 'PERSON'}
+{'entity_name': 'Restitutionen', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Restitutionen', 'entity_label': 'ORG'}
+{'entity_name': 'Institutionen', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Berlinerin', 'entity_label': 'PERSON'}
+{'entity_name': 'Berlin', 'entity_label': 'GPE'}
+
+
+{'entity_name': 'beispiel', 'entity_label': 'ORG'}
+{'entity_name': 'Beispiel', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'von Bamako zum Beispiel', 'entity_label': 'PERSON'}
+{'entity_name': 'Beispiel', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'kulturen', 'entity_label': 'PERSON'}
+{'entity_name': 'Kulturen', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'vergangenheit', 'entity_label': 'ORG'}
+{'entity_name': 'Vergangenheit', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Akten von Verbrechen', 'entity_label': 'PERSON'}
+{'entity_name': 'verbrechen', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Benin-Bronzen', 'entity_label': 'ORG'}
+{'entity_name': 'Benin-Bronzen', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Benin-Bronzen', 'entity_label': 'PERSON'}
+{'entity_name': 'Benin-Bronzen', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Kriegsverbrechen', 'entity_label': 'PERSON'}
+{'entity_name': 'verbrechen', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Vision von Restitution , Zirkulation', 'entity_label': 'ORG'}
+{'entity_name': 'Wort Restitution', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Vergangenheit', 'entity_label': 'PERSON'}
+{'entity_name': 'vergangenheit', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Verbrechen', 'entity_label': 'PERSON'}
+{'entity_name': 'verbrechen', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Restitution', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Wort Restitution', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Anerkennung von von einer furchtbaren', 'entity_label': 'PERSON'}
+{'entity_name': 'Anerkennung von Unrecht', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Hypothesen', 'entity_label': 'PERSON'}
+{'entity_name': 'hypothese', 'entity_label': 'NORP'}
+
+
+{'entity_name': 'Personen', 'entity_label': 'ORG'}
+{'entity_name': 'Positionen', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Anerkennung', 'entity_label': 'PERSON'}
+{'entity_name': 'Anerkennung von von einer furchtbaren', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'hypothese', 'entity_label': 'NORP'}
+{'entity_name': 'Hypothesen', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Illegalität', 'entity_label': 'NORP'}
+{'entity_name': 'Illegalität', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Illegalität', 'entity_label': 'ORG'}
+{'entity_name': 'Illegalität', 'entity_label': 'NORP'}
+
+
+{'entity_name': 'Völkerrecht', 'entity_label': 'ORG'}
+{'entity_name': 'völkerrecht war', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Rechtsvorstellungen', 'entity_label': 'ORG'}
+{'entity_name': 'Rechtsvorstellung', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'völkerrecht war', 'entity_label': 'ORG'}
+{'entity_name': 'Völkerrecht', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Rechtsvorstellung', 'entity_label': 'PERSON'}
+{'entity_name': 'Rechtsvorstellungen', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Eröffnungsausstellung', 'entity_label': 'NORP'}
+{'entity_name': 'Ausstellung', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Elfenbein', 'entity_label': 'ORG'}
+{'entity_name': 'Elfenbein-Gebeine', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Elfenbein-Gebeine', 'entity_label': 'ORG'}
+{'entity_name': 'Elfenbein', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Schlucken von gegnerischen Positionen', 'entity_label': 'PERSON'}
+{'entity_name': 'Positionen', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Thematik Restitution', 'entity_label': 'ORG'}
+{'entity_name': 'Restitution', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Felwine', 'entity_label': 'NORP'}
+{'entity_name': 'Felwine Sarr', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'Restitution', 'entity_label': 'ORG'}
+{'entity_name': 'Thematik Restitution', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Empfindung', 'entity_label': 'NORP'}
+{'entity_name': 'von ihren Empfindungen', 'entity_label': 'PERSON'}
+
+
+{'entity_name': 'von ihren Empfindungen', 'entity_label': 'PERSON'}
+{'entity_name': 'Empfindung', 'entity_label': 'NORP'}

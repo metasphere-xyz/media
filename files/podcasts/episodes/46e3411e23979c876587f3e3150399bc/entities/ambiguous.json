@@ -1,0 +1,34 @@
+{'entity_name': 'german', 'entity_label': 'NORP'}
+{'entity_name': 'Germany', 'entity_label': 'GPE'}
+
+
+{'entity_name': 'Nigeria', 'entity_label': 'GPE'}
+{'entity_name': 'nigerian', 'entity_label': 'NORP'}
+
+
+{'entity_name': 'nigerian', 'entity_label': 'NORP'}
+{'entity_name': 'Nigeria', 'entity_label': 'GPE'}
+
+
+{'entity_name': 'Benin Bronzes', 'entity_label': 'LAW'}
+{'entity_name': 'Benin Bronzes', 'entity_label': 'ORG'}
+
+
+{'entity_name': 'Argentina', 'entity_label': 'GPE'}
+{'entity_name': 'argentinian', 'entity_label': 'NORP'}
+
+
+{'entity_name': 'das Wagnis der Öffentlichkeit', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Wagnis der Öffentlichkeit', 'entity_label': 'HARDCODED'}
+
+
+{'entity_name': 'Wagnis', 'entity_label': 'PERSON'}
+{'entity_name': 'Wagnis', 'entity_label': 'NORP'}
+
+
+{'entity_name': 'Wagnis der Öffentlichkeit', 'entity_label': 'HARDCODED'}
+{'entity_name': 'das Wagnis der Öffentlichkeit', 'entity_label': 'HARDCODED'}
+
+
+{'entity_name': 'Wagnis', 'entity_label': 'NORP'}
+{'entity_name': 'Wagnis', 'entity_label': 'PERSON'}

@@ -3,6 +3,10 @@
     "name": "Forensis: Forging a political practice with Eyal Weizman and Wolfgang Kaleck",
     "source_type": "audio",
     "source_path": "/podcasts/episodes/44cd9536e0fbf498b12797921e789656",
+    "intro_audio": "00-Intro.mp3",
+    "outro_audio": "9999-Outro.mp3",
+    "intro_text": "",
+    "trigger_warning": "",
     "num_chunks": 98,
     "chunk_sequence": [
         {

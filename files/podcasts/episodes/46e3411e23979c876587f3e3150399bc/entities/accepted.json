@@ -1,0 +1,61 @@
+{'entity_name': 'Arthur Creech Jones', 'entity_label': 'PERSON'}
+{'entity_name': 'Becoming Feminist', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Benin Bronzes', 'entity_label': 'ORG'}
+{'entity_name': 'Benin Bronzes', 'entity_label': 'LAW'}
+{'entity_name': 'Berlin', 'entity_label': 'GPE'}
+{'entity_name': 'Brits', 'entity_label': 'NORP'}
+{'entity_name': 'Bénédicte Savoy', 'entity_label': 'ORG'}
+{'entity_name': 'Concrete Utopia of Human Rights', 'entity_label': 'WORK_OF_ART'}
+{'entity_name': 'César Rodríguez Garavito', 'entity_label': 'PERSON'}
+{'entity_name': 'Die konkrete Utopie der Menschenrechte', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Donna Haraway', 'entity_label': 'PERSON'}
+{'entity_name': 'Ein Blick', 'entity_label': 'PERSON'}
+{'entity_name': 'Europe', 'entity_label': 'LOC'}
+{'entity_name': 'European Center for Constitutional and Human Rights (ECCHR)', 'entity_label': 'HARDCODED'}
+{'entity_name': 'French', 'entity_label': 'NORP'}
+{'entity_name': 'German', 'entity_label': 'NORP'}
+{'entity_name': 'Germany', 'entity_label': 'GPE'}
+{'entity_name': 'Great Britain', 'entity_label': 'GPE'}
+{'entity_name': 'Hannah Arendt', 'entity_label': 'PERSON'}
+{'entity_name': 'Humboldt Forum', 'entity_label': 'ORG'}
+{'entity_name': 'Im Wir und Jetzt', 'entity_label': 'HARDCODED'}
+{'entity_name': 'India', 'entity_label': 'GPE'}
+{'entity_name': 'Kenya', 'entity_label': 'GPE'}
+{'entity_name': 'Lettre International', 'entity_label': 'FAC'}
+{'entity_name': 'Madres de la Plaza de Mayo', 'entity_label': 'ORG'}
+{'entity_name': 'Makau Mutua', 'entity_label': 'PERSON'}
+{'entity_name': 'Memory and Justice', 'entity_label': 'WORK_OF_ART'}
+{'entity_name': 'Menschenrechte', 'entity_label': 'PERSON'}
+{'entity_name': 'Namibia', 'entity_label': 'GPE'}
+{'entity_name': 'Nazi', 'entity_label': 'NORP'}
+{'entity_name': 'Nigeria', 'entity_label': 'GPE'}
+{'entity_name': 'North', 'entity_label': 'LOC'}
+{'entity_name': 'Priya Basil', 'entity_label': 'PERSON'}
+{'entity_name': 'Russians', 'entity_label': 'NORP'}
+{'entity_name': 'Schloss', 'entity_label': 'PERSON'}
+{'entity_name': 'South', 'entity_label': 'LOC'}
+{'entity_name': 'UK', 'entity_label': 'GPE'}
+{'entity_name': 'Utopie', 'entity_label': 'ORG'}
+{'entity_name': 'Wagnis', 'entity_label': 'PERSON'}
+{'entity_name': 'Wagnis', 'entity_label': 'NORP'}
+{'entity_name': 'Wagnis der Öffentlichkeit', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Wolfgang Kaleck', 'entity_label': 'HARDCODED'}
+{'entity_name': 'argentinian', 'entity_label': 'NORP'}
+{'entity_name': 'be less stupid', 'entity_label': 'HARDCODED'}
+{'entity_name': 'become Feminist-Feministin', 'entity_label': 'ORG'}
+{'entity_name': 'british', 'entity_label': 'NORP'}
+{'entity_name': 'colombian', 'entity_label': 'NORP'}
+{'entity_name': 'european', 'entity_label': 'NORP'}
+{'entity_name': 'german', 'entity_label': 'NORP'}
+{'entity_name': 'inter-american Court of Human Rights', 'entity_label': 'ORG'}
+{'entity_name': 'latin american', 'entity_label': 'NORP'}
+{'entity_name': 'life of our family was shaped by British colonialism', 'entity_label': 'HARDCODED'}
+{'entity_name': 'lock', 'entity_label': 'HARDCODED'}
+{'entity_name': 'nigerian', 'entity_label': 'NORP'}
+{'entity_name': 'sustained unlearning', 'entity_label': 'HARDCODED'}
+{'entity_name': 'to be less stupid', 'entity_label': 'HARDCODED'}
+{'entity_name': 'we', 'entity_label': 'HARDCODED'}
+{'entity_name': "we know how world has to function and we tell others what's right and what's wrong", 'entity_label': 'HARDCODED'}
+{'entity_name': 'western', 'entity_label': 'NORP'}
+{'entity_name': 'wir', 'entity_label': 'HARDCODED'}
+{'entity_name': 'Öffentlichkeit', 'entity_label': 'PERSON'}
