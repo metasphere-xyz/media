@@ -78,7 +78,7 @@ def add_arguments(argument_parser, list):
         elif section == "database":
             argument_parser.add_argument('--db-address',
                                          help='url of the metasphere graph database to connect to',
-                                         default='bolt://.xyz:7687/'
+                                          default='bolt://levimur.com:7687/'
                                          )
             argument_parser.add_argument('--db-username',
                                          help='username for graph database',

@@ -41,22 +41,22 @@ argument_parser.add_argument('--api-address',
                              help='url of the metasphere api to connect to',
                              default='http://127.0.0.1:5000'
                              )
+argument_parser.add_argument('--db-username',
+                             help='username for graph database',
+                             default='neo4j'
+                             )
 # argument_parser.add_argument('--db-address',
 #                              help='url of the metasphere graph database to connect to',
 #                              default='bolt://ecchr.metasphere.xyz:7687/'
+#                              )
+# argument_parser.add_argument('--db-password',
+#                              help='password for graph database',
+#                              default='burr-query-duel-cherry'
 #                              )
 argument_parser.add_argument('--db-address',
                              help='url of the metasphere graph database to connect to',
                              default='bolt://levimur.com:7687/'
                              )
-argument_parser.add_argument('--db-username',
-                             help='username for graph database',
-                             default='neo4j'
-                             )
-# argument_parser.add_argument('--db-password',
-#                              help='password for graph database',
-#                              default='burr-query-duel-cherry'
-#                              )
 argument_parser.add_argument('--db-password',
                              help='password for graph database',
                              default='zigzag-harbor-prelude-brigade-pigment-8784'

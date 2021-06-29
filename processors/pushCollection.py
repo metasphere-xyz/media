@@ -143,7 +143,6 @@ except (OSError, IOError) as error:
 parent_dir = os.path.dirname(sys.argv[0]) + '/../'
 base_dir = os.path.abspath(parent_dir)
 collection_base_dir = os.path.abspath(
-    # base_dir) + '/files' + collection["source_path"]
     base_dir) + '/files' + collection["source_path"]
 
 print(os.path.abspath(parent_dir))

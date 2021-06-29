@@ -1,10 +1,20 @@
-{'entity_name': 'Pixellated Revolution', 'entity_label': 'WORK_OF_ART'}
-{'entity_name': 'Berlin', 'entity_label': 'GPE'}
-{'entity_name': 'Chile', 'entity_label': 'GPE'}
-{'entity_name': 'Wolfgang Kaleck', 'entity_label': 'PERSON'}
-{'entity_name': 'Abu Ghraib', 'entity_label': 'HISTORIC_EVENT'}
-{'entity_name': 'syrian', 'entity_label': 'NORP'}
-{'entity_name': 'Rabih Mroué', 'entity_label': 'PERSON'}
-{'entity_name': 'Iraqis', 'entity_label': 'NORP'}
-{'entity_name': 'Argentina', 'entity_label': 'GPE'}
-{'entity_name': 'Lebanon', 'entity_label': 'GPE'}
+{'entity_name': 'Pixellated Revolution', 'entity_label': 'WORK_OF_ART'
+}
+{'entity_name': 'Berlin', 'entity_label': 'GPE'
+}
+{'entity_name': 'Chile', 'entity_label': 'GPE'
+}
+{'entity_name': 'Wolfgang Kaleck', 'entity_label': 'PERSON'
+}
+{'entity_name': 'Abu Ghraib', 'entity_label': 'HISTORIC_EVENT'
+}
+{'entity_name': 'syrian', 'entity_label': 'NORP'
+}
+{'entity_name': 'Rabih Mroué', 'entity_label': 'PERSON'
+}
+{'entity_name': 'Iraqis', 'entity_label': 'NORP'
+}
+{'entity_name': 'Argentina', 'entity_label': 'GPE'
+}
+{'entity_name': 'Lebanon', 'entity_label': 'GPE'
+}

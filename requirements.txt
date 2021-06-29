@@ -3,3 +3,5 @@ progress>=1.5
 requests>=2.25.1
 rich>=9.12.4
 urllib3>=1.26.3
+inquirer>=2.7.0
+wikipedia>=1.4.0
